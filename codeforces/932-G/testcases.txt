@@ -1,0 +1,9 @@
+Test: #1, time: 0 ms., memory: 1836 KB, exit code: 0, checker exit code: 1, verdict: WRONG_ANSWER
+Input
+abcdcdab
+Output
+-1
+Answer
+1
+Checker Log
+wrong answer 1st numbers differ - expected: '1', found: '-1'

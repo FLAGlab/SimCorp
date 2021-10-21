@@ -1,0 +1,12 @@
+Test: #, time: 0 ms., memory: 0 KB, exit code: 0, checker exit code: 2, verdict: WRONG_ANSWER
+Input
+3
+-1 0
+0 2
+1 0
+Output
+Hello
+Answer
+2
+Checker Log
+wrong output format Expected integer, but "Hello" found

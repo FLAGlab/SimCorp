@@ -1,0 +1,18 @@
+title
+G. Palindrome Partition
+
+input
+standard input
+
+output
+standard output
+
+problem-statement
+Given a string s, find the number of ways to split s to substrings such that if there are k substrings (p1, p2, p3, ..., pk) in partition, then pi = pk - i + 1 for all i (1 ≤ i ≤ k) and k is even.Since the number of ways can be large, print it modulo 109 + 7.The only line of input contains a string s (2 ≤ |s| ≤ 106) of even length consisting of lowercase Latin letters. Print one integer, the number of ways of partitioning the string modulo 109 + 7.In the first case, the only way to partition the string is ab|cd|cd|ab.In the second case, the string can be partitioned as ab|b|ab|ab|ab|ab|b|ab or ab|b|abab|abab|b|ab or abbab|ab|ab|abbab.
+
+input-specification
+The only line of input contains a string s (2 ≤ |s| ≤ 106) of even length consisting of lowercase Latin letters. 
+
+output-specification
+Print one integer, the number of ways of partitioning the string modulo 109 + 7.
+

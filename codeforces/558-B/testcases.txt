@@ -1,0 +1,20 @@
+Test: #, time: 15 ms., memory: 3896 KB, exit code: 0, checker exit code: 0, verdict: OK
+Input
+5
+1 1 2 2 1
+Output
+1 5
+Answer
+1 5
+Checker Log
+ok Participant has the same answer as Jury
+Test: #, time: 15 ms., memory: 3896 KB, exit code: 0, checker exit code: 1, verdict: WRONG_ANSWER
+Input
+5
+1 2 2 3 1
+Output
+1 5
+Answer
+2 3
+Checker Log
+wrong answer Jury has a smaller array than participant : ju 2, pa 5

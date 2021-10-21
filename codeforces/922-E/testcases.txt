@@ -1,0 +1,9 @@
+Test: #, time: 31 ms., memory: 81556 KB, exit code: 0, checker exit code: 1, verdict: WRONG_ANSWER
+Input
+2 12 0 4
+3 4
+4 2
+Answer
+6
+Checker Log
+wrong answer Answer contains longer sequence [length = 1], but output contains 0 elements
