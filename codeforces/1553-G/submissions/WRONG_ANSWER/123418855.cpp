@@ -27,7 +27,7 @@ ll query(ll x,ll t){
  }
  return res;
 }
-int main(){
+signed main(){
     cin>>n;
  for(ll i=1;i<=n;i++) cin>>a[i];
  for(ll i=1;i<=n;i++){

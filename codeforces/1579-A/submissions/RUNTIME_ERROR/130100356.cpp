@@ -1,10 +1,4 @@
-#include <cstdio>
-#include <iostream>
-#include <cstring>
-#include <cmath>
-#include <algorithm>
-#include <cstdlib>
-#include <ctime>
+#include<bits/stdc++.h>
  
 inline int read() {
  int x = 0, f = 1; char ch = getchar();
@@ -24,7 +18,7 @@ void Solve() {
  return;
 }
  
-int main() {
+signed main() {
  int t = read();
  while(t--) Solve();
  return 0;

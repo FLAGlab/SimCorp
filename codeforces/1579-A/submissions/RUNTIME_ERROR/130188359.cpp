@@ -1,15 +1,6 @@
-#include<stdio.h>
-#include<assert.h>
-#include<ctype.h>
-#include<limits.h>
-#include<math.h>
-#include<stdbool.h>
-#include<stddef.h>
-#include<stdint.h>
-#include<stdlib.h>
-#include<string.h>
+#include<bits/stdc++.h>
  
-int main()
+signed main()
 { int N,i;
 scanf("%d",&N);
 while (N--)

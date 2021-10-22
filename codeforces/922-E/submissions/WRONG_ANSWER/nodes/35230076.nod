@@ -1,0 +1,6 @@
+
+1
+  %retval = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  ret i32 0

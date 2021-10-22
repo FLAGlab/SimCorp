@@ -1,7 +1,8 @@
+#include<bits/stdc++.h>
  #include <iostream>
  using namespace std;
  
- int main() {
+ signed main() {
  int t;
     	cin>>t;
  while(t--){

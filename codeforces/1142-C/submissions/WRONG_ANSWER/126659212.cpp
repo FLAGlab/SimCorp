@@ -1,12 +1,11 @@
-#include <cstdio>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 5;
 const double eps = 1e-8;
 int n;
 long long ans;
 double x[N], y[N];
-int main() {
+signed main() {
 	scanf ("%d", &n);
  for (int i = 1; i <= n; i++) {
 		scanf ("%lf%lf", &x[i], &y[i]);

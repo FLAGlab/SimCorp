@@ -1,9 +1,9 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
  
 const int inf = 1e9 + 7;
 int dp[1005][10005];
-int main() {
+signed main() {
  int n, w, b, x, sum = 0, ans = 0;
 	cin >> n >> w >> b >> x;
  int c[n], cost[n]; c[0] = 0;

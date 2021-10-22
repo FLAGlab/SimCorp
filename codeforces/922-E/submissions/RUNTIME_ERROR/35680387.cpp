@@ -1,4 +1,4 @@
-#include <iostream>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -7,7 +7,7 @@ const int MAX = 1e4 + 10;
 long long dp[1000][MAX];
 int v[MAX];
  
-int main(){
+signed main(){
  long long n, w, b, x;
     cin >> n >> w >> b >> x;
  for(int i = 1; i <= n+1; ++i){

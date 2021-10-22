@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 #define re register
 #define V 1000005
@@ -9,7 +9,7 @@ typedef pair<int, int> P;
 int n, q, gs, cnt, tot, a[N], p[10], f[N], id[V], pr[N], mip[V];
 P g[25*N];
 int find(int x){ return (f[x] == x) ? f[x] : f[x] = find(f[x]); }
-int main(){
+signed main(){
 //	freopen("D.out", "w", stdout);
  for(re int i = 2; i < 10000; ++i){
  if(!mip[i]){ mip[i] = i; pr[++tot] = i;}

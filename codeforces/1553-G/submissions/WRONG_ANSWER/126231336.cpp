@@ -7,7 +7,7 @@ vector<int> ft[N];
 map<int,bool> fl[N<<1];
 int find(int x){return (fa[x]==x)?x:(fa[x]=find(fa[x]));}
  
-int main(){
+signed main(){
 	cin>>n>>m;
  for(int i=2;i<N;i++) if(ft[i].empty())
  for(int j=i;j<N;j+=i) ft[j].push_back(i);

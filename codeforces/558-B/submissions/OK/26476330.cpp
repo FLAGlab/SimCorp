@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define LL long long
 using namespace std;
 int f[1000050],s[1000050],e[1000050];
-int main()
+signed main()
 {
  int n,x,mx=-1,a,b,d=1e9; cin>>n;
     memset(s,-1,sizeof(s));

@@ -1,0 +1,301 @@
+
+1
+  %retval = alloca i32, align 4
+  %N = alloca i64, align 8
+  %W = alloca i64, align 8
+  %B = alloca i64, align 8
+  %X = alloca i64, align 8
+  %n = alloca [1010 x i64], align 16
+  %c = alloca [1010 x i64], align 16
+  %w = alloca [10100 x i64], align 16
+  %b = alloca [10100 x i64], align 16
+  %t = alloca [10100 x i64], align 16
+  %back = alloca i64, align 8
+  %i = alloca i64, align 8
+  %j = alloca i64, align 8
+  %k = alloca i64, align 8
+  %ww = alloca i64, align 8
+  %bb = alloca i64, align 8
+  store i32 0, i32* %retval
+  %0 = bitcast [10100 x i64]* %t to i8*
+  call void @llvm.memset.p0i8.i64(i8* %0, i8 0, i64 80800, i32 16, i1 false)
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0), i64* %N, i64* %W, i64* %B, i64* %X)
+  store i64 1, i64* %i, align 8
+  br label %for.cond
+
+2
+  %1 = load i64* %i, align 8
+  %2 = load i64* %N, align 8
+  %cmp = icmp sle i64 %1, %2
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %arraydecay = getelementptr inbounds [1010 x i64]* %n, i32 0, i32 0
+  %3 = load i64* %i, align 8
+  %add.ptr = getelementptr inbounds i64* %arraydecay, i64 %3
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([5 x i8]* @.str1, i32 0, i32 0), i64* %add.ptr)
+  %4 = load i64* %i, align 8
+  %inc = add nsw i64 %4, 1
+  store i64 %inc, i64* %i, align 8
+  br label %for.cond
+
+4
+  store i64 1, i64* %i, align 8
+  br label %for.cond2
+
+5
+  %5 = load i64* %i, align 8
+  %6 = load i64* %N, align 8
+  %cmp3 = icmp sle i64 %5, %6
+  br i1 %cmp3, label %for.body4, label %for.end10
+
+6
+  %arraydecay5 = getelementptr inbounds [1010 x i64]* %c, i32 0, i32 0
+  %7 = load i64* %i, align 8
+  %add.ptr6 = getelementptr inbounds i64* %arraydecay5, i64 %7
+  %call7 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([5 x i8]* @.str1, i32 0, i32 0), i64* %add.ptr6)
+  %8 = load i64* %i, align 8
+  %inc9 = add nsw i64 %8, 1
+  store i64 %inc9, i64* %i, align 8
+  br label %for.cond2
+
+7
+  %9 = load i64* %W, align 8
+  %arrayidx = getelementptr inbounds [10100 x i64]* %w, i32 0, i64 0
+  store i64 %9, i64* %arrayidx, align 8
+  %10 = load i64* %W, align 8
+  %arrayidx11 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 0
+  store i64 %10, i64* %arrayidx11, align 8
+  %arrayidx12 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 0
+  store i64 1, i64* %arrayidx12, align 8
+  store i64 0, i64* %back, align 8
+  store i64 1, i64* %i, align 8
+  br label %for.cond13
+
+8
+  %11 = load i64* %i, align 8
+  %12 = load i64* %N, align 8
+  %cmp14 = icmp sle i64 %11, %12
+  br i1 %cmp14, label %for.body15, label %for.end91
+
+9
+  %13 = load i64* %back, align 8
+  store i64 %13, i64* %j, align 8
+  br label %for.cond16
+
+10
+  %14 = load i64* %j, align 8
+  %cmp17 = icmp sge i64 %14, 0
+  br i1 %cmp17, label %land.rhs, label %land.end
+
+11
+  %15 = load i64* %j, align 8
+  %16 = load i64* %i, align 8
+  %arrayidx18 = getelementptr inbounds [1010 x i64]* %n, i32 0, i64 %16
+  %17 = load i64* %arrayidx18, align 8
+  %add = add nsw i64 %15, %17
+  %arrayidx19 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %add
+  %18 = load i64* %arrayidx19, align 8
+  %tobool = icmp ne i64 %18, 0
+  %lnot = xor i1 %tobool, true
+  br label %land.end
+
+12
+  %19 = phi i1 [ false, %for.cond16 ], [ %lnot, %land.rhs ]
+  br i1 %19, label %for.body20, label %for.end88
+
+13
+  store i64 1, i64* %k, align 8
+  br label %for.cond21
+
+14
+  %20 = load i64* %k, align 8
+  %21 = load i64* %i, align 8
+  %arrayidx22 = getelementptr inbounds [1010 x i64]* %n, i32 0, i64 %21
+  %22 = load i64* %arrayidx22, align 8
+  %cmp23 = icmp sle i64 %20, %22
+  br i1 %cmp23, label %for.body24, label %for.end86
+
+15
+  %23 = load i64* %i, align 8
+  %24 = load i64* %j, align 8
+  %arrayidx25 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %24
+  %25 = load i64* %arrayidx25, align 8
+  %sub = sub nsw i64 %23, %25
+  %26 = load i64* %X, align 8
+  %mul = mul nsw i64 %sub, %26
+  %27 = load i64* %j, align 8
+  %arrayidx26 = getelementptr inbounds [10100 x i64]* %w, i32 0, i64 %27
+  %28 = load i64* %arrayidx26, align 8
+  %add27 = add nsw i64 %mul, %28
+  %29 = load i64* %j, align 8
+  %arrayidx28 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 %29
+  %30 = load i64* %arrayidx28, align 8
+  %cmp29 = icmp slt i64 %add27, %30
+  br i1 %cmp29, label %cond.true, label %cond.false
+
+16
+  %31 = load i64* %i, align 8
+  %32 = load i64* %j, align 8
+  %arrayidx30 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %32
+  %33 = load i64* %arrayidx30, align 8
+  %sub31 = sub nsw i64 %31, %33
+  %34 = load i64* %X, align 8
+  %mul32 = mul nsw i64 %sub31, %34
+  %35 = load i64* %j, align 8
+  %arrayidx33 = getelementptr inbounds [10100 x i64]* %w, i32 0, i64 %35
+  %36 = load i64* %arrayidx33, align 8
+  %add34 = add nsw i64 %mul32, %36
+  br label %cond.end
+
+17
+  %37 = load i64* %j, align 8
+  %arrayidx35 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 %37
+  %38 = load i64* %arrayidx35, align 8
+  br label %cond.end
+
+18
+  %cond = phi i64 [ %add34, %cond.true ], [ %38, %cond.false ]
+  %39 = load i64* %k, align 8
+  %40 = load i64* %i, align 8
+  %arrayidx36 = getelementptr inbounds [1010 x i64]* %c, i32 0, i64 %40
+  %41 = load i64* %arrayidx36, align 8
+  %mul37 = mul nsw i64 %39, %41
+  %sub38 = sub nsw i64 %cond, %mul37
+  store i64 %sub38, i64* %ww, align 8
+  %cmp39 = icmp sge i64 %sub38, 0
+  br i1 %cmp39, label %land.lhs.true, label %land.end83
+
+19
+  %42 = load i64* %j, align 8
+  %43 = load i64* %k, align 8
+  %add40 = add nsw i64 %42, %43
+  %arrayidx41 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %add40
+  %44 = load i64* %arrayidx41, align 8
+  %tobool42 = icmp ne i64 %44, 0
+  br i1 %tobool42, label %lor.lhs.false, label %land.rhs67
+
+20
+  %45 = load i64* %j, align 8
+  %46 = load i64* %k, align 8
+  %add43 = add nsw i64 %45, %46
+  %arrayidx44 = getelementptr inbounds [10100 x i64]* %w, i32 0, i64 %add43
+  %47 = load i64* %arrayidx44, align 8
+  %48 = load i64* %i, align 8
+  %49 = load i64* %j, align 8
+  %50 = load i64* %k, align 8
+  %add45 = add nsw i64 %49, %50
+  %arrayidx46 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %add45
+  %51 = load i64* %arrayidx46, align 8
+  %sub47 = sub nsw i64 %48, %51
+  %52 = load i64* %X, align 8
+  %mul48 = mul nsw i64 %sub47, %52
+  %add49 = add nsw i64 %47, %mul48
+  %53 = load i64* %j, align 8
+  %54 = load i64* %k, align 8
+  %add50 = add nsw i64 %53, %54
+  %arrayidx51 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 %add50
+  %55 = load i64* %arrayidx51, align 8
+  %cmp52 = icmp slt i64 %add49, %55
+  br i1 %cmp52, label %cond.true53, label %cond.false61
+
+21
+  %56 = load i64* %j, align 8
+  %57 = load i64* %k, align 8
+  %add54 = add nsw i64 %56, %57
+  %arrayidx55 = getelementptr inbounds [10100 x i64]* %w, i32 0, i64 %add54
+  %58 = load i64* %arrayidx55, align 8
+  %59 = load i64* %i, align 8
+  %60 = load i64* %j, align 8
+  %61 = load i64* %k, align 8
+  %add56 = add nsw i64 %60, %61
+  %arrayidx57 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %add56
+  %62 = load i64* %arrayidx57, align 8
+  %sub58 = sub nsw i64 %59, %62
+  %63 = load i64* %X, align 8
+  %mul59 = mul nsw i64 %sub58, %63
+  %add60 = add nsw i64 %58, %mul59
+  br label %cond.end64
+
+22
+  %64 = load i64* %j, align 8
+  %65 = load i64* %k, align 8
+  %add62 = add nsw i64 %64, %65
+  %arrayidx63 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 %add62
+  %66 = load i64* %arrayidx63, align 8
+  br label %cond.end64
+
+23
+  %cond65 = phi i64 [ %add60, %cond.true53 ], [ %66, %cond.false61 ]
+  %67 = load i64* %ww, align 8
+  %cmp66 = icmp slt i64 %cond65, %67
+  br i1 %cmp66, label %land.rhs67, label %land.end83
+
+24
+  %68 = load i64* %ww, align 8
+  %69 = load i64* %j, align 8
+  %70 = load i64* %k, align 8
+  %add68 = add nsw i64 %69, %70
+  %arrayidx69 = getelementptr inbounds [10100 x i64]* %w, i32 0, i64 %add68
+  store i64 %68, i64* %arrayidx69, align 8
+  %71 = load i64* %j, align 8
+  %arrayidx70 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 %71
+  %72 = load i64* %arrayidx70, align 8
+  %73 = load i64* %B, align 8
+  %74 = load i64* %k, align 8
+  %mul71 = mul nsw i64 %73, %74
+  %add72 = add nsw i64 %72, %mul71
+  %75 = load i64* %j, align 8
+  %76 = load i64* %k, align 8
+  %add73 = add nsw i64 %75, %76
+  %arrayidx74 = getelementptr inbounds [10100 x i64]* %b, i32 0, i64 %add73
+  store i64 %add72, i64* %arrayidx74, align 8
+  %77 = load i64* %i, align 8
+  %78 = load i64* %j, align 8
+  %79 = load i64* %k, align 8
+  %add75 = add nsw i64 %78, %79
+  %arrayidx76 = getelementptr inbounds [10100 x i64]* %t, i32 0, i64 %add75
+  store i64 %77, i64* %arrayidx76, align 8
+  %80 = load i64* %back, align 8
+  %81 = load i64* %j, align 8
+  %82 = load i64* %k, align 8
+  %add77 = add nsw i64 %81, %82
+  %cmp78 = icmp slt i64 %80, %add77
+  br i1 %cmp78, label %land.rhs79, label %land.end82
+
+25
+  %83 = load i64* %j, align 8
+  %84 = load i64* %k, align 8
+  %add80 = add nsw i64 %83, %84
+  store i64 %add80, i64* %back, align 8
+  %tobool81 = icmp ne i64 %add80, 0
+  br label %land.end82
+
+26
+  %85 = phi i1 [ false, %land.rhs67 ], [ %tobool81, %land.rhs79 ]
+  br label %land.end83
+
+27
+  %86 = phi i1 [ false, %cond.end64 ], [ false, %cond.end ], [ %85, %land.end82 ]
+  %87 = load i64* %k, align 8
+  %inc85 = add nsw i64 %87, 1
+  store i64 %inc85, i64* %k, align 8
+  br label %for.cond21
+
+28
+  %88 = load i64* %j, align 8
+  %dec = add nsw i64 %88, -1
+  store i64 %dec, i64* %j, align 8
+  br label %for.cond16
+
+29
+  %89 = load i64* %i, align 8
+  %inc90 = add nsw i64 %89, 1
+  store i64 %inc90, i64* %i, align 8
+  br label %for.cond13
+
+30
+  %90 = load i64* %back, align 8
+  %call92 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([6 x i8]* @.str2, i32 0, i32 0), i64 %90)
+  %91 = load i32* %retval
+  ret i32 %91

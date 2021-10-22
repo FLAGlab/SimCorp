@@ -1,11 +1,10 @@
-#include <iostream>
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
 int n ;
 long int a[100100] ;
 int cnt[100100] ;
-int main()
+signed main()
 {
  int maxoccurence=0 ;
     cin>>n ;

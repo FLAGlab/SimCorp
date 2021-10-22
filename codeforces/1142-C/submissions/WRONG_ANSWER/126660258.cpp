@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 struct nod{
  int x, y;
@@ -18,7 +18,7 @@ nod sub(nod x, nod y){
 	ans.y = x.y - y.y;
  return ans;
 }
-int main(){
+signed main(){
 	cin >> n;
  for (int i = 0; i < n; i++){
  int x, y;

@@ -1,9 +1,9 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int a[100005],b[100005],c[100005],d[100005];
 int n;
 int x=1000005;
-int main(){
+signed main(){
     cin>>n;
  for(int i=1;i<=n;i++)
     	cin>>a[i];

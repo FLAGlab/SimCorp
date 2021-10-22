@@ -1,5 +1,4 @@
-#include <iostream>
-#include <map>
+#include<bits/stdc++.h>
 using namespace std;
  
 const int N = 1e4+5, M = 1e3+5;
@@ -17,7 +16,7 @@ int go(int mana,int ix,int avail) {
  return ans;
 }
  
-int main() {
+signed main() {
     cin >> n >> w >> b >> x;
  for(int i=1;i<=n;i++) cin >> birds[i];
  for(int i=1;i<=n;i++) cin >> cost[i];

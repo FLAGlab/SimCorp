@@ -1,6 +1,6 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
+signed main()
 {int a=0,b=0,c=0,n;
 string s;
 cin>>n;

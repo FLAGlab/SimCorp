@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 constexpr int INF = 1e6 + 1;
@@ -26,7 +26,7 @@ struct dsu {
  }
 };
  
-int main() {
+signed main() {
  int n, q;
 	scanf("%d%d", &n, &q);
  

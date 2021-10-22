@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -74,7 +74,7 @@ void solve() {
 	cout << solve(s, t) << endl;
 }
  
-int main() {
+signed main() {
 #ifndef ONLINE_JUDGE
 	freopen("in.in", "r", stdin);
 	freopen("out.out", "w", stdout);

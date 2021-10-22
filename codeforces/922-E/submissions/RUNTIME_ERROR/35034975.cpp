@@ -1,13 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <algorithm>
-#include <vector>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <string>
-#include <stack>
-#include <queue>
+#include<bits/stdc++.h>
 using namespace std;
  
 const int MAXN = 1e3 + 1;
@@ -32,7 +23,7 @@ void init()
  }
 }
  
-int main() {
+signed main() {
 	ios_base::sync_with_stdio(0);
  
  

@@ -1,8 +1,7 @@
-#include<cstdio>
-#include<cstring>
+#include<bits/stdc++.h>
 using namespace std;
 int n,s;char c;
-int main()
+signed main()
 {
 	scanf("%d",&n),getchar();
  while(n--)

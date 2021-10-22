@@ -15,7 +15,7 @@ ll n , W, B , X;
 ll c[N], cost[N];
 vector<ll> foo[N];
  
-int main()
+signed main()
 {
 	ios::sync_with_stdio( 0 );
 	cin.tie( 0 );

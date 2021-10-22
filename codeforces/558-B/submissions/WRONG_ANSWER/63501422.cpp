@@ -1,6 +1,6 @@
-#include <cstdio>
+#include<bits/stdc++.h>
 int arr[1000000+10],n,ini[1000000+10],fin[1000000+10];
-int main(){
+signed main(){
  int x,may=0;
     scanf("%d",&n);
  for(int i=0;i<n;i++){

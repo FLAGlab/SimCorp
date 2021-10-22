@@ -1,6 +1,4 @@
-#include<cstdio>
-#include<iostream>
-#include<cstring>
+#include<bits/stdc++.h>
  
 using namespace std;
 const int N=1e3+10,M=1e4;
@@ -8,7 +6,7 @@ typedef long long ll;
  
 int n,w,a,b;
 ll c[N],cost[N],dp[N][M+10];
-int main(){
+signed main(){
 	scanf("%d%d%d%d",&n,&w,&a,&b);
  for(int i=1;i<=n;i++)scanf("%lld",c+i);
  for(int i=1;i<=n;i++)scanf("%lld",cost+i);

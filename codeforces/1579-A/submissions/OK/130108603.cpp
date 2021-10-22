@@ -2,7 +2,7 @@
 using namespace std;
 int a[4];
 string s;
-int main(){
+signed main(){
  int t; cin>>t;
  while(t--){
 		cin>>s;

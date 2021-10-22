@@ -1,5 +1,4 @@
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
  
 using namespace std;
 struct node
@@ -9,7 +8,7 @@ struct node
  int cnt=0;
 }p[100005];
  
-int main()
+signed main()
 {
  int n;
 	scanf("%d",&n);

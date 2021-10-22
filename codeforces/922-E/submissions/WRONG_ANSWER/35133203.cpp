@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
  
@@ -11,7 +11,7 @@ ll dp[1001][10010];
 int cost[SIZE];
 int c[SIZE];
  
-int main(){
+signed main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
  

@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+signed main()
 {
  long long int n,i,m=0,freq[100001]={0},d=1e7,p,k;
 	cin>>n;

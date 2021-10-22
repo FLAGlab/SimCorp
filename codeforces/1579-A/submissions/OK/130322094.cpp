@@ -1,8 +1,8 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int t,sl[3];
 string s;
-int main(){
+signed main(){
     cin>>t;
  while(t--){
         cin>>s;

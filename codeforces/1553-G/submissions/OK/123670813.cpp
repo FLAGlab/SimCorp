@@ -22,7 +22,7 @@ int find(int x){
 void merge(int x,int y){
     p[find(x)]=find(y);
 }
-int main(){
+signed main(){
     scanf("%d%d",&n,&q);
  for(int i=1;i<=n;i++) scanf("%d",&a[i]);
  for(int i=2;i<=1000001;i++){

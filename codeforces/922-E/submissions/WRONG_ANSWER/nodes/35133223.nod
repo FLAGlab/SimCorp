@@ -1,0 +1,214 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i64, align 8
+  %w = alloca i64, align 8
+  %b = alloca i64, align 8
+  %x = alloca i64, align 8
+  %mm = alloca i64, align 8
+  %ans = alloca i64, align 8
+  %i = alloca i64, align 8
+  %i8 = alloca i64, align 8
+  %i17 = alloca i64, align 8
+  %j = alloca i64, align 8
+  %k = alloca i64, align 8
+  %ref.tmp = alloca i64, align 8
+  %ref.tmp50 = alloca i64, align 8
+  %ref.tmp58 = alloca i64, align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %0 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %0
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %1 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call1 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %1, %"class.std::basic_ostream"* null)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %n)
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call2, i64* %w)
+  %call4 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call3, i64* %b)
+  %call5 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call4, i64* %x)
+  store i64 0, i64* %mm, align 8
+  store i64 0, i64* %ans, align 8
+  store i64 0, i64* %i, align 8
+  br label %for.cond
+
+2
+  %2 = load i64* %i, align 8
+  %3 = load i64* %n, align 8
+  %cmp = icmp slt i64 %2, %3
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %4 = load i64* %i, align 8
+  %arrayidx = getelementptr inbounds [10003 x i64]* @c, i32 0, i64 %4
+  %call6 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx)
+  %5 = load i64* %i, align 8
+  %arrayidx7 = getelementptr inbounds [10003 x i64]* @c, i32 0, i64 %5
+  %6 = load i64* %arrayidx7, align 8
+  %7 = load i64* %mm, align 8
+  %add = add nsw i64 %7, %6
+  store i64 %add, i64* %mm, align 8
+  %8 = load i64* %i, align 8
+  %inc = add nsw i64 %8, 1
+  store i64 %inc, i64* %i, align 8
+  br label %for.cond
+
+4
+  store i64 0, i64* %i8, align 8
+  br label %for.cond9
+
+5
+  %9 = load i64* %i8, align 8
+  %10 = load i64* %n, align 8
+  %cmp10 = icmp slt i64 %9, %10
+  br i1 %cmp10, label %for.body11, label %for.end16
+
+6
+  %11 = load i64* %i8, align 8
+  %arrayidx12 = getelementptr inbounds [10003 x i64]* @cost, i32 0, i64 %11
+  %call13 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx12)
+  %12 = load i64* %i8, align 8
+  %inc15 = add nsw i64 %12, 1
+  store i64 %inc15, i64* %i8, align 8
+  br label %for.cond9
+
+7
+  %13 = load i64* %w, align 8
+  store i64 %13, i64* getelementptr inbounds ([1001 x [10010 x i64]]* @dp, i32 0, i64 0, i64 0), align 8
+  store i64 0, i64* %i17, align 8
+  br label %for.cond18
+
+8
+  %14 = load i64* %i17, align 8
+  %15 = load i64* %n, align 8
+  %cmp19 = icmp slt i64 %14, %15
+  br i1 %cmp19, label %for.body20, label %for.end69
+
+9
+  store i64 0, i64* %j, align 8
+  br label %for.cond21
+
+10
+  %16 = load i64* %j, align 8
+  %17 = load i64* %mm, align 8
+  %cmp22 = icmp slt i64 %16, %17
+  br i1 %cmp22, label %for.body23, label %for.end66
+
+11
+  %18 = load i64* %j, align 8
+  %19 = load i64* %i17, align 8
+  %arrayidx24 = getelementptr inbounds [1001 x [10010 x i64]]* @dp, i32 0, i64 %19
+  %arrayidx25 = getelementptr inbounds [10010 x i64]* %arrayidx24, i32 0, i64 %18
+  %20 = load i64* %arrayidx25, align 8
+  %cmp26 = icmp eq i64 %20, 0
+  br i1 %cmp26, label %if.then, label %if.end
+
+12
+  br label %for.inc64
+
+13
+  store i64 0, i64* %k, align 8
+  br label %for.cond27
+
+14
+  %21 = load i64* %k, align 8
+  %22 = load i64* %i17, align 8
+  %arrayidx28 = getelementptr inbounds [10003 x i64]* @c, i32 0, i64 %22
+  %23 = load i64* %arrayidx28, align 8
+  %cmp29 = icmp sle i64 %21, %23
+  br i1 %cmp29, label %for.body30, label %for.end63
+
+15
+  %24 = load i64* %j, align 8
+  %25 = load i64* %i17, align 8
+  %arrayidx31 = getelementptr inbounds [1001 x [10010 x i64]]* @dp, i32 0, i64 %25
+  %arrayidx32 = getelementptr inbounds [10010 x i64]* %arrayidx31, i32 0, i64 %24
+  %26 = load i64* %arrayidx32, align 8
+  %27 = load i64* %k, align 8
+  %mul = mul nsw i64 1, %27
+  %28 = load i64* %i17, align 8
+  %arrayidx33 = getelementptr inbounds [10003 x i64]* @cost, i32 0, i64 %28
+  %29 = load i64* %arrayidx33, align 8
+  %mul34 = mul nsw i64 %mul, %29
+  %cmp35 = icmp sge i64 %26, %mul34
+  br i1 %cmp35, label %if.then36, label %if.end60
+
+16
+  %30 = load i64* %j, align 8
+  %31 = load i64* %k, align 8
+  %add37 = add nsw i64 %30, %31
+  %32 = load i64* %i17, align 8
+  %add38 = add nsw i64 %32, 1
+  %arrayidx39 = getelementptr inbounds [1001 x [10010 x i64]]* @dp, i32 0, i64 %add38
+  %arrayidx40 = getelementptr inbounds [10010 x i64]* %arrayidx39, i32 0, i64 %add37
+  %33 = load i64* %j, align 8
+  %34 = load i64* %i17, align 8
+  %arrayidx41 = getelementptr inbounds [1001 x [10010 x i64]]* @dp, i32 0, i64 %34
+  %arrayidx42 = getelementptr inbounds [10010 x i64]* %arrayidx41, i32 0, i64 %33
+  %35 = load i64* %arrayidx42, align 8
+  %36 = load i64* %k, align 8
+  %37 = load i64* %i17, align 8
+  %arrayidx43 = getelementptr inbounds [10003 x i64]* @cost, i32 0, i64 %37
+  %38 = load i64* %arrayidx43, align 8
+  %mul44 = mul nsw i64 %36, %38
+  %sub = sub nsw i64 %35, %mul44
+  %39 = load i64* %x, align 8
+  %add45 = add nsw i64 %sub, %39
+  store i64 %add45, i64* %ref.tmp, align 8
+  %40 = load i64* %w, align 8
+  %41 = load i64* %j, align 8
+  %42 = load i64* %k, align 8
+  %add46 = add nsw i64 %41, %42
+  %mul47 = mul nsw i64 1, %add46
+  %43 = load i64* %b, align 8
+  %mul48 = mul nsw i64 %mul47, %43
+  %add49 = add nsw i64 %40, %mul48
+  store i64 %add49, i64* %ref.tmp50, align 8
+  %call51 = call i64* @_ZSt3minIxERKT_S2_S2_(i64* %ref.tmp, i64* %ref.tmp50)
+  %call52 = call i64* @_ZSt3maxIxERKT_S2_S2_(i64* %arrayidx40, i64* %call51)
+  %44 = load i64* %call52
+  %45 = load i64* %j, align 8
+  %46 = load i64* %k, align 8
+  %add53 = add nsw i64 %45, %46
+  %47 = load i64* %i17, align 8
+  %add54 = add nsw i64 %47, 1
+  %arrayidx55 = getelementptr inbounds [1001 x [10010 x i64]]* @dp, i32 0, i64 %add54
+  %arrayidx56 = getelementptr inbounds [10010 x i64]* %arrayidx55, i32 0, i64 %add53
+  store i64 %44, i64* %arrayidx56, align 8
+  %48 = load i64* %j, align 8
+  %49 = load i64* %k, align 8
+  %add57 = add nsw i64 %48, %49
+  store i64 %add57, i64* %ref.tmp58, align 8
+  %call59 = call i64* @_ZSt3maxIxERKT_S2_S2_(i64* %ans, i64* %ref.tmp58)
+  %50 = load i64* %call59
+  store i64 %50, i64* %ans, align 8
+  br label %if.end60
+
+17
+  %51 = load i64* %k, align 8
+  %inc62 = add nsw i64 %51, 1
+  store i64 %inc62, i64* %k, align 8
+  br label %for.cond27
+
+18
+  br label %for.inc64
+
+19
+  %52 = load i64* %j, align 8
+  %inc65 = add nsw i64 %52, 1
+  store i64 %inc65, i64* %j, align 8
+  br label %for.cond21
+
+20
+  %53 = load i64* %i17, align 8
+  %inc68 = add nsw i64 %53, 1
+  store i64 %inc68, i64* %i17, align 8
+  br label %for.cond18
+
+21
+  %54 = load i64* %ans, align 8
+  %call70 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %54)
+  %call71 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call70, i8* getelementptr inbounds ([2 x i8]* @.str, i32 0, i32 0))
+  %55 = load i32* %retval
+  ret i32 %55

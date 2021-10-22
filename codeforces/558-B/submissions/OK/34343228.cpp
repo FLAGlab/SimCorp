@@ -1,5 +1,4 @@
-#include <iostream>
-#include <array>
+#include<bits/stdc++.h>
  
 using namespace std;;
  
@@ -7,7 +6,7 @@ int ar[1000009];
 int l[1000009];
 int r[1000009];
  
-int main(){
+signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
  int n,a,mx,mxi;

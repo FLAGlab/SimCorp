@@ -1,0 +1,180 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %ref.tmp = alloca %struct.Poi, align 8
+  %i9 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* @n)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([5 x i8]* @.str1, i32 0, i32 0), i32* %x, i32* %y)
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [100005 x %struct.Poi]* @P, i32 0, i64 %idxprom
+  %x2 = getelementptr inbounds %struct.Poi* %ref.tmp, i32 0, i32 0
+  %3 = load i32* %x, align 4
+  %conv = sext i32 %3 to i64
+  store i64 %conv, i64* %x2, align 8
+  %y3 = getelementptr inbounds %struct.Poi* %ref.tmp, i32 0, i32 1
+  %4 = load i32* %y, align 4
+  %conv4 = sext i32 %4 to i64
+  %5 = load i32* %x, align 4
+  %conv5 = sext i32 %5 to i64
+  %mul = mul nsw i64 1, %conv5
+  %6 = load i32* %x, align 4
+  %conv6 = sext i32 %6 to i64
+  %mul7 = mul nsw i64 %mul, %conv6
+  %sub = sub nsw i64 %conv4, %mul7
+  store i64 %sub, i64* %y3, align 8
+  %7 = bitcast %struct.Poi* %arrayidx to i8*
+  %8 = bitcast %struct.Poi* %ref.tmp to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  %9 = load i32* %i, align 4
+  %inc = add nsw i32 %9, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %10 = load i32* @n, align 4
+  %idx.ext = sext i32 %10 to i64
+  %add.ptr = getelementptr inbounds %struct.Poi* getelementptr inbounds ([100005 x %struct.Poi]* @P, i32 0, i32 0), i64 %idx.ext
+  %add.ptr8 = getelementptr inbounds %struct.Poi* %add.ptr, i64 1
+  call void @_ZSt4sortIP3PoiEvT_S2_(%struct.Poi* getelementptr inbounds ([100005 x %struct.Poi]* @P, i32 0, i64 1), %struct.Poi* %add.ptr8)
+  store i32 1, i32* %i9, align 4
+  br label %for.cond10
+
+5
+  %11 = load i32* %i9, align 4
+  %12 = load i32* @n, align 4
+  %cmp11 = icmp sle i32 %11, %12
+  br i1 %cmp11, label %for.body12, label %for.end63
+
+6
+  %13 = load i32* %i9, align 4
+  %cmp13 = icmp sgt i32 %13, 1
+  br i1 %cmp13, label %land.lhs.true, label %if.end
+
+7
+  %14 = load i32* %i9, align 4
+  %idxprom14 = sext i32 %14 to i64
+  %arrayidx15 = getelementptr inbounds [100005 x %struct.Poi]* @P, i32 0, i64 %idxprom14
+  %x16 = getelementptr inbounds %struct.Poi* %arrayidx15, i32 0, i32 0
+  %15 = load i64* %x16, align 8
+  %16 = load i32* %i9, align 4
+  %sub17 = sub nsw i32 %16, 1
+  %idxprom18 = sext i32 %sub17 to i64
+  %arrayidx19 = getelementptr inbounds [100005 x %struct.Poi]* @P, i32 0, i64 %idxprom18
+  %x20 = getelementptr inbounds %struct.Poi* %arrayidx19, i32 0, i32 0
+  %17 = load i64* %x20, align 8
+  %cmp21 = icmp eq i64 %15, %17
+  br i1 %cmp21, label %if.then, label %if.end
+
+8
+  br label %for.inc61
+
+9
+  br label %while.cond
+
+10
+  %18 = load i32* @top, align 4
+  %cmp22 = icmp sgt i32 %18, 1
+  br i1 %cmp22, label %land.rhs, label %land.end
+
+11
+  %19 = load i32* @top, align 4
+  %idxprom23 = sext i32 %19 to i64
+  %arrayidx24 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom23
+  %y25 = getelementptr inbounds %struct.Poi* %arrayidx24, i32 0, i32 1
+  %20 = load i64* %y25, align 8
+  %21 = load i32* @top, align 4
+  %sub26 = sub nsw i32 %21, 1
+  %idxprom27 = sext i32 %sub26 to i64
+  %arrayidx28 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom27
+  %y29 = getelementptr inbounds %struct.Poi* %arrayidx28, i32 0, i32 1
+  %22 = load i64* %y29, align 8
+  %sub30 = sub nsw i64 %20, %22
+  %23 = load i32* @top, align 4
+  %idxprom31 = sext i32 %23 to i64
+  %arrayidx32 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom31
+  %x33 = getelementptr inbounds %struct.Poi* %arrayidx32, i32 0, i32 0
+  %24 = load i64* %x33, align 8
+  %25 = load i32* %i9, align 4
+  %idxprom34 = sext i32 %25 to i64
+  %arrayidx35 = getelementptr inbounds [100005 x %struct.Poi]* @P, i32 0, i64 %idxprom34
+  %x36 = getelementptr inbounds %struct.Poi* %arrayidx35, i32 0, i32 0
+  %26 = load i64* %x36, align 8
+  %sub37 = sub nsw i64 %24, %26
+  %mul38 = mul nsw i64 %sub30, %sub37
+  %27 = load i32* @top, align 4
+  %idxprom39 = sext i32 %27 to i64
+  %arrayidx40 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom39
+  %y41 = getelementptr inbounds %struct.Poi* %arrayidx40, i32 0, i32 1
+  %28 = load i64* %y41, align 8
+  %29 = load i32* %i9, align 4
+  %idxprom42 = sext i32 %29 to i64
+  %arrayidx43 = getelementptr inbounds [100005 x %struct.Poi]* @P, i32 0, i64 %idxprom42
+  %y44 = getelementptr inbounds %struct.Poi* %arrayidx43, i32 0, i32 1
+  %30 = load i64* %y44, align 8
+  %sub45 = sub nsw i64 %28, %30
+  %31 = load i32* @top, align 4
+  %idxprom46 = sext i32 %31 to i64
+  %arrayidx47 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom46
+  %x48 = getelementptr inbounds %struct.Poi* %arrayidx47, i32 0, i32 0
+  %32 = load i64* %x48, align 8
+  %33 = load i32* @top, align 4
+  %sub49 = sub nsw i32 %33, 1
+  %idxprom50 = sext i32 %sub49 to i64
+  %arrayidx51 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom50
+  %x52 = getelementptr inbounds %struct.Poi* %arrayidx51, i32 0, i32 0
+  %34 = load i64* %x52, align 8
+  %sub53 = sub nsw i64 %32, %34
+  %mul54 = mul nsw i64 %sub45, %sub53
+  %cmp55 = icmp sge i64 %mul38, %mul54
+  br label %land.end
+
+12
+  %35 = phi i1 [ false, %while.cond ], [ %cmp55, %land.rhs ]
+  br i1 %35, label %while.body, label %while.end
+
+13
+  %36 = load i32* @top, align 4
+  %dec = add nsw i32 %36, -1
+  store i32 %dec, i32* @top, align 4
+  br label %while.cond
+
+14
+  %37 = load i32* @top, align 4
+  %inc56 = add nsw i32 %37, 1
+  store i32 %inc56, i32* @top, align 4
+  %idxprom57 = sext i32 %inc56 to i64
+  %arrayidx58 = getelementptr inbounds [100005 x %struct.Poi]* @stk, i32 0, i64 %idxprom57
+  %38 = load i32* %i9, align 4
+  %idxprom59 = sext i32 %38 to i64
+  %arrayidx60 = getelementptr inbounds [100005 x %struct.Poi]* @P, i32 0, i64 %idxprom59
+  %39 = bitcast %struct.Poi* %arrayidx58 to i8*
+  %40 = bitcast %struct.Poi* %arrayidx60 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %39, i8* %40, i64 16, i32 8, i1 false)
+  br label %for.inc61
+
+15
+  %41 = load i32* %i9, align 4
+  %inc62 = add nsw i32 %41, 1
+  store i32 %inc62, i32* %i9, align 4
+  br label %for.cond10
+
+16
+  %42 = load i32* @top, align 4
+  %sub64 = sub nsw i32 %42, 1
+  %call65 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i32 %sub64)
+  ret i32 0

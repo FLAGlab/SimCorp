@@ -17,7 +17,7 @@ bool cmp1(nd a,nd b){
 int work(nd a,nd b,nd c){
  return (b.x-a.x)*(c.y-a.y)-(c.x-a.x)*(b.y-a.y);
 }
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++){
 		cin>>aa[i].x>>aa[i].y;

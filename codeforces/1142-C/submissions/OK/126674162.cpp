@@ -1,7 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>
-#include <cmath>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 ll n, top, m;
@@ -14,7 +11,7 @@ double cal(point A, point B, point C) {
 bool cmp(point A, point B) {
  return (A.x == B.x) ? (A.y > B.y) : (A.x < B.x);
 }
-int main() {
+signed main() {
 	scanf("%lld", &n);
  for (int i = 1; i <= n; i++) {
 		scanf("%lld %lld", &b[i].x, &b[i].y);

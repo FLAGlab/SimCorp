@@ -24,7 +24,7 @@ inline int find(int x)
  if(f[x]==x) return x;
  return f[x]=find(f[x]);
 }
-int main(){
+signed main(){
 	n=read();m=read();
  for(re int i=1;i<=n;++i)
  {

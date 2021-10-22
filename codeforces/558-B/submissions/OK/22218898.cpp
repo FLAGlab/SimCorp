@@ -1,10 +1,9 @@
-#include<iostream>
-#include<cstdio>
+#include<bits/stdc++.h>
 using namespace std;
 int t[1000000+20];
 int s[1000000+20];
 int e[1000000+20];
-int main(){
+signed main(){
  int n,a;
 	cin>>n;
  for(int i=1;i<=n;i++){

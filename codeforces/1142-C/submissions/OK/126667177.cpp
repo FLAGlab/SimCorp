@@ -1,5 +1,4 @@
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 int n;
 const int maxn=1e6+100;
 typedef long long ll;
@@ -16,7 +15,7 @@ struct point{
  }
 }p[maxn];
 int st[maxn],tp=0;
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1;i<=n;i++){
 		scanf("%lld%lld",&p[i].x,&p[i].y);

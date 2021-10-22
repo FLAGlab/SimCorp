@@ -1,0 +1,262 @@
+
+1
+  %retval = alloca i32, align 4
+  %agg.tmp = alloca %"struct.std::_Setprecision", align 4
+  %n = alloca i32, align 4
+  %a = alloca i64, align 8
+  %b = alloca i64, align 8
+  %points = alloca %"class.std::vector", align 8
+  %edges = alloca %"class.std::vector", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %i = alloca i32, align 4
+  %ref.tmp = alloca %struct.Point, align 8
+  %ref.tmp19 = alloca i64, align 8
+  %ans = alloca i64, align 8
+  %start1 = alloca %struct.Point, align 8
+  %start2 = alloca %struct.Point, align 8
+  %i28 = alloca i32, align 4
+  %cnt = alloca i64, align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %0 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %0
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %1 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call1 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %1, %"class.std::basic_ostream"* null)
+  %vtable2 = load i8** bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8**)
+  %vbase.offset.ptr3 = getelementptr i8* %vtable2, i64 -24
+  %2 = bitcast i8* %vbase.offset.ptr3 to i64*
+  %vbase.offset4 = load i64* %2
+  %add.ptr5 = getelementptr inbounds i8* bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8*), i64 %vbase.offset4
+  %3 = bitcast i8* %add.ptr5 to %"class.std::basic_ios"*
+  %call6 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %3, %"class.std::basic_ostream"* null)
+  %call7 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSt8ios_baseS0_E(%"class.std::basic_ostream"* @_ZSt4cout, %"class.std::ios_base"* (%"class.std::ios_base"*)* @_ZSt5fixedRSt8ios_base)
+  %call8 = call i32 @_ZSt12setprecisioni(i32 12)
+  %coerce.dive = getelementptr %"struct.std::_Setprecision"* %agg.tmp, i32 0, i32 0
+  store i32 %call8, i32* %coerce.dive
+  %coerce.dive9 = getelementptr %"struct.std::_Setprecision"* %agg.tmp, i32 0, i32 0
+  %4 = load i32* %coerce.dive9
+  %call10 = call %"class.std::basic_ostream"* @_ZStlsIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_St13_Setprecision(%"class.std::basic_ostream"* %call7, i32 %4)
+  %5 = load %struct._IO_FILE** @stdin, align 8
+  %call11 = call %struct._IO_FILE* @freopen(i8* getelementptr inbounds ([10 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @.str1, i32 0, i32 0), %struct._IO_FILE* %5)
+  %6 = load %struct._IO_FILE** @stdout, align 8
+  %call12 = call %struct._IO_FILE* @freopen(i8* getelementptr inbounds ([13 x i8]* @.str2, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @.str3, i32 0, i32 0), %struct._IO_FILE* %6)
+  %call13 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %n)
+  call void @_ZNSt6vectorI5PointIxESaIS1_EEC1Ev(%"class.std::vector"* %points)
+  invoke void @_ZNSt6vectorI5PointIxESaIS1_EEC1Ev(%"class.std::vector"* %edges)
+          to label %invoke.cont unwind label %lpad
+
+2
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+3
+  %7 = load i32* %i, align 4
+  %8 = load i32* %n, align 4
+  %cmp = icmp slt i32 %7, %8
+  br i1 %cmp, label %for.body, label %for.end
+
+4
+  %call16 = invoke %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %a)
+          to label %invoke.cont15 unwind label %lpad14
+
+5
+  %call18 = invoke %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call16, i64* %b)
+          to label %invoke.cont17 unwind label %lpad14
+
+6
+  %9 = load i64* %b, align 8
+  %10 = load i64* %a, align 8
+  %11 = load i64* %a, align 8
+  %mul = mul nsw i64 %10, %11
+  %sub = sub nsw i64 %9, %mul
+  store i64 %sub, i64* %ref.tmp19, align 8
+  %call21 = invoke { i64, i64 } @_Z9makePointIxE5PointIT_ERKS1_S4_(i64* %a, i64* %ref.tmp19)
+          to label %invoke.cont20 unwind label %lpad14
+
+7
+  %12 = bitcast %struct.Point* %ref.tmp to { i64, i64 }*
+  %13 = getelementptr { i64, i64 }* %12, i32 0, i32 0
+  %14 = extractvalue { i64, i64 } %call21, 0
+  store i64 %14, i64* %13, align 1
+  %15 = getelementptr { i64, i64 }* %12, i32 0, i32 1
+  %16 = extractvalue { i64, i64 } %call21, 1
+  store i64 %16, i64* %15, align 1
+  invoke void @_ZNSt6vectorI5PointIxESaIS1_EE9push_backEOS1_(%"class.std::vector"* %points, %struct.Point* %ref.tmp)
+          to label %invoke.cont22 unwind label %lpad14
+
+8
+  %17 = load i32* %i, align 4
+  %inc = add nsw i32 %17, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+9
+  %18 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %19 = extractvalue { i8*, i32 } %18, 0
+  store i8* %19, i8** %exn.slot
+  %20 = extractvalue { i8*, i32 } %18, 1
+  store i32 %20, i32* %ehselector.slot
+  br label %ehcleanup
+
+10
+  %21 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %22 = extractvalue { i8*, i32 } %21, 0
+  store i8* %22, i8** %exn.slot
+  %23 = extractvalue { i8*, i32 } %21, 1
+  store i32 %23, i32* %ehselector.slot
+  call void @_ZNSt6vectorI5PointIxESaIS1_EED1Ev(%"class.std::vector"* %edges) #2
+  br label %ehcleanup
+
+11
+  store i64 1, i64* %ans, align 8
+  invoke void @_Z11convex_hullRSt6vectorI5PointIxESaIS1_EES4_(%"class.std::vector"* %points, %"class.std::vector"* %edges)
+          to label %invoke.cont23 unwind label %lpad14
+
+12
+  %call25 = invoke %struct.Point* @_ZNSt6vectorI5PointIxESaIS1_EEixEm(%"class.std::vector"* %edges, i64 0)
+          to label %invoke.cont24 unwind label %lpad14
+
+13
+  %24 = bitcast %struct.Point* %start1 to i8*
+  %25 = bitcast %struct.Point* %call25 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %24, i8* %25, i64 16, i32 8, i1 false)
+  %call27 = invoke %struct.Point* @_ZNSt6vectorI5PointIxESaIS1_EEixEm(%"class.std::vector"* %edges, i64 1)
+          to label %invoke.cont26 unwind label %lpad14
+
+14
+  %26 = bitcast %struct.Point* %start2 to i8*
+  %27 = bitcast %struct.Point* %call27 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %26, i8* %27, i64 16, i32 8, i1 false)
+  store i32 2, i32* %i28, align 4
+  br label %while.cond
+
+15
+  %28 = load i32* %i28, align 4
+  %conv = sext i32 %28 to i64
+  %call29 = call i64 @_ZNKSt6vectorI5PointIxESaIS1_EE4sizeEv(%"class.std::vector"* %edges) #2
+  %cmp30 = icmp ult i64 %conv, %call29
+  br i1 %cmp30, label %while.body, label %while.end55
+
+16
+  store i64 2, i64* %cnt, align 8
+  br label %while.cond31
+
+17
+  %29 = load i32* %i28, align 4
+  %conv32 = sext i32 %29 to i64
+  %call33 = call i64 @_ZNKSt6vectorI5PointIxESaIS1_EE4sizeEv(%"class.std::vector"* %edges) #2
+  %cmp34 = icmp ult i64 %conv32, %call33
+  br i1 %cmp34, label %land.rhs, label %land.end
+
+18
+  %30 = load i32* %i28, align 4
+  %conv35 = sext i32 %30 to i64
+  %call37 = invoke %struct.Point* @_ZNSt6vectorI5PointIxESaIS1_EEixEm(%"class.std::vector"* %edges, i64 %conv35)
+          to label %invoke.cont36 unwind label %lpad14
+
+19
+  %call39 = invoke i64 @_Z3ccwIxxxEDTcl3ccwmifp_fp1_mifp0_fp1_EERK5PointIT_ERKS1_IT0_ERKS1_IT1_E(%struct.Point* %call37, %struct.Point* %start2, %struct.Point* %start1)
+          to label %invoke.cont38 unwind label %lpad14
+
+20
+  %tobool = icmp ne i64 %call39, 0
+  %lnot = xor i1 %tobool, true
+  br label %land.end
+
+21
+  %31 = phi i1 [ false, %while.cond31 ], [ %lnot, %invoke.cont38 ]
+  br i1 %31, label %while.body40, label %while.end
+
+22
+  %32 = load i64* %cnt, align 8
+  %inc41 = add nsw i64 %32, 1
+  store i64 %inc41, i64* %cnt, align 8
+  %33 = load i32* %i28, align 4
+  %inc42 = add nsw i32 %33, 1
+  store i32 %inc42, i32* %i28, align 4
+  br label %while.cond31
+
+23
+  %34 = load i32* %i28, align 4
+  %conv43 = sext i32 %34 to i64
+  %call44 = call i64 @_ZNKSt6vectorI5PointIxESaIS1_EE4sizeEv(%"class.std::vector"* %edges) #2
+  %cmp45 = icmp eq i64 %conv43, %call44
+  br i1 %cmp45, label %if.then, label %if.end
+
+24
+  br label %while.end55
+
+25
+  %35 = load i32* %i28, align 4
+  %sub46 = sub nsw i32 %35, 1
+  %conv47 = sext i32 %sub46 to i64
+  %call49 = invoke %struct.Point* @_ZNSt6vectorI5PointIxESaIS1_EEixEm(%"class.std::vector"* %edges, i64 %conv47)
+          to label %invoke.cont48 unwind label %lpad14
+
+26
+  %36 = bitcast %struct.Point* %start1 to i8*
+  %37 = bitcast %struct.Point* %call49 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %36, i8* %37, i64 16, i32 8, i1 false)
+  %38 = load i32* %i28, align 4
+  %conv50 = sext i32 %38 to i64
+  %call52 = invoke %struct.Point* @_ZNSt6vectorI5PointIxESaIS1_EEixEm(%"class.std::vector"* %edges, i64 %conv50)
+          to label %invoke.cont51 unwind label %lpad14
+
+27
+  %39 = bitcast %struct.Point* %start2 to i8*
+  %40 = bitcast %struct.Point* %call52 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %39, i8* %40, i64 16, i32 8, i1 false)
+  %41 = load i32* %i28, align 4
+  %inc53 = add nsw i32 %41, 1
+  store i32 %inc53, i32* %i28, align 4
+  %42 = load i64* %ans, align 8
+  %inc54 = add nsw i64 %42, 1
+  store i64 %inc54, i64* %ans, align 8
+  br label %while.cond
+
+28
+  %call56 = call i64 @_ZNKSt6vectorI5PointIxESaIS1_EE4sizeEv(%"class.std::vector"* %edges) #2
+  %43 = load i32* %n, align 4
+  %conv57 = sext i32 %43 to i64
+  %cmp58 = icmp eq i64 %call56, %conv57
+  br i1 %cmp58, label %land.lhs.true, label %if.else
+
+29
+  %44 = load i64* %ans, align 8
+  %cmp59 = icmp eq i64 %44, 1
+  br i1 %cmp59, label %if.then60, label %if.else
+
+30
+  %call62 = invoke %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 0)
+          to label %invoke.cont61 unwind label %lpad14
+
+31
+  br label %if.end65
+
+32
+  %45 = load i64* %ans, align 8
+  %call64 = invoke %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %45)
+          to label %invoke.cont63 unwind label %lpad14
+
+33
+  br label %if.end65
+
+34
+  call void @_ZNSt6vectorI5PointIxESaIS1_EED1Ev(%"class.std::vector"* %edges) #2
+  call void @_ZNSt6vectorI5PointIxESaIS1_EED1Ev(%"class.std::vector"* %points) #2
+  %46 = load i32* %retval
+  ret i32 %46
+
+35
+  call void @_ZNSt6vectorI5PointIxESaIS1_EED1Ev(%"class.std::vector"* %points) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val66 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val66

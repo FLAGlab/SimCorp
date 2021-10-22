@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -14,7 +14,7 @@ void build (int curr, vector <int> & c, vector <int> & cost, int w, int maxw, in
  }
 }
  
-int main()
+signed main()
 {
   IO;
  int n, w, b, x; cin >> n >> w >> b >> x;

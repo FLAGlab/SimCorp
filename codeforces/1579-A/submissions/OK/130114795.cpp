@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -7,7 +6,7 @@ int n;
 string str;
 int cnt;
  
-int main() {
+signed main() {
 	cin>>n;
  while(n--) {
 		cnt = 0;

@@ -1,7 +1,7 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
  
-int main() {
+signed main() {
  int n,max = -1, ind;
 	cin>>n;
  int a[n], hash[1000001]={0},st[1000001]={0},fin[1000001]={0};

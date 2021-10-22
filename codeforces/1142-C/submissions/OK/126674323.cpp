@@ -1,5 +1,4 @@
-#include <cstdio>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 5;
 int n, top, st[N];
@@ -15,7 +14,7 @@ bool cmp (node x, node y) {
 inline bool check (int i, int j, int k) {
  return (a[k].y - a[i].y) * (a[k].x - a[j].x) <= (a[k].y - a[j].y) * (a[k].x - a[i].x);
 }
-int main() {
+signed main() {
 	scanf ("%d", &n);
  for (int i = 1; i <= n; i++) {
 		scanf ("%lld%lld", &b[i].x, &b[i].y);

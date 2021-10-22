@@ -1,8 +1,7 @@
-#include <iostream>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 int n,a[100005],b[1000006],mx,f;
-main(){
+signed main(){
     cin>>n;
  for(int i=0;i<n;++i){
         cin>>a[i];

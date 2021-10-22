@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<map>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn=150005,maxv=1000005;
 int n,q,mx,ps;
@@ -22,7 +20,7 @@ void sieve(int n){
  }
  }
 }
-int main(){
+signed main(){
 	scanf("%d%d",&n,&q);
  for(int i=1;i<=n;i++)
 		scanf("%d",&a[i]),mx=max(mx,a[i]),f[i]=i;

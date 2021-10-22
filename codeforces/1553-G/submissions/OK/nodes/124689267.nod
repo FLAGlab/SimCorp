@@ -1,0 +1,53 @@
+
+1
+  %retval = alloca i32, align 4
+  %m = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i5 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %0 = load %struct._IO_FILE** @stdin, align 8
+  %call = call %struct._IO_FILE* @freopen(i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @.str2, i32 0, i32 0), %struct._IO_FILE* %0)
+  %1 = load %struct._IO_FILE** @stdout, align 8
+  %call1 = call %struct._IO_FILE* @freopen(i8* getelementptr inbounds ([8 x i8]* @.str3, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @.str4, i32 0, i32 0), %struct._IO_FILE* %1)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call2, i32* %m)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %2 = load i32* %i, align 4
+  %3 = load i32* @n, align 4
+  %cmp = icmp sle i32 %2, %3
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %4 = load i32* %i, align 4
+  %idxprom = sext i32 %4 to i64
+  %arrayidx = getelementptr inbounds [1010101 x i32]* @a, i32 0, i64 %idxprom
+  %call4 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %arrayidx)
+  %5 = load i32* %i, align 4
+  %inc = add nsw i32 %5, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  call void @_Z3prev()
+  store i32 1, i32* %i5, align 4
+  br label %for.cond6
+
+5
+  %6 = load i32* %i5, align 4
+  %7 = load i32* %m, align 4
+  %cmp7 = icmp sle i32 %6, %7
+  br i1 %cmp7, label %for.body8, label %for.end11
+
+6
+  call void @_Z5solvev()
+  %8 = load i32* %i5, align 4
+  %inc10 = add nsw i32 %8, 1
+  store i32 %inc10, i32* %i5, align 4
+  br label %for.cond6
+
+7
+  %9 = load i32* %retval
+  ret i32 %9

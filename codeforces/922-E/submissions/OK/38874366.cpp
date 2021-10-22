@@ -1,8 +1,7 @@
-#include <iostream>
-#include <string.h>
+#include<bits/stdc++.h>
 using namespace std;
 long long dp[1005][10005],cnt[1005],cost[1005];
-int main()
+signed main()
 {
  int n,w,b,x;
 	scanf("%d%d%d%d",&n,&w,&b,&x);

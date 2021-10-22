@@ -9,7 +9,7 @@ inline int find(int x){
  if(x==fa[x]) return x;
  return fa[x]=find(fa[x]);
 }
-int main(){
+signed main(){
 	scanf("%d%d",&n,&q);
  for(int i=1;i<=n;++i){
 		scanf("%d",&a[i]);

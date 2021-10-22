@@ -1,0 +1,149 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %s = alloca %"class.std::basic_string", align 8
+  %count = alloca i32, align 4
+  %n = alloca i32, align 4
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %t)
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  call void @_ZNSsC1Ev(%"class.std::basic_string"* %s)
+  store i32 0, i32* %count, align 4
+  %call1 = call i64 @_ZNKSs4sizeEv(%"class.std::basic_string"* %s) #2
+  %conv = trunc i64 %call1 to i32
+  store i32 %conv, i32* %n, align 4
+  %call2 = invoke %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RSbIS4_S5_T1_E(%"class.std::basic_istream"* @_ZSt3cin, %"class.std::basic_string"* %s)
+          to label %invoke.cont unwind label %lpad
+
+4
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+5
+  %1 = load i32* %i, align 4
+  %conv3 = sext i32 %1 to i64
+  %call4 = call i64 @_ZNKSs4sizeEv(%"class.std::basic_string"* %s) #2
+  %cmp = icmp ult i64 %conv3, %call4
+  br i1 %cmp, label %for.body, label %for.end
+
+6
+  %2 = load i32* %i, align 4
+  %conv5 = sext i32 %2 to i64
+  %call7 = invoke i8* @_ZNSsixEm(%"class.std::basic_string"* %s, i64 %conv5)
+          to label %invoke.cont6 unwind label %lpad
+
+7
+  %3 = load i8* %call7
+  %conv8 = sext i8 %3 to i32
+  %cmp9 = icmp eq i32 %conv8, 65
+  br i1 %cmp9, label %land.lhs.true, label %lor.lhs.false
+
+8
+  %4 = load i32* %i, align 4
+  %add = add nsw i32 %4, 1
+  %conv10 = sext i32 %add to i64
+  %call12 = invoke i8* @_ZNSsixEm(%"class.std::basic_string"* %s, i64 %conv10)
+          to label %invoke.cont11 unwind label %lpad
+
+9
+  %5 = load i8* %call12
+  %conv13 = sext i8 %5 to i32
+  %cmp14 = icmp eq i32 %conv13, 66
+  br i1 %cmp14, label %if.then, label %lor.lhs.false
+
+10
+  %6 = load i32* %i, align 4
+  %conv15 = sext i32 %6 to i64
+  %call17 = invoke i8* @_ZNSsixEm(%"class.std::basic_string"* %s, i64 %conv15)
+          to label %invoke.cont16 unwind label %lpad
+
+11
+  %7 = load i8* %call17
+  %conv18 = sext i8 %7 to i32
+  %cmp19 = icmp eq i32 %conv18, 66
+  br i1 %cmp19, label %land.lhs.true20, label %if.end
+
+12
+  %8 = load i32* %i, align 4
+  %conv21 = sext i32 %8 to i64
+  %call23 = invoke i8* @_ZNSsixEm(%"class.std::basic_string"* %s, i64 %conv21)
+          to label %invoke.cont22 unwind label %lpad
+
+13
+  %9 = load i8* %call23
+  %conv24 = sext i8 %9 to i32
+  %cmp25 = icmp eq i32 %conv24, 67
+  br i1 %cmp25, label %if.then, label %if.end
+
+14
+  %10 = load i32* %n, align 4
+  %dec26 = add nsw i32 %10, -1
+  store i32 %dec26, i32* %n, align 4
+  br label %if.end
+
+15
+  %11 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot
+  call void @_ZNSsD1Ev(%"class.std::basic_string"* %s) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val38 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val38
+
+16
+  %14 = load i32* %i, align 4
+  %inc = add nsw i32 %14, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+17
+  %15 = load i32* %n, align 4
+  %cmp27 = icmp eq i32 %15, 0
+  br i1 %cmp27, label %if.then28, label %if.else
+
+18
+  %call30 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* getelementptr inbounds ([4 x i8]* @.str, i32 0, i32 0))
+          to label %invoke.cont29 unwind label %lpad
+
+19
+  %call32 = invoke %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call30, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %invoke.cont31 unwind label %lpad
+
+20
+  br label %if.end37
+
+21
+  %call34 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* getelementptr inbounds ([3 x i8]* @.str1, i32 0, i32 0))
+          to label %invoke.cont33 unwind label %lpad
+
+22
+  %call36 = invoke %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call34, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %invoke.cont35 unwind label %lpad
+
+23
+  br label %if.end37
+
+24
+  call void @_ZNSsD1Ev(%"class.std::basic_string"* %s) #2
+  br label %while.cond
+
+25
+  ret i32 0

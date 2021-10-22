@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define maxn 150005
 #define maxv 1000005
 using namespace std;
@@ -17,7 +17,7 @@ int find(int x){
  return x == f[x] ? x : f[x] = find(f[x]);
 }
  
-int main(){
+signed main(){
 	n = read(), q = read();
  for(int i=1; i<=1000001; ++i) f[i] = i;
  for(int i=1, x; i<=n; ++i){

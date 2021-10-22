@@ -1,7 +1,7 @@
+#include<bits/stdc++.h>
 //#pragma GCC optimize("Ofast")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
  
-#include <bits/stdc++.h>
  
 #define fi first
 #define se second
@@ -44,7 +44,7 @@ ll cost[N];
  
 ll dp[N];
  
-int main(){ _
+signed main(){ _
  int n;
   ll W, B, X;
   cin >> n >> W >> B >> X;

@@ -1,5 +1,5 @@
+#include<bits/stdc++.h>
 //Daniel Grzegorzewski
-#include <bits/stdc++.h>
 #pragma GCC optimize("O3")
  
 #define MP make_pair

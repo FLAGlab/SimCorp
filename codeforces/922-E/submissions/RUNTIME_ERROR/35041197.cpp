@@ -4,7 +4,7 @@ using namespace std;
  
 long long n, w, b, x, cost[1000001], c[1000001], dp[1011][10011];
  
-int main()
+signed main()
 {
     cin >> n >> w >> b >> x;
  for(int i = 1; i <= n; i++)

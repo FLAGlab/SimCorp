@@ -1,0 +1,415 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i8 = alloca i32, align 4
+  %i17 = alloca i32, align 4
+  %j = alloca i32, align 4
+  %i42 = alloca i32, align 4
+  %j46 = alloca i32, align 4
+  %i71 = alloca i32, align 4
+  %p = alloca %"class.std::vector", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %nn = alloca i32, align 4
+  %j84 = alloca i32, align 4
+  %k = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %ref.tmp = alloca %"struct.std::pair.3", align 4
+  %coerce = alloca %"struct.std::pair", align 8
+  %ref.tmp135 = alloca %"struct.std::pair.3", align 4
+  store i32 0, i32* %retval
+  %call = call i32 @_Z4readv()
+  store i32 %call, i32* @n, align 4
+  %call1 = call i32 @_Z4readv()
+  store i32 %call1, i32* @m, align 4
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call2 = call i32 @_Z4readv()
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom
+  store i32 %call2, i32* %arrayidx, align 4
+  %3 = load i32* %i, align 4
+  %idxprom3 = sext i32 %3 to i64
+  %arrayidx4 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom3
+  %4 = load i32* %arrayidx4, align 4
+  %5 = load i32* @ma, align 4
+  %cmp5 = icmp sgt i32 %4, %5
+  br i1 %cmp5, label %if.then, label %if.end
+
+4
+  %6 = load i32* %i, align 4
+  %idxprom6 = sext i32 %6 to i64
+  %arrayidx7 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom6
+  %7 = load i32* %arrayidx7, align 4
+  store i32 %7, i32* @ma, align 4
+  br label %if.end
+
+5
+  %8 = load i32* %i, align 4
+  %inc = add nsw i32 %8, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+6
+  store i32 1, i32* %i8, align 4
+  br label %for.cond9
+
+7
+  %9 = load i32* %i8, align 4
+  %10 = load i32* @ma, align 4
+  %add = add nsw i32 %10, 1
+  %cmp10 = icmp sle i32 %9, %add
+  br i1 %cmp10, label %for.body11, label %for.end16
+
+8
+  %11 = load i32* %i8, align 4
+  %12 = load i32* %i8, align 4
+  %idxprom12 = sext i32 %12 to i64
+  %arrayidx13 = getelementptr inbounds [300010 x i32]* @f, i32 0, i64 %idxprom12
+  store i32 %11, i32* %arrayidx13, align 4
+  %13 = load i32* %i8, align 4
+  %inc15 = add nsw i32 %13, 1
+  store i32 %inc15, i32* %i8, align 4
+  br label %for.cond9
+
+9
+  store i32 2, i32* %i17, align 4
+  br label %for.cond18
+
+10
+  %14 = load i32* %i17, align 4
+  %15 = load i32* @ma, align 4
+  %add19 = add nsw i32 %15, 1
+  %cmp20 = icmp sle i32 %14, %add19
+  br i1 %cmp20, label %for.body21, label %for.end41
+
+11
+  %16 = load i32* %i17, align 4
+  %idxprom22 = sext i32 %16 to i64
+  %arrayidx23 = getelementptr inbounds [1000010 x %"class.std::vector"]* @q, i32 0, i64 %idxprom22
+  %call24 = call zeroext i1 @_ZNKSt6vectorIiSaIiEE5emptyEv(%"class.std::vector"* %arrayidx23) #2
+  br i1 %call24, label %if.then25, label %if.end38
+
+12
+  %17 = load i32* %i17, align 4
+  store i32 %17, i32* %j, align 4
+  br label %for.cond26
+
+13
+  %18 = load i32* %j, align 4
+  %19 = load i32* @ma, align 4
+  %add27 = add nsw i32 %19, 1
+  %cmp28 = icmp sle i32 %18, %add27
+  br i1 %cmp28, label %for.body29, label %for.end37
+
+14
+  %20 = load i32* %j, align 4
+  %idxprom30 = sext i32 %20 to i64
+  %arrayidx31 = getelementptr inbounds [1000010 x %"class.std::vector"]* @q, i32 0, i64 %idxprom30
+  call void @_ZNSt6vectorIiSaIiEE9push_backERKi(%"class.std::vector"* %arrayidx31, i32* %i17)
+  %21 = load i32* %j, align 4
+  %idxprom32 = sext i32 %21 to i64
+  %arrayidx33 = getelementptr inbounds [300010 x i32]* @pl, i32 0, i64 %idxprom32
+  %22 = load i32* %arrayidx33, align 4
+  %inc34 = add nsw i32 %22, 1
+  store i32 %inc34, i32* %arrayidx33, align 4
+  %23 = load i32* %i17, align 4
+  %24 = load i32* %j, align 4
+  %add36 = add nsw i32 %24, %23
+  store i32 %add36, i32* %j, align 4
+  br label %for.cond26
+
+15
+  br label %if.end38
+
+16
+  %25 = load i32* %i17, align 4
+  %inc40 = add nsw i32 %25, 1
+  store i32 %inc40, i32* %i17, align 4
+  br label %for.cond18
+
+17
+  store i32 1, i32* %i42, align 4
+  br label %for.cond43
+
+18
+  %26 = load i32* %i42, align 4
+  %27 = load i32* @n, align 4
+  %cmp44 = icmp sle i32 %26, %27
+  br i1 %cmp44, label %for.body45, label %for.end70
+
+19
+  store i32 0, i32* %j46, align 4
+  br label %for.cond47
+
+20
+  %28 = load i32* %j46, align 4
+  %29 = load i32* %i42, align 4
+  %idxprom48 = sext i32 %29 to i64
+  %arrayidx49 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom48
+  %30 = load i32* %arrayidx49, align 4
+  %idxprom50 = sext i32 %30 to i64
+  %arrayidx51 = getelementptr inbounds [300010 x i32]* @pl, i32 0, i64 %idxprom50
+  %31 = load i32* %arrayidx51, align 4
+  %cmp52 = icmp slt i32 %28, %31
+  br i1 %cmp52, label %for.body53, label %for.end67
+
+21
+  %32 = load i32* %i42, align 4
+  %idxprom54 = sext i32 %32 to i64
+  %arrayidx55 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom54
+  %33 = load i32* %arrayidx55, align 4
+  %idxprom56 = sext i32 %33 to i64
+  %arrayidx57 = getelementptr inbounds [1000010 x %"class.std::vector"]* @q, i32 0, i64 %idxprom56
+  %34 = load i32* %j46, align 4
+  %conv = sext i32 %34 to i64
+  %call58 = call i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector"* %arrayidx57, i64 %conv)
+  %35 = load i32* %call58
+  %call59 = call i32 @_Z4findi(i32 %35)
+  %36 = load i32* %i42, align 4
+  %idxprom60 = sext i32 %36 to i64
+  %arrayidx61 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom60
+  %37 = load i32* %arrayidx61, align 4
+  %call62 = call i32 @_Z4findi(i32 %37)
+  %idxprom63 = sext i32 %call62 to i64
+  %arrayidx64 = getelementptr inbounds [300010 x i32]* @f, i32 0, i64 %idxprom63
+  store i32 %call59, i32* %arrayidx64, align 4
+  %38 = load i32* %j46, align 4
+  %inc66 = add nsw i32 %38, 1
+  store i32 %inc66, i32* %j46, align 4
+  br label %for.cond47
+
+22
+  %39 = load i32* %i42, align 4
+  %inc69 = add nsw i32 %39, 1
+  store i32 %inc69, i32* %i42, align 4
+  br label %for.cond43
+
+23
+  store i32 1, i32* %i71, align 4
+  br label %for.cond72
+
+24
+  %40 = load i32* %i71, align 4
+  %41 = load i32* @n, align 4
+  %cmp73 = icmp sle i32 %40, %41
+  br i1 %cmp73, label %for.body74, label %for.end120
+
+25
+  %42 = load i32* %i71, align 4
+  %idxprom75 = sext i32 %42 to i64
+  %arrayidx76 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom75
+  %43 = load i32* %arrayidx76, align 4
+  %add77 = add nsw i32 %43, 1
+  %idxprom78 = sext i32 %add77 to i64
+  %arrayidx79 = getelementptr inbounds [1000010 x %"class.std::vector"]* @q, i32 0, i64 %idxprom78
+  call void @_ZNSt6vectorIiSaIiEEC1ERKS1_(%"class.std::vector"* %p, %"class.std::vector"* %arrayidx79)
+  %44 = load i32* %i71, align 4
+  %idxprom80 = sext i32 %44 to i64
+  %arrayidx81 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom80
+  invoke void @_ZNSt6vectorIiSaIiEE9push_backERKi(%"class.std::vector"* %p, i32* %arrayidx81)
+          to label %invoke.cont unwind label %lpad
+
+26
+  %call82 = call i64 @_ZNKSt6vectorIiSaIiEE4sizeEv(%"class.std::vector"* %p) #2
+  %conv83 = trunc i64 %call82 to i32
+  store i32 %conv83, i32* %nn, align 4
+  store i32 0, i32* %j84, align 4
+  br label %for.cond85
+
+27
+  %45 = load i32* %j84, align 4
+  %46 = load i32* %nn, align 4
+  %cmp86 = icmp slt i32 %45, %46
+  br i1 %cmp86, label %for.body87, label %for.end117
+
+28
+  %47 = load i32* %j84, align 4
+  %add88 = add nsw i32 %47, 1
+  store i32 %add88, i32* %k, align 4
+  br label %for.cond89
+
+29
+  %48 = load i32* %k, align 4
+  %49 = load i32* %nn, align 4
+  %cmp90 = icmp slt i32 %48, %49
+  br i1 %cmp90, label %for.body91, label %for.end114
+
+30
+  %50 = load i32* %j84, align 4
+  %conv92 = sext i32 %50 to i64
+  %call94 = invoke i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector"* %p, i64 %conv92)
+          to label %invoke.cont93 unwind label %lpad
+
+31
+  %51 = load i32* %call94
+  store i32 %51, i32* %x, align 4
+  %52 = load i32* %k, align 4
+  %conv95 = sext i32 %52 to i64
+  %call97 = invoke i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector"* %p, i64 %conv95)
+          to label %invoke.cont96 unwind label %lpad
+
+32
+  %53 = load i32* %call97
+  store i32 %53, i32* %y, align 4
+  %54 = load i32* %x, align 4
+  %call99 = invoke i32 @_Z4findi(i32 %54)
+          to label %invoke.cont98 unwind label %lpad
+
+33
+  store i32 %call99, i32* %x, align 4
+  %55 = load i32* %y, align 4
+  %call101 = invoke i32 @_Z4findi(i32 %55)
+          to label %invoke.cont100 unwind label %lpad
+
+34
+  store i32 %call101, i32* %y, align 4
+  %56 = load i32* %x, align 4
+  %57 = load i32* %y, align 4
+  %cmp102 = icmp sgt i32 %56, %57
+  br i1 %cmp102, label %if.then103, label %if.end104
+
+35
+  call void @_ZSt4swapIiEvRT_S1_(i32* %x, i32* %y) #2
+  br label %if.end104
+
+36
+  %58 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %59 = extractvalue { i8*, i32 } %58, 0
+  store i8* %59, i8** %exn.slot
+  %60 = extractvalue { i8*, i32 } %58, 1
+  store i32 %60, i32* %ehselector.slot
+  call void @_ZNSt6vectorIiSaIiEED1Ev(%"class.std::vector"* %p) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val145 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val145
+
+37
+  %61 = load i32* %x, align 4
+  %62 = load i32* %y, align 4
+  %cmp105 = icmp ne i32 %61, %62
+  br i1 %cmp105, label %if.then106, label %if.end111
+
+38
+  %call108 = invoke i64 @_ZSt9make_pairIRiS0_ESt4pairINSt17__decay_and_stripIT_E6__typeENS2_IT0_E6__typeEEOS3_OS6_(i32* %x, i32* %y)
+          to label %invoke.cont107 unwind label %lpad
+
+39
+  %63 = bitcast %"struct.std::pair.3"* %ref.tmp to i64*
+  store i64 %call108, i64* %63, align 1
+  %call110 = invoke { %"struct.std::_Rb_tree_node_base"*, i8 } @_ZNSt3setISt4pairIiiESt4lessIS1_ESaIS1_EE6insertEOS1_(%"class.std::set"* @s, %"struct.std::pair.3"* %ref.tmp)
+          to label %invoke.cont109 unwind label %lpad
+
+40
+  %64 = bitcast %"struct.std::pair"* %coerce to { %"struct.std::_Rb_tree_node_base"*, i8 }*
+  %65 = getelementptr { %"struct.std::_Rb_tree_node_base"*, i8 }* %64, i32 0, i32 0
+  %66 = extractvalue { %"struct.std::_Rb_tree_node_base"*, i8 } %call110, 0
+  store %"struct.std::_Rb_tree_node_base"* %66, %"struct.std::_Rb_tree_node_base"** %65, align 1
+  %67 = getelementptr { %"struct.std::_Rb_tree_node_base"*, i8 }* %64, i32 0, i32 1
+  %68 = extractvalue { %"struct.std::_Rb_tree_node_base"*, i8 } %call110, 1
+  store i8 %68, i8* %67, align 1
+  br label %if.end111
+
+41
+  %69 = load i32* %k, align 4
+  %inc113 = add nsw i32 %69, 1
+  store i32 %inc113, i32* %k, align 4
+  br label %for.cond89
+
+42
+  %70 = load i32* %j84, align 4
+  %inc116 = add nsw i32 %70, 1
+  store i32 %inc116, i32* %j84, align 4
+  br label %for.cond85
+
+43
+  call void @_ZNSt6vectorIiSaIiEED1Ev(%"class.std::vector"* %p) #2
+  %71 = load i32* %i71, align 4
+  %inc119 = add nsw i32 %71, 1
+  store i32 %inc119, i32* %i71, align 4
+  br label %for.cond72
+
+44
+  br label %while.cond
+
+45
+  %72 = load i32* @m, align 4
+  %dec = add nsw i32 %72, -1
+  store i32 %dec, i32* @m, align 4
+  %tobool = icmp ne i32 %72, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+46
+  %call121 = call i32 @_Z4readv()
+  store i32 %call121, i32* @x, align 4
+  %call122 = call i32 @_Z4readv()
+  store i32 %call122, i32* @y, align 4
+  %73 = load i32* @x, align 4
+  %idxprom123 = sext i32 %73 to i64
+  %arrayidx124 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom123
+  %74 = load i32* %arrayidx124, align 4
+  %call125 = call i32 @_Z4findi(i32 %74)
+  store i32 %call125, i32* @x, align 4
+  %75 = load i32* @y, align 4
+  %idxprom126 = sext i32 %75 to i64
+  %arrayidx127 = getelementptr inbounds [300010 x i32]* @a, i32 0, i64 %idxprom126
+  %76 = load i32* %arrayidx127, align 4
+  %call128 = call i32 @_Z4findi(i32 %76)
+  store i32 %call128, i32* @y, align 4
+  %77 = load i32* @x, align 4
+  %78 = load i32* @y, align 4
+  %cmp129 = icmp sgt i32 %77, %78
+  br i1 %cmp129, label %if.then130, label %if.end131
+
+47
+  call void @_ZSt4swapIiEvRT_S1_(i32* @x, i32* @y) #2
+  br label %if.end131
+
+48
+  %79 = load i32* @x, align 4
+  %80 = load i32* @y, align 4
+  %cmp132 = icmp eq i32 %79, %80
+  br i1 %cmp132, label %if.then133, label %if.else
+
+49
+  %call134 = call i32 @puts(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0))
+  br label %if.end144
+
+50
+  %call136 = call i64 @_ZSt9make_pairIRiS0_ESt4pairINSt17__decay_and_stripIT_E6__typeENS2_IT0_E6__typeEEOS3_OS6_(i32* @x, i32* @y)
+  %81 = bitcast %"struct.std::pair.3"* %ref.tmp135 to i64*
+  store i64 %call136, i64* %81, align 1
+  %call137 = call i64 @_ZNKSt3setISt4pairIiiESt4lessIS1_ESaIS1_EE5countERKS1_(%"class.std::set"* @s, %"struct.std::pair.3"* %ref.tmp135)
+  %tobool138 = icmp ne i64 %call137, 0
+  br i1 %tobool138, label %if.then139, label %if.else141
+
+51
+  %call140 = call i32 @puts(i8* getelementptr inbounds ([3 x i8]* @.str3, i32 0, i32 0))
+  br label %if.end143
+
+52
+  %call142 = call i32 @puts(i8* getelementptr inbounds ([3 x i8]* @.str4, i32 0, i32 0))
+  br label %if.end143
+
+53
+  br label %if.end144
+
+54
+  br label %while.cond
+
+55
+  ret i32 0

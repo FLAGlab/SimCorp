@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -6,7 +6,7 @@ static const int MAX = 1000000;
  
 int l[MAX + 1] = {}, r[MAX + 1] = {}, c[MAX + 1] = {};
  
-int main()
+signed main()
 {
  int n, m = 0; cin >> n;
  for (int i = 1; i <= n; ++i) {

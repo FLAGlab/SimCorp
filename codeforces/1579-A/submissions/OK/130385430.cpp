@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
 string s;
 int co[3];
  
-int main()
+signed main()
 {
  int t;
 	cin >> t;

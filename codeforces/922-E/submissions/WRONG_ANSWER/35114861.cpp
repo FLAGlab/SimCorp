@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 ll DP[1001][10001];
  
-int main()
+signed main()
 {
     ios::sync_with_stdio(0);
     ll n,W,B,X;

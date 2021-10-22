@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define inf 2000000000
 #define li 1005
 using namespace std;
 int n,w,b,x,c[li],cost[li],dp[li][li];
-int main()
+signed main()
 {
     scanf("%d %d %d %d",&n,&w,&b,&x);
  for(int i=1;i<=n;i++) scanf("%d",&c[i]);

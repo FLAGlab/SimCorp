@@ -2,7 +2,7 @@
 using namespace std;
 int T;
 string s;
-int main()
+signed main()
 {
 	scanf("%d",&T);
  while(T--) 

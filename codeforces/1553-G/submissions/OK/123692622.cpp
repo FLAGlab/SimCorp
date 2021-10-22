@@ -8,7 +8,7 @@ int get(int x){
  if (x==f[x]) return x;
  return f[x]=get(f[x]);
 }
-int main(){
+signed main(){
 	scanf("%d%d",&n,&q);
  for (int i=1;i<=n;i++)
 		scanf("%d",&a[i]),

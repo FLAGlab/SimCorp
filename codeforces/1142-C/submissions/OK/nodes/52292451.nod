@@ -1,0 +1,156 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %ref.tmp = alloca %struct.P, align 8
+  %i6 = alloca i32, align 4
+  %agg.tmp = alloca %struct.P, align 8
+  %agg.tmp24 = alloca %struct.P, align 8
+  %agg.tmp27 = alloca %struct.P, align 8
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* @n)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %sub = sub nsw i32 %1, 1
+  %cmp = icmp sle i32 %0, %sub
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([5 x i8]* @.str2, i32 0, i32 0), i32* @x, i32* @y)
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [250010 x %struct.P]* @p, i32 0, i64 %idxprom
+  %x = getelementptr inbounds %struct.P* %ref.tmp, i32 0, i32 0
+  %3 = load i32* @x, align 4
+  store i32 %3, i32* %x, align 4
+  %y = getelementptr inbounds %struct.P* %ref.tmp, i32 0, i32 1
+  %4 = load i32* @y, align 4
+  %conv = sitofp i32 %4 to double
+  %5 = load i32* @x, align 4
+  %conv2 = sitofp i32 %5 to double
+  %mul = fmul double 1.000000e+00, %conv2
+  %6 = load i32* @x, align 4
+  %conv3 = sitofp i32 %6 to double
+  %mul4 = fmul double %mul, %conv3
+  %sub5 = fsub double %conv, %mul4
+  store double %sub5, double* %y, align 8
+  %7 = bitcast %struct.P* %arrayidx to i8*
+  %8 = bitcast %struct.P* %ref.tmp to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  %9 = load i32* %i, align 4
+  %inc = add nsw i32 %9, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %10 = load i32* @n, align 4
+  %idx.ext = sext i32 %10 to i64
+  %add.ptr = getelementptr inbounds %struct.P* getelementptr inbounds ([250010 x %struct.P]* @p, i32 0, i32 0), i64 %idx.ext
+  call void @_ZSt4sortIP1PEvT_S2_(%struct.P* getelementptr inbounds ([250010 x %struct.P]* @p, i32 0, i32 0), %struct.P* %add.ptr)
+  store i32 0, i32* %i6, align 4
+  br label %for.cond7
+
+5
+  %11 = load i32* %i6, align 4
+  %12 = load i32* @n, align 4
+  %sub8 = sub nsw i32 %12, 1
+  %cmp9 = icmp sle i32 %11, %sub8
+  br i1 %cmp9, label %for.body10, label %for.end34
+
+6
+  %13 = load i32* %i6, align 4
+  %tobool = icmp ne i32 %13, 0
+  br i1 %tobool, label %land.lhs.true, label %if.end
+
+7
+  %14 = load i32* %i6, align 4
+  %idxprom11 = sext i32 %14 to i64
+  %arrayidx12 = getelementptr inbounds [250010 x %struct.P]* @p, i32 0, i64 %idxprom11
+  %x13 = getelementptr inbounds %struct.P* %arrayidx12, i32 0, i32 0
+  %15 = load i32* %x13, align 4
+  %16 = load i32* %i6, align 4
+  %sub14 = sub nsw i32 %16, 1
+  %idxprom15 = sext i32 %sub14 to i64
+  %arrayidx16 = getelementptr inbounds [250010 x %struct.P]* @p, i32 0, i64 %idxprom15
+  %x17 = getelementptr inbounds %struct.P* %arrayidx16, i32 0, i32 0
+  %17 = load i32* %x17, align 4
+  %cmp18 = icmp eq i32 %15, %17
+  br i1 %cmp18, label %if.then, label %if.end
+
+8
+  br label %for.inc32
+
+9
+  br label %while.cond
+
+10
+  %call19 = call i64 @_ZNKSt6vectorI1PSaIS0_EE4sizeEv(%"class.std::vector"* @v) #2
+  %cmp20 = icmp ugt i64 %call19, 1
+  br i1 %cmp20, label %land.rhs, label %land.end
+
+11
+  %call21 = call i64 @_ZNKSt6vectorI1PSaIS0_EE4sizeEv(%"class.std::vector"* @v) #2
+  %sub22 = sub i64 %call21, 2
+  %call23 = call %struct.P* @_ZNSt6vectorI1PSaIS0_EEixEm(%"class.std::vector"* @v, i64 %sub22)
+  %18 = bitcast %struct.P* %agg.tmp to i8*
+  %19 = bitcast %struct.P* %call23 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %18, i8* %19, i64 16, i32 8, i1 false)
+  %20 = load i32* %i6, align 4
+  %idxprom25 = sext i32 %20 to i64
+  %arrayidx26 = getelementptr inbounds [250010 x %struct.P]* @p, i32 0, i64 %idxprom25
+  %21 = bitcast %struct.P* %agg.tmp24 to i8*
+  %22 = bitcast %struct.P* %arrayidx26 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %21, i8* %22, i64 16, i32 8, i1 false)
+  %call28 = call %struct.P* @_ZNSt6vectorI1PSaIS0_EE4backEv(%"class.std::vector"* @v)
+  %23 = bitcast %struct.P* %agg.tmp27 to i8*
+  %24 = bitcast %struct.P* %call28 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %23, i8* %24, i64 16, i32 8, i1 false)
+  %25 = bitcast %struct.P* %agg.tmp to { i32, double }*
+  %26 = getelementptr { i32, double }* %25, i32 0, i32 0
+  %27 = load i32* %26, align 1
+  %28 = getelementptr { i32, double }* %25, i32 0, i32 1
+  %29 = load double* %28, align 1
+  %30 = bitcast %struct.P* %agg.tmp24 to { i32, double }*
+  %31 = getelementptr { i32, double }* %30, i32 0, i32 0
+  %32 = load i32* %31, align 1
+  %33 = getelementptr { i32, double }* %30, i32 0, i32 1
+  %34 = load double* %33, align 1
+  %35 = bitcast %struct.P* %agg.tmp27 to { i32, double }*
+  %36 = getelementptr { i32, double }* %35, i32 0, i32 0
+  %37 = load i32* %36, align 1
+  %38 = getelementptr { i32, double }* %35, i32 0, i32 1
+  %39 = load double* %38, align 1
+  %call29 = call zeroext i1 @_Z5check1PS_S_(i32 %27, double %29, i32 %32, double %34, i32 %37, double %39)
+  br label %land.end
+
+12
+  %40 = phi i1 [ false, %while.cond ], [ %call29, %land.rhs ]
+  br i1 %40, label %while.body, label %while.end
+
+13
+  call void @_ZNSt6vectorI1PSaIS0_EE8pop_backEv(%"class.std::vector"* @v)
+  br label %while.cond
+
+14
+  %41 = load i32* %i6, align 4
+  %idxprom30 = sext i32 %41 to i64
+  %arrayidx31 = getelementptr inbounds [250010 x %struct.P]* @p, i32 0, i64 %idxprom30
+  call void @_ZNSt6vectorI1PSaIS0_EE9push_backERKS0_(%"class.std::vector"* @v, %struct.P* %arrayidx31)
+  br label %for.inc32
+
+15
+  %42 = load i32* %i6, align 4
+  %inc33 = add nsw i32 %42, 1
+  store i32 %inc33, i32* %i6, align 4
+  br label %for.cond7
+
+16
+  %call35 = call i64 @_ZNKSt6vectorI1PSaIS0_EE4sizeEv(%"class.std::vector"* @v) #2
+  %sub36 = sub i64 %call35, 1
+  %call37 = call %"class.std::basic_ostream"* @_ZNSolsEm(%"class.std::basic_ostream"* @_ZSt4cout, i64 %sub36)
+  %call38 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call37, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+  ret i32 0

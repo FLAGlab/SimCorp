@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ull unsigned long long int
 #define ll long long int
  
 using namespace std;
  
-int main(){
+signed main(){
  // freopen("sample.txt","r",stdin);
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

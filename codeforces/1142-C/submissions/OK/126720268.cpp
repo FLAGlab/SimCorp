@@ -1,6 +1,4 @@
-#include<iostream>
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 #define ll long long
 using namespace std;
 const int N=1e6+10;
@@ -17,7 +15,7 @@ bool cmp(abc a,abc b){
  else return a.y>b.y;
 }
  
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++){
 		scanf("%lld %lld",&a[i].x,&a[i].y);

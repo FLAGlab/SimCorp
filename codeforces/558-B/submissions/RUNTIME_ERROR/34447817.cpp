@@ -1,10 +1,9 @@
 #include<bits/stdc++.h>
-#include <iostream>
 using namespace std;
 #define ll long long
 pair<int,int> a[100003];
 int f[3][100005];
-int main()
+signed main()
 {
  int n;
 	cin>>n;

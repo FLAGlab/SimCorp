@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define N 1000005
 using namespace std;
 inline int read(){

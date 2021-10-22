@@ -3,7 +3,7 @@ using namespace std;
 map<long long,long long> mp;
 long long a[100005];
 long long vis[100005];
-int main()
+signed main()
 {
  int n;
  while(cin>>n)

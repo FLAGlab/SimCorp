@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -21,7 +21,7 @@ bool ccw(point p1, point p2, point p3){
  
 point P[MAXN], H[MAXN];
  
-int main(){
+signed main(){
  int n;
  while(scanf("%d", &n) > 0){
  for(int i=0; i<n; i++){

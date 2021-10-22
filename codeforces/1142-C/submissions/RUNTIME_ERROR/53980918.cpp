@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-#include<unistd.h>
+#include<bits/stdc++.h>
 #define inf (int)(1e9)
 #define fi first
 #define se second
@@ -50,7 +49,7 @@ vector<point> tubao(vector<point> a) {
  if(a.size()>1) res.resize(m-1);
  return res;
 }
-int main()
+signed main()
 {
     ios::sync_with_stdio(0), cin.tie(0);
  int n;
@@ -68,7 +67,7 @@ int main()
  int nx=(i+1)%p.size();
  if(p[nx].x<p[i].x) ans++;
  }
-    sleep(1.5);
+    //sleep(1.5);
     cout<<ans<<'\n';
  return 1;
 }

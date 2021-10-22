@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn = 3000010;
 typedef long long LL;
@@ -7,7 +7,7 @@ int n,w,b,x;
 int c[maxn];
 int cost[maxn];
 int dp[1001][10010];
-main()
+signed main()
 {
 	scanf("%lld%lld%lld%lld",&n,&w,&b,&x);
  for(int i = 1;i<= n;i++)scanf("%lld",&c[i]);

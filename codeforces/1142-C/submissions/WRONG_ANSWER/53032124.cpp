@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define X first
 #define Y second
 using namespace std;
@@ -8,7 +8,7 @@ pair<ll,ll> p[100010];
 ll ccw(pair<ll,ll> &a, pair<ll,ll> &b, pair<ll,ll> &c) {
  return (ll)(b.X-a.X)*(c.Y-a.Y) - (ll)(b.Y-a.Y)*(c.X-a.X);
 }
-int main() {
+signed main() {
 	scanf("%d", &n);
  for(int i=1; i<=n; i++) {
  int x, y;

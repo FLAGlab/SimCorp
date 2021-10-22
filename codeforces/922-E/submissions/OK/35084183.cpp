@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+signed main()
 {
  long long N=10100,M=10000 , n,w,b,x,c[N],cnt[N] , dp[N],m[N] , ans;
 	cin>>n>>w>>b>>x     ,   dp[0]=w    ,    m[0]=1;

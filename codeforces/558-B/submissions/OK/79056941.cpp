@@ -6,7 +6,7 @@ using namespace std;
 int a[maxn],r[maxn],l[maxn];
 ll n,i,k,ansr,ansl;
  
-int main()
+signed main()
 {
 	ll ma=-1;
  for(cin>>n;i<=n-1;i++)

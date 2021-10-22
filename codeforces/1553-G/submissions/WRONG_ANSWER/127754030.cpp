@@ -36,7 +36,7 @@ bool cone(int u,int v){
  }
  }
 }
-int main(){
+signed main(){
 	n=read(),q=read(),tot=0;
  for(int i=1;i<=1000000;++i) fa[i]=i;
  for(int i=1;i<=n;++i){

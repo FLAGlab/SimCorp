@@ -10,7 +10,7 @@ const double eps=1e-9;
 const int inf=1e9;
 map<int,int>m;
 int a[mx];
-main(){
+signed main(){
  int n,pos1=0,pos2=0,maxx=0;
     scanf("%d",&n);
  for(int i=1;i<=n;i++){

@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define inf 2000000000
 #define li 1005
 #define lo long long
 using namespace std;
 lo int n,w,b,x,c[li],cost[li],dp[li][li];
-int main()
+signed main()
 {
     scanf("%lld %lld %lld %lld",&n,&w,&b,&x);
  for(int i=1;i<=n;i++) scanf("%lld",&c[i]);

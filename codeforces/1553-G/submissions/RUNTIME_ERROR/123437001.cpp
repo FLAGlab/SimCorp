@@ -1,6 +1,4 @@
-#include<iostream>
-#include<vector>
-#include<set>
+#include<bits/stdc++.h>
 #define rep(i,a,b) for(int i = (a); i <= (b); i++)
 #define per(i,b,a) for(int i = (b); i >= (a); i--)
 #define N 150100
@@ -37,7 +35,7 @@ vector<int> get(int x){
  return ret;
 }
  
-int main(){
+signed main(){
     ios::sync_with_stdio(false);
     euler();
     cin>>n>>q;

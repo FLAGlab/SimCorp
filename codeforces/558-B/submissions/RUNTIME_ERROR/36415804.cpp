@@ -16,7 +16,7 @@ public:
 };
  
  
-int main()
+signed main()
 {
  long long int n,a,maxx=0,diff=-1,num;
     cin>>n;

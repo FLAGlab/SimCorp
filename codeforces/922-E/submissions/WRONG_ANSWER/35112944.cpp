@@ -14,7 +14,7 @@ for(int j=0;j<=c[i];j++){
 }
 return dp[i][current]=maxis;
 }
-int main(){
+signed main(){
     cin>>n>>W>>B>>X;
  for(int i=0;i<n;i++){cin>>c[i];}
  for(int i=0;i<n;i++)cin>>cost[i];

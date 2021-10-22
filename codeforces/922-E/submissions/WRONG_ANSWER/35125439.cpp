@@ -1,15 +1,10 @@
-#include<iostream>
-#include<cstring>
-#include<cmath>
-#include<algorithm>
-#include<cstdio>
-#include<cstdlib>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 const ll INF=10000000000000000ll;
 ll f[1001][10005];
 ll cost[1001],num[1001],W,B,X,n;
-int main()
+signed main()
 {
 	cin>>n>>W>>B>>X;
  for(int i=1;i<=n;i++) cin>>num[i];

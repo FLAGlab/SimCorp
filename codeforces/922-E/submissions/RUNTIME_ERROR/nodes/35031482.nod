@@ -1,0 +1,340 @@
+
+1
+  %retval = alloca i32, align 4
+  %treeNum = alloca i32, align 4
+  %startLimit = alloca i64, align 8
+  %gain = alloca i64, align 8
+  %restore = alloca i64, align 8
+  %lives = alloca %"class.std::vector", align 8
+  %costs = alloca %"class.std::vector", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %lastRange = alloca i32, align 4
+  %newRange = alloca i32, align 4
+  %curr = alloca %"class.std::vector", align 8
+  %ref.tmp = alloca i64, align 8
+  %ref.tmp5 = alloca %"class.std::allocator", align 1
+  %next = alloca %"class.std::vector", align 8
+  %ref.tmp8 = alloca i64, align 8
+  %ref.tmp9 = alloca %"class.std::allocator", align 1
+  %tree = alloca i32, align 4
+  %single = alloca i64, align 8
+  %birds = alloca i32, align 4
+  %mana = alloca i64, align 8
+  %ref.tmp24 = alloca i64, align 8
+  %ref.tmp28 = alloca i64, align 8
+  %ref.tmp33 = alloca i64, align 8
+  %canBuy = alloca i64, align 8
+  %ref.tmp36 = alloca i64, align 8
+  %buying = alloca i32, align 4
+  %ref.tmp53 = alloca i64, align 8
+  %ref.tmp61 = alloca i32, align 4
+  %result = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %call1 = call i32 @_Z4loadIiET_v()
+  store i32 %call1, i32* %treeNum, align 4
+  %call2 = call i64 @_Z4loadIxET_v()
+  store i64 %call2, i64* %startLimit, align 8
+  %call3 = call i64 @_Z4loadIxET_v()
+  store i64 %call3, i64* %gain, align 8
+  %call4 = call i64 @_Z4loadIxET_v()
+  store i64 %call4, i64* %restore, align 8
+  %0 = load i32* %treeNum, align 4
+  call void @_Z5loadNIxESt6vectorIT_SaIS1_EEi(%"class.std::vector"* sret %lives, i32 %0)
+  %1 = load i32* %treeNum, align 4
+  invoke void @_Z5loadNIxESt6vectorIT_SaIS1_EEi(%"class.std::vector"* sret %costs, i32 %1)
+          to label %invoke.cont unwind label %lpad
+
+2
+  store i32 0, i32* %lastRange, align 4
+  store i32 0, i32* %newRange, align 4
+  store i64 -2305843009213693951, i64* %ref.tmp, align 8
+  call void @_ZNSaIxEC1Ev(%"class.std::allocator"* %ref.tmp5) #2
+  invoke void @_ZNSt6vectorIxSaIxEEC1EmRKxRKS0_(%"class.std::vector"* %curr, i64 1000077, i64* %ref.tmp, %"class.std::allocator"* %ref.tmp5)
+          to label %invoke.cont7 unwind label %lpad6
+
+3
+  call void @_ZNSaIxED1Ev(%"class.std::allocator"* %ref.tmp5) #2
+  store i64 -2305843009213693951, i64* %ref.tmp8, align 8
+  call void @_ZNSaIxEC1Ev(%"class.std::allocator"* %ref.tmp9) #2
+  invoke void @_ZNSt6vectorIxSaIxEEC1EmRKxRKS0_(%"class.std::vector"* %next, i64 1000077, i64* %ref.tmp8, %"class.std::allocator"* %ref.tmp9)
+          to label %invoke.cont11 unwind label %lpad10
+
+4
+  call void @_ZNSaIxED1Ev(%"class.std::allocator"* %ref.tmp9) #2
+  %2 = load i64* %startLimit, align 8
+  %3 = load i64* %restore, align 8
+  %sub = sub nsw i64 %2, %3
+  %call14 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %curr, i64 0)
+          to label %invoke.cont13 unwind label %lpad12
+
+5
+  store i64 %sub, i64* %call14
+  store i32 0, i32* %tree, align 4
+  br label %for.cond
+
+6
+  %4 = load i32* %tree, align 4
+  %5 = load i32* %treeNum, align 4
+  %cmp = icmp slt i32 %4, %5
+  br i1 %cmp, label %for.body, label %for.end72
+
+7
+  %6 = load i32* %tree, align 4
+  %conv = sext i32 %6 to i64
+  %call16 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %costs, i64 %conv)
+          to label %invoke.cont15 unwind label %lpad12
+
+8
+  %7 = load i64* %call16
+  store i64 %7, i64* %single, align 8
+  store i32 0, i32* %birds, align 4
+  br label %for.cond17
+
+9
+  %8 = load i32* %birds, align 4
+  %9 = load i32* %lastRange, align 4
+  %cmp18 = icmp sle i32 %8, %9
+  br i1 %cmp18, label %for.body19, label %for.end66
+
+10
+  %10 = load i32* %birds, align 4
+  %conv20 = sext i32 %10 to i64
+  %call22 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %curr, i64 %conv20)
+          to label %invoke.cont21 unwind label %lpad12
+
+11
+  %11 = load i64* %call22
+  %cmp23 = icmp ne i64 %11, -2305843009213693951
+  br i1 %cmp23, label %if.then, label %if.end
+
+12
+  store i64 0, i64* %ref.tmp24, align 8
+  %12 = load i32* %birds, align 4
+  %conv25 = sext i32 %12 to i64
+  %call27 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %curr, i64 %conv25)
+          to label %invoke.cont26 unwind label %lpad12
+
+13
+  %13 = load i64* %call27
+  %14 = load i64* %restore, align 8
+  %add = add nsw i64 %13, %14
+  store i64 %add, i64* %ref.tmp28, align 8
+  %call30 = invoke i64* @_ZSt3maxIxERKT_S2_S2_(i64* %ref.tmp24, i64* %ref.tmp28)
+          to label %invoke.cont29 unwind label %lpad12
+
+14
+  %15 = load i64* %startLimit, align 8
+  %16 = load i32* %birds, align 4
+  %conv31 = sext i32 %16 to i64
+  %17 = load i64* %gain, align 8
+  %mul = mul nsw i64 %conv31, %17
+  %add32 = add nsw i64 %15, %mul
+  store i64 %add32, i64* %ref.tmp33, align 8
+  %call35 = invoke i64* @_ZSt3minIxERKT_S2_S2_(i64* %call30, i64* %ref.tmp33)
+          to label %invoke.cont34 unwind label %lpad12
+
+15
+  %18 = load i64* %call35
+  store i64 %18, i64* %mana, align 8
+  %19 = load i64* %mana, align 8
+  %20 = load i64* %single, align 8
+  %div = sdiv i64 %19, %20
+  store i64 %div, i64* %ref.tmp36, align 8
+  %21 = load i32* %tree, align 4
+  %conv37 = sext i32 %21 to i64
+  %call39 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %lives, i64 %conv37)
+          to label %invoke.cont38 unwind label %lpad12
+
+16
+  %call41 = invoke i64* @_ZSt3minIxERKT_S2_S2_(i64* %ref.tmp36, i64* %call39)
+          to label %invoke.cont40 unwind label %lpad12
+
+17
+  %22 = load i64* %call41
+  store i64 %22, i64* %canBuy, align 8
+  store i32 0, i32* %buying, align 4
+  br label %for.cond42
+
+18
+  %23 = load i32* %buying, align 4
+  %conv43 = sext i32 %23 to i64
+  %24 = load i64* %canBuy, align 8
+  %cmp44 = icmp sle i64 %conv43, %24
+  br i1 %cmp44, label %for.body45, label %for.end
+
+19
+  %25 = load i32* %birds, align 4
+  %26 = load i32* %buying, align 4
+  %add46 = add nsw i32 %25, %26
+  %conv47 = sext i32 %add46 to i64
+  %call49 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %next, i64 %conv47)
+          to label %invoke.cont48 unwind label %lpad12
+
+20
+  %27 = load i64* %mana, align 8
+  %28 = load i32* %buying, align 4
+  %conv50 = sext i32 %28 to i64
+  %29 = load i64* %single, align 8
+  %mul51 = mul nsw i64 %conv50, %29
+  %sub52 = sub nsw i64 %27, %mul51
+  store i64 %sub52, i64* %ref.tmp53, align 8
+  %call55 = invoke i64* @_ZSt3maxIxERKT_S2_S2_(i64* %call49, i64* %ref.tmp53)
+          to label %invoke.cont54 unwind label %lpad12
+
+21
+  %30 = load i64* %call55
+  %31 = load i32* %birds, align 4
+  %32 = load i32* %buying, align 4
+  %add56 = add nsw i32 %31, %32
+  %conv57 = sext i32 %add56 to i64
+  %call59 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %next, i64 %conv57)
+          to label %invoke.cont58 unwind label %lpad12
+
+22
+  store i64 %30, i64* %call59
+  %33 = load i32* %birds, align 4
+  %34 = load i32* %buying, align 4
+  %add60 = add nsw i32 %33, %34
+  store i32 %add60, i32* %ref.tmp61, align 4
+  %call63 = invoke i32* @_ZSt3maxIiERKT_S2_S2_(i32* %newRange, i32* %ref.tmp61)
+          to label %invoke.cont62 unwind label %lpad12
+
+23
+  %35 = load i32* %call63
+  store i32 %35, i32* %newRange, align 4
+  %36 = load i32* %buying, align 4
+  %inc = add nsw i32 %36, 1
+  store i32 %inc, i32* %buying, align 4
+  br label %for.cond42
+
+24
+  %37 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot
+  br label %ehcleanup90
+
+25
+  %40 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot
+  call void @_ZNSaIxED1Ev(%"class.std::allocator"* %ref.tmp5) #2
+  br label %ehcleanup89
+
+26
+  %43 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %44 = extractvalue { i8*, i32 } %43, 0
+  store i8* %44, i8** %exn.slot
+  %45 = extractvalue { i8*, i32 } %43, 1
+  store i32 %45, i32* %ehselector.slot
+  call void @_ZNSaIxED1Ev(%"class.std::allocator"* %ref.tmp9) #2
+  br label %ehcleanup
+
+27
+  %46 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %47 = extractvalue { i8*, i32 } %46, 0
+  store i8* %47, i8** %exn.slot
+  %48 = extractvalue { i8*, i32 } %46, 1
+  store i32 %48, i32* %ehselector.slot
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %next) #2
+  br label %ehcleanup
+
+28
+  br label %if.end
+
+29
+  %49 = load i32* %birds, align 4
+  %inc65 = add nsw i32 %49, 1
+  store i32 %inc65, i32* %birds, align 4
+  br label %for.cond17
+
+30
+  %call68 = invoke i32* @_ZSt3maxIiERKT_S2_S2_(i32* %lastRange, i32* %newRange)
+          to label %invoke.cont67 unwind label %lpad12
+
+31
+  %50 = load i32* %call68
+  store i32 %50, i32* %lastRange, align 4
+  invoke void @_ZSt4swapIxSaIxEEvRSt6vectorIT_T0_ES5_(%"class.std::vector"* %curr, %"class.std::vector"* %next)
+          to label %invoke.cont69 unwind label %lpad12
+
+32
+  %51 = load i32* %tree, align 4
+  %inc71 = add nsw i32 %51, 1
+  store i32 %inc71, i32* %tree, align 4
+  br label %for.cond
+
+33
+  store i32 0, i32* %result, align 4
+  store i32 0, i32* %i, align 4
+  br label %for.cond73
+
+34
+  %52 = load i32* %i, align 4
+  %cmp74 = icmp slt i32 %52, 10004
+  br i1 %cmp74, label %for.body75, label %for.end84
+
+35
+  %53 = load i32* %i, align 4
+  %conv76 = sext i32 %53 to i64
+  %call78 = invoke i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %curr, i64 %conv76)
+          to label %invoke.cont77 unwind label %lpad12
+
+36
+  %54 = load i64* %call78
+  %cmp79 = icmp ne i64 %54, -2305843009213693951
+  br i1 %cmp79, label %if.then80, label %if.end81
+
+37
+  %55 = load i32* %i, align 4
+  store i32 %55, i32* %result, align 4
+  br label %if.end81
+
+38
+  %56 = load i32* %i, align 4
+  %inc83 = add nsw i32 %56, 1
+  store i32 %inc83, i32* %i, align 4
+  br label %for.cond73
+
+39
+  %57 = load i32* %result, align 4
+  %call86 = invoke %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %57)
+          to label %invoke.cont85 unwind label %lpad12
+
+40
+  %call88 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* %call86, i8 signext 10)
+          to label %invoke.cont87 unwind label %lpad12
+
+41
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %next) #2
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %curr) #2
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %costs) #2
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %lives) #2
+  %58 = load i32* %retval
+  ret i32 %58
+
+42
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %curr) #2
+  br label %ehcleanup89
+
+43
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %costs) #2
+  br label %ehcleanup90
+
+44
+  call void @_ZNSt6vectorIxSaIxEED1Ev(%"class.std::vector"* %lives) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val91 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val91

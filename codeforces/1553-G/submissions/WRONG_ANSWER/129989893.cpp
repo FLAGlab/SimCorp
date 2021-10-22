@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int f0[5000005],f1[5000005];
 int zys(int *glc,int a){
@@ -12,7 +12,7 @@ int zys(int *glc,int a){
 int prime[2000005],a[1000005];
 bool mark[2000005];
 //#define P for(int wba=0;wba<(n<<1);wba++){cout<<f0[wba]<<" ";}cout<<endl;
-int main(){
+signed main(){
  int n,q,i,j,A,B,sum=0;
 	cin>>n>>q;
  for(i=0;i<=2000000;i++){

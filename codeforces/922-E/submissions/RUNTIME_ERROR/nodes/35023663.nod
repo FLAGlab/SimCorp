@@ -1,0 +1,4 @@
+
+1
+  call void @"_Z5$mainv"()
+  ret i32 0

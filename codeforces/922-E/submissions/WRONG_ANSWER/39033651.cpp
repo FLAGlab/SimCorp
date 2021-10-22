@@ -1,11 +1,8 @@
-#include<cstdio>
-#include<iostream>
-#include<algorithm>
-#include<cstring>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 ll f[10005];
-int main()
+signed main()
 {
  int n,w,b,x,i,j,k;
     cin>>n>>w>>b>>x;

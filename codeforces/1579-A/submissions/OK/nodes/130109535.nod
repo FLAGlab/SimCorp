@@ -1,0 +1,47 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %ref.tmp = alloca %"class.std::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %t)
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  call void @_Z5solvev(%"class.std::basic_string"* sret %ref.tmp)
+  %call1 = invoke %"class.std::basic_ostream"* @_ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKSbIS4_S5_T1_E(%"class.std::basic_ostream"* @_ZSt4cout, %"class.std::basic_string"* %ref.tmp)
+          to label %invoke.cont unwind label %lpad
+
+4
+  %call3 = invoke %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call1, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %invoke.cont2 unwind label %lpad
+
+5
+  call void @_ZNSsD1Ev(%"class.std::basic_string"* %ref.tmp) #2
+  br label %while.cond
+
+6
+  %1 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %2 = extractvalue { i8*, i32 } %1, 0
+  store i8* %2, i8** %exn.slot
+  %3 = extractvalue { i8*, i32 } %1, 1
+  store i32 %3, i32* %ehselector.slot
+  call void @_ZNSsD1Ev(%"class.std::basic_string"* %ref.tmp) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val4 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val4
+
+7
+  ret i32 0

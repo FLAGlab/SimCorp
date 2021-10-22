@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int n,m,num,tag[1000005];
 class Point{
@@ -13,7 +13,7 @@ bool cmp(Point x,Point y){
  if(x.a==y.a) return x.b<y.b;
  return x.a<y.a;
 }
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++) scanf("%lld%lld",&p[i].a,&p[i].b),p[i].b-=p[i].a*p[i].a;
 	sort(p+1,p+n+1,cmp);

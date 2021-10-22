@@ -1,10 +1,9 @@
-#include <iostream>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
  
 #define int long long
  
-main() {
+signed main() {
  int n;
  long long W, B, X;
  long long a[n + 1], b[n + 1];

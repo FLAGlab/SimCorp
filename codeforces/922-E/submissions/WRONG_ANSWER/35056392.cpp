@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+signed main(){
  int n,w,b,x,sz=0,turn=0,c[1001],cost[1001];
  long long dp[2][10001];
   scanf("%d%d%d%d",&n,&w,&b,&x);

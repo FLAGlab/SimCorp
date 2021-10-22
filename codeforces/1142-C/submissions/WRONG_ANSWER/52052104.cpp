@@ -1,8 +1,9 @@
+#include<bits/stdc++.h>
  #include<bits/stdc++.h>
 using namespace std;
 int vertex,edge,u,v,w;
  
-int main()
+signed main()
 {
  int n;
     cin>>n;

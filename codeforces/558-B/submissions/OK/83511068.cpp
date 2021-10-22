@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long int
 int m[1000005],l[1000005];
-int main()
+signed main()
 {
  int n,x,maxi=0,mini=INT_MAX,ch=-1;
  

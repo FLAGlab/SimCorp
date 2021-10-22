@@ -1,7 +1,7 @@
-#include<bits/stdc++.h> 
+#include<bits/stdc++.h>
 using namespace std;
 const int N=1e5+5; int T,i,s,t,n; char st[N];
-int main() {
+signed main() {
 	scanf("%d",&T);
  for (;T--;) {
 		scanf("%s",st),n=strlen(st),s=0,t=0;

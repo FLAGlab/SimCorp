@@ -9,7 +9,7 @@ struct my
  int r;
 };
 my b[100000+10];
-int main()
+signed main()
 {
     cin>>n;
  map<int, int> mp;

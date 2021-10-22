@@ -1,7 +1,6 @@
-#include <iostream>
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main(){
+signed main(){
 int a1=0,a2=0,a3=0,i;
 string b;
 cin>>b;

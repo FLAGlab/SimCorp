@@ -1,0 +1,71 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %keep = alloca i32, align 4
+  %maxx = alloca i32, align 4
+  %i = alloca i32, align 4
+  %x = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %n)
+  store i32 -1, i32* %maxx, align 4
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* %n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %x)
+  %call2 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @start, i32* %x)
+  %2 = load i32* %call2
+  %tobool = icmp ne i32 %2, 0
+  br i1 %tobool, label %if.end, label %if.then
+
+4
+  %3 = load i32* %i, align 4
+  %call3 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @start, i32* %x)
+  store i32 %3, i32* %call3
+  br label %if.end
+
+5
+  %4 = load i32* %i, align 4
+  %call4 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @End, i32* %x)
+  store i32 %4, i32* %call4
+  %call5 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @cnt, i32* %x)
+  %5 = load i32* %call5
+  %inc = add nsw i32 %5, 1
+  store i32 %inc, i32* %call5
+  %call6 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @cnt, i32* %x)
+  %6 = load i32* %call6
+  %7 = load i32* %maxx, align 4
+  %cmp7 = icmp sgt i32 %6, %7
+  br i1 %cmp7, label %if.then8, label %if.end10
+
+6
+  %call9 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @cnt, i32* %x)
+  %8 = load i32* %call9
+  store i32 %8, i32* %maxx, align 4
+  %9 = load i32* %x, align 4
+  store i32 %9, i32* %keep, align 4
+  br label %if.end10
+
+7
+  %10 = load i32* %i, align 4
+  %inc11 = add nsw i32 %10, 1
+  store i32 %inc11, i32* %i, align 4
+  br label %for.cond
+
+8
+  %call12 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @start, i32* %keep)
+  %11 = load i32* %call12
+  %call13 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %11)
+  %call14 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call13, i8* getelementptr inbounds ([2 x i8]* @.str, i32 0, i32 0))
+  %call15 = call i32* @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEixERS3_(%"class.std::map"* @End, i32* %keep)
+  %12 = load i32* %call15
+  %call16 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %call14, i32 %12)
+  %call17 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call16, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+  ret i32 0

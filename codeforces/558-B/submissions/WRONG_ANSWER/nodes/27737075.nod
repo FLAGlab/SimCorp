@@ -1,0 +1,74 @@
+
+1
+  %retval = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* @n)
+  store i64 1, i64* @i, align 8
+  br label %for.cond
+
+2
+  %0 = load i64* @i, align 8
+  %1 = load i64* @n, align 8
+  %cmp = icmp sle i64 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i64* @i, align 8
+  %arrayidx = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %2
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx)
+  %3 = load i64* @i, align 8
+  %arrayidx2 = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %3
+  %call3 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @mp, i64* %arrayidx2)
+  %4 = load i64* %call3
+  %inc = add nsw i64 %4, 1
+  store i64 %inc, i64* %call3
+  %5 = load i64* @i, align 8
+  %arrayidx4 = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %5
+  %call5 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @mp1, i64* %arrayidx4)
+  %6 = load i64* %call5
+  %cmp6 = icmp eq i64 %6, 0
+  br i1 %cmp6, label %if.then, label %if.end
+
+4
+  %7 = load i64* @i, align 8
+  %8 = load i64* @i, align 8
+  %arrayidx7 = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %8
+  %call8 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @mp1, i64* %arrayidx7)
+  store i64 %7, i64* %call8
+  br label %if.end
+
+5
+  %9 = load i64* @i, align 8
+  %arrayidx9 = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %9
+  %call10 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @mp, i64* %arrayidx9)
+  %10 = load i64* %call10
+  %11 = load i64* @ma, align 8
+  %cmp11 = icmp sgt i64 %10, %11
+  br i1 %cmp11, label %if.then12, label %if.end15
+
+6
+  %12 = load i64* @i, align 8
+  %arrayidx13 = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %12
+  %call14 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @mp, i64* %arrayidx13)
+  %13 = load i64* %call14
+  store i64 %13, i64* @ma, align 8
+  %14 = load i64* @i, align 8
+  store i64 %14, i64* @t, align 8
+  br label %if.end15
+
+7
+  %15 = load i64* @i, align 8
+  %inc16 = add nsw i64 %15, 1
+  store i64 %inc16, i64* @i, align 8
+  br label %for.cond
+
+8
+  %16 = load i64* @t, align 8
+  %arrayidx17 = getelementptr inbounds [1000005 x i64]* @a, i32 0, i64 %16
+  %call18 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @mp1, i64* %arrayidx17)
+  %17 = load i64* %call18
+  %call19 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %17)
+  %call20 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call19, i8* getelementptr inbounds ([2 x i8]* @.str, i32 0, i32 0))
+  %18 = load i64* @t, align 8
+  %call21 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* %call20, i64 %18)
+  ret i32 0

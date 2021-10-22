@@ -1,5 +1,4 @@
-#include <iostream>
-#include <climits>
+#include<bits/stdc++.h>
 using namespace std;
 #define int int64_t
 const int N = 1e3 + 9;

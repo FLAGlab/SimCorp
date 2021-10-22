@@ -1,10 +1,9 @@
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 int dp[1005][10005],c[1005],cost[1005];
 int n,w,b,x;
  
-int main(){
+signed main(){
 	scanf("%d %d %d %d",&n,&w,&b,&x);
  int sc=0;
  for(int i=0;i<n;i++){

@@ -9,7 +9,7 @@ struct Poi{
  }
 }P[M],stk[M];
 int top,n;
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1,x,y;i<=n;i++){
 		scanf("%d%d",&x,&y);

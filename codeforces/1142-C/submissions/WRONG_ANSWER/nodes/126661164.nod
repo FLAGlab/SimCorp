@@ -1,0 +1,150 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i64, align 8
+  %j = alloca i64, align 8
+  %b = alloca i64, align 8
+  %c = alloca i64, align 8
+  %k = alloca i64, align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %0 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %0
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %1 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call1 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %1, %"class.std::basic_ostream"* null)
+  %vtable2 = load i8** bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8**)
+  %vbase.offset.ptr3 = getelementptr i8* %vtable2, i64 -24
+  %2 = bitcast i8* %vbase.offset.ptr3 to i64*
+  %vbase.offset4 = load i64* %2
+  %add.ptr5 = getelementptr inbounds i8* bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8*), i64 %vbase.offset4
+  %3 = bitcast i8* %add.ptr5 to %"class.std::basic_ios"*
+  %call6 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %3, %"class.std::basic_ostream"* null)
+  %call7 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* @n)
+  store i64 0, i64* %i, align 8
+  br label %for.cond
+
+2
+  %4 = load i64* %i, align 8
+  %5 = load i64* @n, align 8
+  %cmp = icmp slt i64 %4, %5
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %6 = load i64* %i, align 8
+  %arrayidx = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %6
+  %x = getelementptr inbounds %struct.node* %arrayidx, i32 0, i32 0
+  %call8 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %x)
+  %7 = load i64* %i, align 8
+  %arrayidx9 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %7
+  %y = getelementptr inbounds %struct.node* %arrayidx9, i32 0, i32 1
+  %call10 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call8, i64* %y)
+  %8 = load i64* %i, align 8
+  %inc = add nsw i64 %8, 1
+  store i64 %inc, i64* %i, align 8
+  br label %for.cond
+
+4
+  %9 = load i64* @n, align 8
+  %add.ptr11 = getelementptr inbounds %struct.node* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i32 0), i64 %9
+  call void @_ZSt4sortIP4nodePFbS0_S0_EEvT_S4_T0_(%struct.node* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i32 0), %struct.node* %add.ptr11, i1 (i64, i64, i64, i64)* @_Z3cmp4nodeS_)
+  store i64 1, i64* %j, align 8
+  br label %for.cond12
+
+5
+  %10 = load i64* %j, align 8
+  %11 = load i64* @n, align 8
+  %cmp13 = icmp slt i64 %10, %11
+  br i1 %cmp13, label %for.body14, label %for.end46
+
+6
+  %12 = load i64* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i64 0, i32 0), align 8
+  %13 = load i64* %j, align 8
+  %arrayidx15 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %13
+  %x16 = getelementptr inbounds %struct.node* %arrayidx15, i32 0, i32 0
+  %14 = load i64* %x16, align 8
+  %add = add nsw i64 %12, %14
+  store i64 %add, i64* %b, align 8
+  %15 = load i64* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i64 0, i32 1), align 8
+  %16 = load i64* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i64 0, i32 0), align 8
+  %17 = load i64* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i64 0, i32 0), align 8
+  %mul = mul nsw i64 %16, %17
+  %mul17 = mul nsw i64 %mul, 2
+  %sub = sub nsw i64 %15, %mul17
+  %18 = load i64* getelementptr inbounds ([1145141 x %struct.node]* @a, i32 0, i64 0, i32 0), align 8
+  %19 = load i64* %j, align 8
+  %arrayidx18 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %19
+  %x19 = getelementptr inbounds %struct.node* %arrayidx18, i32 0, i32 0
+  %20 = load i64* %x19, align 8
+  %mul20 = mul nsw i64 %18, %20
+  %sub21 = sub nsw i64 %sub, %mul20
+  store i64 %sub21, i64* %c, align 8
+  store i64 0, i64* @flag, align 8
+  store i64 0, i64* %k, align 8
+  br label %for.cond22
+
+7
+  %21 = load i64* %k, align 8
+  %22 = load i64* @n, align 8
+  %cmp23 = icmp slt i64 %21, %22
+  br i1 %cmp23, label %for.body24, label %for.end40
+
+8
+  %23 = load i64* %k, align 8
+  %arrayidx25 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %23
+  %y26 = getelementptr inbounds %struct.node* %arrayidx25, i32 0, i32 1
+  %24 = load i64* %y26, align 8
+  %25 = load i64* %k, align 8
+  %arrayidx27 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %25
+  %x28 = getelementptr inbounds %struct.node* %arrayidx27, i32 0, i32 0
+  %26 = load i64* %x28, align 8
+  %27 = load i64* %k, align 8
+  %arrayidx29 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %27
+  %x30 = getelementptr inbounds %struct.node* %arrayidx29, i32 0, i32 0
+  %28 = load i64* %x30, align 8
+  %mul31 = mul nsw i64 %26, %28
+  %29 = load i64* %b, align 8
+  %30 = load i64* %k, align 8
+  %arrayidx32 = getelementptr inbounds [1145141 x %struct.node]* @a, i32 0, i64 %30
+  %x33 = getelementptr inbounds %struct.node* %arrayidx32, i32 0, i32 0
+  %31 = load i64* %x33, align 8
+  %mul34 = mul nsw i64 %29, %31
+  %add35 = add nsw i64 %mul31, %mul34
+  %32 = load i64* %c, align 8
+  %add36 = add nsw i64 %add35, %32
+  %cmp37 = icmp sgt i64 %24, %add36
+  br i1 %cmp37, label %if.then, label %if.end
+
+9
+  store i64 1, i64* @flag, align 8
+  br label %if.end
+
+10
+  %33 = load i64* %k, align 8
+  %inc39 = add nsw i64 %33, 1
+  store i64 %inc39, i64* %k, align 8
+  br label %for.cond22
+
+11
+  %34 = load i64* @flag, align 8
+  %tobool = icmp ne i64 %34, 0
+  br i1 %tobool, label %if.end43, label %if.then41
+
+12
+  %35 = load i64* @ans, align 8
+  %inc42 = add nsw i64 %35, 1
+  store i64 %inc42, i64* @ans, align 8
+  br label %if.end43
+
+13
+  %36 = load i64* %j, align 8
+  %inc45 = add nsw i64 %36, 1
+  store i64 %inc45, i64* %j, align 8
+  br label %for.cond12
+
+14
+  %37 = load i64* @ans, align 8
+  %call47 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %37)
+  ret i32 0

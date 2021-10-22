@@ -18,7 +18,7 @@ void solve(){
  
 }
  
-int main(){
+signed main(){
  int T; scanf("%d", &T);
  while(T --){
 		solve();

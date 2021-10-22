@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define mp make_pair
 using namespace std;
 const int mx = 1123, mc = 11234;
@@ -6,7 +6,7 @@ long long dp[2][mc];
 int c[mx], cost[mx];
 int n;
 long long W, B, X;
-int main(){
+signed main(){
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cin >> n >> W >> B >> X;

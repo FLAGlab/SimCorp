@@ -1,0 +1,81 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %i = alloca i32, align 4
+  %n = alloca i64, align 8
+  %a = alloca [100 x i64], align 16
+  %e = alloca i64, align 8
+  %k = alloca i64, align 8
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %t)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* %t, align 4
+  %cmp = icmp slt i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0), i64* %n)
+  store i64 0, i64* %e, align 8
+  store i64 0, i64* %k, align 8
+  %2 = load i64* %n, align 8
+  %rem = srem i64 %2, 2
+  %cmp2 = icmp eq i64 %rem, 0
+  br i1 %cmp2, label %if.then, label %if.else9
+
+4
+  br label %while.cond
+
+5
+  %3 = load i64* %k, align 8
+  %cmp3 = icmp eq i64 %3, 0
+  br i1 %cmp3, label %while.body, label %while.end
+
+6
+  %4 = load i64* %n, align 8
+  %rem4 = srem i64 %4, 2
+  %cmp5 = icmp eq i64 %rem4, 0
+  br i1 %cmp5, label %if.then6, label %if.else
+
+7
+  %5 = load i64* %e, align 8
+  %arrayidx = getelementptr inbounds [100 x i64]* %a, i32 0, i64 %5
+  store i64 2, i64* %arrayidx, align 8
+  %6 = load i64* %e, align 8
+  %inc = add nsw i64 %6, 1
+  store i64 %inc, i64* %e, align 8
+  br label %if.end
+
+8
+  %7 = load i64* %n, align 8
+  %mul = mul nsw i64 %7, 2
+  %8 = load i64* %e, align 8
+  %sub = sub nsw i64 %8, 1
+  %arrayidx7 = getelementptr inbounds [100 x i64]* %a, i32 0, i64 %sub
+  store i64 %mul, i64* %arrayidx7, align 8
+  %9 = load i64* %k, align 8
+  %inc8 = add nsw i64 %9, 1
+  store i64 %inc8, i64* %k, align 8
+  br label %if.end
+
+9
+  br label %while.cond
+
+10
+  br label %if.end10
+
+11
+  br label %if.end10
+
+12
+  %10 = load i32* %i, align 4
+  %inc11 = add nsw i32 %10, 1
+  store i32 %inc11, i32* %i, align 4
+  br label %for.cond
+
+13
+  ret i32 0

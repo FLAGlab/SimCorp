@@ -1,9 +1,9 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
  
 int am[1000001], l[1000001], r[1000001];
  
-int main(){
+signed main(){
  int n, i, aux, m = 0, res = 10000000, left = -1, right = -1;
   cin >> n;
  for(i = 0; i < n; i++){

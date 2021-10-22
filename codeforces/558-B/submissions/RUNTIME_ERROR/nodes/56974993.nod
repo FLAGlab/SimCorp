@@ -1,0 +1,201 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %q = alloca i32, align 4
+  %l = alloca i32, align 4
+  %r = alloca i32, align 4
+  %cntnum = alloca i32, align 4
+  %i = alloca i32, align 4
+  %q15 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %n)
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %q)
+  %0 = load i32* %q, align 4
+  %idxprom = sext i32 %0 to i64
+  %arrayidx = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom
+  %x = getelementptr inbounds %struct.node* %arrayidx, i32 0, i32 0
+  store i32 1, i32* %x, align 4
+  %1 = load i32* %q, align 4
+  %idxprom2 = sext i32 %1 to i64
+  %arrayidx3 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom2
+  %y = getelementptr inbounds %struct.node* %arrayidx3, i32 0, i32 1
+  store i32 1, i32* %y, align 4
+  %2 = load i32* %q, align 4
+  %idxprom4 = sext i32 %2 to i64
+  %arrayidx5 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom4
+  %cnt = getelementptr inbounds %struct.node* %arrayidx5, i32 0, i32 2
+  %3 = load i32* %cnt, align 4
+  %inc = add nsw i32 %3, 1
+  store i32 %inc, i32* %cnt, align 4
+  %4 = load i32* %q, align 4
+  %idxprom6 = sext i32 %4 to i64
+  %arrayidx7 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom6
+  %x8 = getelementptr inbounds %struct.node* %arrayidx7, i32 0, i32 0
+  %5 = load i32* %x8, align 4
+  store i32 %5, i32* %l, align 4
+  %6 = load i32* %q, align 4
+  %idxprom9 = sext i32 %6 to i64
+  %arrayidx10 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom9
+  %y11 = getelementptr inbounds %struct.node* %arrayidx10, i32 0, i32 1
+  %7 = load i32* %y11, align 4
+  store i32 %7, i32* %r, align 4
+  %8 = load i32* %q, align 4
+  %idxprom12 = sext i32 %8 to i64
+  %arrayidx13 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom12
+  %cnt14 = getelementptr inbounds %struct.node* %arrayidx13, i32 0, i32 2
+  %9 = load i32* %cnt14, align 4
+  store i32 %9, i32* %cntnum, align 4
+  store i32 2, i32* %i, align 4
+  br label %for.cond
+
+2
+  %10 = load i32* %i, align 4
+  %11 = load i32* %n, align 4
+  %cmp = icmp sle i32 %10, %11
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call16 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %q15)
+  %12 = load i32* %q15, align 4
+  %idxprom17 = sext i32 %12 to i64
+  %arrayidx18 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom17
+  %cnt19 = getelementptr inbounds %struct.node* %arrayidx18, i32 0, i32 2
+  %13 = load i32* %cnt19, align 4
+  %tobool = icmp ne i32 %13, 0
+  br i1 %tobool, label %if.then, label %if.else
+
+4
+  %14 = load i32* %i, align 4
+  %15 = load i32* %q15, align 4
+  %idxprom20 = sext i32 %15 to i64
+  %arrayidx21 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom20
+  %y22 = getelementptr inbounds %struct.node* %arrayidx21, i32 0, i32 1
+  store i32 %14, i32* %y22, align 4
+  br label %if.end
+
+5
+  %16 = load i32* %i, align 4
+  %17 = load i32* %q15, align 4
+  %idxprom23 = sext i32 %17 to i64
+  %arrayidx24 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom23
+  %x25 = getelementptr inbounds %struct.node* %arrayidx24, i32 0, i32 0
+  store i32 %16, i32* %x25, align 4
+  %18 = load i32* %i, align 4
+  %19 = load i32* %q15, align 4
+  %idxprom26 = sext i32 %19 to i64
+  %arrayidx27 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom26
+  %y28 = getelementptr inbounds %struct.node* %arrayidx27, i32 0, i32 1
+  store i32 %18, i32* %y28, align 4
+  br label %if.end
+
+6
+  %20 = load i32* %q15, align 4
+  %idxprom29 = sext i32 %20 to i64
+  %arrayidx30 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom29
+  %cnt31 = getelementptr inbounds %struct.node* %arrayidx30, i32 0, i32 2
+  %21 = load i32* %cnt31, align 4
+  %inc32 = add nsw i32 %21, 1
+  store i32 %inc32, i32* %cnt31, align 4
+  %22 = load i32* %q15, align 4
+  %idxprom33 = sext i32 %22 to i64
+  %arrayidx34 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom33
+  %cnt35 = getelementptr inbounds %struct.node* %arrayidx34, i32 0, i32 2
+  %23 = load i32* %cnt35, align 4
+  %24 = load i32* %cntnum, align 4
+  %idxprom36 = sext i32 %24 to i64
+  %arrayidx37 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom36
+  %cnt38 = getelementptr inbounds %struct.node* %arrayidx37, i32 0, i32 2
+  %25 = load i32* %cnt38, align 4
+  %cmp39 = icmp sgt i32 %23, %25
+  br i1 %cmp39, label %if.then40, label %if.else47
+
+7
+  %26 = load i32* %q15, align 4
+  store i32 %26, i32* %cntnum, align 4
+  %27 = load i32* %q15, align 4
+  %idxprom41 = sext i32 %27 to i64
+  %arrayidx42 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom41
+  %x43 = getelementptr inbounds %struct.node* %arrayidx42, i32 0, i32 0
+  %28 = load i32* %x43, align 4
+  store i32 %28, i32* %l, align 4
+  %29 = load i32* %q15, align 4
+  %idxprom44 = sext i32 %29 to i64
+  %arrayidx45 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom44
+  %y46 = getelementptr inbounds %struct.node* %arrayidx45, i32 0, i32 1
+  %30 = load i32* %y46, align 4
+  store i32 %30, i32* %r, align 4
+  br label %if.end74
+
+8
+  %31 = load i32* %q15, align 4
+  %idxprom48 = sext i32 %31 to i64
+  %arrayidx49 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom48
+  %cnt50 = getelementptr inbounds %struct.node* %arrayidx49, i32 0, i32 2
+  %32 = load i32* %cnt50, align 4
+  %33 = load i32* %cntnum, align 4
+  %idxprom51 = sext i32 %33 to i64
+  %arrayidx52 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom51
+  %cnt53 = getelementptr inbounds %struct.node* %arrayidx52, i32 0, i32 2
+  %34 = load i32* %cnt53, align 4
+  %cmp54 = icmp eq i32 %32, %34
+  br i1 %cmp54, label %if.then55, label %if.end73
+
+9
+  %35 = load i32* %q15, align 4
+  %idxprom56 = sext i32 %35 to i64
+  %arrayidx57 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom56
+  %y58 = getelementptr inbounds %struct.node* %arrayidx57, i32 0, i32 1
+  %36 = load i32* %y58, align 4
+  %37 = load i32* %q15, align 4
+  %idxprom59 = sext i32 %37 to i64
+  %arrayidx60 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom59
+  %x61 = getelementptr inbounds %struct.node* %arrayidx60, i32 0, i32 0
+  %38 = load i32* %x61, align 4
+  %sub = sub nsw i32 %36, %38
+  %39 = load i32* %r, align 4
+  %40 = load i32* %l, align 4
+  %sub62 = sub nsw i32 %39, %40
+  %cmp63 = icmp slt i32 %sub, %sub62
+  br i1 %cmp63, label %if.then65, label %lor.lhs.false
+
+10
+  %41 = load i32* %q15, align 4
+  %42 = load i32* %cntnum, align 4
+  %cmp64 = icmp eq i32 %41, %42
+  br i1 %cmp64, label %if.then65, label %if.end72
+
+11
+  %43 = load i32* %q15, align 4
+  store i32 %43, i32* %cntnum, align 4
+  %44 = load i32* %q15, align 4
+  %idxprom66 = sext i32 %44 to i64
+  %arrayidx67 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom66
+  %x68 = getelementptr inbounds %struct.node* %arrayidx67, i32 0, i32 0
+  %45 = load i32* %x68, align 4
+  store i32 %45, i32* %l, align 4
+  %46 = load i32* %q15, align 4
+  %idxprom69 = sext i32 %46 to i64
+  %arrayidx70 = getelementptr inbounds [100005 x %struct.node]* @p, i32 0, i64 %idxprom69
+  %y71 = getelementptr inbounds %struct.node* %arrayidx70, i32 0, i32 1
+  %47 = load i32* %y71, align 4
+  store i32 %47, i32* %r, align 4
+  br label %if.end72
+
+12
+  br label %if.end73
+
+13
+  br label %if.end74
+
+14
+  %48 = load i32* %i, align 4
+  %inc75 = add nsw i32 %48, 1
+  store i32 %inc75, i32* %i, align 4
+  br label %for.cond
+
+15
+  %49 = load i32* %l, align 4
+  %50 = load i32* %r, align 4
+  %call76 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([7 x i8]* @.str2, i32 0, i32 0), i32 %49, i32 %50)
+  ret i32 0

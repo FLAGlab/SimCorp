@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int a[100005], b[100005];
 map<int, int>m;
  
-int main(){
+signed main(){
  int n, i, x, mx=-1;
     cin>>n;
  for(i=1;i<=n;i++){

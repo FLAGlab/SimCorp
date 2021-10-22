@@ -1,8 +1,4 @@
-#include <cstdio>
-#include <iostream>
-#include <cstring>
-#include <cmath>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 #define N 100010
 #define eps 1e-9
@@ -23,7 +19,7 @@ inline bool check(const point &X,const point &Y,const point &Q)
  return Q.y-Q.x*Q.x-b*Q.x-c>-eps;
 }
  
-int main()
+signed main()
 {
 	scanf("%d",&n);
  for(int i=1;i<=n;i++) scanf("%lf%lf",&a[i].x,&a[i].y);

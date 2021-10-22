@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 const int N = 100005;
@@ -16,7 +16,7 @@ bool bad(int O, int A, int B) {
  return cross(O, A, B) >= 0; // ccw
 }
  
-int main() {
+signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);
  

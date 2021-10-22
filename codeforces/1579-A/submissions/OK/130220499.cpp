@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 map<char,int> mp;
-int main(){
+signed main(){
  int t;
 	cin>>t;
  while(t--){

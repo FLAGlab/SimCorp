@@ -16,7 +16,7 @@ struct poi{
  friend bool operator < (poi x,poi y){return x.x!=y.x?x.x<y.x:x.y<y.y;}
 }a[N],stk[N];
  
-int main(){
+signed main(){
 	scanf("%d",&n);
 	rep (i,1,n){
 		scanf("%lld%lld",&a[i].x,&a[i].y);

@@ -1,16 +1,9 @@
-#include<cstdio>
-#include<cmath>
-#include<cstring>
-#include<algorithm>
-#include<queue>
-#include<vector>
-#include<map>
-#include<set>
+#include<bits/stdc++.h>
 #define met(s,k) memset(s,k,sizeof s)
 using namespace std;
 typedef long long ll;
 ll dp[1005][1005][2],cost[1005],num[1005];
-int main()
+signed main()
 {
     ll n,w,b,x,sum=0;
  int ans=0;

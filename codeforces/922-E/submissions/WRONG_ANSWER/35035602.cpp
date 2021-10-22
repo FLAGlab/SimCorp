@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include<bits/stdc++.h>
  
-int main() {
+signed main() {
  long long N, W, B, X, n[1010], c[1010], w[10100], b[10100], t[10100] = {}, back, i, j, k, ww, bb;
  for (scanf("%lld%lld%lld%lld", &N, &W, &B, &X), i = 1; i <= N; i++)
 		scanf("%lld", n+i);

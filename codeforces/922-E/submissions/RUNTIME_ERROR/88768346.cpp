@@ -1,13 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>
-#include <queue>
-#include <stack>
-#include <bitset>
-#include <vector>
-#include <map>
-#include <string>
-#include <cstring>
+#include<bits/stdc++.h>
 #define fir first
 #define sec second
 using namespace std;
@@ -23,7 +14,7 @@ P sta[MAXN];
 int p,h;
  
  
-int main() {
+signed main() {
     cin>>n>>w>>z>>x;
  for(int i=1;i<=n;i++) cin>>a[i];
  for(int i=1;i<=n;i++) cin>>b[i];

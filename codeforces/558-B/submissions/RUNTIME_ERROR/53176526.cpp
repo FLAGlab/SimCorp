@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
  
-int main() {
+signed main() {
  int n; scanf("%d", &n);
  vector<int> a(n);
  vector<vector<int> > pos(n);

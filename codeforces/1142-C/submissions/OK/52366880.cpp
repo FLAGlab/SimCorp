@@ -1,7 +1,4 @@
-#include<iostream>
-#include<string.h>
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 #define M 100005
 #define LL long long
 using namespace std;
@@ -17,7 +14,7 @@ int top=0;
 bool check(node &a,node &b,node &c){
  return 1.0*(c.y-a.y)*(b.x-c.x)<=1.0*(b.y-c.y)*(c.x-a.x);
 }
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1;i<=n;i++){ 
 		scanf("%lld%lld",&A[i].x,&A[i].y);

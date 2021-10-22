@@ -62,7 +62,7 @@ inline void work()
  }
     printf("%d\n",tot);
 }
-int main()
+signed main()
 {
  //int T;scanf("%d",&T);
  int T=1;

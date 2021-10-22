@@ -3,7 +3,7 @@
 using namespace std;
 map<int,int>A;
 int w[1000000];
-int main()
+signed main()
 {
  int n,ll=0,k,t,p;
  

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 char str[1000];
-int main(){
+signed main(){
  int t;
 	cin>>t;
  while(t--){

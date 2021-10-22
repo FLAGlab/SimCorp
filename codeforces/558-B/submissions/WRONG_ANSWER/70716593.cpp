@@ -1,8 +1,7 @@
-#include <iostream>
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
-int main() {
+signed main() {
  long n,val,max1=0,index=0;
 	cin>>n;
  long arr[n];

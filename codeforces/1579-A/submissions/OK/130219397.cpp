@@ -1,6 +1,6 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main(){
+signed main(){
  int t;
 	cin>>t;
  int b[4]={0};

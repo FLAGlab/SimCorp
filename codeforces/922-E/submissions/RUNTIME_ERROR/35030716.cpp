@@ -10,7 +10,7 @@ template<typename T> T load() { T x; cin >> x; return x; }
 template<typename T> vector<T> loadN(int s) { vector<T> vt(s); for(auto& el : vt) el = load<T>(); return vt; }
 template<typename T> ostream& operator<<(ostream& os, const vector<T>& vt) { for(auto& el : vt) os << el << ' '; return os; }
  
-int main() {
+signed main() {
     ios::sync_with_stdio(false);
  auto treeNum = load<int>();
  auto startLimit = load<i64>();

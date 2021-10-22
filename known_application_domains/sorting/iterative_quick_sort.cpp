@@ -1,32 +1,16 @@
 // A utility function to swap two elements
-void swap(int* a, int* b)
-{
+void swap(int* a, int* b) {
 	int t = *a;
 	*a = *b;
 	*b = t;
 }
 
-/* This function is same in both iterative and recursive*/
-int partition(int arr[], int l, int h)
-{
-	int x = arr[h];
-	int i = (l - 1);
 
-	for (int j = l; j <= h - 1; j++) {
-		if (arr[j] <= x) {
-			i++;
-			swap(&arr[i], &arr[j]);
-		}
-	}
-	swap(&arr[i + 1], &arr[h]);
-	return (i + 1);
-}
+// This is code is contributed by rathbhupendra
 
-/* A[] --> Array to be sorted,
-l --> Starting index,
-h --> Ending index */
-void quickSort(int arr[], int l, int h)
-{
+int main() {
+	int a[] = {1, 2, 3, 4, 5};
+	int n = 5, h = n - 1, l = 0;
 	// Create an auxiliary stack
 	int stack[h - l + 1];
 
@@ -45,7 +29,17 @@ void quickSort(int arr[], int l, int h)
 
 		// Set pivot element at its correct position
 		// in sorted array
-		int p = partition(arr, l, h);
+		int x = a[h];
+		int i = (l - 1);
+
+		for (int j = l; j <= h - 1; j++) {
+			if (a[j] <= x) {
+				i++;
+				swap(&a[i], &a[j]);
+			}
+		}
+		swap(&a[i + 1], &a[h]);
+		int p = (i + 1);
 
 		// If there are elements on left side of pivot,
 		// then push left side to stack
@@ -61,6 +55,5 @@ void quickSort(int arr[], int l, int h)
 			stack[++top] = h;
 		}
 	}
+	return 0;
 }
-
-// This is code is contributed by rathbhupendra

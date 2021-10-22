@@ -2,7 +2,7 @@
 using namespace std;
 int n,m,i,j,A[1000000],L[1000000],x,y,maks;
  
-int main(){
+signed main(){
   cin>>n;
  for(int i=1;i<=n;i++){
     cin>>m;

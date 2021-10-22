@@ -1,10 +1,4 @@
-#include <cstdio>
-#include <iostream>
-#include <cstring>
-#include <algorithm>
-#include <queue>
-#include <vector>
-#include <unordered_map>
+#include<bits/stdc++.h>
 using namespace std;
 const int N=3E5+5;
 const int M=1E6+5;
@@ -26,7 +20,7 @@ int work(int x,int y)
  return 2;
 }
  
-int main()
+signed main()
 {
  #ifdef WXY_Z
     	freopen("1.in","r",stdin);  freopen("1.out","w",stdout); 

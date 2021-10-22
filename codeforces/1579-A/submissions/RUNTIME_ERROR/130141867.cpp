@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 void solve(vector<int> &X, vector<int> &B)
@@ -29,7 +29,7 @@ bool check(vector<int> &X)
  return true;
 }
  
-int main()
+signed main()
 {
     string s;
  int t, i, n;

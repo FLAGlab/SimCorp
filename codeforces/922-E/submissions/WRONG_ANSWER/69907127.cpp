@@ -22,7 +22,7 @@ lint pd(lint tenho, lint w, lint arv){
  
 }
  
-int main(){
+signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
 	cin>>n>>w>>b>>x;

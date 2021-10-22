@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+signed main()
 {
  int n,low,high,ans,maxi=0;
  map<int,int>mp;

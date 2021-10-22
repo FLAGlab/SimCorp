@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 int a[1000010];
 long long x[100010],l,r,ans,maks,n;
 bool p;
  
-int main(){
+signed main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
  

@@ -1,5 +1,4 @@
-#include <cstdio>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 5;
 const double eps = 1e-8;
@@ -14,7 +13,7 @@ bool cmp (node x, node y) {
 inline double slope (int i, int j) {
  return (a[i].y - a[j].y) / (a[i].x - a[j].x);
 }
-int main() {
+signed main() {
 	scanf ("%d", &n);
  for (int i = 1; i <= n; i++) {
 		scanf ("%lf%lf", &a[i].x, &a[i].y);

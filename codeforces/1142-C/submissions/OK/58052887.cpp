@@ -1,8 +1,4 @@
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
-#include<cstring>
-#include<algorithm>
+#include<bits/stdc++.h>
  
 typedef long long LL;
  
@@ -16,7 +12,7 @@ bool cmp(data a,data b)
  return a.x<b.x||a.x==b.x&&a.y<b.y;
 }
  
-int main()
+signed main()
 {
 	scanf("%d",&n);
  for (int i=1;i<=n;i++)

@@ -1,7 +1,7 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int co[100001],pos[100001];
-int main()
+signed main()
 {
  long long n,x,max=0,begin=0,end=10000001;
     cin>>n;

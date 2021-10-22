@@ -13,7 +13,7 @@ int n,N;
 bool cmp(node &A,node &B,node &C){
  return (A.y-B.y)*(B.x-C.x)>=(B.y-C.y)*(A.x-B.x);
 }
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1;i<=n;++i) 
 		scanf("%lld%lld",&a[i].x,&a[i].y);

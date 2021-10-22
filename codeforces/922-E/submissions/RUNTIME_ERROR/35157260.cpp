@@ -3,7 +3,7 @@ using namespace std;
 #define pb push_back
 long long p[10005],c[10005];
 long long w,b,x,n,t;
-int main(){
+signed main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cin>>n>>w>>b>>x;

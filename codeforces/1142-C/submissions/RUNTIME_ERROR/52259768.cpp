@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 typedef long double ld;
@@ -91,7 +91,7 @@ struct u_t
 		cerr << endl;
  }
 };
-int main()
+signed main()
 {
 	__init();
 	cin >> n;

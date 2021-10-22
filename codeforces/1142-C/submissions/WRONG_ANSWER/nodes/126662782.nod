@@ -1,0 +1,114 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %i7 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* @n)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i32* %x, i32* %y)
+  %2 = load i32* %x, align 4
+  %sub = sub nsw i32 0, %2
+  %conv = sitofp i32 %sub to double
+  %3 = load i32* %i, align 4
+  %idxprom = sext i32 %3 to i64
+  %arrayidx = getelementptr inbounds [1000005 x %struct.node]* @a, i32 0, i64 %idxprom
+  %k = getelementptr inbounds %struct.node* %arrayidx, i32 0, i32 0
+  store double %conv, double* %k, align 8
+  %4 = load i32* %y, align 4
+  %5 = load i32* %x, align 4
+  %6 = load i32* %x, align 4
+  %mul = mul nsw i32 %5, %6
+  %sub2 = sub nsw i32 %4, %mul
+  %conv3 = sitofp i32 %sub2 to double
+  %7 = load i32* %i, align 4
+  %idxprom4 = sext i32 %7 to i64
+  %arrayidx5 = getelementptr inbounds [1000005 x %struct.node]* @a, i32 0, i64 %idxprom4
+  %b = getelementptr inbounds %struct.node* %arrayidx5, i32 0, i32 1
+  store double %conv3, double* %b, align 8
+  %8 = load i32* %i, align 4
+  %inc = add nsw i32 %8, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %9 = load i32* @n, align 4
+  %idx.ext = sext i32 %9 to i64
+  %add.ptr = getelementptr inbounds %struct.node* getelementptr inbounds ([1000005 x %struct.node]* @a, i32 0, i32 0), i64 %idx.ext
+  %add.ptr6 = getelementptr inbounds %struct.node* %add.ptr, i64 1
+  call void @_ZSt4sortIP4nodePFbS0_S0_EEvT_S4_T0_(%struct.node* getelementptr inbounds ([1000005 x %struct.node]* @a, i32 0, i64 1), %struct.node* %add.ptr6, i1 (double, double, double, double)* @_Z3cmp4nodeS_)
+  store i32 1, i32* %i7, align 4
+  br label %for.cond8
+
+5
+  %10 = load i32* %i7, align 4
+  %11 = load i32* @n, align 4
+  %cmp9 = icmp sle i32 %10, %11
+  br i1 %cmp9, label %for.body10, label %for.end28
+
+6
+  br label %while.cond
+
+7
+  %12 = load i32* @top, align 4
+  %cmp11 = icmp sge i32 %12, 2
+  br i1 %cmp11, label %land.rhs, label %land.end
+
+8
+  %13 = load i32* @top, align 4
+  %idxprom12 = sext i32 %13 to i64
+  %arrayidx13 = getelementptr inbounds [1000005 x i32]* @s, i32 0, i64 %idxprom12
+  %14 = load i32* %arrayidx13, align 4
+  %idxprom14 = sext i32 %14 to i64
+  %arrayidx15 = getelementptr inbounds [1000005 x %struct.node]* @a, i32 0, i64 %idxprom14
+  %b16 = getelementptr inbounds %struct.node* %arrayidx15, i32 0, i32 1
+  %15 = load double* %b16, align 8
+  %16 = load i32* %i7, align 4
+  %idxprom17 = sext i32 %16 to i64
+  %arrayidx18 = getelementptr inbounds [1000005 x i32]* @s, i32 0, i64 %idxprom17
+  %17 = load i32* %arrayidx18, align 4
+  %idxprom19 = sext i32 %17 to i64
+  %arrayidx20 = getelementptr inbounds [1000005 x %struct.node]* @a, i32 0, i64 %idxprom19
+  %b21 = getelementptr inbounds %struct.node* %arrayidx20, i32 0, i32 1
+  %18 = load double* %b21, align 8
+  %cmp22 = fcmp ole double %15, %18
+  br label %land.end
+
+9
+  %19 = phi i1 [ false, %while.cond ], [ %cmp22, %land.rhs ]
+  br i1 %19, label %while.body, label %while.end
+
+10
+  %20 = load i32* @top, align 4
+  %dec = add nsw i32 %20, -1
+  store i32 %dec, i32* @top, align 4
+  br label %while.cond
+
+11
+  %21 = load i32* %i7, align 4
+  %22 = load i32* @top, align 4
+  %inc23 = add nsw i32 %22, 1
+  store i32 %inc23, i32* @top, align 4
+  %idxprom24 = sext i32 %inc23 to i64
+  %arrayidx25 = getelementptr inbounds [1000005 x i32]* @s, i32 0, i64 %idxprom24
+  store i32 %21, i32* %arrayidx25, align 4
+  %23 = load i32* %i7, align 4
+  %inc27 = add nsw i32 %23, 1
+  store i32 %inc27, i32* %i7, align 4
+  br label %for.cond8
+
+12
+  %24 = load i32* @top, align 4
+  %call29 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i32 %24)
+  ret i32 0

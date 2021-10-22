@@ -1,5 +1,5 @@
+#include<bits/stdc++.h>
 // time-limit: 1000
-#include <bits/stdc++.h>
  
 using namespace std;
  
@@ -10,7 +10,7 @@ long long cost[N];
 long long w, b, x;
 long long dp[N][MX + 1];
  
-int main() {
+signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cin >> n >> w >> b >> x;

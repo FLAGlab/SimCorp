@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<cstring>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 #define N 100005
 #define ll long long
@@ -19,7 +17,7 @@ struct ff{
  
 ld slope(ff x,ff y){return (ld)(x.y-y.y)/(x.x-y.x);}
  
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(i=1;i<=n;++i){
 		scanf("%lld%lld",&x,&y);

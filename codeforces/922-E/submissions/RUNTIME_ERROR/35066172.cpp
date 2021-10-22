@@ -1,21 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
-#include <array>
-#include <string>
-#include <set>
-#include <map>
-#include <cassert>
-#include <unordered_set>
-#include <unordered_map>
-#include <stack>
-#include <queue>
-#include <deque>
-#include <cmath>
-#include <iomanip>
-#include <bitset>
-#include <utility>
+#include<bits/stdc++.h>
  
 using namespace std;
 typedef long long ll;
@@ -30,7 +13,7 @@ int n, cnt[maxn], sum = 0;
  
 vector<ll> dp, prv;
  
-int main() {
+signed main() {
 	iosb;
 	cin >> n >> W >> B >> X;
  for (int i = 0; i < n; ++i)

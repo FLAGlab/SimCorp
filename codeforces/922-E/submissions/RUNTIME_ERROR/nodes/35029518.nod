@@ -1,0 +1,56 @@
+
+1
+  %retval = alloca i32, align 4
+  %w = alloca i64, align 8
+  %i = alloca i64, align 8
+  %i6 = alloca i64, align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* @n)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call1, i64* %w)
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call2, i64* @b)
+  %call4 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call3, i64* @x)
+  store i64 0, i64* %i, align 8
+  br label %for.cond
+
+2
+  %0 = load i64* %i, align 8
+  %1 = load i64* @n, align 8
+  %cmp = icmp slt i64 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i64* %i, align 8
+  %arrayidx = getelementptr inbounds [1001 x i64]* @c, i32 0, i64 %2
+  %call5 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx)
+  %3 = load i64* %i, align 8
+  %inc = add nsw i64 %3, 1
+  store i64 %inc, i64* %i, align 8
+  br label %for.cond
+
+4
+  store i64 0, i64* %i6, align 8
+  br label %for.cond7
+
+5
+  %4 = load i64* %i6, align 8
+  %5 = load i64* @n, align 8
+  %cmp8 = icmp slt i64 %4, %5
+  br i1 %cmp8, label %for.body9, label %for.end14
+
+6
+  %6 = load i64* %i6, align 8
+  %arrayidx10 = getelementptr inbounds [1001 x i64]* @cost, i32 0, i64 %6
+  %call11 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx10)
+  %7 = load i64* %i6, align 8
+  %inc13 = add nsw i64 %7, 1
+  store i64 %inc13, i64* %i6, align 8
+  br label %for.cond7
+
+7
+  %8 = load i64* %w, align 8
+  %9 = load i64* %w, align 8
+  %call15 = call i64 @_Z4funcxxx(i64 0, i64 %8, i64 %9)
+  %call16 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %call15)
+  %call17 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call16, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+  ret i32 0

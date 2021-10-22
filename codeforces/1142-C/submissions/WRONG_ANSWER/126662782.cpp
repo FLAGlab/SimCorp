@@ -1,5 +1,4 @@
-#include <cstdio>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 5;
 const double eps = 1e-8;
@@ -10,7 +9,7 @@ struct node {
 bool cmp (node x, node y) {
  return x.k < y.k;
 }
-int main() {
+signed main() {
 	scanf ("%d", &n);
  for (int i = 1, x, y; i <= n; i++) {
 		scanf ("%lf%lf", &x, &y);

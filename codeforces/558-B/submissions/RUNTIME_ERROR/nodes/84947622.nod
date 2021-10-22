@@ -1,0 +1,151 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i64, align 8
+  %coerce = alloca %"struct.std::pair", align 8
+  %l = alloca i64, align 8
+  %r = alloca i64, align 8
+  %it = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  %ref.tmp = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  %curdiff = alloca i64, align 8
+  %coerce46 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %0 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %0
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %1 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call1 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %1, %"class.std::basic_ostream"* null)
+  %vtable2 = load i8** bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8**)
+  %vbase.offset.ptr3 = getelementptr i8* %vtable2, i64 -24
+  %2 = bitcast i8* %vbase.offset.ptr3 to i64*
+  %vbase.offset4 = load i64* %2
+  %add.ptr5 = getelementptr inbounds i8* bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8*), i64 %vbase.offset4
+  %3 = bitcast i8* %add.ptr5 to %"class.std::basic_ios"*
+  %call6 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %3, %"class.std::basic_ostream"* null)
+  %call7 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* @n)
+  %4 = load i64* @n, align 8
+  store i64 %4, i64* @diff, align 8
+  store i64 1, i64* %i, align 8
+  br label %for.cond
+
+2
+  %5 = load i64* %i, align 8
+  %6 = load i64* @n, align 8
+  %cmp = icmp sle i64 %5, %6
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %7 = load i64* %i, align 8
+  %arrayidx = getelementptr inbounds [100005 x i64]* @a, i32 0, i64 %7
+  %call8 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx)
+  %8 = load i64* %i, align 8
+  %arrayidx9 = getelementptr inbounds [100005 x i64]* @a, i32 0, i64 %8
+  %call10 = call { %"struct.std::_Rb_tree_node_base"*, i8 } @_ZNSt3setIxSt4lessIxESaIxEE6insertERKx(%"class.std::set"* @s, i64* %arrayidx9)
+  %9 = bitcast %"struct.std::pair"* %coerce to { %"struct.std::_Rb_tree_node_base"*, i8 }*
+  %10 = getelementptr { %"struct.std::_Rb_tree_node_base"*, i8 }* %9, i32 0, i32 0
+  %11 = extractvalue { %"struct.std::_Rb_tree_node_base"*, i8 } %call10, 0
+  store %"struct.std::_Rb_tree_node_base"* %11, %"struct.std::_Rb_tree_node_base"** %10, align 1
+  %12 = getelementptr { %"struct.std::_Rb_tree_node_base"*, i8 }* %9, i32 0, i32 1
+  %13 = extractvalue { %"struct.std::_Rb_tree_node_base"*, i8 } %call10, 1
+  store i8 %13, i8* %12, align 1
+  %14 = load i64* %i, align 8
+  %arrayidx11 = getelementptr inbounds [100005 x i64]* @a, i32 0, i64 %14
+  %call12 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @m, i64* %arrayidx11)
+  %15 = load i64* %call12
+  %inc = add nsw i64 %15, 1
+  store i64 %inc, i64* %call12
+  %16 = load i64* %i, align 8
+  %arrayidx13 = getelementptr inbounds [100005 x i64]* @a, i32 0, i64 %16
+  %call14 = call i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* @m, i64* %arrayidx13)
+  %call15 = call i64* @_ZSt3maxIxERKT_S2_S2_(i64* @f, i64* %call14)
+  %17 = load i64* %call15
+  store i64 %17, i64* @f, align 8
+  %18 = load i64* %i, align 8
+  %arrayidx16 = getelementptr inbounds [100005 x i64]* @a, i32 0, i64 %18
+  %19 = load i64* %arrayidx16, align 8
+  %arrayidx17 = getelementptr inbounds [100005 x %"class.std::vector"]* @v, i32 0, i64 %19
+  call void @_ZNSt6vectorIxSaIxEE9push_backERKx(%"class.std::vector"* %arrayidx17, i64* %i)
+  %20 = load i64* %i, align 8
+  %inc18 = add nsw i64 %20, 1
+  store i64 %inc18, i64* %i, align 8
+  br label %for.cond
+
+4
+  store i64 1, i64* %l, align 8
+  %21 = load i64* @n, align 8
+  store i64 %21, i64* %r, align 8
+  %call19 = call %"struct.std::_Rb_tree_node_base"* @_ZNKSt3setIxSt4lessIxESaIxEE5beginEv(%"class.std::set"* @s) #2
+  %coerce.dive = getelementptr %"struct.std::_Rb_tree_const_iterator"* %it, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call19, %"struct.std::_Rb_tree_node_base"** %coerce.dive
+  br label %for.cond20
+
+5
+  %call21 = call %"struct.std::_Rb_tree_node_base"* @_ZNKSt3setIxSt4lessIxESaIxEE3endEv(%"class.std::set"* @s) #2
+  %coerce.dive22 = getelementptr %"struct.std::_Rb_tree_const_iterator"* %ref.tmp, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call21, %"struct.std::_Rb_tree_node_base"** %coerce.dive22
+  %call23 = call zeroext i1 @_ZNKSt23_Rb_tree_const_iteratorIxEneERKS0_(%"struct.std::_Rb_tree_const_iterator"* %it, %"struct.std::_Rb_tree_const_iterator"* %ref.tmp)
+  br i1 %call23, label %for.body24, label %for.end48
+
+6
+  %call25 = call i64* @_ZNKSt23_Rb_tree_const_iteratorIxEdeEv(%"struct.std::_Rb_tree_const_iterator"* %it)
+  %22 = load i64* %call25
+  %arrayidx26 = getelementptr inbounds [100005 x %"class.std::vector"]* @v, i32 0, i64 %22
+  %call27 = call i64 @_ZNKSt6vectorIxSaIxEE4sizeEv(%"class.std::vector"* %arrayidx26) #2
+  %23 = load i64* @f, align 8
+  %cmp28 = icmp eq i64 %call27, %23
+  br i1 %cmp28, label %if.then, label %if.end43
+
+7
+  %call29 = call i64* @_ZNKSt23_Rb_tree_const_iteratorIxEdeEv(%"struct.std::_Rb_tree_const_iterator"* %it)
+  %24 = load i64* %call29
+  %arrayidx30 = getelementptr inbounds [100005 x %"class.std::vector"]* @v, i32 0, i64 %24
+  %call31 = call i64* @_ZNSt6vectorIxSaIxEE4backEv(%"class.std::vector"* %arrayidx30)
+  %25 = load i64* %call31
+  %call32 = call i64* @_ZNKSt23_Rb_tree_const_iteratorIxEdeEv(%"struct.std::_Rb_tree_const_iterator"* %it)
+  %26 = load i64* %call32
+  %arrayidx33 = getelementptr inbounds [100005 x %"class.std::vector"]* @v, i32 0, i64 %26
+  %call34 = call i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %arrayidx33, i64 0)
+  %27 = load i64* %call34
+  %sub = sub nsw i64 %25, %27
+  store i64 %sub, i64* %curdiff, align 8
+  %28 = load i64* %curdiff, align 8
+  %29 = load i64* @diff, align 8
+  %cmp35 = icmp slt i64 %28, %29
+  br i1 %cmp35, label %if.then36, label %if.end
+
+8
+  %30 = load i64* %curdiff, align 8
+  store i64 %30, i64* @diff, align 8
+  %call37 = call i64* @_ZNKSt23_Rb_tree_const_iteratorIxEdeEv(%"struct.std::_Rb_tree_const_iterator"* %it)
+  %31 = load i64* %call37
+  %arrayidx38 = getelementptr inbounds [100005 x %"class.std::vector"]* @v, i32 0, i64 %31
+  %call39 = call i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %arrayidx38, i64 0)
+  %32 = load i64* %call39
+  store i64 %32, i64* %l, align 8
+  %call40 = call i64* @_ZNKSt23_Rb_tree_const_iteratorIxEdeEv(%"struct.std::_Rb_tree_const_iterator"* %it)
+  %33 = load i64* %call40
+  %arrayidx41 = getelementptr inbounds [100005 x %"class.std::vector"]* @v, i32 0, i64 %33
+  %call42 = call i64* @_ZNSt6vectorIxSaIxEE4backEv(%"class.std::vector"* %arrayidx41)
+  %34 = load i64* %call42
+  store i64 %34, i64* %r, align 8
+  br label %if.end
+
+9
+  br label %if.end43
+
+10
+  %call45 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt23_Rb_tree_const_iteratorIxEppEi(%"struct.std::_Rb_tree_const_iterator"* %it, i32 0)
+  %coerce.dive47 = getelementptr %"struct.std::_Rb_tree_const_iterator"* %coerce46, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call45, %"struct.std::_Rb_tree_node_base"** %coerce.dive47
+  br label %for.cond20
+
+11
+  %35 = load i64* %l, align 8
+  %call49 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %35)
+  %call50 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call49, i8* getelementptr inbounds ([2 x i8]* @.str, i32 0, i32 0))
+  %36 = load i64* %r, align 8
+  %call51 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* %call50, i64 %36)
+  ret i32 0

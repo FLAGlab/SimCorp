@@ -1,7 +1,4 @@
-#include<iostream>
-#include<cstdio>
-#include<cmath>
-#include<map>
+#include<bits/stdc++.h>
 #define foir(i,l,r) for (register int i=l;i<=r;++i)
 #define fopr(i,l,r) for (register int i=l;i>=r;--i)
 #define maxn 150010
@@ -40,7 +37,7 @@ inline void solve(int x)
  }
 }
  
-int main()
+signed main()
 {
 	n=read();
 	q=read();

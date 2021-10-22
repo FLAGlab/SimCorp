@@ -2,7 +2,7 @@
 using namespace std;
 int n,m;
 map<int,int> st,ed,sum;
-int main(){
+signed main(){
 	cin>>n;
  for (int i=1;i<=n;i++){
 		cin>>m;

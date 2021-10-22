@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 #define mx   1000060
 map<int,int> start,End,cnt;
  
-int main()
+signed main()
 {
  int n;cin >> n;
  int keep;

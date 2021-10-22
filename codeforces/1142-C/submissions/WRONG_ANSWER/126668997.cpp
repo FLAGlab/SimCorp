@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const double eps=0.00000001;
 int n,m,num,tag[1000005];
@@ -15,7 +15,7 @@ bool cmp(Point x,Point y){
  if(fabs(x.a-y.a)<0.00000001) return x.b>y.b;
  return x.a<y.a;
 }
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++) scanf("%lf%lf",&p[i].a,&p[i].b);
 	sort(p+1,p+n+1,cmp);

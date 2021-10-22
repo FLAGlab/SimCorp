@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
-int main()
+signed main()
 {
  int n ;
     cin>>n ;

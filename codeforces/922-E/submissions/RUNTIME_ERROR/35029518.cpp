@@ -1,5 +1,4 @@
-#include <iostream>
-#include <map>
+#include<bits/stdc++.h>
 using namespace std;
 #define int long long
 const int maxn = 1001;
@@ -22,7 +21,7 @@ int func(int k, int w, int s) {
  return bestans;
 }
  
-main() {
+signed main() {
 	ios::sync_with_stdio(0);
  int w;
 	cin >> n >> w >> b >> x;

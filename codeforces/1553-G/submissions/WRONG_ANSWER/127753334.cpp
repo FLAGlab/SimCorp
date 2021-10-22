@@ -25,7 +25,7 @@ bool cone(int u,int v){
  if(find(u)==find(v+1)) return 1;
  if(find(v)==find(u+1)) return 1;
 }
-int main(){
+signed main(){
 	n=read(),q=read(),tot=0;
  for(int i=1;i<=1000000;++i) fa[i]=i;
  for(int i=1;i<=n;++i){

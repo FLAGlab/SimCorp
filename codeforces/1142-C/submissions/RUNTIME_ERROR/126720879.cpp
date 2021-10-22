@@ -1,7 +1,4 @@
-#include <iostream>
-#include <cmath>
-#include <algorithm>
-#include <queue>
+#include<bits/stdc++.h>
 using namespace std;
  
 long long n, cur, ans;
@@ -38,7 +35,7 @@ bool cmp( point a, point b )
  return anga < angb;
 }
  
-int main()
+signed main()
 {
     p[0].x = 2e9;
     p[0].y = 2e9;

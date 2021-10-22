@@ -47,7 +47,7 @@ void init(){
  }
 }
  
-int main(){
+signed main(){
     read(n),read(q);
  for(rg int i=1;i<=n;++i)
 		read(a[i]),fa[i]=i,upb=max(upb,a[i]+1);

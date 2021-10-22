@@ -1,5 +1,5 @@
-//是啊，你就是那只鬼了，所以被你碰到以后，就轮到我变成鬼了{{{
 #include<bits/stdc++.h>
+//是啊，你就是那只鬼了，所以被你碰到以后，就轮到我变成鬼了{{{
 using namespace std;typedef long long ll;
 template<typename T>inline void read(T &x)
 {
@@ -11,7 +11,7 @@ template<typename T>inline void read(T &x)
 int n,Q,a[150005],fa[1000005];vector<int>v[1000005];
 inline int getf(int x) {return fa[x]==x?x:fa[x]=getf(fa[x]);}
 inline void mrg(int x,int y) {x=getf(x),y=getf(y);if(x^y) fa[x]=y;}
-int main()
+signed main()
 {
 	read(n),read(Q);for(int i=1;i<=n;i++) read(a[i]);
  int mx=0;for(int i=1;i<=n;i++) mx=max(mx,a[i]);

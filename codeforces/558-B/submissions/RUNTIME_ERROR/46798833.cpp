@@ -2,7 +2,7 @@
 #define ll long long int
 using namespace std;
 ll freq[100001];
-int main()
+signed main()
 {
 	ll n,i,j,k,x,y,l,r,max,size;
 	cin>>n;

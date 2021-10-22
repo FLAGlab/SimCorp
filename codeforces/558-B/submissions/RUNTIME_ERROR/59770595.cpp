@@ -1,13 +1,9 @@
-#include <iostream>
-#include <cmath>
-#include <algorithm>
-#include <vector>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 100;
 vector<int> a, f(1e5 + 100);
 vector<int>v[N];
-int main() {
+signed main() {
  int n;
 	cin >> n;
 	a.resize(n);

@@ -1,0 +1,13 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %s = alloca i8, align 1
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %n)
+  %call1 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0))
+  store i8 65, i8* %s, align 1
+  %0 = load i8* %s, align 1
+  %conv = sext i8 %0 to i32
+  %call2 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([8 x i8]* @.str1, i32 0, i32 0), i32 %conv)
+  ret i32 0

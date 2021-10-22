@@ -1,11 +1,10 @@
-#include<iostream>
-#include<cstdio>
+#include<bits/stdc++.h>
 typedef long long ll;
 const int N=1e4+5;
 ll dp[2][N];
 int q[N],head,tail,n,c[N],sum[N];
 ll w,b,x,cost[N];
-int main() {
+signed main() {
     scanf("%d%lld%lld%lld",&n,&w,&b,&x);
  for(int i=1;i<=n;i++) scanf("%d",c+i),sum[i]=c[i]+sum[i-1];
  for(int i=1;i<=n;i++) scanf("%lld",cost+i);

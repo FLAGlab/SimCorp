@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 5;
 int n, x, y, q, cnt, a[N], lst[N], p[N], id[N], vis[N], fa[N]; unordered_set <int> edge[N / 8];
 inline int find(int x) { return fa[x] == x ? x : fa[x] = find(fa[x]); }
-int main() {
+signed main() {
 	scanf("%d%d", &n, &q);
  for (int i = 2; i <= 1e6 + 1; ++ i) {
  if (!vis[i]) p[++ cnt] = lst[i] = fa[i] = i;

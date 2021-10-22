@@ -1,10 +1,9 @@
-#include<cstdio>
-#include<cstring>
+#include<bits/stdc++.h>
 using namespace std;
 char s[100]; 
 int c[200];
 int T;
-int main(){
+signed main(){
 	scanf("%d",&T);
  while(T--){
 		scanf("%s",s);

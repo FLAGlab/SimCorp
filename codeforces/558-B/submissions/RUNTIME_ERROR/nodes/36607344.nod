@@ -1,0 +1,148 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %a = alloca i32, align 4
+  %i = alloca i32, align 4
+  %maxcnt = alloca i32, align 4
+  %ansl = alloca i32, align 4
+  %ansr = alloca i32, align 4
+  %i2 = alloca i32, align 4
+  %coerce = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %tmp = alloca %"class.std::reverse_iterator", align 8
+  %templ = alloca i32, align 4
+  %coerce31 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %tempr = alloca i32, align 4
+  %tmp37 = alloca %"class.std::reverse_iterator", align 8
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %n)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* %n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %a)
+  %2 = load i32* %a, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom
+  call void @_ZNSt6vectorIiSaIiEE9push_backERKi(%"class.std::vector"* %arrayidx, i32* %i)
+  %3 = load i32* %i, align 4
+  %inc = add nsw i32 %3, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  store i32 0, i32* %maxcnt, align 4
+  store i32 1, i32* %ansl, align 4
+  %4 = load i32* %n, align 4
+  store i32 %4, i32* %ansr, align 4
+  store i32 1, i32* %i2, align 4
+  br label %for.cond3
+
+5
+  %5 = load i32* %i2, align 4
+  %cmp4 = icmp sle i32 %5, 1000000
+  br i1 %cmp4, label %for.body5, label %for.end47
+
+6
+  %6 = load i32* %maxcnt, align 4
+  %conv = sext i32 %6 to i64
+  %7 = load i32* %i2, align 4
+  %idxprom6 = sext i32 %7 to i64
+  %arrayidx7 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom6
+  %call8 = call i64 @_ZNKSt6vectorIiSaIiEE4sizeEv(%"class.std::vector"* %arrayidx7) #2
+  %cmp9 = icmp ult i64 %conv, %call8
+  br i1 %cmp9, label %if.then, label %if.else
+
+7
+  %8 = load i32* %i2, align 4
+  %idxprom10 = sext i32 %8 to i64
+  %arrayidx11 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom10
+  %call12 = call i32* @_ZNSt6vectorIiSaIiEE5beginEv(%"class.std::vector"* %arrayidx11) #2
+  %coerce.dive = getelementptr %"class.__gnu_cxx::__normal_iterator"* %coerce, i32 0, i32 0
+  store i32* %call12, i32** %coerce.dive
+  %call13 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %coerce)
+  %9 = load i32* %call13
+  store i32 %9, i32* %ansl, align 4
+  %10 = load i32* %i2, align 4
+  %idxprom14 = sext i32 %10 to i64
+  %arrayidx15 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom14
+  call void @_ZNSt6vectorIiSaIiEE6rbeginEv(%"class.std::reverse_iterator"* sret %tmp, %"class.std::vector"* %arrayidx15) #2
+  %call16 = call i32* @_ZNKSt16reverse_iteratorIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEEdeEv(%"class.std::reverse_iterator"* %tmp)
+  %11 = load i32* %call16
+  store i32 %11, i32* %ansr, align 4
+  %12 = load i32* %i2, align 4
+  %idxprom17 = sext i32 %12 to i64
+  %arrayidx18 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom17
+  %call19 = call i64 @_ZNKSt6vectorIiSaIiEE4sizeEv(%"class.std::vector"* %arrayidx18) #2
+  %conv20 = trunc i64 %call19 to i32
+  store i32 %conv20, i32* %maxcnt, align 4
+  br label %if.end44
+
+8
+  %13 = load i32* %maxcnt, align 4
+  %conv21 = sext i32 %13 to i64
+  %14 = load i32* %i2, align 4
+  %idxprom22 = sext i32 %14 to i64
+  %arrayidx23 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom22
+  %call24 = call i64 @_ZNKSt6vectorIiSaIiEE4sizeEv(%"class.std::vector"* %arrayidx23) #2
+  %cmp25 = icmp eq i64 %conv21, %call24
+  br i1 %cmp25, label %if.then26, label %if.end43
+
+9
+  %15 = load i32* %i2, align 4
+  %idxprom28 = sext i32 %15 to i64
+  %arrayidx29 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom28
+  %call30 = call i32* @_ZNSt6vectorIiSaIiEE5beginEv(%"class.std::vector"* %arrayidx29) #2
+  %coerce.dive32 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %coerce31, i32 0, i32 0
+  store i32* %call30, i32** %coerce.dive32
+  %call33 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %coerce31)
+  %16 = load i32* %call33
+  store i32 %16, i32* %templ, align 4
+  %17 = load i32* %i2, align 4
+  %idxprom35 = sext i32 %17 to i64
+  %arrayidx36 = getelementptr inbounds [1000005 x %"class.std::vector"]* @vec, i32 0, i64 %idxprom35
+  call void @_ZNSt6vectorIiSaIiEE6rbeginEv(%"class.std::reverse_iterator"* sret %tmp37, %"class.std::vector"* %arrayidx36) #2
+  %call38 = call i32* @_ZNKSt16reverse_iteratorIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEEdeEv(%"class.std::reverse_iterator"* %tmp37)
+  %18 = load i32* %call38
+  store i32 %18, i32* %tempr, align 4
+  %19 = load i32* %tempr, align 4
+  %20 = load i32* %templ, align 4
+  %sub = sub nsw i32 %19, %20
+  %add = add nsw i32 %sub, 1
+  %21 = load i32* %ansr, align 4
+  %22 = load i32* %ansl, align 4
+  %sub39 = sub nsw i32 %21, %22
+  %add40 = add nsw i32 %sub39, 1
+  %cmp41 = icmp slt i32 %add, %add40
+  br i1 %cmp41, label %if.then42, label %if.end
+
+10
+  %23 = load i32* %templ, align 4
+  store i32 %23, i32* %ansl, align 4
+  %24 = load i32* %tempr, align 4
+  store i32 %24, i32* %ansr, align 4
+  br label %if.end
+
+11
+  br label %if.end43
+
+12
+  br label %if.end44
+
+13
+  %25 = load i32* %i2, align 4
+  %inc46 = add nsw i32 %25, 1
+  store i32 %inc46, i32* %i2, align 4
+  br label %for.cond3
+
+14
+  %26 = load i32* %ansl, align 4
+  %27 = load i32* %ansr, align 4
+  %call48 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([7 x i8]* @.str2, i32 0, i32 0), i32 %26, i32 %27)
+  ret i32 0

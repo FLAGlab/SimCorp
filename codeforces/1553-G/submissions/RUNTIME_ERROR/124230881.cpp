@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 struct DSU {
@@ -21,7 +21,7 @@ struct DSU {
  }
 };
  
-int main() {
+signed main() {
  int n, q;
 	cin >> n >> q;
  vector<int> a(n);

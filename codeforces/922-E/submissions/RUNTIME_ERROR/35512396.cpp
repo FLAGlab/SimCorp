@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ll long long
 using namespace std;
 ll dp[1001][10001],a[10001],cost[10001];
-int main()
+signed main()
 {
     ll n,W,B,X,i,j,g;
     cin>>n>>W>>B>>X;

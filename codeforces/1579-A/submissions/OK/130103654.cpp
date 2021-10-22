@@ -2,7 +2,7 @@
 using namespace std;
  
 char s[100];
-int main()
+signed main()
 {
  int T,n;
 	scanf("%d",&T);

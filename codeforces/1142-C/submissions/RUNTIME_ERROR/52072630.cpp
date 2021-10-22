@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -66,7 +66,7 @@ const int N = 1e5+5;
  
 Coord myStack[N];
  
-int main(){
+signed main(){
  int n;
     cin >> n;
  for (int i = 0 ; i < n; i++){
@@ -84,7 +84,7 @@ int main(){
  
  
  for (auto x : myHash){
-        points.push_back({x, yConfig[x]-x*x});
+        points.push_back({(double) x, (double) yConfig[x]-x*x});
  }
  
  Coord start = points[0];

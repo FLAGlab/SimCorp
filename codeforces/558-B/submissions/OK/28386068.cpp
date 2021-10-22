@@ -1,12 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <float.h>
+#include<bits/stdc++.h>
  
 int arr[1234567],arr1[1234567];
  
-int main() 
+signed main() 
 {
  int i,n,j,st=-1,end=-1,l=0;
 	scanf("%d",&n);

@@ -5,7 +5,7 @@ int n, a[100005], l, r;
 map<int, int> mp;
 int num , mx=0;
  
-int main(){
+signed main(){
 	cin>>n;
  for(int i=0; i<n; i++) cin>>a[i];
  

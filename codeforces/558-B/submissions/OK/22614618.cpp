@@ -1,13 +1,7 @@
-#include<iostream>
-#include<string>
-#include<cmath>
-#include<algorithm>
-#include<cstdio>
-#include<map>
-#include<cstdlib>
+#include<bits/stdc++.h>
 using namespace std;
 int a[1111111]={0},b[1111111][2];
-int main() 
+signed main() 
 {
  int n;
 	cin>>n;

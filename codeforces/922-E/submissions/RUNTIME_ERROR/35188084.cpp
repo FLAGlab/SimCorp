@@ -1,11 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>
-#include <map>
-#include <cmath>
-#include <functional>
-#include <utility>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 const int N=123456;
 struct node
@@ -18,7 +11,7 @@ vector<node> v[N+1];
 int costBirds[N];
 int noBirds[N];
 int n,w,x,b;
-int main()
+signed main()
 {
  // freopen("in.txt","r",stdin);
  // freopen("out.txt","w",stdout);

@@ -1,0 +1,293 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %p = alloca i32, align 4
+  %pre = alloca i32, align 4
+  %x = alloca i32, align 4
+  %i13 = alloca i32, align 4
+  %cid = alloca i32, align 4
+  %i28 = alloca i32, align 4
+  %p32 = alloca i32, align 4
+  %r = alloca i32, align 4
+  %x45 = alloca i32, align 4
+  %coerce = alloca %"struct.std::pair", align 8
+  %x65 = alloca i32, align 4
+  %y = alloca i32, align 4
+  %coerce86 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  %ref.tmp = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  %coerce95 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  %ref.tmp97 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @N)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call1, i32* @Q)
+  call void @_Z5sievev()
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @N, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [1000007 x i32]* @A, i32 0, i64 %idxprom
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %arrayidx)
+  %3 = load i32* %i, align 4
+  %idxprom4 = sext i32 %3 to i64
+  %arrayidx5 = getelementptr inbounds [1000007 x i32]* @A, i32 0, i64 %idxprom4
+  %4 = load i32* %arrayidx5, align 4
+  store i32 %4, i32* %p, align 4
+  store i32 0, i32* %pre, align 4
+  br label %while.cond
+
+4
+  %5 = load i32* %p, align 4
+  %cmp6 = icmp ne i32 %5, 1
+  br i1 %cmp6, label %while.body, label %while.end
+
+5
+  %6 = load i32* %p, align 4
+  %idxprom7 = sext i32 %6 to i64
+  %arrayidx8 = getelementptr inbounds [1000007 x i32]* @lst, i32 0, i64 %idxprom7
+  %7 = load i32* %arrayidx8, align 4
+  store i32 %7, i32* %x, align 4
+  %8 = load i32* %x, align 4
+  %9 = load i32* %p, align 4
+  %div = sdiv i32 %9, %8
+  store i32 %div, i32* %p, align 4
+  %10 = load i32* %pre, align 4
+  %tobool = icmp ne i32 %10, 0
+  br i1 %tobool, label %if.then, label %if.end
+
+6
+  %11 = load i32* %pre, align 4
+  %call9 = call i32 @_Z4findi(i32 %11)
+  %12 = load i32* %x, align 4
+  %call10 = call i32 @_Z4findi(i32 %12)
+  %idxprom11 = sext i32 %call10 to i64
+  %arrayidx12 = getelementptr inbounds [1000007 x i32]* @fa, i32 0, i64 %idxprom11
+  store i32 %call9, i32* %arrayidx12, align 4
+  br label %if.end
+
+7
+  %13 = load i32* %x, align 4
+  store i32 %13, i32* %pre, align 4
+  br label %while.cond
+
+8
+  %14 = load i32* %i, align 4
+  %inc = add nsw i32 %14, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+9
+  store i32 1, i32* %i13, align 4
+  store i32 0, i32* %cid, align 4
+  br label %for.cond14
+
+10
+  %15 = load i32* %i13, align 4
+  %conv = sitofp i32 %15 to double
+  %cmp15 = fcmp ole double %conv, 1.000001e+06
+  br i1 %cmp15, label %for.body16, label %for.end27
+
+11
+  %16 = load i32* %i13, align 4
+  %idxprom17 = sext i32 %16 to i64
+  %arrayidx18 = getelementptr inbounds [1000007 x i32]* @fa, i32 0, i64 %idxprom17
+  %17 = load i32* %arrayidx18, align 4
+  %18 = load i32* %i13, align 4
+  %cmp19 = icmp eq i32 %17, %18
+  br i1 %cmp19, label %if.then20, label %if.end24
+
+12
+  %19 = load i32* %cid, align 4
+  %inc21 = add nsw i32 %19, 1
+  store i32 %inc21, i32* %cid, align 4
+  %20 = load i32* %i13, align 4
+  %idxprom22 = sext i32 %20 to i64
+  %arrayidx23 = getelementptr inbounds [1000007 x i32]* @id, i32 0, i64 %idxprom22
+  store i32 %inc21, i32* %arrayidx23, align 4
+  br label %if.end24
+
+13
+  %21 = load i32* %i13, align 4
+  %inc26 = add nsw i32 %21, 1
+  store i32 %inc26, i32* %i13, align 4
+  br label %for.cond14
+
+14
+  store i32 1, i32* %i28, align 4
+  br label %for.cond29
+
+15
+  %22 = load i32* %i28, align 4
+  %23 = load i32* @N, align 4
+  %cmp30 = icmp sle i32 %22, %23
+  br i1 %cmp30, label %for.body31, label %for.end61
+
+16
+  %24 = load i32* %i28, align 4
+  %idxprom33 = sext i32 %24 to i64
+  %arrayidx34 = getelementptr inbounds [1000007 x i32]* @A, i32 0, i64 %idxprom33
+  %25 = load i32* %arrayidx34, align 4
+  %idxprom35 = sext i32 %25 to i64
+  %arrayidx36 = getelementptr inbounds [1000007 x i32]* @lst, i32 0, i64 %idxprom35
+  %26 = load i32* %arrayidx36, align 4
+  %call37 = call i32 @_Z4findi(i32 %26)
+  %idxprom38 = sext i32 %call37 to i64
+  %arrayidx39 = getelementptr inbounds [1000007 x i32]* @id, i32 0, i64 %idxprom38
+  %27 = load i32* %arrayidx39, align 4
+  store i32 %27, i32* %p32, align 4
+  %28 = load i32* %i28, align 4
+  %idxprom40 = sext i32 %28 to i64
+  %arrayidx41 = getelementptr inbounds [1000007 x i32]* @A, i32 0, i64 %idxprom40
+  %29 = load i32* %arrayidx41, align 4
+  %add = add nsw i32 %29, 1
+  store i32 %add, i32* %r, align 4
+  br label %while.cond42
+
+17
+  %30 = load i32* %r, align 4
+  %cmp43 = icmp ne i32 %30, 1
+  br i1 %cmp43, label %while.body44, label %while.end58
+
+18
+  %31 = load i32* %r, align 4
+  %idxprom46 = sext i32 %31 to i64
+  %arrayidx47 = getelementptr inbounds [1000007 x i32]* @lst, i32 0, i64 %idxprom46
+  %32 = load i32* %arrayidx47, align 4
+  store i32 %32, i32* %x45, align 4
+  %33 = load i32* %x45, align 4
+  %34 = load i32* %r, align 4
+  %div48 = sdiv i32 %34, %33
+  store i32 %div48, i32* %r, align 4
+  %35 = load i32* %x45, align 4
+  %call49 = call i32 @_Z4findi(i32 %35)
+  %idxprom50 = sext i32 %call49 to i64
+  %arrayidx51 = getelementptr inbounds [1000007 x i32]* @id, i32 0, i64 %idxprom50
+  %36 = load i32* %arrayidx51, align 4
+  store i32 %36, i32* %x45, align 4
+  %37 = load i32* %x45, align 4
+  %38 = load i32* %p32, align 4
+  %cmp52 = icmp ne i32 %37, %38
+  br i1 %cmp52, label %if.then53, label %if.end57
+
+19
+  %39 = load i32* %p32, align 4
+  %idxprom54 = sext i32 %39 to i64
+  %arrayidx55 = getelementptr inbounds [125000 x %"class.std::set"]* @pot, i32 0, i64 %idxprom54
+  %call56 = call { %"struct.std::_Rb_tree_node_base"*, i8 } @_ZNSt3setIiSt4lessIiESaIiEE6insertERKi(%"class.std::set"* %arrayidx55, i32* %x45)
+  %40 = bitcast %"struct.std::pair"* %coerce to { %"struct.std::_Rb_tree_node_base"*, i8 }*
+  %41 = getelementptr { %"struct.std::_Rb_tree_node_base"*, i8 }* %40, i32 0, i32 0
+  %42 = extractvalue { %"struct.std::_Rb_tree_node_base"*, i8 } %call56, 0
+  store %"struct.std::_Rb_tree_node_base"* %42, %"struct.std::_Rb_tree_node_base"** %41, align 1
+  %43 = getelementptr { %"struct.std::_Rb_tree_node_base"*, i8 }* %40, i32 0, i32 1
+  %44 = extractvalue { %"struct.std::_Rb_tree_node_base"*, i8 } %call56, 1
+  store i8 %44, i8* %43, align 1
+  br label %if.end57
+
+20
+  br label %while.cond42
+
+21
+  %45 = load i32* %i28, align 4
+  %inc60 = add nsw i32 %45, 1
+  store i32 %inc60, i32* %i28, align 4
+  br label %for.cond29
+
+22
+  br label %while.cond62
+
+23
+  %46 = load i32* @Q, align 4
+  %dec = add nsw i32 %46, -1
+  store i32 %dec, i32* @Q, align 4
+  %tobool63 = icmp ne i32 %46, 0
+  br i1 %tobool63, label %while.body64, label %while.end106
+
+24
+  %call66 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %x65)
+  %call67 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call66, i32* %y)
+  %47 = load i32* %x65, align 4
+  %idxprom68 = sext i32 %47 to i64
+  %arrayidx69 = getelementptr inbounds [1000007 x i32]* @A, i32 0, i64 %idxprom68
+  %48 = load i32* %arrayidx69, align 4
+  %idxprom70 = sext i32 %48 to i64
+  %arrayidx71 = getelementptr inbounds [1000007 x i32]* @lst, i32 0, i64 %idxprom70
+  %49 = load i32* %arrayidx71, align 4
+  %call72 = call i32 @_Z4findi(i32 %49)
+  %idxprom73 = sext i32 %call72 to i64
+  %arrayidx74 = getelementptr inbounds [1000007 x i32]* @id, i32 0, i64 %idxprom73
+  %50 = load i32* %arrayidx74, align 4
+  store i32 %50, i32* %x65, align 4
+  %51 = load i32* %y, align 4
+  %idxprom75 = sext i32 %51 to i64
+  %arrayidx76 = getelementptr inbounds [1000007 x i32]* @A, i32 0, i64 %idxprom75
+  %52 = load i32* %arrayidx76, align 4
+  %idxprom77 = sext i32 %52 to i64
+  %arrayidx78 = getelementptr inbounds [1000007 x i32]* @lst, i32 0, i64 %idxprom77
+  %53 = load i32* %arrayidx78, align 4
+  %call79 = call i32 @_Z4findi(i32 %53)
+  %idxprom80 = sext i32 %call79 to i64
+  %arrayidx81 = getelementptr inbounds [1000007 x i32]* @id, i32 0, i64 %idxprom80
+  %54 = load i32* %arrayidx81, align 4
+  store i32 %54, i32* %y, align 4
+  %55 = load i32* %x65, align 4
+  %56 = load i32* %y, align 4
+  %cmp82 = icmp eq i32 %55, %56
+  br i1 %cmp82, label %cond.true, label %cond.false
+
+25
+  br label %cond.end
+
+26
+  %57 = load i32* %x65, align 4
+  %idxprom83 = sext i32 %57 to i64
+  %arrayidx84 = getelementptr inbounds [125000 x %"class.std::set"]* @pot, i32 0, i64 %idxprom83
+  %call85 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt3setIiSt4lessIiESaIiEE4findERKi(%"class.std::set"* %arrayidx84, i32* %y)
+  %coerce.dive = getelementptr %"struct.std::_Rb_tree_const_iterator"* %coerce86, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call85, %"struct.std::_Rb_tree_node_base"** %coerce.dive
+  %58 = load i32* %x65, align 4
+  %idxprom87 = sext i32 %58 to i64
+  %arrayidx88 = getelementptr inbounds [125000 x %"class.std::set"]* @pot, i32 0, i64 %idxprom87
+  %call89 = call %"struct.std::_Rb_tree_node_base"* @_ZNKSt3setIiSt4lessIiESaIiEE3endEv(%"class.std::set"* %arrayidx88) #2
+  %coerce.dive90 = getelementptr %"struct.std::_Rb_tree_const_iterator"* %ref.tmp, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call89, %"struct.std::_Rb_tree_node_base"** %coerce.dive90
+  %call91 = call zeroext i1 @_ZNKSt23_Rb_tree_const_iteratorIiEeqERKS0_(%"struct.std::_Rb_tree_const_iterator"* %coerce86, %"struct.std::_Rb_tree_const_iterator"* %ref.tmp)
+  br i1 %call91, label %land.rhs, label %land.end
+
+27
+  %59 = load i32* %y, align 4
+  %idxprom92 = sext i32 %59 to i64
+  %arrayidx93 = getelementptr inbounds [125000 x %"class.std::set"]* @pot, i32 0, i64 %idxprom92
+  %call94 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt3setIiSt4lessIiESaIiEE4findERKi(%"class.std::set"* %arrayidx93, i32* %x65)
+  %coerce.dive96 = getelementptr %"struct.std::_Rb_tree_const_iterator"* %coerce95, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call94, %"struct.std::_Rb_tree_node_base"** %coerce.dive96
+  %60 = load i32* %y, align 4
+  %idxprom98 = sext i32 %60 to i64
+  %arrayidx99 = getelementptr inbounds [125000 x %"class.std::set"]* @pot, i32 0, i64 %idxprom98
+  %call100 = call %"struct.std::_Rb_tree_node_base"* @_ZNKSt3setIiSt4lessIiESaIiEE3endEv(%"class.std::set"* %arrayidx99) #2
+  %coerce.dive101 = getelementptr %"struct.std::_Rb_tree_const_iterator"* %ref.tmp97, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call100, %"struct.std::_Rb_tree_node_base"** %coerce.dive101
+  %call102 = call zeroext i1 @_ZNKSt23_Rb_tree_const_iteratorIiEeqERKS0_(%"struct.std::_Rb_tree_const_iterator"* %coerce95, %"struct.std::_Rb_tree_const_iterator"* %ref.tmp97)
+  br label %land.end
+
+28
+  %61 = phi i1 [ false, %cond.false ], [ %call102, %land.rhs ]
+  %cond = select i1 %61, i32 2, i32 1
+  br label %cond.end
+
+29
+  %cond103 = phi i32 [ 0, %cond.true ], [ %cond, %land.end ]
+  %call104 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %cond103)
+  %call105 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* %call104, i8 signext 10)
+  br label %while.cond62
+
+30
+  ret i32 0

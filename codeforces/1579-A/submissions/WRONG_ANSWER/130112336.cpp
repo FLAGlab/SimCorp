@@ -1,6 +1,6 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main(){
+signed main(){
  int n;
 	cin>>n;
  for(int t=0;t<n;t++){

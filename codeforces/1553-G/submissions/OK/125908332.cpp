@@ -1,5 +1,4 @@
-#include<cstdio>
-#include<set>
+#include<bits/stdc++.h>
 using std::set;
 using std::pair;
 //using AK::IOI;

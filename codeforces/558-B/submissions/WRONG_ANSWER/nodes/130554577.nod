@@ -1,0 +1,49 @@
+
+1
+  %retval = alloca i32, align 4
+  %argc.addr = alloca i32, align 4
+  %argv.addr = alloca i8**, align 8
+  %a = alloca i32, align 4
+  %saved_stack = alloca i8*
+  %i = alloca i32, align 4
+  %cleanup.dest.slot = alloca i32
+  store i32 0, i32* %retval
+  store i32 %argc, i32* %argc.addr, align 4
+  store i8** %argv, i8*** %argv.addr, align 8
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %a)
+  %0 = load i32* %a, align 4
+  %1 = zext i32 %0 to i64
+  %2 = call i8* @llvm.stacksave()
+  store i8* %2, i8** %saved_stack
+  %vla = alloca i32, i64 %1, align 16
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %3 = load i32* %i, align 4
+  %4 = load i32* %a, align 4
+  %cmp = icmp slt i32 %3, %4
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %5 = load i32* %i, align 4
+  %idxprom = sext i32 %5 to i64
+  %arrayidx = getelementptr inbounds i32* %vla, i64 %idxprom
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %arrayidx)
+  %6 = load i32* %i, align 4
+  %inc = add nsw i32 %6, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %call2 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 1)
+  %call3 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call2, i8* getelementptr inbounds ([2 x i8]* @.str, i32 0, i32 0))
+  %7 = load i32* %a, align 4
+  %call4 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %call3, i32 %7)
+  %call5 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call4, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+  store i32 0, i32* %retval
+  store i32 1, i32* %cleanup.dest.slot
+  %8 = load i8** %saved_stack
+  call void @llvm.stackrestore(i8* %8)
+  %9 = load i32* %retval
+  ret i32 %9

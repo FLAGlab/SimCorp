@@ -1,7 +1,4 @@
-#include<cstdio>
-#include<cstring>
-#include<cmath>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 struct node
 {
@@ -19,7 +16,7 @@ bool cmp(const node &a,const node &b)
  else if(a.cnt>b.cnt)
  return true;
 }
-int main()
+signed main()
 {
  int n;
 	scanf("%d",&n);

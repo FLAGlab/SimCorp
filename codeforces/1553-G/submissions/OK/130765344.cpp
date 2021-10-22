@@ -1,8 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>
-#include <vector>
-#include <set>
+#include<bits/stdc++.h>
 using namespace std;
 #define endl '\n'
 #define ll long long
@@ -20,7 +16,7 @@ int fnd(int x){ return x == p[x] ? x : p[x] = fnd(p[x]);}
  
 void add(int x, int y){ s.insert({fnd(x), fnd(y)});}
  
-int main(){
+signed main(){
 	ios::sync_with_stdio(0);
 	cin.tie(0);
  

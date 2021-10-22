@@ -1,5 +1,4 @@
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 struct node
 {
@@ -16,7 +15,7 @@ bool cmp(const node &a,const node &b)
  
 }
  
-int main()
+signed main()
 {
  int n;
 	scanf("%d",&n);

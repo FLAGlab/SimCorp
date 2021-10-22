@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+signed main()
 {
  int t,k,mx=-1,p1,p2,p;
   cin>>t;

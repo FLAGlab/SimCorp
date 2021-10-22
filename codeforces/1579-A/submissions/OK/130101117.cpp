@@ -1,8 +1,7 @@
-#include<iostream>
-#include<cstring>
+#include<bits/stdc++.h>
 using namespace std;
 char c[100];
-int main(){
+signed main(){
  int t;
 	cin>>t;
  while(t--){

@@ -1,0 +1,36 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %s = alloca [50 x i8], align 16
+  %l = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %t)
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  %arraydecay = getelementptr inbounds [50 x i8]* %s, i32 0, i32 0
+  %call1 = call %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_(%"class.std::basic_istream"* @_ZSt3cin, i8* %arraydecay)
+  %arraydecay2 = getelementptr inbounds [50 x i8]* %s, i32 0, i32 0
+  %call3 = call i64 @strlen(i8* %arraydecay2) #9
+  %conv = trunc i64 %call3 to i32
+  store i32 %conv, i32* %l, align 4
+  %arraydecay4 = getelementptr inbounds [50 x i8]* %s, i32 0, i32 0
+  %arraydecay5 = getelementptr inbounds [50 x i8]* %s, i32 0, i32 0
+  %1 = load i32* %l, align 4
+  %idx.ext = sext i32 %1 to i64
+  %add.ptr = getelementptr inbounds i8* %arraydecay5, i64 %idx.ext
+  call void @_ZSt4sortIPcEvT_S1_(i8* %arraydecay4, i8* %add.ptr)
+  %arraydecay6 = getelementptr inbounds [50 x i8]* %s, i32 0, i32 0
+  %call7 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* %arraydecay6)
+  br label %while.cond
+
+4
+  ret i32 0

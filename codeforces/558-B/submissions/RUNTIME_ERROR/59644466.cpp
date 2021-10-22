@@ -2,7 +2,7 @@
 #define ll long long
  
 using namespace std;
-int main()
+signed main()
 {
    ll n;cin>>n; ll st=0,end=0;
    ll arr[n],mp[100005]={0},tmp[100005],freq=0;

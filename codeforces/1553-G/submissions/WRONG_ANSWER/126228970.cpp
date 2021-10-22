@@ -9,7 +9,7 @@ unordered_map<int,bool> fl[N<<1];
 int find(int x){return (fa[x]==x)?x:(fa[x]=find(fa[x]));}
 void merge(int x,int y){fa[find(x)]=find(y);}
  
-int main(){
+signed main(){
 	ios::sync_with_stdio(0);cin.tie(0);
 	cin>>n>>m;
  for(int i=2;i<N;i++)

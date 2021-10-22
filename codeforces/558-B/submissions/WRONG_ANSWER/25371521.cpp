@@ -1,6 +1,4 @@
-#include<algorithm>
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
 const int sz=1000005;
@@ -8,7 +6,7 @@ const int sz=1000005;
  
 int arr[sz], b[sz], e[sz];
  
-int main()
+signed main()
 {	boost
  int max = 0, el, n;
 	cin >> n;

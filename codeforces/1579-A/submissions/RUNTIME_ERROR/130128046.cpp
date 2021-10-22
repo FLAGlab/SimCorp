@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<bits/stdc++.h>
  
 void solve(){
  char s[15];
@@ -28,7 +28,7 @@ void solve(){
 }
  
  
-int main(){
+signed main(){
  int tc;
     scanf("%d", &tc);
  for(int i = 0; i < tc; i++){

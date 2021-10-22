@@ -1,10 +1,7 @@
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 long long c[1111],ct[1111],f[1111];
-int main()
+signed main()
 {
  long long n,w,b,x;
     scanf("%d%d%d%d",&n,&w,&b,&x);

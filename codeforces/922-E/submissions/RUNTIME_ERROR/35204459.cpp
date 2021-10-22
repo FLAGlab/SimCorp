@@ -1,5 +1,5 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<bits/stdc++.h>
+#define _CRT_SECURE_NO_WARNINGS
 #pragma comment(linker, "/stack:200000000")
 #pragma GCC optimize("Ofast")
 //------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@ typedef long long ll;
 #define read(v) for (int i_ = 0; i_ < v.size(); i_++){cin >> v[i_];} 
 #define io ios_base::sync_with_stdio(false) 
 //------------------------------------------------------------------------------------------------------
-int main() {
+signed main() {
 	io;
 	ll n, w, b, x;
 	cin >> n >> w >> b >> x;

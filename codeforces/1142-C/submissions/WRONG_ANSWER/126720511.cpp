@@ -1,5 +1,4 @@
-#include<iostream>
-#include<algorithm> 
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e6+10;
 struct node{
@@ -16,7 +15,7 @@ int cross(node a,node b,node c){
 int n;
 int q[maxn];
 int ans;
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++){
  int x,y;

@@ -1,0 +1,25 @@
+
+1
+  %retval = alloca i32, align 4
+  %tc = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str3, i32 0, i32 0), i32* %tc)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* %tc, align 4
+  %cmp = icmp slt i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  call void @_Z5solvev()
+  %2 = load i32* %i, align 4
+  %inc = add nsw i32 %2, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  ret i32 0

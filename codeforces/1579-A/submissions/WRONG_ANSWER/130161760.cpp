@@ -1,8 +1,8 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int i,n,o,x,x1;
 string s;
-main(){
+signed main(){
     cin >> n;
  for (i = 0; i < n; i++)
  {

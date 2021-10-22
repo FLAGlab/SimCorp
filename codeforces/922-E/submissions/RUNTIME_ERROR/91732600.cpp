@@ -9,7 +9,7 @@ const int N1=1e3+1;
 const int N2=1e4+1;
 int n;
 ll cost[N1], W, B, X, c[N1], dp[2][N2];
-main()
+signed main()
 {
 	ios_base::sync_with_stdio(false); cin.tie();
  //freopen("read.inp", "r", stdin);

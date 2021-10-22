@@ -1,0 +1,74 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %num = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %t)
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  %call1 = call %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_(%"class.std::basic_istream"* @_ZSt3cin, i8* getelementptr inbounds ([1123 x i8]* @s, i32 0, i32 0))
+  store i32 0, i32* %num, align 4
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+4
+  %1 = load i32* %i, align 4
+  %conv = sext i32 %1 to i64
+  %call2 = call i64 @strlen(i8* getelementptr inbounds ([1123 x i8]* @s, i32 0, i32 0)) #5
+  %cmp = icmp ult i64 %conv, %call2
+  br i1 %cmp, label %for.body, label %for.end
+
+5
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [1123 x i8]* @s, i32 0, i64 %idxprom
+  %3 = load i8* %arrayidx, align 1
+  %conv3 = sext i8 %3 to i32
+  %cmp4 = icmp eq i32 %conv3, 66
+  br i1 %cmp4, label %if.then, label %if.end
+
+6
+  %4 = load i32* %num, align 4
+  %inc = add nsw i32 %4, 1
+  store i32 %inc, i32* %num, align 4
+  br label %if.end
+
+7
+  %5 = load i32* %i, align 4
+  %inc5 = add nsw i32 %5, 1
+  store i32 %inc5, i32* %i, align 4
+  br label %for.cond
+
+8
+  %6 = load i32* %num, align 4
+  %mul = mul nsw i32 %6, 2
+  %conv6 = sext i32 %mul to i64
+  %call7 = call i64 @strlen(i8* getelementptr inbounds ([1123 x i8]* @s, i32 0, i32 0)) #5
+  %cmp8 = icmp eq i64 %conv6, %call7
+  br i1 %cmp8, label %if.then9, label %if.else
+
+9
+  %call10 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* getelementptr inbounds ([4 x i8]* @.str, i32 0, i32 0))
+  %call11 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call10, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+  br label %if.end14
+
+10
+  %call12 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* getelementptr inbounds ([3 x i8]* @.str1, i32 0, i32 0))
+  %call13 = call %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %call12, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+  br label %if.end14
+
+11
+  br label %while.cond
+
+12
+  ret i32 0

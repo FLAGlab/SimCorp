@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 const int N = 1e5 + 5;
@@ -17,7 +17,7 @@ struct Point{
  }
 }p[N],q[N],st[N];
  
-int main(){
+signed main(){
  int n;
 	cin >> n;
  for(int i=1;i<=n;i++){

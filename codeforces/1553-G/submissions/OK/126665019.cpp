@@ -33,7 +33,7 @@ inline void init(int n){
  }
  }
 }
-int main(){
+signed main(){
 	scanf("%d%d",&n,&q);
  for(int i=1;i<=n;++i) fa[i]=i;
  for(int i=1;i<=n;++i){

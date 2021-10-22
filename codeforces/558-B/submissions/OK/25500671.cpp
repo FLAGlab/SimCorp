@@ -2,7 +2,7 @@
 using namespace std;
 int n,arr[1000007][3],mxp,mnb=1000000000,l,r;
  
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++){
  int a;cin>>a;

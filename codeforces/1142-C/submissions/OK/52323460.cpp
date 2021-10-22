@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
  
@@ -16,7 +16,7 @@ ll f(point a, point b, point c) {
  return c.x*(a.y-a.x*a.x)-a.x*(c.y-c.x*c.x);
 }
  
-int main() {
+signed main() {
   ios::sync_with_stdio(0); cin.tie(0);
  int n;
   cin >> n;

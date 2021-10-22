@@ -4,7 +4,7 @@ int T;
 int a[9];
 string s;
  
-int main()
+signed main()
 {
 	cin>>T;
  while(T--)

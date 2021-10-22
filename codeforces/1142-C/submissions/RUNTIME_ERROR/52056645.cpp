@@ -11,7 +11,7 @@
 #define sqr(x) ((x)*(x))
 #define LL long long 
 using namespace std;
-int main(){
+signed main(){
  int n;
 	scanf("%d",&n);
  map<LL,LL> m;

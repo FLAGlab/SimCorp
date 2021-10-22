@@ -1,12 +1,10 @@
-#include<iostream>
-#include<stdio.h>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 const int MAXN=1e5+233;
 int n=0;
 int a[MAXN<<1]={0};
 int b[MAXN<<1]={0};
-int main()
+signed main()
 {
  int btn=0,btrt=0;
 	scanf("%d",&n);

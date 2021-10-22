@@ -1,6 +1,6 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
  
-int main() {
+signed main() {
  int n;
  char s;
     scanf("%d", &n);

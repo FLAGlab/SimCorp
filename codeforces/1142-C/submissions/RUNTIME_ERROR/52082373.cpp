@@ -1,6 +1,6 @@
+#include<bits/stdc++.h>
 /* ****TCIITB**** */
  
-#include<bits/stdc++.h>
 #define io          ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0); 
 #define ll          long long
 #define pb          push_back
@@ -40,7 +40,7 @@ void convex_hull(vector<pii> pts) {
 		hull.pb(pts[i]);
  }
 }
-int main()
+signed main()
 {
  
 	io

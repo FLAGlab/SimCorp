@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define endl '\n'
 #define ll long long
 #define ull unsigned long long
@@ -84,7 +84,7 @@ void getUDP(vector<point>A,vector<point>&U,vector<point>&D){
     now=wherel;
  while (1){U.push_back(A[now]); if (now==wherer) break; now--; if (now<0) now=A.size()-1;}
 }
-int main() {
+signed main() {
 	IO;
 	cin>>n;
  vector<point> a(n);

@@ -1,7 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 #define endl '\n'
 #define ll long long
@@ -18,7 +15,7 @@ bool cp(pi x, pi y, pi z){
  return (y.f - x.f) * (z.s - y.s) >= (y.s - x.s) * (z.f - y.f);
 }
  
-int main(){
+signed main(){
 	ios::sync_with_stdio(0);
 	cin.tie(0);
  

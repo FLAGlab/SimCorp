@@ -1,9 +1,8 @@
-#include <iostream>
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 #define  ll long long int
 int arr[100002];
-int main() {
+signed main() {
  int t;
   cin>>t;
  while(t--){

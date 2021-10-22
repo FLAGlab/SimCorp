@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -7,7 +7,7 @@ const int NN=101010;
 int a[NN];
 vector<int> adj[NN*10];
  
-int main(){
+signed main(){
 #ifndef ONLINE_JUDGE
 	freopen("in.in","r",stdin);
 #endif

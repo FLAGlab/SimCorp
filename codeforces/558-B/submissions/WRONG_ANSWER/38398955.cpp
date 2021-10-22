@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
  
-int main()
+signed main()
 {
  int n,a[1000005];
     cin>>n;

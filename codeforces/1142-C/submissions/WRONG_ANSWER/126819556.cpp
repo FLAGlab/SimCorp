@@ -1,6 +1,5 @@
+#include<bits/stdc++.h>
 //3
-#include<iostream>
-#include<algorithm> 
 #define ll long long
 using namespace std;
 const int maxn=1e6+10;
@@ -18,7 +17,7 @@ ll cross(node a,node b,node c){
 ll n;
 ll q[maxn];
 ll ans;
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++){
 		ll x,y;

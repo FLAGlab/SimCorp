@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 long long a,b,c,n,k,i,l,o,j,nt;
 string s;
  
-int main()
+signed main()
 {
     cin >>nt;
  for (j=1;j<nt;j++) {

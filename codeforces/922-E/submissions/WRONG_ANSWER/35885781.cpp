@@ -1,10 +1,9 @@
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
  
 int dp[1005][10005];
  
-int main() {
+signed main() {
  int n, w, b, x, sum = 0, ans = 0;
 	cin >> n >> w >> b >> x;
  int c[n], cost[n];

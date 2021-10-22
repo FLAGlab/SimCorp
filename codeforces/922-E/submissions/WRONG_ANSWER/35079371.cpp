@@ -4,7 +4,7 @@ using namespace std;
 int dp[1010][10010],cost[1010],c[1010];
 int n,w,b,x,cnt;
  
-int main()
+signed main()
 {
     memset(dp,-1,sizeof(dp));
     scanf("%d%d%d%d",&n,&w,&b,&x);

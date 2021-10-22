@@ -1,16 +1,4 @@
-#include <cstdio>
-#include <cmath>
-#include <map>
-#include <cassert>
-#include <cstring>
-#include <algorithm>
-#include <iostream>
-#include <ctime>
-#include <unistd.h>
-#include <vector>
-#include <set>
-#include <queue>
-#include <string>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -102,7 +90,7 @@ double get_max(vector <P> &H, double b, double c) {
  return eval(H[lo], b, c);
 }
  
-int main() {
+signed main() {
   scanf("%d", &n);
   REP(i, n) {
     scanf("%lld%lld", &p[i].X, &p[i].Y);

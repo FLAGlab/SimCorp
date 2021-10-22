@@ -1,7 +1,7 @@
+#include<bits/stdc++.h>
 // A divide and conquer program to find convex 
 /* ****revpro**** */
  
-#include<bits/stdc++.h>
 #define ll          long long
 #define pb          push_back
 #define endl       '\n'
@@ -41,7 +41,7 @@ void convex_hull(vector<pii> pts) {
         hull.pb(pts[i]);
  }
 }
-int main() 
+signed main() 
 { 
  vector<pair<ll, ll>> a; 
     ll n;

@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define SZ 1000001
  
 using namespace std;
  
-int main() {
+signed main() {
  int n;
 	cin >> n;
  int a[n], left[SZ], right[SZ], count[SZ], _max = 0;

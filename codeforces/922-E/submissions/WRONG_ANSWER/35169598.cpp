@@ -5,7 +5,7 @@ using namespace std;
 int c[1010],cost[1010];
 int dp[1010][10010];
  
-int main()
+signed main()
 {
  int n,W,B,X;
 	scanf("%d%d%d%d",&n,&W,&B,&X);

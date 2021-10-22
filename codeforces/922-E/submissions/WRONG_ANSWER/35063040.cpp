@@ -5,7 +5,7 @@ using namespace std;
 int n,w,b,x;
 int niz[1001],c[1001],d[1001];
  
-int main(){
+signed main(){
  //w->Pocetna mana
  //b->Koliko se povecava kapacitet kad se uzme ptica
  //x->Mana koju povrati kad predje na sledeci index

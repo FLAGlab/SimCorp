@@ -6,7 +6,7 @@ typedef long long ll;
  
 ll x,w,n,c[maxn],b[maxn],z,dp[maxn];
  
-int main()
+signed main()
 {
     scanf("%d%d%d%d",&n,&w,&z,&x);
     memset(dp,-1,sizeof(dp));

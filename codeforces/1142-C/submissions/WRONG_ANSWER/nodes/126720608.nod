@@ -1,0 +1,140 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %k = alloca i32, align 4
+  %i15 = alloca i32, align 4
+  %agg.tmp = alloca %struct.nd, align 4
+  %agg.tmp22 = alloca %struct.nd, align 4
+  %agg.tmp25 = alloca %struct.nd, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom
+  %x = getelementptr inbounds %struct.nd* %arrayidx, i32 0, i32 0
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %x)
+  %3 = load i32* %i, align 4
+  %idxprom2 = sext i32 %3 to i64
+  %arrayidx3 = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom2
+  %y = getelementptr inbounds %struct.nd* %arrayidx3, i32 0, i32 1
+  %call4 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call1, i32* %y)
+  %4 = load i32* %i, align 4
+  %idxprom5 = sext i32 %4 to i64
+  %arrayidx6 = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom5
+  %x7 = getelementptr inbounds %struct.nd* %arrayidx6, i32 0, i32 0
+  %5 = load i32* %x7, align 4
+  %6 = load i32* %i, align 4
+  %idxprom8 = sext i32 %6 to i64
+  %arrayidx9 = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom8
+  %x10 = getelementptr inbounds %struct.nd* %arrayidx9, i32 0, i32 0
+  %7 = load i32* %x10, align 4
+  %mul = mul nsw i32 %5, %7
+  %8 = load i32* %i, align 4
+  %idxprom11 = sext i32 %8 to i64
+  %arrayidx12 = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom11
+  %y13 = getelementptr inbounds %struct.nd* %arrayidx12, i32 0, i32 1
+  %9 = load i32* %y13, align 4
+  %sub = sub nsw i32 %9, %mul
+  store i32 %sub, i32* %y13, align 4
+  %10 = load i32* %i, align 4
+  %inc = add nsw i32 %10, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %11 = load i32* @n, align 4
+  %idx.ext = sext i32 %11 to i64
+  %add.ptr = getelementptr inbounds %struct.nd* getelementptr inbounds ([5005 x %struct.nd]* @aa, i32 0, i32 0), i64 %idx.ext
+  %add.ptr14 = getelementptr inbounds %struct.nd* %add.ptr, i64 1
+  call void @_ZSt4sortIP2ndPFbS0_S0_EEvT_S4_T0_(%struct.nd* getelementptr inbounds ([5005 x %struct.nd]* @aa, i32 0, i64 1), %struct.nd* %add.ptr14, i1 (i64, i64)* @_Z4cmp12ndS_)
+  store i32 0, i32* %k, align 4
+  store i32 1, i32* %i15, align 4
+  br label %for.cond16
+
+5
+  %12 = load i32* %i15, align 4
+  %13 = load i32* @n, align 4
+  %cmp17 = icmp sle i32 %12, %13
+  br i1 %cmp17, label %for.body18, label %for.end37
+
+6
+  br label %while.cond
+
+7
+  %14 = load i32* %k, align 4
+  %tobool = icmp ne i32 %14, 0
+  br i1 %tobool, label %land.rhs, label %land.end
+
+8
+  %15 = load i32* %k, align 4
+  %sub19 = sub nsw i32 %15, 1
+  %idxprom20 = sext i32 %sub19 to i64
+  %arrayidx21 = getelementptr inbounds [5005 x %struct.nd]* @ans, i32 0, i64 %idxprom20
+  %16 = bitcast %struct.nd* %agg.tmp to i8*
+  %17 = bitcast %struct.nd* %arrayidx21 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %16, i8* %17, i64 8, i32 4, i1 false)
+  %18 = load i32* %k, align 4
+  %idxprom23 = sext i32 %18 to i64
+  %arrayidx24 = getelementptr inbounds [5005 x %struct.nd]* @ans, i32 0, i64 %idxprom23
+  %19 = bitcast %struct.nd* %agg.tmp22 to i8*
+  %20 = bitcast %struct.nd* %arrayidx24 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %19, i8* %20, i64 8, i32 4, i1 false)
+  %21 = load i32* %i15, align 4
+  %idxprom26 = sext i32 %21 to i64
+  %arrayidx27 = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom26
+  %22 = bitcast %struct.nd* %agg.tmp25 to i8*
+  %23 = bitcast %struct.nd* %arrayidx27 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %22, i8* %23, i64 8, i32 4, i1 false)
+  %24 = bitcast %struct.nd* %agg.tmp to i64*
+  %25 = load i64* %24, align 1
+  %26 = bitcast %struct.nd* %agg.tmp22 to i64*
+  %27 = load i64* %26, align 1
+  %28 = bitcast %struct.nd* %agg.tmp25 to i64*
+  %29 = load i64* %28, align 1
+  %call28 = call i32 @_Z4work2ndS_S_(i64 %25, i64 %27, i64 %29)
+  %cmp29 = icmp slt i32 %call28, 0
+  br label %land.end
+
+9
+  %30 = phi i1 [ false, %while.cond ], [ %cmp29, %land.rhs ]
+  br i1 %30, label %while.body, label %while.end
+
+10
+  %31 = load i32* %k, align 4
+  %dec = add nsw i32 %31, -1
+  store i32 %dec, i32* %k, align 4
+  br label %while.cond
+
+11
+  %32 = load i32* %k, align 4
+  %inc30 = add nsw i32 %32, 1
+  store i32 %inc30, i32* %k, align 4
+  %idxprom31 = sext i32 %inc30 to i64
+  %arrayidx32 = getelementptr inbounds [5005 x %struct.nd]* @ans, i32 0, i64 %idxprom31
+  %33 = load i32* %i15, align 4
+  %idxprom33 = sext i32 %33 to i64
+  %arrayidx34 = getelementptr inbounds [5005 x %struct.nd]* @aa, i32 0, i64 %idxprom33
+  %34 = bitcast %struct.nd* %arrayidx32 to i8*
+  %35 = bitcast %struct.nd* %arrayidx34 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %34, i8* %35, i64 8, i32 4, i1 false)
+  %36 = load i32* %i15, align 4
+  %inc36 = add nsw i32 %36, 1
+  store i32 %inc36, i32* %i15, align 4
+  br label %for.cond16
+
+12
+  %37 = load i32* %k, align 4
+  %sub38 = sub nsw i32 %37, 1
+  %call39 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %sub38)
+  ret i32 0

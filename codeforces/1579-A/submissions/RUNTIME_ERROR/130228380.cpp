@@ -22,7 +22,7 @@ void init_code()
  #endif 
 }
  
-int main() 
+signed main() 
 {
    init_code();
  int t = 0;

@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 vector<int>v[1000001];
 int q[100001];
-int main(){
+signed main(){
  int n,mx=0,mn=INT_MAX,j=0;
 	cin>>n;
  for(int i=1;i<=n;i++){

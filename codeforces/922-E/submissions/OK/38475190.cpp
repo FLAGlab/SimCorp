@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
 #define ft first
 #define sc second
 #define pb push_back
 #define pp pop_back
-int main() {
+signed main() {
 	ll n,w,b,x; cin>>n>>w>>b>>x;
 	ll c[n],j,i,k;
  for(i=0;i<n;i++)cin>>c[i];

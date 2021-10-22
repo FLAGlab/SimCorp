@@ -1,0 +1,77 @@
+
+1
+  %retval = alloca i32, align 4
+  %len = alloca i32, align 4
+  %ans = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* @T)
+  br label %while.cond
+
+2
+  %0 = load i32* @T, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* @T, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  %call1 = call %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RSbIS4_S5_T1_E(%"class.std::basic_istream"* @_ZSt3cin, %"class.std::basic_string"* @s)
+  %call2 = call i64 @_ZNKSs4sizeEv(%"class.std::basic_string"* @s) #2
+  %conv = trunc i64 %call2 to i32
+  store i32 %conv, i32* %len, align 4
+  store i32 0, i32* %ans, align 4
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+4
+  %1 = load i32* %i, align 4
+  %2 = load i32* %len, align 4
+  %cmp = icmp slt i32 %1, %2
+  br i1 %cmp, label %for.body, label %for.end
+
+5
+  %3 = load i32* %i, align 4
+  %conv3 = sext i32 %3 to i64
+  %call4 = call i8* @_ZNSsixEm(%"class.std::basic_string"* @s, i64 %conv3)
+  %4 = load i8* %call4
+  %conv5 = sext i8 %4 to i32
+  %cmp6 = icmp eq i32 %conv5, 66
+  br i1 %cmp6, label %if.then, label %if.else
+
+6
+  %5 = load i32* %ans, align 4
+  %inc = add nsw i32 %5, 1
+  store i32 %inc, i32* %ans, align 4
+  br label %if.end
+
+7
+  %6 = load i32* %ans, align 4
+  %dec7 = add nsw i32 %6, -1
+  store i32 %dec7, i32* %ans, align 4
+  br label %if.end
+
+8
+  %7 = load i32* %i, align 4
+  %inc8 = add nsw i32 %7, 1
+  store i32 %inc8, i32* %i, align 4
+  br label %for.cond
+
+9
+  %8 = load i32* %ans, align 4
+  %tobool9 = icmp ne i32 %8, 0
+  br i1 %tobool9, label %if.then10, label %if.else12
+
+10
+  %call11 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0))
+  br label %if.end14
+
+11
+  %call13 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str3, i32 0, i32 0))
+  br label %if.end14
+
+12
+  br label %while.cond
+
+13
+  ret i32 0

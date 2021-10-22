@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
  
-int main(){
+signed main(){
  long int n,i=0,max=0,count=0,max_num;
 	cin>>n;
  long int a[n+2],b[n+2];

@@ -1,0 +1,62 @@
+
+1
+  %retval = alloca i32, align 4
+  %q = alloca i32, align 4
+  %s = alloca i32, align 4
+  %t = alloca i32, align 4
+  %ref.tmp = alloca %"struct.std::pair", align 4
+  store i32 0, i32* %retval
+  %call = call i32 @_Z3winv()
+  store i32 %call, i32* @n, align 4
+  %call1 = call i32 @_Z3winv()
+  store i32 %call1, i32* %q, align 4
+  call void @_Z4initv()
+  call void @_Z10fillthesetv()
+  br label %while.cond
+
+2
+  %0 = load i32* %q, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %q, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  %call2 = call i32 @_Z3winv()
+  %call3 = call i32 @_Z3geti(i32 %call2)
+  store i32 %call3, i32* %s, align 4
+  %call4 = call i32 @_Z3winv()
+  %call5 = call i32 @_Z3geti(i32 %call4)
+  store i32 %call5, i32* %t, align 4
+  %1 = load i32* %s, align 4
+  %2 = load i32* %t, align 4
+  %cmp = icmp eq i32 %1, %2
+  br i1 %cmp, label %if.then, label %if.else
+
+4
+  %call6 = call i32 @putchar(i32 48)
+  br label %if.end13
+
+5
+  call void @_ZNSt4pairIiiEC1IRiS2_vEEOT_OT0_(%"struct.std::pair"* %ref.tmp, i32* %s, i32* %t)
+  %call7 = call i64 @_ZNKSt3setISt4pairIiiESt4lessIS1_ESaIS1_EE5countERKS1_(%"class.std::set"* @edges, %"struct.std::pair"* %ref.tmp)
+  %tobool8 = icmp ne i64 %call7, 0
+  br i1 %tobool8, label %if.then9, label %if.else11
+
+6
+  %call10 = call i32 @putchar(i32 49)
+  br label %if.end
+
+7
+  %call12 = call i32 @putchar(i32 50)
+  br label %if.end
+
+8
+  br label %if.end13
+
+9
+  %call14 = call i32 @putchar(i32 10)
+  br label %while.cond
+
+10
+  ret i32 0

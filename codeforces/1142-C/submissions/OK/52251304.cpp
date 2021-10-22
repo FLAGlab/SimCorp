@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -31,7 +31,7 @@ int solve(int n) {
  return ans;
 }
  
-int main() {
+signed main() {
  int n;
   scanf("%d",&n);
  for(int i=1;i<=n;i++) {

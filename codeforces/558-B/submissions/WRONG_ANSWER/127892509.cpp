@@ -3,7 +3,7 @@
 using namespace std;
  
 int arr[1000009];
-int main() {
+signed main() {
  int n,a;
     cin>>n;
  map<int,pair<int,int>>mp;//(cnt,(start,end))

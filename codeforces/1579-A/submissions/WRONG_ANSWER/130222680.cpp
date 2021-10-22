@@ -10,7 +10,7 @@ typedef pair<ll,ll> pll;
 ll const MOD=1000000007;
 ll const  N= 1e6;
  
-int main()
+signed main()
 {
     fastread();
  

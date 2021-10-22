@@ -4,7 +4,7 @@ using namespace std;
 int n,q,a[N],fa[N],dd[N];
 set<pair<int,int>>s;
 int Find(int x){return fa[x]==x?x:fa[x]=Find(fa[x]);}
-int main()
+signed main()
 {
  for(int i=1;i<N;i++)fa[i]=i;
 	scanf("%d%d",&n,&q);

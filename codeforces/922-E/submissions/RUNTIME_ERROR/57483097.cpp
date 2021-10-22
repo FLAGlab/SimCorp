@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -11,7 +11,7 @@ int num[maxn],cost[maxn];
  
 ll dp[maxn][maxbird];
  
-int main(){
+signed main(){
 	ios_base::sync_with_stdio(0);
  int n;
 	ll cap,inc,reg;

@@ -1,6 +1,6 @@
+#include<bits/stdc++.h>
 //In the name of Allah
  
-#include<bits/stdc++.h>
  
 using namespace std;
  

@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 #define ll long long
 using namespace std; 
  
  
  
-int main() {
+signed main() {
  
  int tt=1;
 	cin>>tt;

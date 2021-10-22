@@ -1,0 +1,471 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i2 = alloca i32, align 4
+  %ref.tmp = alloca %struct.node, align 4
+  %i12 = alloca i32, align 4
+  %ref.tmp20 = alloca %struct.node, align 4
+  %i41 = alloca i32, align 4
+  %maxx = alloca i32, align 4
+  %maxn = alloca i32, align 4
+  %k = alloca i32, align 4
+  %t = alloca %struct.node, align 4
+  %ww = alloca i32, align 4
+  %tn = alloca i32, align 4
+  %ref.tmp78 = alloca i32, align 4
+  %temp = alloca %struct.node, align 4
+  %j = alloca i32, align 4
+  %temp101 = alloca %struct.node, align 4
+  %k102 = alloca i32, align 4
+  %ww111 = alloca i32, align 4
+  %ref.tmp150 = alloca %struct.node, align 4
+  %maxx186 = alloca i32, align 4
+  %i187 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([9 x i8]* @.str, i32 0, i32 0), i32* @n, i32* @w, i32* @b, i32* @x)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idx.ext = sext i32 %2 to i64
+  %add.ptr = getelementptr inbounds i32* getelementptr inbounds ([123456 x i32]* @noBirds, i32 0, i32 0), i64 %idx.ext
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str2, i32 0, i32 0), i32* %add.ptr)
+  %3 = load i32* %i, align 4
+  %inc = add nsw i32 %3, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  store i32 1, i32* %i2, align 4
+  br label %for.cond3
+
+5
+  %4 = load i32* %i2, align 4
+  %5 = load i32* @n, align 4
+  %cmp4 = icmp sle i32 %4, %5
+  br i1 %cmp4, label %for.body5, label %for.end11
+
+6
+  %6 = load i32* %i2, align 4
+  %idx.ext6 = sext i32 %6 to i64
+  %add.ptr7 = getelementptr inbounds i32* getelementptr inbounds ([123456 x i32]* @costBirds, i32 0, i32 0), i64 %idx.ext6
+  %call8 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str2, i32 0, i32 0), i32* %add.ptr7)
+  %7 = load i32* %i2, align 4
+  %inc10 = add nsw i32 %7, 1
+  store i32 %inc10, i32* %i2, align 4
+  br label %for.cond3
+
+7
+  %no = getelementptr inbounds %struct.node* %ref.tmp, i32 0, i32 0
+  store i32 0, i32* %no, align 4
+  %w = getelementptr inbounds %struct.node* %ref.tmp, i32 0, i32 1
+  %8 = load i32* @w, align 4
+  store i32 %8, i32* %w, align 4
+  %c = getelementptr inbounds %struct.node* %ref.tmp, i32 0, i32 2
+  %9 = load i32* @w, align 4
+  store i32 %9, i32* %c, align 4
+  call void @_ZNSt6vectorI4nodeSaIS0_EE9push_backEOS0_(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), %struct.node* %ref.tmp)
+  store i32 1, i32* %i12, align 4
+  br label %for.cond13
+
+8
+  %10 = load i32* %i12, align 4
+  %11 = load i32* getelementptr inbounds ([123456 x i32]* @noBirds, i32 0, i64 1), align 4
+  %cmp14 = icmp sle i32 %10, %11
+  br i1 %cmp14, label %for.body15, label %for.end40
+
+9
+  %12 = load i32* %i12, align 4
+  %sub = sub nsw i32 %12, 1
+  %conv = sext i32 %sub to i64
+  %call16 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), i64 %conv)
+  %w17 = getelementptr inbounds %struct.node* %call16, i32 0, i32 1
+  %13 = load i32* %w17, align 4
+  %14 = load i32* getelementptr inbounds ([123456 x i32]* @costBirds, i32 0, i64 1), align 4
+  %15 = load i32* %i12, align 4
+  %mul = mul nsw i32 %14, %15
+  %sub18 = sub nsw i32 %13, %mul
+  %cmp19 = icmp sge i32 %sub18, 0
+  br i1 %cmp19, label %if.then, label %if.else
+
+10
+  %no21 = getelementptr inbounds %struct.node* %ref.tmp20, i32 0, i32 0
+  %16 = load i32* %i12, align 4
+  store i32 %16, i32* %no21, align 4
+  %w22 = getelementptr inbounds %struct.node* %ref.tmp20, i32 0, i32 1
+  %17 = load i32* %i12, align 4
+  %sub23 = sub nsw i32 %17, 1
+  %conv24 = sext i32 %sub23 to i64
+  %call25 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), i64 %conv24)
+  %w26 = getelementptr inbounds %struct.node* %call25, i32 0, i32 1
+  %18 = load i32* %w26, align 4
+  %19 = load i32* %i12, align 4
+  %idxprom = sext i32 %19 to i64
+  %arrayidx = getelementptr inbounds [123456 x i32]* @costBirds, i32 0, i64 %idxprom
+  %20 = load i32* %arrayidx, align 4
+  %21 = load i32* %i12, align 4
+  %mul27 = mul nsw i32 %20, %21
+  %sub28 = sub nsw i32 %18, %mul27
+  store i32 %sub28, i32* %w22, align 4
+  %c29 = getelementptr inbounds %struct.node* %ref.tmp20, i32 0, i32 2
+  %22 = load i32* %i12, align 4
+  %sub30 = sub nsw i32 %22, 1
+  %conv31 = sext i32 %sub30 to i64
+  %call32 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), i64 %conv31)
+  %c33 = getelementptr inbounds %struct.node* %call32, i32 0, i32 2
+  %23 = load i32* %c33, align 4
+  %24 = load i32* %i12, align 4
+  %25 = load i32* @b, align 4
+  %mul34 = mul nsw i32 %24, %25
+  %add = add nsw i32 %23, %mul34
+  store i32 %add, i32* %c29, align 4
+  call void @_ZNSt6vectorI4nodeSaIS0_EE9push_backEOS0_(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), %struct.node* %ref.tmp20)
+  br label %if.end
+
+11
+  %26 = load i32* %i12, align 4
+  %sub35 = sub nsw i32 %26, 1
+  %conv36 = sext i32 %sub35 to i64
+  %call37 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), i64 %conv36)
+  call void @_ZNSt6vectorI4nodeSaIS0_EE9push_backERKS0_(%"class.std::vector"* getelementptr inbounds ([123457 x %"class.std::vector"]* @v, i32 0, i64 1), %struct.node* %call37)
+  br label %if.end
+
+12
+  %27 = load i32* %i12, align 4
+  %inc39 = add nsw i32 %27, 1
+  store i32 %inc39, i32* %i12, align 4
+  br label %for.cond13
+
+13
+  store i32 2, i32* %i41, align 4
+  br label %for.cond42
+
+14
+  %28 = load i32* %i41, align 4
+  %29 = load i32* @n, align 4
+  %cmp43 = icmp sle i32 %28, %29
+  br i1 %cmp43, label %for.body44, label %for.end185
+
+15
+  store i32 0, i32* %maxx, align 4
+  store i32 0, i32* %maxn, align 4
+  store i32 0, i32* %k, align 4
+  br label %for.cond45
+
+16
+  %30 = load i32* %k, align 4
+  %conv46 = sext i32 %30 to i64
+  %31 = load i32* %i41, align 4
+  %sub47 = sub nsw i32 %31, 1
+  %idxprom48 = sext i32 %sub47 to i64
+  %arrayidx49 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom48
+  %call50 = call i64 @_ZNKSt6vectorI4nodeSaIS0_EE4sizeEv(%"class.std::vector"* %arrayidx49) #2
+  %cmp51 = icmp ult i64 %conv46, %call50
+  br i1 %cmp51, label %for.body52, label %for.end70
+
+17
+  %32 = load i32* %i41, align 4
+  %sub53 = sub nsw i32 %32, 1
+  %idxprom54 = sext i32 %sub53 to i64
+  %arrayidx55 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom54
+  %33 = load i32* %k, align 4
+  %conv56 = sext i32 %33 to i64
+  %call57 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx55, i64 %conv56)
+  %no58 = getelementptr inbounds %struct.node* %call57, i32 0, i32 0
+  %34 = load i32* %no58, align 4
+  %35 = load i32* %maxx, align 4
+  %cmp59 = icmp sge i32 %34, %35
+  br i1 %cmp59, label %if.then60, label %if.end67
+
+18
+  %36 = load i32* %i41, align 4
+  %sub61 = sub nsw i32 %36, 1
+  %idxprom62 = sext i32 %sub61 to i64
+  %arrayidx63 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom62
+  %37 = load i32* %k, align 4
+  %conv64 = sext i32 %37 to i64
+  %call65 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx63, i64 %conv64)
+  %no66 = getelementptr inbounds %struct.node* %call65, i32 0, i32 0
+  %38 = load i32* %no66, align 4
+  store i32 %38, i32* %maxx, align 4
+  %39 = load i32* %k, align 4
+  store i32 %39, i32* %maxn, align 4
+  br label %if.end67
+
+19
+  %40 = load i32* %k, align 4
+  %inc69 = add nsw i32 %40, 1
+  store i32 %inc69, i32* %k, align 4
+  br label %for.cond45
+
+20
+  %41 = load i32* %i41, align 4
+  %sub71 = sub nsw i32 %41, 1
+  %idxprom72 = sext i32 %sub71 to i64
+  %arrayidx73 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom72
+  %42 = load i32* %maxn, align 4
+  %conv74 = sext i32 %42 to i64
+  %call75 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx73, i64 %conv74)
+  %43 = bitcast %struct.node* %t to i8*
+  %44 = bitcast %struct.node* %call75 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %43, i8* %44, i64 12, i32 4, i1 false)
+  %45 = load i32* @w, align 4
+  store i32 %45, i32* %ww, align 4
+  %46 = load i32* %ww, align 4
+  %47 = load i32* %i41, align 4
+  %idxprom76 = sext i32 %47 to i64
+  %arrayidx77 = getelementptr inbounds [123456 x i32]* @costBirds, i32 0, i64 %idxprom76
+  %48 = load i32* %arrayidx77, align 4
+  %div = sdiv i32 %46, %48
+  store i32 %div, i32* %ref.tmp78, align 4
+  %49 = load i32* %i41, align 4
+  %idxprom79 = sext i32 %49 to i64
+  %arrayidx80 = getelementptr inbounds [123456 x i32]* @noBirds, i32 0, i64 %idxprom79
+  %call81 = call i32* @_ZSt3minIiERKT_S2_S2_(i32* %ref.tmp78, i32* %arrayidx80)
+  %50 = load i32* %call81
+  store i32 %50, i32* %tn, align 4
+  %no82 = getelementptr inbounds %struct.node* %temp, i32 0, i32 0
+  %51 = load i32* %tn, align 4
+  store i32 %51, i32* %no82, align 4
+  %w83 = getelementptr inbounds %struct.node* %temp, i32 0, i32 1
+  %52 = load i32* %ww, align 4
+  %53 = load i32* %i41, align 4
+  %idxprom84 = sext i32 %53 to i64
+  %arrayidx85 = getelementptr inbounds [123456 x i32]* @costBirds, i32 0, i64 %idxprom84
+  %54 = load i32* %arrayidx85, align 4
+  %55 = load i32* %tn, align 4
+  %mul86 = mul nsw i32 %54, %55
+  %sub87 = sub nsw i32 %52, %mul86
+  store i32 %sub87, i32* %w83, align 4
+  %c88 = getelementptr inbounds %struct.node* %temp, i32 0, i32 2
+  %56 = load i32* %ww, align 4
+  %57 = load i32* %tn, align 4
+  %58 = load i32* @b, align 4
+  %mul89 = mul nsw i32 %57, %58
+  %add90 = add nsw i32 %56, %mul89
+  store i32 %add90, i32* %c88, align 4
+  %no91 = getelementptr inbounds %struct.node* %temp, i32 0, i32 0
+  %59 = load i32* %no91, align 4
+  %no92 = getelementptr inbounds %struct.node* %t, i32 0, i32 0
+  %60 = load i32* %no92, align 4
+  %cmp93 = icmp sgt i32 %59, %60
+  br i1 %cmp93, label %if.then94, label %if.end95
+
+21
+  %61 = bitcast %struct.node* %t to i8*
+  %62 = bitcast %struct.node* %temp to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %61, i8* %62, i64 12, i32 4, i1 false)
+  br label %if.end95
+
+22
+  store i32 0, i32* %j, align 4
+  br label %for.cond96
+
+23
+  %63 = load i32* %j, align 4
+  %64 = load i32* %i41, align 4
+  %idxprom97 = sext i32 %64 to i64
+  %arrayidx98 = getelementptr inbounds [123456 x i32]* @noBirds, i32 0, i64 %idxprom97
+  %65 = load i32* %arrayidx98, align 4
+  %cmp99 = icmp sle i32 %63, %65
+  br i1 %cmp99, label %for.body100, label %for.end182
+
+24
+  %66 = bitcast %struct.node* %temp101 to i8*
+  %67 = bitcast %struct.node* %t to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %66, i8* %67, i64 12, i32 4, i1 false)
+  store i32 0, i32* %k102, align 4
+  br label %for.cond103
+
+25
+  %68 = load i32* %k102, align 4
+  %conv104 = sext i32 %68 to i64
+  %69 = load i32* %i41, align 4
+  %sub105 = sub nsw i32 %69, 1
+  %idxprom106 = sext i32 %sub105 to i64
+  %arrayidx107 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom106
+  %call108 = call i64 @_ZNKSt6vectorI4nodeSaIS0_EE4sizeEv(%"class.std::vector"* %arrayidx107) #2
+  %cmp109 = icmp ult i64 %conv104, %call108
+  br i1 %cmp109, label %for.body110, label %for.end177
+
+26
+  %70 = load i32* %i41, align 4
+  %sub112 = sub nsw i32 %70, 1
+  %idxprom113 = sext i32 %sub112 to i64
+  %arrayidx114 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom113
+  %71 = load i32* %k102, align 4
+  %conv115 = sext i32 %71 to i64
+  %call116 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx114, i64 %conv115)
+  %w117 = getelementptr inbounds %struct.node* %call116, i32 0, i32 1
+  %72 = load i32* %w117, align 4
+  %73 = load i32* @x, align 4
+  %add118 = add nsw i32 %72, %73
+  store i32 %add118, i32* %ww111, align 4
+  %74 = load i32* %ww111, align 4
+  %75 = load i32* %i41, align 4
+  %sub119 = sub nsw i32 %75, 1
+  %idxprom120 = sext i32 %sub119 to i64
+  %arrayidx121 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom120
+  %76 = load i32* %k102, align 4
+  %conv122 = sext i32 %76 to i64
+  %call123 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx121, i64 %conv122)
+  %c124 = getelementptr inbounds %struct.node* %call123, i32 0, i32 2
+  %77 = load i32* %c124, align 4
+  %cmp125 = icmp sgt i32 %74, %77
+  br i1 %cmp125, label %if.then126, label %if.end133
+
+27
+  %78 = load i32* %i41, align 4
+  %sub127 = sub nsw i32 %78, 1
+  %idxprom128 = sext i32 %sub127 to i64
+  %arrayidx129 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom128
+  %79 = load i32* %k102, align 4
+  %conv130 = sext i32 %79 to i64
+  %call131 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx129, i64 %conv130)
+  %c132 = getelementptr inbounds %struct.node* %call131, i32 0, i32 2
+  %80 = load i32* %c132, align 4
+  store i32 %80, i32* %ww111, align 4
+  br label %if.end133
+
+28
+  %81 = load i32* %ww111, align 4
+  %82 = load i32* %i41, align 4
+  %idxprom134 = sext i32 %82 to i64
+  %arrayidx135 = getelementptr inbounds [123456 x i32]* @costBirds, i32 0, i64 %idxprom134
+  %83 = load i32* %arrayidx135, align 4
+  %84 = load i32* %j, align 4
+  %mul136 = mul nsw i32 %83, %84
+  %sub137 = sub nsw i32 %81, %mul136
+  %cmp138 = icmp sge i32 %sub137, 0
+  br i1 %cmp138, label %if.then139, label %if.end174
+
+29
+  %85 = load i32* %i41, align 4
+  %sub140 = sub nsw i32 %85, 1
+  %idxprom141 = sext i32 %sub140 to i64
+  %arrayidx142 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom141
+  %86 = load i32* %k102, align 4
+  %conv143 = sext i32 %86 to i64
+  %call144 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx142, i64 %conv143)
+  %no145 = getelementptr inbounds %struct.node* %call144, i32 0, i32 0
+  %87 = load i32* %no145, align 4
+  %88 = load i32* %j, align 4
+  %add146 = add nsw i32 %87, %88
+  %no147 = getelementptr inbounds %struct.node* %temp101, i32 0, i32 0
+  %89 = load i32* %no147, align 4
+  %cmp148 = icmp sge i32 %add146, %89
+  br i1 %cmp148, label %if.then149, label %if.end173
+
+30
+  %no151 = getelementptr inbounds %struct.node* %ref.tmp150, i32 0, i32 0
+  %90 = load i32* %i41, align 4
+  %sub152 = sub nsw i32 %90, 1
+  %idxprom153 = sext i32 %sub152 to i64
+  %arrayidx154 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom153
+  %91 = load i32* %k102, align 4
+  %conv155 = sext i32 %91 to i64
+  %call156 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx154, i64 %conv155)
+  %no157 = getelementptr inbounds %struct.node* %call156, i32 0, i32 0
+  %92 = load i32* %no157, align 4
+  %93 = load i32* %j, align 4
+  %add158 = add nsw i32 %92, %93
+  store i32 %add158, i32* %no151, align 4
+  %w159 = getelementptr inbounds %struct.node* %ref.tmp150, i32 0, i32 1
+  %94 = load i32* %ww111, align 4
+  %95 = load i32* %i41, align 4
+  %idxprom160 = sext i32 %95 to i64
+  %arrayidx161 = getelementptr inbounds [123456 x i32]* @costBirds, i32 0, i64 %idxprom160
+  %96 = load i32* %arrayidx161, align 4
+  %97 = load i32* %j, align 4
+  %mul162 = mul nsw i32 %96, %97
+  %sub163 = sub nsw i32 %94, %mul162
+  store i32 %sub163, i32* %w159, align 4
+  %c164 = getelementptr inbounds %struct.node* %ref.tmp150, i32 0, i32 2
+  %98 = load i32* %i41, align 4
+  %sub165 = sub nsw i32 %98, 1
+  %idxprom166 = sext i32 %sub165 to i64
+  %arrayidx167 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom166
+  %99 = load i32* %k102, align 4
+  %conv168 = sext i32 %99 to i64
+  %call169 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx167, i64 %conv168)
+  %c170 = getelementptr inbounds %struct.node* %call169, i32 0, i32 2
+  %100 = load i32* %c170, align 4
+  %101 = load i32* %j, align 4
+  %102 = load i32* @b, align 4
+  %mul171 = mul nsw i32 %101, %102
+  %add172 = add nsw i32 %100, %mul171
+  store i32 %add172, i32* %c164, align 4
+  %103 = bitcast %struct.node* %temp101 to i8*
+  %104 = bitcast %struct.node* %ref.tmp150 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %103, i8* %104, i64 12, i32 4, i1 false)
+  br label %if.end173
+
+31
+  br label %if.end174
+
+32
+  %105 = load i32* %k102, align 4
+  %inc176 = add nsw i32 %105, 1
+  store i32 %inc176, i32* %k102, align 4
+  br label %for.cond103
+
+33
+  %106 = load i32* %i41, align 4
+  %idxprom178 = sext i32 %106 to i64
+  %arrayidx179 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom178
+  call void @_ZNSt6vectorI4nodeSaIS0_EE9push_backERKS0_(%"class.std::vector"* %arrayidx179, %struct.node* %temp101)
+  %107 = load i32* %j, align 4
+  %inc181 = add nsw i32 %107, 1
+  store i32 %inc181, i32* %j, align 4
+  br label %for.cond96
+
+34
+  %108 = load i32* %i41, align 4
+  %inc184 = add nsw i32 %108, 1
+  store i32 %inc184, i32* %i41, align 4
+  br label %for.cond42
+
+35
+  store i32 0, i32* %maxx186, align 4
+  store i32 0, i32* %i187, align 4
+  br label %for.cond188
+
+36
+  %109 = load i32* %i187, align 4
+  %conv189 = sext i32 %109 to i64
+  %110 = load i32* @n, align 4
+  %idxprom190 = sext i32 %110 to i64
+  %arrayidx191 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom190
+  %call192 = call i64 @_ZNKSt6vectorI4nodeSaIS0_EE4sizeEv(%"class.std::vector"* %arrayidx191) #2
+  %cmp193 = icmp ult i64 %conv189, %call192
+  br i1 %cmp193, label %for.body194, label %for.end203
+
+37
+  %111 = load i32* @n, align 4
+  %idxprom195 = sext i32 %111 to i64
+  %arrayidx196 = getelementptr inbounds [123457 x %"class.std::vector"]* @v, i32 0, i64 %idxprom195
+  %112 = load i32* %i187, align 4
+  %conv197 = sext i32 %112 to i64
+  %call198 = call %struct.node* @_ZNSt6vectorI4nodeSaIS0_EEixEm(%"class.std::vector"* %arrayidx196, i64 %conv197)
+  %no199 = getelementptr inbounds %struct.node* %call198, i32 0, i32 0
+  %call200 = call i32* @_ZSt3maxIiERKT_S2_S2_(i32* %no199, i32* %maxx186)
+  %113 = load i32* %call200
+  store i32 %113, i32* %maxx186, align 4
+  %114 = load i32* %i187, align 4
+  %inc202 = add nsw i32 %114, 1
+  store i32 %inc202, i32* %i187, align 4
+  br label %for.cond188
+
+38
+  %115 = load i32* %maxx186, align 4
+  %call204 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str3, i32 0, i32 0), i32 %115)
+  %116 = load i32* %retval
+  ret i32 %116

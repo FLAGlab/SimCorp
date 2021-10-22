@@ -1,0 +1,286 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %i = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %ref.tmp = alloca %"struct.std::__detail::_Node_iterator", align 8
+  %ref.tmp5 = alloca %"struct.std::__detail::_Node_iterator", align 8
+  %coerce = alloca %"struct.std::pair", align 8
+  %__range = alloca %"class.std::unordered_set"*, align 8
+  %__begin = alloca %"struct.std::__detail::_Node_iterator", align 8
+  %__end = alloca %"struct.std::__detail::_Node_iterator", align 8
+  %x24 = alloca i32, align 4
+  %ref.tmp26 = alloca %struct.Coord, align 8
+  %start = alloca %struct.Coord, align 8
+  %startPos = alloca i32, align 4
+  %i34 = alloca i32, align 4
+  %agg.tmp = alloca %struct.Coord, align 8
+  %it = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %coerce56 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp58 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp59 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %top = alloca i32, align 4
+  %i66 = alloca i32, align 4
+  %agg.tmp73 = alloca %struct.Coord, align 8
+  %agg.tmp75 = alloca %struct.Coord, align 8
+  %agg.tmp79 = alloca %struct.Coord, align 8
+  %ref.tmp94 = alloca i32, align 4
+  %ref.tmp95 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %n)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* %n, align 4
+  %cmp = icmp slt i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %x)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call1, i32* %y)
+  %call3 = call %"struct.std::__detail::_Hash_node"* @_ZNSt13unordered_setIiSt4hashIiESt8equal_toIiESaIiEE4findERKi(%"class.std::unordered_set"* @myHash, i32* %x)
+  %coerce.dive = getelementptr %"struct.std::__detail::_Node_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive4 = getelementptr %"struct.std::__detail::_Node_iterator_base"* %coerce.dive, i32 0, i32 0
+  store %"struct.std::__detail::_Hash_node"* %call3, %"struct.std::__detail::_Hash_node"** %coerce.dive4
+  %2 = bitcast %"struct.std::__detail::_Node_iterator"* %ref.tmp to %"struct.std::__detail::_Node_iterator_base"*
+  %call6 = call %"struct.std::__detail::_Hash_node"* @_ZNSt13unordered_setIiSt4hashIiESt8equal_toIiESaIiEE3endEv(%"class.std::unordered_set"* @myHash) #2
+  %coerce.dive7 = getelementptr %"struct.std::__detail::_Node_iterator"* %ref.tmp5, i32 0, i32 0
+  %coerce.dive8 = getelementptr %"struct.std::__detail::_Node_iterator_base"* %coerce.dive7, i32 0, i32 0
+  store %"struct.std::__detail::_Hash_node"* %call6, %"struct.std::__detail::_Hash_node"** %coerce.dive8
+  %3 = bitcast %"struct.std::__detail::_Node_iterator"* %ref.tmp5 to %"struct.std::__detail::_Node_iterator_base"*
+  %call9 = call zeroext i1 @_ZNSt8__detaileqIiLb0EEEbRKNS_19_Node_iterator_baseIT_XT0_EEES5_(%"struct.std::__detail::_Node_iterator_base"* %2, %"struct.std::__detail::_Node_iterator_base"* %3)
+  br i1 %call9, label %if.then, label %if.else
+
+4
+  %4 = load i32* %y, align 4
+  %call10 = call i32* @_ZNSt13unordered_mapIiiSt4hashIiESt8equal_toIiESaISt4pairIKiiEEEixERS5_(%"class.std::unordered_map"* @yConfig, i32* %x)
+  store i32 %4, i32* %call10
+  %call11 = call { %"struct.std::__detail::_Hash_node"*, i8 } @_ZNSt13unordered_setIiSt4hashIiESt8equal_toIiESaIiEE6insertERKi(%"class.std::unordered_set"* @myHash, i32* %x)
+  %5 = bitcast %"struct.std::pair"* %coerce to { %"struct.std::__detail::_Hash_node"*, i8 }*
+  %6 = getelementptr { %"struct.std::__detail::_Hash_node"*, i8 }* %5, i32 0, i32 0
+  %7 = extractvalue { %"struct.std::__detail::_Hash_node"*, i8 } %call11, 0
+  store %"struct.std::__detail::_Hash_node"* %7, %"struct.std::__detail::_Hash_node"** %6, align 1
+  %8 = getelementptr { %"struct.std::__detail::_Hash_node"*, i8 }* %5, i32 0, i32 1
+  %9 = extractvalue { %"struct.std::__detail::_Hash_node"*, i8 } %call11, 1
+  store i8 %9, i8* %8, align 1
+  br label %if.end
+
+5
+  %call12 = call i32* @_ZNSt13unordered_mapIiiSt4hashIiESt8equal_toIiESaISt4pairIKiiEEEixERS5_(%"class.std::unordered_map"* @yConfig, i32* %x)
+  %call13 = call i32* @_ZSt3maxIiERKT_S2_S2_(i32* %call12, i32* %y)
+  %10 = load i32* %call13
+  %call14 = call i32* @_ZNSt13unordered_mapIiiSt4hashIiESt8equal_toIiESaISt4pairIKiiEEEixERS5_(%"class.std::unordered_map"* @yConfig, i32* %x)
+  store i32 %10, i32* %call14
+  br label %if.end
+
+6
+  %11 = load i32* %i, align 4
+  %inc = add nsw i32 %11, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+7
+  store %"class.std::unordered_set"* @myHash, %"class.std::unordered_set"** %__range, align 8
+  %call15 = call %"struct.std::__detail::_Hash_node"* @_ZNSt13unordered_setIiSt4hashIiESt8equal_toIiESaIiEE5beginEv(%"class.std::unordered_set"* @myHash) #2
+  %coerce.dive16 = getelementptr %"struct.std::__detail::_Node_iterator"* %__begin, i32 0, i32 0
+  %coerce.dive17 = getelementptr %"struct.std::__detail::_Node_iterator_base"* %coerce.dive16, i32 0, i32 0
+  store %"struct.std::__detail::_Hash_node"* %call15, %"struct.std::__detail::_Hash_node"** %coerce.dive17
+  %call18 = call %"struct.std::__detail::_Hash_node"* @_ZNSt13unordered_setIiSt4hashIiESt8equal_toIiESaIiEE3endEv(%"class.std::unordered_set"* @myHash) #2
+  %coerce.dive19 = getelementptr %"struct.std::__detail::_Node_iterator"* %__end, i32 0, i32 0
+  %coerce.dive20 = getelementptr %"struct.std::__detail::_Node_iterator_base"* %coerce.dive19, i32 0, i32 0
+  store %"struct.std::__detail::_Hash_node"* %call18, %"struct.std::__detail::_Hash_node"** %coerce.dive20
+  br label %for.cond21
+
+8
+  %12 = bitcast %"struct.std::__detail::_Node_iterator"* %__begin to %"struct.std::__detail::_Node_iterator_base"*
+  %13 = bitcast %"struct.std::__detail::_Node_iterator"* %__end to %"struct.std::__detail::_Node_iterator_base"*
+  %call22 = call zeroext i1 @_ZNSt8__detailneIiLb0EEEbRKNS_19_Node_iterator_baseIT_XT0_EEES5_(%"struct.std::__detail::_Node_iterator_base"* %12, %"struct.std::__detail::_Node_iterator_base"* %13)
+  br i1 %call22, label %for.body23, label %for.end32
+
+9
+  %call25 = call i32* @_ZNKSt8__detail14_Node_iteratorIiLb1ELb0EEdeEv(%"struct.std::__detail::_Node_iterator"* %__begin)
+  %14 = load i32* %call25
+  store i32 %14, i32* %x24, align 4
+  %15 = load i32* %x24, align 4
+  %conv = sitofp i32 %15 to double
+  %call27 = call i32* @_ZNSt13unordered_mapIiiSt4hashIiESt8equal_toIiESaISt4pairIKiiEEEixERS5_(%"class.std::unordered_map"* @yConfig, i32* %x24)
+  %16 = load i32* %call27
+  %conv28 = sitofp i32 %16 to double
+  %17 = load i32* %x24, align 4
+  %18 = load i32* %x24, align 4
+  %mul = mul nsw i32 %17, %18
+  %conv29 = sitofp i32 %mul to double
+  %sub = fsub double %conv28, %conv29
+  call void @_ZN5CoordC1Edd(%struct.Coord* %ref.tmp26, double %conv, double %sub)
+  call void @_ZNSt6vectorI5CoordSaIS0_EE9push_backEOS0_(%"class.std::vector"* @points, %struct.Coord* %ref.tmp26)
+  %call31 = call %"struct.std::__detail::_Node_iterator"* @_ZNSt8__detail14_Node_iteratorIiLb1ELb0EEppEv(%"struct.std::__detail::_Node_iterator"* %__begin)
+  br label %for.cond21
+
+10
+  %call33 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 0)
+  %19 = bitcast %struct.Coord* %start to i8*
+  %20 = bitcast %struct.Coord* %call33 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %19, i8* %20, i64 16, i32 8, i1 false)
+  store i32 0, i32* %startPos, align 4
+  store i32 1, i32* %i34, align 4
+  br label %for.cond35
+
+11
+  %21 = load i32* %i34, align 4
+  %conv36 = sext i32 %21 to i64
+  %call37 = call i64 @_ZNKSt6vectorI5CoordSaIS0_EE4sizeEv(%"class.std::vector"* @points) #2
+  %cmp38 = icmp ult i64 %conv36, %call37
+  br i1 %cmp38, label %for.body39, label %for.end49
+
+12
+  %22 = load i32* %i34, align 4
+  %conv40 = sext i32 %22 to i64
+  %call41 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 %conv40)
+  %23 = bitcast %struct.Coord* %agg.tmp to i8*
+  %24 = bitcast %struct.Coord* %call41 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %23, i8* %24, i64 16, i32 8, i1 false)
+  %25 = bitcast %struct.Coord* %agg.tmp to { i64, i64 }*
+  %26 = getelementptr { i64, i64 }* %25, i32 0, i32 0
+  %27 = load i64* %26, align 1
+  %28 = getelementptr { i64, i64 }* %25, i32 0, i32 1
+  %29 = load i64* %28, align 1
+  %call42 = call zeroext i1 @_ZN5CoordltES_(%struct.Coord* %start, i64 %27, i64 %29)
+  br i1 %call42, label %if.then43, label %if.end46
+
+13
+  %30 = load i32* %i34, align 4
+  store i32 %30, i32* %startPos, align 4
+  %31 = load i32* %i34, align 4
+  %conv44 = sext i32 %31 to i64
+  %call45 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 %conv44)
+  %32 = bitcast %struct.Coord* %start to i8*
+  %33 = bitcast %struct.Coord* %call45 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %32, i8* %33, i64 16, i32 8, i1 false)
+  br label %if.end46
+
+14
+  %34 = load i32* %i34, align 4
+  %inc48 = add nsw i32 %34, 1
+  store i32 %inc48, i32* %i34, align 4
+  br label %for.cond35
+
+15
+  %35 = load i32* %startPos, align 4
+  %conv50 = sext i32 %35 to i64
+  %call51 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 %conv50)
+  %call52 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 0)
+  call void @_ZSt4swapI5CoordEvRT_S2_(%struct.Coord* %call51, %struct.Coord* %call52) #2
+  %call53 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EE5beginEv(%"class.std::vector"* @points) #2
+  %coerce.dive54 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %it, i32 0, i32 0
+  store %struct.Coord* %call53, %struct.Coord** %coerce.dive54
+  %call55 = call %struct.Coord* @_ZN9__gnu_cxx17__normal_iteratorIP5CoordSt6vectorIS1_SaIS1_EEEppEi(%"class.__gnu_cxx::__normal_iterator"* %it, i32 0)
+  %coerce.dive57 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %coerce56, i32 0, i32 0
+  store %struct.Coord* %call55, %struct.Coord** %coerce.dive57
+  %36 = bitcast %"class.__gnu_cxx::__normal_iterator"* %agg.tmp58 to i8*
+  %37 = bitcast %"class.__gnu_cxx::__normal_iterator"* %it to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %36, i8* %37, i64 8, i32 8, i1 false)
+  %call60 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EE3endEv(%"class.std::vector"* @points) #2
+  %coerce.dive61 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp59, i32 0, i32 0
+  store %struct.Coord* %call60, %struct.Coord** %coerce.dive61
+  %coerce.dive62 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp58, i32 0, i32 0
+  %38 = load %struct.Coord** %coerce.dive62
+  %coerce.dive63 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp59, i32 0, i32 0
+  %39 = load %struct.Coord** %coerce.dive63
+  call void @_ZSt4sortIN9__gnu_cxx17__normal_iteratorIP5CoordSt6vectorIS2_SaIS2_EEEEPFbS2_S2_EEvT_SA_T0_(%struct.Coord* %38, %struct.Coord* %39, i1 (i64, i64, i64, i64)* @_Z7trigger5CoordS_)
+  %call64 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 0)
+  %40 = bitcast %struct.Coord* %call64 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* bitcast ([100005 x %struct.Coord]* @myStack to i8*), i8* %40, i64 16, i32 8, i1 false)
+  %call65 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 1)
+  %41 = bitcast %struct.Coord* %call65 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* bitcast (%struct.Coord* getelementptr inbounds ([100005 x %struct.Coord]* @myStack, i32 0, i64 1) to i8*), i8* %41, i64 16, i32 8, i1 false)
+  store i32 2, i32* %top, align 4
+  store i32 2, i32* %i66, align 4
+  br label %for.cond67
+
+16
+  %42 = load i32* %i66, align 4
+  %conv68 = sext i32 %42 to i64
+  %call69 = call i64 @_ZNKSt6vectorI5CoordSaIS0_EE4sizeEv(%"class.std::vector"* @points) #2
+  %cmp70 = icmp ult i64 %conv68, %call69
+  br i1 %cmp70, label %for.body71, label %for.end92
+
+17
+  br label %for.cond72
+
+18
+  %43 = load i32* %top, align 4
+  %sub74 = sub nsw i32 %43, 2
+  %idxprom = sext i32 %sub74 to i64
+  %arrayidx = getelementptr inbounds [100005 x %struct.Coord]* @myStack, i32 0, i64 %idxprom
+  %44 = bitcast %struct.Coord* %agg.tmp73 to i8*
+  %45 = bitcast %struct.Coord* %arrayidx to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %44, i8* %45, i64 16, i32 8, i1 false)
+  %46 = load i32* %top, align 4
+  %sub76 = sub nsw i32 %46, 1
+  %idxprom77 = sext i32 %sub76 to i64
+  %arrayidx78 = getelementptr inbounds [100005 x %struct.Coord]* @myStack, i32 0, i64 %idxprom77
+  %47 = bitcast %struct.Coord* %agg.tmp75 to i8*
+  %48 = bitcast %struct.Coord* %arrayidx78 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %47, i8* %48, i64 16, i32 8, i1 false)
+  %49 = load i32* %i66, align 4
+  %conv80 = sext i32 %49 to i64
+  %call81 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 %conv80)
+  %50 = bitcast %struct.Coord* %agg.tmp79 to i8*
+  %51 = bitcast %struct.Coord* %call81 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %50, i8* %51, i64 16, i32 8, i1 false)
+  %52 = bitcast %struct.Coord* %agg.tmp73 to { i64, i64 }*
+  %53 = getelementptr { i64, i64 }* %52, i32 0, i32 0
+  %54 = load i64* %53, align 1
+  %55 = getelementptr { i64, i64 }* %52, i32 0, i32 1
+  %56 = load i64* %55, align 1
+  %57 = bitcast %struct.Coord* %agg.tmp75 to { i64, i64 }*
+  %58 = getelementptr { i64, i64 }* %57, i32 0, i32 0
+  %59 = load i64* %58, align 1
+  %60 = getelementptr { i64, i64 }* %57, i32 0, i32 1
+  %61 = load i64* %60, align 1
+  %62 = bitcast %struct.Coord* %agg.tmp79 to { i64, i64 }*
+  %63 = getelementptr { i64, i64 }* %62, i32 0, i32 0
+  %64 = load i64* %63, align 1
+  %65 = getelementptr { i64, i64 }* %62, i32 0, i32 1
+  %66 = load i64* %65, align 1
+  %call82 = call zeroext i1 @_Z10compareTwo5CoordS_S_(i64 %54, i64 %56, i64 %59, i64 %61, i64 %64, i64 %66)
+  %lnot = xor i1 %call82, true
+  br i1 %lnot, label %for.body83, label %for.end84
+
+19
+  %67 = load i32* %top, align 4
+  %dec = add nsw i32 %67, -1
+  store i32 %dec, i32* %top, align 4
+  br label %for.cond72
+
+20
+  %68 = load i32* %top, align 4
+  %inc85 = add nsw i32 %68, 1
+  store i32 %inc85, i32* %top, align 4
+  %idxprom86 = sext i32 %68 to i64
+  %arrayidx87 = getelementptr inbounds [100005 x %struct.Coord]* @myStack, i32 0, i64 %idxprom86
+  %69 = load i32* %i66, align 4
+  %conv88 = sext i32 %69 to i64
+  %call89 = call %struct.Coord* @_ZNSt6vectorI5CoordSaIS0_EEixEm(%"class.std::vector"* @points, i64 %conv88)
+  %70 = bitcast %struct.Coord* %arrayidx87 to i8*
+  %71 = bitcast %struct.Coord* %call89 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %70, i8* %71, i64 16, i32 8, i1 false)
+  %72 = load i32* %i66, align 4
+  %inc91 = add nsw i32 %72, 1
+  store i32 %inc91, i32* %i66, align 4
+  br label %for.cond67
+
+21
+  %73 = load i32* %top, align 4
+  %sub93 = sub nsw i32 %73, 1
+  store i32 %sub93, i32* %ref.tmp94, align 4
+  store i32 1, i32* %ref.tmp95, align 4
+  %call96 = call i32* @_ZSt3maxIiERKT_S2_S2_(i32* %ref.tmp94, i32* %ref.tmp95)
+  %74 = load i32* %call96
+  %call97 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %74)
+  %75 = load i32* %retval
+  ret i32 %75

@@ -13,7 +13,7 @@ struct node{
 bool cmp(node A,node B,node C){
  return (C.y-A.y)*(C.x-B.x)>=(C.y-B.y)*(C.x-A.x);
 }
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1;i<=n;i++)scanf("%lld%lld",&a[i].x,&a[i].y),a[i].y-=1ll*a[i].x*a[i].x;
 	sort(a+1,a+n+1);

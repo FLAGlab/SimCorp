@@ -1,0 +1,100 @@
+
+1
+  %retval = alloca i32, align 4
+  %tot = alloca i64, align 8
+  %i = alloca i64, align 8
+  %i8 = alloca i64, align 8
+  %ans = alloca i64, align 8
+  %i17 = alloca i64, align 8
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %0 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %0
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %1 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call1 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %1, %"class.std::basic_ostream"* null)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERl(%"class.std::basic_istream"* @_ZSt3cin, i64* @n)
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERl(%"class.std::basic_istream"* %call2, i64* @w)
+  %call4 = call %"class.std::basic_istream"* @_ZNSirsERl(%"class.std::basic_istream"* %call3, i64* @b)
+  %call5 = call %"class.std::basic_istream"* @_ZNSirsERl(%"class.std::basic_istream"* %call4, i64* @x)
+  store i64 0, i64* %tot, align 8
+  store i64 1, i64* %i, align 8
+  br label %for.cond
+
+2
+  %2 = load i64* %i, align 8
+  %3 = load i64* @n, align 8
+  %cmp = icmp sle i64 %2, %3
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %4 = load i64* %i, align 8
+  %arrayidx = getelementptr inbounds [1009 x i64]* @c, i32 0, i64 %4
+  %call6 = call %"class.std::basic_istream"* @_ZNSirsERl(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx)
+  %5 = load i64* %i, align 8
+  %arrayidx7 = getelementptr inbounds [1009 x i64]* @c, i32 0, i64 %5
+  %6 = load i64* %arrayidx7, align 8
+  %7 = load i64* %tot, align 8
+  %add = add nsw i64 %7, %6
+  store i64 %add, i64* %tot, align 8
+  %8 = load i64* %i, align 8
+  %inc = add nsw i64 %8, 1
+  store i64 %inc, i64* %i, align 8
+  br label %for.cond
+
+4
+  store i64 1, i64* %i8, align 8
+  br label %for.cond9
+
+5
+  %9 = load i64* %i8, align 8
+  %10 = load i64* @n, align 8
+  %cmp10 = icmp sle i64 %9, %10
+  br i1 %cmp10, label %for.body11, label %for.end16
+
+6
+  %11 = load i64* %i8, align 8
+  %arrayidx12 = getelementptr inbounds [1009 x i64]* @cost, i32 0, i64 %11
+  %call13 = call %"class.std::basic_istream"* @_ZNSirsERl(%"class.std::basic_istream"* @_ZSt3cin, i64* %arrayidx12)
+  %12 = load i64* %i8, align 8
+  %inc15 = add nsw i64 %12, 1
+  store i64 %inc15, i64* %i8, align 8
+  br label %for.cond9
+
+7
+  store i64 0, i64* %ans, align 8
+  store i64 1, i64* %i17, align 8
+  br label %for.cond18
+
+8
+  %13 = load i64* %i17, align 8
+  %14 = load i64* %tot, align 8
+  %cmp19 = icmp sle i64 %13, %14
+  br i1 %cmp19, label %for.body20, label %for.end25
+
+9
+  %15 = load i64* @n, align 8
+  %16 = load i64* %i17, align 8
+  %call21 = call i64 @_Z1fll(i64 %15, i64 %16)
+  %cmp22 = icmp sge i64 %call21, 0
+  br i1 %cmp22, label %if.then, label %if.end
+
+10
+  %17 = load i64* %i17, align 8
+  store i64 %17, i64* %ans, align 8
+  br label %if.end
+
+11
+  %18 = load i64* %i17, align 8
+  %inc24 = add nsw i64 %18, 1
+  store i64 %inc24, i64* %i17, align 8
+  br label %for.cond18
+
+12
+  %19 = load i64* %ans, align 8
+  %call26 = call %"class.std::basic_ostream"* @_ZNSolsEl(%"class.std::basic_ostream"* @_ZSt4cout, i64 %19)
+  %call27 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* %call26, i8 signext 10)
+  %20 = load i32* %retval
+  ret i32 %20

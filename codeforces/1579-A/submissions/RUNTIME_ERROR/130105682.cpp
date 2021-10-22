@@ -3,7 +3,7 @@ using namespace std;
  
 int num[3];
  
-int main(){
+signed main(){
  //ios::sync_with_stdio(false);
  
  int t;

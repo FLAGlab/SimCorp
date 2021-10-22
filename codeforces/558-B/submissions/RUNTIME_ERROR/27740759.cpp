@@ -1,4 +1,4 @@
-#include <iostream>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -7,7 +7,7 @@ struct el{
  int b;
  int oc;
 };
-int main()
+signed main()
 {
   ios::sync_with_stdio(0);
  int n;

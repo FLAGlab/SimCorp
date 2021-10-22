@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 long long a[1000005],b[1000005];
-int main(){
+signed main(){
  int n,m,l,r,maxn=-1,sum1=0x3f3f3f3f;
 	cin>>n;
  for(int i=1;i<=n;i++){

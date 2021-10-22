@@ -13,7 +13,7 @@ struct Point{
 }P[maxn],Q[maxn];
 int tp;
  
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1;i<=n;i++)
 		 scanf("%lf%lf",&P[i].x,&P[i].y),P[i].y-=P[i].x*P[i].x;

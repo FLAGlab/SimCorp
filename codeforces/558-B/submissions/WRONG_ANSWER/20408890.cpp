@@ -1,7 +1,7 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std; 
 int n, x, l[1000005], r[1000005], c[1000005];
-int main()
+signed main()
 {
 	ios_base::sync_with_stdio(0);
 	cin >> n;

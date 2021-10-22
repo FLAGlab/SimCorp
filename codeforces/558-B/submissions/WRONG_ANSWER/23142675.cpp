@@ -1,6 +1,4 @@
-#include <iostream>
-#include <map>
-#include <cmath>
+#include<bits/stdc++.h>
 using namespace std;
 #define owo long long
 owo n,m,a[1000000];
@@ -9,7 +7,7 @@ map<int,int> ss;
 map<int,int> s3;
  
 owo q,g,x,z;
-int main(){
+signed main(){
     cin>>n;
  for(int i=1; i<=n; i++){ cin>>a[i];
  if(t[a[i]]==0){ ss[a[i]]=i;}

@@ -1,0 +1,86 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %l = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %t)
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  store i32 0, i32* %x, align 4
+  store i32 0, i32* %y, align 4
+  %call1 = call %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_(%"class.std::basic_istream"* @_ZSt3cin, i8* getelementptr inbounds ([1000 x i8]* @str, i32 0, i32 0))
+  %call2 = call i64 @strlen(i8* getelementptr inbounds ([1000 x i8]* @str, i32 0, i32 0)) #5
+  %conv = trunc i64 %call2 to i32
+  store i32 %conv, i32* %l, align 4
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+4
+  %1 = load i32* %i, align 4
+  %2 = load i32* %l, align 4
+  %cmp = icmp slt i32 %1, %2
+  br i1 %cmp, label %for.body, label %for.end
+
+5
+  %3 = load i32* %i, align 4
+  %idxprom = sext i32 %3 to i64
+  %arrayidx = getelementptr inbounds [1000 x i8]* @str, i32 0, i64 %idxprom
+  %4 = load i8* %arrayidx, align 1
+  %conv3 = sext i8 %4 to i32
+  %cmp4 = icmp eq i32 %conv3, 66
+  br i1 %cmp4, label %if.then, label %if.else
+
+6
+  %5 = load i32* %x, align 4
+  %inc = add nsw i32 %5, 1
+  store i32 %inc, i32* %x, align 4
+  br label %if.end
+
+7
+  %6 = load i32* %y, align 4
+  %inc5 = add nsw i32 %6, 1
+  store i32 %inc5, i32* %y, align 4
+  br label %if.end
+
+8
+  %7 = load i32* %i, align 4
+  %inc6 = add nsw i32 %7, 1
+  store i32 %inc6, i32* %i, align 4
+  br label %for.cond
+
+9
+  %8 = load i32* %x, align 4
+  %call7 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %8)
+  %call8 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* %call7, i8 signext 32)
+  %9 = load i32* %y, align 4
+  %call9 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %call8, i32 %9)
+  %10 = load i32* %x, align 4
+  %11 = load i32* %y, align 4
+  %cmp10 = icmp eq i32 %10, %11
+  br i1 %cmp10, label %if.then11, label %if.else13
+
+10
+  %call12 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0))
+  br label %if.end15
+
+11
+  %call14 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0))
+  br label %if.end15
+
+12
+  br label %while.cond
+
+13
+  ret i32 0

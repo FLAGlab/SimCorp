@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define piii pair< pair<int ,int>,int >
 using namespace std;
  
-int main()
+signed main()
 {
  vector<piii> arr;
  int freq[100005] = { 0 };

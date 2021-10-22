@@ -1,0 +1,89 @@
+
+1
+  %retval = alloca i32, align 4
+  %__range = alloca %"class.std::basic_string"*, align 8
+  %__begin = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %__end = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %c = alloca i8, align 1
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  br label %while.cond
+
+2
+  %0 = load i32* @n, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* @n, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  store i32 0, i32* @cnt, align 4
+  %call1 = call %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RSbIS4_S5_T1_E(%"class.std::basic_istream"* @_ZSt3cin, %"class.std::basic_string"* @str)
+  store %"class.std::basic_string"* @str, %"class.std::basic_string"** %__range, align 8
+  %call2 = call i8* @_ZNSs5beginEv(%"class.std::basic_string"* @str) #2
+  %coerce.dive = getelementptr %"class.__gnu_cxx::__normal_iterator"* %__begin, i32 0, i32 0
+  store i8* %call2, i8** %coerce.dive
+  %call3 = call i8* @_ZNSs3endEv(%"class.std::basic_string"* @str) #2
+  %coerce.dive4 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %__end, i32 0, i32 0
+  store i8* %call3, i8** %coerce.dive4
+  br label %for.cond
+
+4
+  %call5 = call zeroext i1 @_ZN9__gnu_cxxneIPcSsEEbRKNS_17__normal_iteratorIT_T0_EES7_(%"class.__gnu_cxx::__normal_iterator"* %__begin, %"class.__gnu_cxx::__normal_iterator"* %__end)
+  br i1 %call5, label %for.body, label %for.end
+
+5
+  %call6 = call i8* @_ZNK9__gnu_cxx17__normal_iteratorIPcSsEdeEv(%"class.__gnu_cxx::__normal_iterator"* %__begin)
+  %1 = load i8* %call6
+  store i8 %1, i8* %c, align 1
+  %2 = load i8* %c, align 1
+  %conv = sext i8 %2 to i32
+  %cmp = icmp eq i32 %conv, 66
+  br i1 %cmp, label %if.then, label %if.end
+
+6
+  %3 = load i32* @cnt, align 4
+  %inc = add nsw i32 %3, 1
+  store i32 %inc, i32* @cnt, align 4
+  br label %if.end
+
+7
+  %4 = load i8* %c, align 1
+  %conv7 = sext i8 %4 to i32
+  %cmp8 = icmp eq i32 %conv7, 65
+  br i1 %cmp8, label %if.then11, label %lor.lhs.false
+
+8
+  %5 = load i8* %c, align 1
+  %conv9 = sext i8 %5 to i32
+  %cmp10 = icmp eq i32 %conv9, 67
+  br i1 %cmp10, label %if.then11, label %if.end13
+
+9
+  %6 = load i32* @cnt, align 4
+  %dec12 = add nsw i32 %6, -1
+  store i32 %dec12, i32* @cnt, align 4
+  br label %if.end13
+
+10
+  %call14 = call %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPcSsEppEv(%"class.__gnu_cxx::__normal_iterator"* %__begin)
+  br label %for.cond
+
+11
+  %7 = load i32* @cnt, align 4
+  %cmp15 = icmp eq i32 %7, 0
+  br i1 %cmp15, label %if.then16, label %if.else
+
+12
+  %call17 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0))
+  br label %if.end19
+
+13
+  %call18 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0))
+  br label %if.end19
+
+14
+  br label %while.cond
+
+15
+  ret i32 0

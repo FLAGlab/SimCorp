@@ -1,0 +1,145 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i14 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* @n)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom
+  %x = getelementptr inbounds %struct.node* %arrayidx, i32 0, i32 0
+  %3 = load i32* %i, align 4
+  %idxprom1 = sext i32 %3 to i64
+  %arrayidx2 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom1
+  %y = getelementptr inbounds %struct.node* %arrayidx2, i32 0, i32 1
+  %call3 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([9 x i8]* @.str1, i32 0, i32 0), i64* %x, i64* %y)
+  %4 = load i32* %i, align 4
+  %idxprom4 = sext i32 %4 to i64
+  %arrayidx5 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom4
+  %x6 = getelementptr inbounds %struct.node* %arrayidx5, i32 0, i32 0
+  %5 = load i64* %x6, align 8
+  %6 = load i32* %i, align 4
+  %idxprom7 = sext i32 %6 to i64
+  %arrayidx8 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom7
+  %x9 = getelementptr inbounds %struct.node* %arrayidx8, i32 0, i32 0
+  %7 = load i64* %x9, align 8
+  %mul = mul nsw i64 %5, %7
+  %8 = load i32* %i, align 4
+  %idxprom10 = sext i32 %8 to i64
+  %arrayidx11 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom10
+  %y12 = getelementptr inbounds %struct.node* %arrayidx11, i32 0, i32 1
+  %9 = load i64* %y12, align 8
+  %sub = sub nsw i64 %9, %mul
+  store i64 %sub, i64* %y12, align 8
+  %10 = load i32* %i, align 4
+  %inc = add nsw i32 %10, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %11 = load i32* @n, align 4
+  %idx.ext = sext i32 %11 to i64
+  %add.ptr = getelementptr inbounds %struct.node* getelementptr inbounds ([100005 x %struct.node]* @A, i32 0, i32 0), i64 %idx.ext
+  %add.ptr13 = getelementptr inbounds %struct.node* %add.ptr, i64 1
+  call void @_ZSt4sortIP4nodeEvT_S2_(%struct.node* getelementptr inbounds ([100005 x %struct.node]* @A, i32 0, i64 1), %struct.node* %add.ptr13)
+  store i32 1, i32* %i14, align 4
+  br label %for.cond15
+
+5
+  %12 = load i32* %i14, align 4
+  %13 = load i32* @n, align 4
+  %cmp16 = icmp sle i32 %12, %13
+  br i1 %cmp16, label %for.body17, label %for.end42
+
+6
+  %14 = load i32* %i14, align 4
+  %15 = load i32* @n, align 4
+  %cmp18 = icmp ne i32 %14, %15
+  br i1 %cmp18, label %land.lhs.true, label %if.end
+
+7
+  %16 = load i32* %i14, align 4
+  %idxprom19 = sext i32 %16 to i64
+  %arrayidx20 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom19
+  %x21 = getelementptr inbounds %struct.node* %arrayidx20, i32 0, i32 0
+  %17 = load i64* %x21, align 8
+  %18 = load i32* %i14, align 4
+  %add = add nsw i32 %18, 1
+  %idxprom22 = sext i32 %add to i64
+  %arrayidx23 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom22
+  %x24 = getelementptr inbounds %struct.node* %arrayidx23, i32 0, i32 0
+  %19 = load i64* %x24, align 8
+  %cmp25 = icmp eq i64 %17, %19
+  br i1 %cmp25, label %if.then, label %if.end
+
+8
+  br label %for.inc40
+
+9
+  br label %while.cond
+
+10
+  %20 = load i32* @top, align 4
+  %cmp26 = icmp sgt i32 %20, 1
+  br i1 %cmp26, label %land.rhs, label %land.end
+
+11
+  %21 = load i32* @top, align 4
+  %sub27 = sub nsw i32 %21, 1
+  %idxprom28 = sext i32 %sub27 to i64
+  %arrayidx29 = getelementptr inbounds [100005 x %struct.node]* @stk, i32 0, i64 %idxprom28
+  %22 = load i32* %i14, align 4
+  %idxprom30 = sext i32 %22 to i64
+  %arrayidx31 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom30
+  %23 = load i32* @top, align 4
+  %idxprom32 = sext i32 %23 to i64
+  %arrayidx33 = getelementptr inbounds [100005 x %struct.node]* @stk, i32 0, i64 %idxprom32
+  %call34 = call zeroext i1 @_Z5checkR4nodeS0_S0_(%struct.node* %arrayidx29, %struct.node* %arrayidx31, %struct.node* %arrayidx33)
+  br label %land.end
+
+12
+  %24 = phi i1 [ false, %while.cond ], [ %call34, %land.rhs ]
+  br i1 %24, label %while.body, label %while.end
+
+13
+  %25 = load i32* @top, align 4
+  %dec = add nsw i32 %25, -1
+  store i32 %dec, i32* @top, align 4
+  br label %while.cond
+
+14
+  %26 = load i32* @top, align 4
+  %inc35 = add nsw i32 %26, 1
+  store i32 %inc35, i32* @top, align 4
+  %idxprom36 = sext i32 %inc35 to i64
+  %arrayidx37 = getelementptr inbounds [100005 x %struct.node]* @stk, i32 0, i64 %idxprom36
+  %27 = load i32* %i14, align 4
+  %idxprom38 = sext i32 %27 to i64
+  %arrayidx39 = getelementptr inbounds [100005 x %struct.node]* @A, i32 0, i64 %idxprom38
+  %28 = bitcast %struct.node* %arrayidx37 to i8*
+  %29 = bitcast %struct.node* %arrayidx39 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %28, i8* %29, i64 16, i32 8, i1 false)
+  br label %for.inc40
+
+15
+  %30 = load i32* %i14, align 4
+  %inc41 = add nsw i32 %30, 1
+  store i32 %inc41, i32* %i14, align 4
+  br label %for.cond15
+
+16
+  %31 = load i32* @top, align 4
+  %sub43 = sub nsw i32 %31, 1
+  %call44 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i32 %sub43)
+  ret i32 0

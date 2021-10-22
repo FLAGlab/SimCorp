@@ -1,7 +1,6 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
+signed main()
 {
  int x;
     scanf("%d",&x);

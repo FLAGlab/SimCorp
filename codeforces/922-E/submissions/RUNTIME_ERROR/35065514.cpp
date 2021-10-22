@@ -1,28 +1,10 @@
+#include<bits/stdc++.h>
 #pragma comment(linker, "/STACK:536870912")
 #pragma warning(disable:4996)
  
 #pragma GCC optimize("Ofast")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
  
-#include<iostream>
-#include<algorithm>
-#include<queue>
-#include<string>
-#include<vector>
-#include<map>
-#include<list>
-#include<set>
-#include<cstring>
-#include<ctime>
-#include<cmath>
-#include<limits>
-#include<iterator>
-#include<functional>
-#include<unordered_map>
-#include<unordered_set>
-#include<stack>
-#include<bitset>
-#include<complex>
  
 #define all(v) v.begin(), v.end()
 #define setv(ar, val) memset(ar, val, sizeof(ar));
@@ -34,7 +16,7 @@ using namespace std;
 const int N = 1e3 + 50, M = 1e4 + 50;
 ll dp[N][M], cost[N], c[N];
  
-int main() {
+signed main() {
 #ifdef _DEBUG
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);

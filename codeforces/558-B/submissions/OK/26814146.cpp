@@ -1,7 +1,7 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int m[1000005],L[1000005];
-int main(){
+signed main(){
  int n,x;
  int mx=0,mn=100000001,cnt=-1;
 	cin>>n;

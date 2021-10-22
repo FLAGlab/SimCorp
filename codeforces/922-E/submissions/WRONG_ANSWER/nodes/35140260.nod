@@ -1,0 +1,56 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i5 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call, i32* @w)
+  %call2 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call1, i32* @b)
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call2, i32* @x)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [1005 x i32]* @birds, i32 0, i64 %idxprom
+  %call4 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %arrayidx)
+  %3 = load i32* %i, align 4
+  %inc = add nsw i32 %3, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  store i32 1, i32* %i5, align 4
+  br label %for.cond6
+
+5
+  %4 = load i32* %i5, align 4
+  %5 = load i32* @n, align 4
+  %cmp7 = icmp sle i32 %4, %5
+  br i1 %cmp7, label %for.body8, label %for.end14
+
+6
+  %6 = load i32* %i5, align 4
+  %idxprom9 = sext i32 %6 to i64
+  %arrayidx10 = getelementptr inbounds [1005 x i32]* @cost, i32 0, i64 %idxprom9
+  %call11 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %arrayidx10)
+  %7 = load i32* %i5, align 4
+  %inc13 = add nsw i32 %7, 1
+  store i32 %inc13, i32* %i5, align 4
+  br label %for.cond6
+
+7
+  %8 = load i32* @w, align 4
+  %9 = load i32* getelementptr inbounds ([1005 x i32]* @birds, i32 0, i64 1), align 4
+  %call15 = call i32 @_Z2goiii(i32 %8, i32 1, i32 %9)
+  %call16 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %call15)
+  %10 = load i32* %retval
+  ret i32 %10

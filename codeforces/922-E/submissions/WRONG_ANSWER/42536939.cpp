@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
 int c[1005], cost[1005];
 LL dp[1005][10005];
  
-int main(){
+signed main(){
 	memset(dp, -1, sizeof(dp));
  int n, W, B, X;
 	scanf("%d%d%d%d", &n, &W, &B, &X);

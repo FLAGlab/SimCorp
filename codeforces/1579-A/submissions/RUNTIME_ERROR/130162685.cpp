@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <string.h>
+#include<bits/stdc++.h>
  
-int main() {
+signed main() {
  int t;
 	scanf("%d",&t);
  for (int m=0;m<t;m++)

@@ -9,7 +9,7 @@ bool cmp(P p1,P p2){
  return p1.second>p2.second;
 }
 int q[N],hd,tl;
-int main(){
+signed main(){
  //freopen("tt.in","r",stdin),freopen("tt.out","w",stdout);
     ios::sync_with_stdio(0),cin.tie(0),cout.tie(0);
     cin>>n;

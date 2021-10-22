@@ -2,7 +2,7 @@
 using namespace std;
 int t,len,tot;
 char c[60];
-int main()
+signed main()
 {
 	scanf("%d",&t);
  while (t--)

@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 #pragma optimize("-O3")
 #define int long long int
@@ -127,7 +127,7 @@ PT lin(PT a, PT b, PT c, PT d){
  return a + b*cross(c, d)/cross(b, d);
 }
  
-main() {
+signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);

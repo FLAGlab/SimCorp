@@ -1,7 +1,4 @@
-#include<cstdio>
-#include<vector>
-#include<algorithm>
-#include<iostream>
+#include<bits/stdc++.h>
 #define rep(i,l,r) for (int i=(l); i<=(r); i++)
 using namespace std;
  
@@ -18,7 +15,7 @@ bool check(P a,P b,P c){
  return K*c.x+B-c.y>-1e-9;
 }
  
-int main(){
+signed main(){
 	scanf("%d",&n);
 	rep(i,0,n-1) scanf("%d%d",&x,&y),p[i]=(P){x,y-1.*x*x};
 	sort(p,p+n);

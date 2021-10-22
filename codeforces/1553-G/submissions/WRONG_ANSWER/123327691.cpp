@@ -11,7 +11,7 @@ void sieve(){
  }
 }
  
-int main(){
+signed main(){
 	ios::sync_with_stdio(0); cin >> N >> Q; sieve();
  for(int i = 1 ; i <= N ; ++i){
 		cin >> A[i]; int p = A[i] , pre = 0;

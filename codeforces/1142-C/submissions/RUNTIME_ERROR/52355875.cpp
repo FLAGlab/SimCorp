@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <fstream>
+#include<bits/stdc++.h>
 using namespace std;
  
 struct Point{
@@ -47,7 +44,7 @@ bool comp (Point a, Point b){
  
 vector <Point> hull;
  
-int main(){
+signed main(){
 //    ifstream cin ("txt.txt");
     ios::sync_with_stdio(0);
     cin.tie(0);

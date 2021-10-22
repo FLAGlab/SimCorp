@@ -21,7 +21,7 @@ int get(int x)
  return fa[x]=get(fa[x]);
  return x;
 }
-int main()
+signed main()
 {
  int n=read(),q=read(),i,j,x,m=0;
  for(i=1;i<=n;i++)

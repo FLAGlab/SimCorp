@@ -13,7 +13,7 @@ struct pos{
 bool check(pos a,pos b,pos c){
  return (c.y-a.y)*(b.x-c.x)<=(b.y-c.y)*(c.x-a.x);
 }
-int main() {
+signed main() {
 	scanf("%d",&n);
  for(int i=1;i<=n;i++){
 		ll x,y;

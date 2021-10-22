@@ -1,8 +1,8 @@
+#include<bits/stdc++.h>
 // In the name of GOD!
 // 08 / 12 / 2016
 // 1395 / 09 / 18
  
-#include <iostream>
  
 #define F first
 #define S second
@@ -15,7 +15,7 @@ const int A = 1e6 + 5;
  
 pii num[A];
  
-int main() {
+signed main() {
  int n, m = 0, l, r;
  
 	cin >> n;

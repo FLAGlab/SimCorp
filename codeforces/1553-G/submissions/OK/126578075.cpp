@@ -1,5 +1,4 @@
-#include <cstdio>
-#include <unordered_set>
+#include<bits/stdc++.h>
  
 const int N = 200100;
 int dv[1000100], prime[N], fa[N], tot;
@@ -26,7 +25,7 @@ bool test(int x, int y) {
 	x = getfa(x), y = getfa(y);
  return edge[x].find(y) != edge[x].end();
 }
-int main() {
+signed main() {
 	init(1000001);
  int n, q;
 	scanf("%d %d", &n, &q);

@@ -9,7 +9,7 @@ int _find(int x){
 }
 vector<int> v[MAX_V];
 set<pair<int,int> > s;
-int main(){
+signed main(){
 	scanf("%d%d",&n,&q);
  for(int i=1;i<=n;i++) scanf("%d",&a[i]);
  for(int i=1;i<=1000000;i++) fa[i]=i;

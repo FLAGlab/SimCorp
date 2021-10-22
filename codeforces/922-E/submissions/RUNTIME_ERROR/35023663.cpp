@@ -1,3 +1,4 @@
+#include<bits/stdc++.h>
 #define LOCAL_GCC 0 // CHANGEME
 #if defined(_DEV) || defined(OCL)
 #define DEV 1
@@ -12,14 +13,11 @@
 #pragma GCC optimize("O3")
 #endif
 #if defined(__GNUC__) || defined(OCL)
-#include <bits/stdc++.h>
 #else
  
 #if DEV
-#include "../allstd.h"
 #else
 #ifndef OCL
-#include "no-such-header.h"
 #endif
 #endif
 #endif
@@ -37,7 +35,7 @@ void $readvec(const vector<T>& vec, int cnt) {
 using ll = signed long long;
 using ld = long double;
 void $main();
-int main() {
+signed main() {
  if (DEV) {
         freopen("input.txt", "r", stdin);
         freopen("output.txt", "w", stdout);

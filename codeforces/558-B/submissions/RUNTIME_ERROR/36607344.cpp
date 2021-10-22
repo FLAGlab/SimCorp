@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> vec[1000005];
-int main()
+signed main()
 {
  int n,a;
 	scanf("%d",&n);

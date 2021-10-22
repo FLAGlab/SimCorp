@@ -21,7 +21,7 @@ bool con(int num){
  int u=find(num),v=find(2);
  return u==v;
 }
-int main(){
+signed main(){
 	n=read(),q=read(),tot=0;
  for(int i=1;i<=1000000;++i) fa[i]=i;
  for(int i=1;i<=n;++i){

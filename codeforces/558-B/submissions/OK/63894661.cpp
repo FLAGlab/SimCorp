@@ -1,8 +1,8 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 const int Maxv=1e6+10;
 int n,z,y,l[Maxv],r[Maxv],v[Maxv],ans,len,m;
-int main()
+signed main()
 {
 	cin>>n;
  for(int i=1;i<=n;i++){

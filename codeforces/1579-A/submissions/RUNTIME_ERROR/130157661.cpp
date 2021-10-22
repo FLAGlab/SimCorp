@@ -1,10 +1,7 @@
-#include <iostream>
-#include <math.h>
-#include <string.h>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
  
-int main() {
+signed main() {
  int tests;
     string t[50];
     cin >> tests;

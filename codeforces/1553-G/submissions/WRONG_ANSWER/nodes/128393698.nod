@@ -1,0 +1,204 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i7 = alloca i32, align 4
+  %i16 = alloca i32, align 4
+  %j = alloca i32, align 4
+  %i38 = alloca i32, align 4
+  %l = alloca i32, align 4
+  %r = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 @_Z2rdv()
+  store i32 %call, i32* @n, align 4
+  %call1 = call i32 @_Z2rdv()
+  store i32 %call1, i32* @q, align 4
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %call2 = call i32 @_Z2rdv()
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom
+  store i32 %call2, i32* %arrayidx, align 4
+  %3 = load i32* %i, align 4
+  %idxprom3 = sext i32 %3 to i64
+  %arrayidx4 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom3
+  %4 = load i32* %arrayidx4, align 4
+  %idxprom5 = sext i32 %4 to i64
+  %arrayidx6 = getelementptr inbounds [1000005 x i8]* @exist, i32 0, i64 %idxprom5
+  store i8 1, i8* %arrayidx6, align 1
+  %5 = load i32* %i, align 4
+  %inc = add nsw i32 %5, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  store i32 1, i32* %i7, align 4
+  br label %for.cond8
+
+5
+  %6 = load i32* %i7, align 4
+  %7 = load i32* @m, align 4
+  %cmp9 = icmp sle i32 %6, %7
+  br i1 %cmp9, label %for.body10, label %for.end15
+
+6
+  %8 = load i32* %i7, align 4
+  %9 = load i32* %i7, align 4
+  %idxprom11 = sext i32 %9 to i64
+  %arrayidx12 = getelementptr inbounds [1000005 x i32]* @fa, i32 0, i64 %idxprom11
+  store i32 %8, i32* %arrayidx12, align 4
+  %10 = load i32* %i7, align 4
+  %inc14 = add nsw i32 %10, 1
+  store i32 %inc14, i32* %i7, align 4
+  br label %for.cond8
+
+7
+  store i32 2, i32* %i16, align 4
+  br label %for.cond17
+
+8
+  %11 = load i32* %i16, align 4
+  %12 = load i32* @m, align 4
+  %cmp18 = icmp sle i32 %11, %12
+  br i1 %cmp18, label %for.body19, label %for.end37
+
+9
+  %13 = load i32* %i16, align 4
+  %14 = load i32* %i16, align 4
+  %add = add nsw i32 %13, %14
+  store i32 %add, i32* %j, align 4
+  br label %for.cond20
+
+10
+  %15 = load i32* %j, align 4
+  %16 = load i32* @m, align 4
+  %cmp21 = icmp sle i32 %15, %16
+  br i1 %cmp21, label %for.body22, label %for.end34
+
+11
+  %17 = load i32* %j, align 4
+  %idxprom23 = sext i32 %17 to i64
+  %arrayidx24 = getelementptr inbounds [1000005 x i8]* @exist, i32 0, i64 %idxprom23
+  %18 = load i8* %arrayidx24, align 1
+  %tobool = trunc i8 %18 to i1
+  br i1 %tobool, label %land.lhs.true, label %if.end
+
+12
+  %19 = load i32* %i16, align 4
+  %call25 = call i32 @_Z4Findi(i32 %19)
+  %20 = load i32* %j, align 4
+  %call26 = call i32 @_Z4Findi(i32 %20)
+  %cmp27 = icmp ne i32 %call25, %call26
+  br i1 %cmp27, label %if.then, label %if.end
+
+13
+  %21 = load i32* %i16, align 4
+  %call28 = call i32 @_Z4Findi(i32 %21)
+  %22 = load i32* %j, align 4
+  %call29 = call i32 @_Z4Findi(i32 %22)
+  %idxprom30 = sext i32 %call29 to i64
+  %arrayidx31 = getelementptr inbounds [1000005 x i32]* @fa, i32 0, i64 %idxprom30
+  store i32 %call28, i32* %arrayidx31, align 4
+  br label %if.end
+
+14
+  %23 = load i32* %i16, align 4
+  %24 = load i32* %j, align 4
+  %add33 = add nsw i32 %24, %23
+  store i32 %add33, i32* %j, align 4
+  br label %for.cond20
+
+15
+  %25 = load i32* %i16, align 4
+  %inc36 = add nsw i32 %25, 1
+  store i32 %inc36, i32* %i16, align 4
+  br label %for.cond17
+
+16
+  store i32 1, i32* %i38, align 4
+  br label %for.cond39
+
+17
+  %26 = load i32* %i38, align 4
+  %27 = load i32* @q, align 4
+  %cmp40 = icmp sle i32 %26, %27
+  br i1 %cmp40, label %for.body41, label %for.end75
+
+18
+  %call42 = call i32 @_Z2rdv()
+  store i32 %call42, i32* %l, align 4
+  %call43 = call i32 @_Z2rdv()
+  store i32 %call43, i32* %r, align 4
+  %28 = load i32* %l, align 4
+  %idxprom44 = sext i32 %28 to i64
+  %arrayidx45 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom44
+  %29 = load i32* %arrayidx45, align 4
+  %call46 = call i32 @_Z4Findi(i32 %29)
+  %30 = load i32* %r, align 4
+  %idxprom47 = sext i32 %30 to i64
+  %arrayidx48 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom47
+  %31 = load i32* %arrayidx48, align 4
+  %call49 = call i32 @_Z4Findi(i32 %31)
+  %cmp50 = icmp eq i32 %call46, %call49
+  br i1 %cmp50, label %if.then51, label %if.else
+
+19
+  %call52 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0))
+  br label %if.end72
+
+20
+  %32 = load i32* %l, align 4
+  %idxprom53 = sext i32 %32 to i64
+  %arrayidx54 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom53
+  %33 = load i32* %arrayidx54, align 4
+  %add55 = add nsw i32 %33, 1
+  %34 = load i32* %r, align 4
+  %idxprom56 = sext i32 %34 to i64
+  %arrayidx57 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom56
+  %35 = load i32* %arrayidx57, align 4
+  %call58 = call i32 @_Z4Findi(i32 %35)
+  %call59 = call zeroext i1 @_Z5solveii(i32 %add55, i32 %call58)
+  br i1 %call59, label %if.then67, label %lor.lhs.false
+
+21
+  %36 = load i32* %r, align 4
+  %idxprom60 = sext i32 %36 to i64
+  %arrayidx61 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom60
+  %37 = load i32* %arrayidx61, align 4
+  %add62 = add nsw i32 %37, 1
+  %38 = load i32* %l, align 4
+  %idxprom63 = sext i32 %38 to i64
+  %arrayidx64 = getelementptr inbounds [150005 x i32]* @a, i32 0, i64 %idxprom63
+  %39 = load i32* %arrayidx64, align 4
+  %call65 = call i32 @_Z4Findi(i32 %39)
+  %call66 = call zeroext i1 @_Z5solveii(i32 %add62, i32 %call65)
+  br i1 %call66, label %if.then67, label %if.else69
+
+22
+  %call68 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([3 x i8]* @.str1, i32 0, i32 0))
+  br label %if.end71
+
+23
+  %call70 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([3 x i8]* @.str2, i32 0, i32 0))
+  br label %if.end71
+
+24
+  br label %if.end72
+
+25
+  %40 = load i32* %i38, align 4
+  %inc74 = add nsw i32 %40, 1
+  store i32 %inc74, i32* %i38, align 4
+  br label %for.cond39
+
+26
+  ret i32 0

@@ -1,0 +1,22 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call i32 @_Z4readv()
+  store i32 %call, i32* %t, align 4
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  call void @_Z5Solvev()
+  br label %while.cond
+
+4
+  ret i32 0

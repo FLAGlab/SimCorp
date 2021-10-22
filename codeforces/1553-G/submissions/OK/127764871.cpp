@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 #define pii pair <int,int>
@@ -10,7 +10,7 @@ int f[N],col[N],d[N],c;
 int find(int x){return f[x]==x?x:f[x]=find(f[x]);}
 vector <pii> res;
  
-int main(){
+signed main(){
 	cin>>n>>q;
  for(int i=1;i<=n;i++)cin>>a[i],f[i]=i,buc[a[i]]=i;
  for(int i=2;i<N;i++){

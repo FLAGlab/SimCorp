@@ -30,7 +30,7 @@ void pre(){
  }
  }sort(s.begin(),s.end());
 }
-int main() {
+signed main() {
 	scanf("%d%d",&n,&q);
  for(int i=1;i<=n;++i)scanf("%d",a+i),buc[a[i]]=f[i]=i;pre();
  while(q--){

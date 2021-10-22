@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
-#include <iomanip>
-#include <sstream>
+#include<bits/stdc++.h>
 #define  ei                          else if
 #define  pi                          3.14159265358979323846D
 #define  vi                          vector<int>
@@ -18,7 +16,7 @@
 using namespace std;
  
  
-int main(){
+signed main(){
     ll t, x, n, a, b,c,d,i,j; 
  
     cin >> t; 

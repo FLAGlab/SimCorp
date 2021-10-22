@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int N = 1e3 + 2;
  
 long long dp[N][(int)1e4 + 2], c[N], cost[N];
  
-int main() {
+signed main() {
  long long i, j, n, W, B, X;
  //freopen("input.txt", "r", stdin);
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);

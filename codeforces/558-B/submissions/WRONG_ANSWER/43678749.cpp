@@ -1,12 +1,9 @@
-#include<iostream>
-#include<stdio.h>
-#include<algorithm>
-#include<map>
+#include<bits/stdc++.h>
 using namespace std;
 const int MAXN=1e5+23;
 int n=0;
 int a[MAXN]={0};
-int main()
+signed main()
 {
  map<int, int> tb; 
  int btn=0,btrt=0;

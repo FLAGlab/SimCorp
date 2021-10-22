@@ -14,7 +14,7 @@ int merge(int x,int y){
 	fa[x] = y;
 }
 map<int,int> MAP[maxn];
-int main(){
+signed main(){
 	memset(pd,false,sizeof(pd));
  for(int i=2;i<=maxn;i++){
  if(!pd[i])	p[++acc] = i;

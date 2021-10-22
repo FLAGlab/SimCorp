@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 #define int long long
@@ -11,7 +11,7 @@ ll dp[1001][10010];
 int cost[SIZE];
 int c[SIZE];
 #undef int
-int main(){
+signed main(){
 #define int long long
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);

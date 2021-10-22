@@ -13,7 +13,7 @@ bool cmp(node x,node y){
  }
  return x.sum1>y.sum1;
 }
-int main(){
+signed main(){
  int n,m;
 	cin>>n;
  for(int i=1;i<=n;i++){

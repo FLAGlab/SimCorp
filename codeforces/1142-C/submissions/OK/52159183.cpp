@@ -1,7 +1,4 @@
-#include<cstdio>
-#include<iostream>
-#include<cstring>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 const int N=1e6+10;
@@ -14,7 +11,7 @@ bool comp(dot a,dot b){
  return a.x>b.x;
 }
 dot operator -(dot a,dot b){return (dot){a.x-b.x,a.y-b.y};}
-int main(){
+signed main(){
 	cin>>n;
  for (int i=1;i<=n;i++){
  int x,y;

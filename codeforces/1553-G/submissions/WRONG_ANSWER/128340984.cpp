@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ri register int
 #define ll long long
 using namespace std;
@@ -42,7 +42,7 @@ bool check(int s,int t) {
  for(ri i=0;i<ly;i++)visit[v[s+1][i]]=0;
  return ans;
 }
-int main() {
+signed main() {
 	scanf("%d%d",&n,&m);
 	euler();
  for(ri i=1;i<=n;i++) {

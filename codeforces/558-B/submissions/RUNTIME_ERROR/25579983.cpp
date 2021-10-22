@@ -1,7 +1,7 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int n,c[100005],mi[100005],ma[100005];
-int main()
+signed main()
 {
     cin>>n;
  int a[n];

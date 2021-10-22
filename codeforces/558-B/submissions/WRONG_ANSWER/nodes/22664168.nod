@@ -1,0 +1,121 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i16 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp slt i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [100005 x i32]* @a, i32 0, i64 %idxprom
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %arrayidx)
+  %3 = load i32* %i, align 4
+  %idxprom2 = sext i32 %3 to i64
+  %arrayidx3 = getelementptr inbounds [100005 x i32]* @a, i32 0, i64 %idxprom2
+  %4 = load i32* %arrayidx3, align 4
+  %idxprom4 = sext i32 %4 to i64
+  %arrayidx5 = getelementptr inbounds [1000006 x i32]* @b, i32 0, i64 %idxprom4
+  %5 = load i32* %arrayidx5, align 4
+  %inc = add nsw i32 %5, 1
+  store i32 %inc, i32* %arrayidx5, align 4
+  %6 = load i32* %i, align 4
+  %idxprom6 = sext i32 %6 to i64
+  %arrayidx7 = getelementptr inbounds [100005 x i32]* @a, i32 0, i64 %idxprom6
+  %7 = load i32* %arrayidx7, align 4
+  %idxprom8 = sext i32 %7 to i64
+  %arrayidx9 = getelementptr inbounds [1000006 x i32]* @b, i32 0, i64 %idxprom8
+  %8 = load i32* %arrayidx9, align 4
+  %9 = load i32* @mx, align 4
+  %idxprom10 = sext i32 %9 to i64
+  %arrayidx11 = getelementptr inbounds [1000006 x i32]* @b, i32 0, i64 %idxprom10
+  %10 = load i32* %arrayidx11, align 4
+  %cmp12 = icmp sgt i32 %8, %10
+  br i1 %cmp12, label %if.then, label %if.end
+
+4
+  %11 = load i32* %i, align 4
+  %idxprom13 = sext i32 %11 to i64
+  %arrayidx14 = getelementptr inbounds [100005 x i32]* @a, i32 0, i64 %idxprom13
+  %12 = load i32* %arrayidx14, align 4
+  store i32 %12, i32* @mx, align 4
+  br label %if.end
+
+5
+  %13 = load i32* %i, align 4
+  %inc15 = add nsw i32 %13, 1
+  store i32 %inc15, i32* %i, align 4
+  br label %for.cond
+
+6
+  store i32 0, i32* %i16, align 4
+  br label %for.cond17
+
+7
+  %14 = load i32* %i16, align 4
+  %15 = load i32* @n, align 4
+  %cmp18 = icmp slt i32 %14, %15
+  br i1 %cmp18, label %for.body19, label %for.end35
+
+8
+  %16 = load i32* @f, align 4
+  %tobool = icmp ne i32 %16, 0
+  br i1 %tobool, label %if.else, label %land.lhs.true
+
+9
+  %17 = load i32* %i16, align 4
+  %idxprom20 = sext i32 %17 to i64
+  %arrayidx21 = getelementptr inbounds [100005 x i32]* @a, i32 0, i64 %idxprom20
+  %18 = load i32* %arrayidx21, align 4
+  %19 = load i32* @mx, align 4
+  %cmp22 = icmp eq i32 %18, %19
+  br i1 %cmp22, label %if.then23, label %if.else
+
+10
+  %20 = load i32* %i16, align 4
+  %add = add nsw i32 %20, 1
+  %call24 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %add)
+  %call25 = call %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call24, i8* getelementptr inbounds ([2 x i8]* @.str, i32 0, i32 0))
+  %21 = load i32* %i16, align 4
+  %add26 = add nsw i32 %21, 1
+  store i32 %add26, i32* @f, align 4
+  br label %if.end32
+
+11
+  %22 = load i32* %i16, align 4
+  %idxprom27 = sext i32 %22 to i64
+  %arrayidx28 = getelementptr inbounds [100005 x i32]* @a, i32 0, i64 %idxprom27
+  %23 = load i32* %arrayidx28, align 4
+  %24 = load i32* @mx, align 4
+  %cmp29 = icmp eq i32 %23, %24
+  br i1 %cmp29, label %if.then30, label %if.end31
+
+12
+  %25 = load i32* %i16, align 4
+  store i32 %25, i32* @f, align 4
+  br label %if.end31
+
+13
+  br label %if.end32
+
+14
+  %26 = load i32* %i16, align 4
+  %inc34 = add nsw i32 %26, 1
+  store i32 %inc34, i32* %i16, align 4
+  br label %for.cond17
+
+15
+  %27 = load i32* @f, align 4
+  %add36 = add nsw i32 %27, 1
+  %call37 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %add36)
+  %28 = load i32* %retval
+  ret i32 %28

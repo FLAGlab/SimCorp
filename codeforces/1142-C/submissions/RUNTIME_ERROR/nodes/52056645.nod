@@ -1,0 +1,417 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %m = alloca %"class.std::map", align 8
+  %i = alloca i32, align 4
+  %first = alloca i64, align 8
+  %second = alloca i64, align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %coerce = alloca %"struct.std::_Rb_tree_iterator", align 8
+  %ref.tmp = alloca %"struct.std::_Rb_tree_iterator", align 8
+  %v = alloca %"class.std::vector", align 8
+  %__range = alloca %"class.std::map"*, align 8
+  %__begin = alloca %"struct.std::_Rb_tree_iterator", align 8
+  %__end = alloca %"struct.std::_Rb_tree_iterator", align 8
+  %it = alloca %"struct.std::pair.3", align 8
+  %ref.tmp28 = alloca %"struct.std::pair", align 8
+  %last = alloca i32, align 4
+  %ans = alloca i32, align 4
+  %i35 = alloca i32, align 4
+  %now = alloca %"struct.std::pair", align 8
+  %A = alloca i64, align 8
+  %B = alloca i64, align 8
+  %C = alloca i64, align 8
+  %D = alloca i64, align 8
+  %E = alloca i64, align 8
+  %F = alloca i64, align 8
+  %b = alloca x86_fp80, align 16
+  %c = alloca x86_fp80, align 16
+  %ok = alloca i32, align 4
+  %j = alloca i32, align 4
+  %myy = alloca x86_fp80, align 16
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i32* %n)
+  call void @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEC1Ev(%"class.std::map"* %m)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* %n, align 4
+  %cmp = icmp slt i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %conv = sext i32 %2 to i64
+  store i64 %conv, i64* %first, align 8
+  store i64 0, i64* %second, align 8
+  %call1 = invoke i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([10 x i8]* @.str1, i32 0, i32 0), i64* %first, i64* %second)
+          to label %invoke.cont unwind label %lpad
+
+4
+  %call3 = invoke %"struct.std::_Rb_tree_node_base"* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEE4findERS3_(%"class.std::map"* %m, i64* %first)
+          to label %invoke.cont2 unwind label %lpad
+
+5
+  %coerce.dive = getelementptr %"struct.std::_Rb_tree_iterator"* %coerce, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call3, %"struct.std::_Rb_tree_node_base"** %coerce.dive
+  %call4 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEE3endEv(%"class.std::map"* %m) #2
+  %coerce.dive5 = getelementptr %"struct.std::_Rb_tree_iterator"* %ref.tmp, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call4, %"struct.std::_Rb_tree_node_base"** %coerce.dive5
+  %call7 = invoke zeroext i1 @_ZNKSt17_Rb_tree_iteratorISt4pairIKxxEEneERKS3_(%"struct.std::_Rb_tree_iterator"* %coerce, %"struct.std::_Rb_tree_iterator"* %ref.tmp)
+          to label %invoke.cont6 unwind label %lpad
+
+6
+  br i1 %call7, label %if.then, label %if.else
+
+7
+  %call9 = invoke i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* %m, i64* %first)
+          to label %invoke.cont8 unwind label %lpad
+
+8
+  %call11 = invoke i64* @_ZSt3maxIxERKT_S2_S2_(i64* %call9, i64* %second)
+          to label %invoke.cont10 unwind label %lpad
+
+9
+  %3 = load i64* %call11
+  %call13 = invoke i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* %m, i64* %first)
+          to label %invoke.cont12 unwind label %lpad
+
+10
+  store i64 %3, i64* %call13
+  br label %if.end
+
+11
+  %4 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %5 = extractvalue { i8*, i32 } %4, 0
+  store i8* %5, i8** %exn.slot
+  %6 = extractvalue { i8*, i32 } %4, 1
+  store i32 %6, i32* %ehselector.slot
+  br label %ehcleanup
+
+12
+  %7 = load i64* %second, align 8
+  %call15 = invoke i64* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEEixERS3_(%"class.std::map"* %m, i64* %first)
+          to label %invoke.cont14 unwind label %lpad
+
+13
+  store i64 %7, i64* %call15
+  br label %if.end
+
+14
+  %8 = load i32* %i, align 4
+  %inc = add nsw i32 %8, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+15
+  invoke void @_ZNSt6vectorISt4pairIxxESaIS1_EEC1Ev(%"class.std::vector"* %v)
+          to label %invoke.cont16 unwind label %lpad
+
+16
+  store %"class.std::map"* %m, %"class.std::map"** %__range, align 8
+  %9 = load %"class.std::map"** %__range, align 8
+  %call17 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEE5beginEv(%"class.std::map"* %9) #2
+  %coerce.dive18 = getelementptr %"struct.std::_Rb_tree_iterator"* %__begin, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call17, %"struct.std::_Rb_tree_node_base"** %coerce.dive18
+  %10 = load %"class.std::map"** %__range, align 8
+  %call19 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEE3endEv(%"class.std::map"* %10) #2
+  %coerce.dive20 = getelementptr %"struct.std::_Rb_tree_iterator"* %__end, i32 0, i32 0
+  store %"struct.std::_Rb_tree_node_base"* %call19, %"struct.std::_Rb_tree_node_base"** %coerce.dive20
+  br label %for.cond21
+
+17
+  %call24 = invoke zeroext i1 @_ZNKSt17_Rb_tree_iteratorISt4pairIKxxEEneERKS3_(%"struct.std::_Rb_tree_iterator"* %__begin, %"struct.std::_Rb_tree_iterator"* %__end)
+          to label %invoke.cont23 unwind label %lpad22
+
+18
+  br i1 %call24, label %for.body25, label %for.end34
+
+19
+  %call27 = invoke %"struct.std::pair.3"* @_ZNKSt17_Rb_tree_iteratorISt4pairIKxxEEdeEv(%"struct.std::_Rb_tree_iterator"* %__begin)
+          to label %invoke.cont26 unwind label %lpad22
+
+20
+  %11 = bitcast %"struct.std::pair.3"* %it to i8*
+  %12 = bitcast %"struct.std::pair.3"* %call27 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %11, i8* %12, i64 16, i32 8, i1 false)
+  invoke void @_ZNSt4pairIxxEC1IKxxvEERKS_IT_T0_E(%"struct.std::pair"* %ref.tmp28, %"struct.std::pair.3"* %it)
+          to label %invoke.cont29 unwind label %lpad22
+
+21
+  invoke void @_ZNSt6vectorISt4pairIxxESaIS1_EE9push_backEOS1_(%"class.std::vector"* %v, %"struct.std::pair"* %ref.tmp28)
+          to label %invoke.cont30 unwind label %lpad22
+
+22
+  %call33 = invoke %"struct.std::_Rb_tree_iterator"* @_ZNSt17_Rb_tree_iteratorISt4pairIKxxEEppEv(%"struct.std::_Rb_tree_iterator"* %__begin)
+          to label %invoke.cont32 unwind label %lpad22
+
+23
+  br label %for.cond21
+
+24
+  %13 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %14 = extractvalue { i8*, i32 } %13, 0
+  store i8* %14, i8** %exn.slot
+  %15 = extractvalue { i8*, i32 } %13, 1
+  store i32 %15, i32* %ehselector.slot
+  call void @_ZNSt6vectorISt4pairIxxESaIS1_EED1Ev(%"class.std::vector"* %v) #2
+  br label %ehcleanup
+
+25
+  store i32 0, i32* %last, align 4
+  store i32 0, i32* %ans, align 4
+  store i32 0, i32* %i35, align 4
+  br label %for.cond36
+
+26
+  %16 = load i32* %i35, align 4
+  %conv37 = sext i32 %16 to i64
+  %call38 = call i64 @_ZNKSt6vectorISt4pairIxxESaIS1_EE4sizeEv(%"class.std::vector"* %v) #2
+  %sub = sub i64 %call38, 1
+  %cmp39 = icmp ult i64 %conv37, %sub
+  br i1 %cmp39, label %for.body40, label %for.end133
+
+27
+  %17 = load i32* %last, align 4
+  %conv41 = sext i32 %17 to i64
+  %call43 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv41)
+          to label %invoke.cont42 unwind label %lpad22
+
+28
+  %18 = bitcast %"struct.std::pair"* %now to i8*
+  %19 = bitcast %"struct.std::pair"* %call43 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %18, i8* %19, i64 16, i32 8, i1 false)
+  %second44 = getelementptr inbounds %"struct.std::pair"* %now, i32 0, i32 1
+  %20 = load i64* %second44, align 8
+  %first45 = getelementptr inbounds %"struct.std::pair"* %now, i32 0, i32 0
+  %21 = load i64* %first45, align 8
+  %first46 = getelementptr inbounds %"struct.std::pair"* %now, i32 0, i32 0
+  %22 = load i64* %first46, align 8
+  %mul = mul nsw i64 %21, %22
+  %sub47 = sub nsw i64 %20, %mul
+  store i64 %sub47, i64* %A, align 8
+  %first48 = getelementptr inbounds %"struct.std::pair"* %now, i32 0, i32 0
+  %23 = load i64* %first48, align 8
+  store i64 %23, i64* %B, align 8
+  store i64 1, i64* %C, align 8
+  %24 = load i32* %i35, align 4
+  %add = add nsw i32 %24, 1
+  %conv49 = sext i32 %add to i64
+  %call51 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv49)
+          to label %invoke.cont50 unwind label %lpad22
+
+29
+  %second52 = getelementptr inbounds %"struct.std::pair"* %call51, i32 0, i32 1
+  %25 = load i64* %second52, align 8
+  %26 = load i32* %i35, align 4
+  %add53 = add nsw i32 %26, 1
+  %conv54 = sext i32 %add53 to i64
+  %call56 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv54)
+          to label %invoke.cont55 unwind label %lpad22
+
+30
+  %first57 = getelementptr inbounds %"struct.std::pair"* %call56, i32 0, i32 0
+  %27 = load i64* %first57, align 8
+  %28 = load i32* %i35, align 4
+  %add58 = add nsw i32 %28, 1
+  %conv59 = sext i32 %add58 to i64
+  %call61 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv59)
+          to label %invoke.cont60 unwind label %lpad22
+
+31
+  %first62 = getelementptr inbounds %"struct.std::pair"* %call61, i32 0, i32 0
+  %29 = load i64* %first62, align 8
+  %mul63 = mul nsw i64 %27, %29
+  %sub64 = sub nsw i64 %25, %mul63
+  store i64 %sub64, i64* %D, align 8
+  %30 = load i32* %i35, align 4
+  %add65 = add nsw i32 %30, 1
+  %conv66 = sext i32 %add65 to i64
+  %call68 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv66)
+          to label %invoke.cont67 unwind label %lpad22
+
+32
+  %first69 = getelementptr inbounds %"struct.std::pair"* %call68, i32 0, i32 0
+  %31 = load i64* %first69, align 8
+  store i64 %31, i64* %E, align 8
+  store i64 1, i64* %F, align 8
+  %32 = load i64* %A, align 8
+  %33 = load i64* %F, align 8
+  %mul70 = mul nsw i64 %32, %33
+  %34 = load i64* %C, align 8
+  %35 = load i64* %D, align 8
+  %mul71 = mul nsw i64 %34, %35
+  %sub72 = sub nsw i64 %mul70, %mul71
+  %conv73 = sitofp i64 %sub72 to x86_fp80
+  %36 = load i64* %B, align 8
+  %37 = load i64* %F, align 8
+  %mul74 = mul nsw i64 %36, %37
+  %38 = load i64* %C, align 8
+  %39 = load i64* %E, align 8
+  %mul75 = mul nsw i64 %38, %39
+  %sub76 = sub nsw i64 %mul74, %mul75
+  %conv77 = sitofp i64 %sub76 to x86_fp80
+  %div = fdiv x86_fp80 %conv73, %conv77
+  store x86_fp80 %div, x86_fp80* %b, align 16
+  %40 = load i64* %B, align 8
+  %41 = load i64* %D, align 8
+  %mul78 = mul nsw i64 %40, %41
+  %42 = load i64* %A, align 8
+  %43 = load i64* %E, align 8
+  %mul79 = mul nsw i64 %42, %43
+  %sub80 = sub nsw i64 %mul78, %mul79
+  %conv81 = sitofp i64 %sub80 to x86_fp80
+  %44 = load i64* %B, align 8
+  %45 = load i64* %F, align 8
+  %mul82 = mul nsw i64 %44, %45
+  %46 = load i64* %C, align 8
+  %47 = load i64* %E, align 8
+  %mul83 = mul nsw i64 %46, %47
+  %sub84 = sub nsw i64 %mul82, %mul83
+  %conv85 = sitofp i64 %sub84 to x86_fp80
+  %div86 = fdiv x86_fp80 %conv81, %conv85
+  store x86_fp80 %div86, x86_fp80* %c, align 16
+  store i32 1, i32* %ok, align 4
+  %48 = load i32* %i35, align 4
+  %add87 = add nsw i32 %48, 2
+  store i32 %add87, i32* %j, align 4
+  br label %for.cond88
+
+33
+  %49 = load i32* %j, align 4
+  %conv89 = sext i32 %49 to i64
+  %call90 = call i64 @_ZNKSt6vectorISt4pairIxxESaIS1_EE4sizeEv(%"class.std::vector"* %v) #2
+  %cmp91 = icmp ult i64 %conv89, %call90
+  br i1 %cmp91, label %for.body92, label %for.end126
+
+34
+  %50 = load i32* %j, align 4
+  %conv93 = sext i32 %50 to i64
+  %call95 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv93)
+          to label %invoke.cont94 unwind label %lpad22
+
+35
+  %first96 = getelementptr inbounds %"struct.std::pair"* %call95, i32 0, i32 0
+  %51 = load i64* %first96, align 8
+  %52 = load i32* %j, align 4
+  %conv97 = sext i32 %52 to i64
+  %call99 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv97)
+          to label %invoke.cont98 unwind label %lpad22
+
+36
+  %first100 = getelementptr inbounds %"struct.std::pair"* %call99, i32 0, i32 0
+  %53 = load i64* %first100, align 8
+  %mul101 = mul nsw i64 %51, %53
+  %conv102 = sitofp i64 %mul101 to x86_fp80
+  %54 = load x86_fp80* %b, align 16
+  %55 = load i32* %j, align 4
+  %conv103 = sext i32 %55 to i64
+  %call105 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv103)
+          to label %invoke.cont104 unwind label %lpad22
+
+37
+  %first106 = getelementptr inbounds %"struct.std::pair"* %call105, i32 0, i32 0
+  %56 = load i64* %first106, align 8
+  %conv107 = sitofp i64 %56 to x86_fp80
+  %mul108 = fmul x86_fp80 %54, %conv107
+  %add109 = fadd x86_fp80 %conv102, %mul108
+  %57 = load x86_fp80* %c, align 16
+  %add110 = fadd x86_fp80 %add109, %57
+  store x86_fp80 %add110, x86_fp80* %myy, align 16
+  %58 = load x86_fp80* %myy, align 16
+  %59 = load i32* %j, align 4
+  %conv111 = sext i32 %59 to i64
+  %call113 = invoke %"struct.std::pair"* @_ZNSt6vectorISt4pairIxxESaIS1_EEixEm(%"class.std::vector"* %v, i64 %conv111)
+          to label %invoke.cont112 unwind label %lpad22
+
+38
+  %second114 = getelementptr inbounds %"struct.std::pair"* %call113, i32 0, i32 1
+  %60 = load i64* %second114, align 8
+  %conv115 = sitofp i64 %60 to double
+  %add116 = fadd double %conv115, 1.000000e-05
+  %conv117 = fpext double %add116 to x86_fp80
+  %cmp118 = fcmp olt x86_fp80 %58, %conv117
+  br i1 %cmp118, label %if.then119, label %if.end120
+
+39
+  store i32 0, i32* %ok, align 4
+  br label %for.end126
+
+40
+  %61 = load x86_fp80* %myy, align 16
+  %cmp121 = fcmp ogt x86_fp80 %61, 0xK40169896800000000000
+  br i1 %cmp121, label %if.then122, label %if.end123
+
+41
+  br label %for.end126
+
+42
+  %62 = load i32* %j, align 4
+  %inc125 = add nsw i32 %62, 1
+  store i32 %inc125, i32* %j, align 4
+  br label %for.cond88
+
+43
+  %63 = load i32* %ok, align 4
+  %tobool = icmp ne i32 %63, 0
+  br i1 %tobool, label %if.then127, label %if.end130
+
+44
+  %64 = load i32* %ans, align 4
+  %inc128 = add nsw i32 %64, 1
+  store i32 %inc128, i32* %ans, align 4
+  %65 = load i32* %i35, align 4
+  %add129 = add nsw i32 %65, 1
+  store i32 %add129, i32* %last, align 4
+  br label %if.end130
+
+45
+  %66 = load i32* %i35, align 4
+  %inc132 = add nsw i32 %66, 1
+  store i32 %inc132, i32* %i35, align 4
+  br label %for.cond36
+
+46
+  %67 = load i32* %ans, align 4
+  %cmp134 = icmp eq i32 %67, 0
+  br i1 %cmp134, label %if.then135, label %if.end138
+
+47
+  %call136 = call i64 @_ZNKSt6vectorISt4pairIxxESaIS1_EE4sizeEv(%"class.std::vector"* %v) #2
+  %cmp137 = icmp eq i64 %call136, 0
+  br i1 %cmp137, label %cond.true, label %cond.false
+
+48
+  br label %cond.end
+
+49
+  call void @__assert_fail(i8* getelementptr inbounds ([12 x i8]* @.str2, i32 0, i32 0), i8* getelementptr inbounds ([78 x i8]* @.str3, i32 0, i32 0), i32 65, i8* getelementptr inbounds ([11 x i8]* @__PRETTY_FUNCTION__.main, i32 0, i32 0)) #9
+  unreachable
+
+50
+  br label %if.end138
+
+51
+  %69 = load i32* %ans, align 4
+  %call140 = invoke i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str4, i32 0, i32 0), i32 %69)
+          to label %invoke.cont139 unwind label %lpad22
+
+52
+  call void @_ZNSt6vectorISt4pairIxxESaIS1_EED1Ev(%"class.std::vector"* %v) #2
+  call void @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEED1Ev(%"class.std::map"* %m) #2
+  %70 = load i32* %retval
+  ret i32 %70
+
+53
+  call void @_ZNSt3mapIxxSt4lessIxESaISt4pairIKxxEEED1Ev(%"class.std::map"* %m) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val141 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val141

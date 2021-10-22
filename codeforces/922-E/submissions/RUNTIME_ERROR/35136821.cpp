@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 typedef long long ll;
  
 using namespace std;
  
-int main()
+signed main()
 {
     ios::sync_with_stdio(0);cin.tie(0);
  int n;

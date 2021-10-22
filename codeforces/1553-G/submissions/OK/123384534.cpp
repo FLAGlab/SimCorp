@@ -1,9 +1,4 @@
-#include<algorithm>
-#include<cstring>
-#include<cctype>
-#include<cstdio>
-#include<vector>
-#include<map>
+#include<bits/stdc++.h>
 #define rep(i,x,y) for(int i=x; i<=y; ++i)
 #define pb push_back
  
@@ -58,7 +53,7 @@ void merge(int x,int y)
 	fa[x]=y;
 }
  
-int main()
+signed main()
 {
 	n=getint(),q=getint();
 	rep(i,1,n) mx=max(mx,a[i]=getint());

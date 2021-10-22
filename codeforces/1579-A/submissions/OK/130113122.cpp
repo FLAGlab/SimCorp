@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
 char s[1123];
  
-int main(){
+signed main(){
  int t;
 	cin>>t;
  while(t--){

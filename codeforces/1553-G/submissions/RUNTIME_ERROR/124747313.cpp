@@ -23,7 +23,7 @@ namespace union_set {
 		fa[find(u)]=find(v); return ;
  }
 } 
-int main() {
+signed main() {
 	n=read(),q=read(); union_set::csh(n);
 	rep(i,1,n) a[i]=read(),pos[a[i]]=i; 
 	rep(i,2,N-1) {

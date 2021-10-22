@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int n,y=1;
 int A[100005],maxx=INT_MIN,q,minn=INT_MAX,at,visit[100005],topac,x,yat;
 map <int,int> mp,tp;
-int main()
+signed main()
 {
 	scanf("%d",&n);
  for(int i=1;i<=n;i++)

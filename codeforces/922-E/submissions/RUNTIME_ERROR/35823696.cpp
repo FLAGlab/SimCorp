@@ -1,7 +1,7 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int dp[2][10001];
-int main() {
+signed main() {
 	freopen("922E.inp","r",stdin);
  //freopen("922E.out","w",stdout);
 	ios_base::sync_with_stdio(false);

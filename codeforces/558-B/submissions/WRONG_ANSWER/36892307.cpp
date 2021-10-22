@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -9,7 +9,7 @@ struct poin{
  
 map<int,poin> in;
  
-int main(){
+signed main(){
  
 	cin>>n;
  for(int x=1;x<=n;x++){

@@ -1,9 +1,8 @@
-#include <iostream>
-#include <map>
+#include<bits/stdc++.h>
 using namespace std;
 int i,a,n,c[1000005][2],k,ans1,ans2,mn=INT_MAX,mx;
 map <int,int> mp;
-int main(){
+signed main(){
 	ios::sync_with_stdio(0);
 	cin>>n;
  for(i=1;i<=n;i++){

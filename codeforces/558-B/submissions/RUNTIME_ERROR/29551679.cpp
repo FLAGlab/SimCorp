@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ll long long
  
 using namespace std;
  
 ll n,s[100001],pok[100001];
  
-int main()
+signed main()
 {
  /*freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);*/

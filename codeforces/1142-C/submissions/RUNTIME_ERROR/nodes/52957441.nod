@@ -1,0 +1,311 @@
+
+1
+  %retval = alloca i32, align 4
+  %a = alloca %"class.std::vector", align 8
+  %ref.tmp = alloca %"class.std::allocator", align 1
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %u = alloca %"class.std::vector", align 8
+  %ref.tmp9 = alloca %"class.std::allocator", align 1
+  %d = alloca %"class.std::vector", align 8
+  %ref.tmp13 = alloca %"class.std::allocator", align 1
+  %c = alloca %"class.std::vector", align 8
+  %__range = alloca %"class.std::vector"*, align 8
+  %__begin = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %__end = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %i = alloca %struct.point*, align 8
+  %ref.tmp35 = alloca %"class.std::vector", align 8
+  %agg.tmp = alloca %"class.std::vector", align 8
+  %agg.tmp40 = alloca %"class.std::vector", align 8
+  %sz = alloca i32, align 4
+  %x46 = alloca i32, align 4
+  %i47 = alloca i32, align 4
+  %ref.tmp66 = alloca i32, align 4
+  %ref.tmp67 = alloca i32, align 4
+  %cleanup.dest.slot = alloca i32
+  store i32 0, i32* %retval
+  %call = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %0 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %0
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %1 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call1 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %1, %"class.std::basic_ostream"* null)
+  %vtable2 = load i8** bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8**)
+  %vbase.offset.ptr3 = getelementptr i8* %vtable2, i64 -24
+  %2 = bitcast i8* %vbase.offset.ptr3 to i64*
+  %vbase.offset4 = load i64* %2
+  %add.ptr5 = getelementptr inbounds i8* bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8*), i64 %vbase.offset4
+  %3 = bitcast i8* %add.ptr5 to %"class.std::basic_ios"*
+  %call6 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %3, %"class.std::basic_ostream"* null)
+  %call7 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  %4 = load i32* @n, align 4
+  %conv = sext i32 %4 to i64
+  call void @_ZNSaI5pointEC1Ev(%"class.std::allocator"* %ref.tmp) #2
+  invoke void @_ZNSt6vectorI5pointSaIS0_EEC1EmRKS1_(%"class.std::vector"* %a, i64 %conv, %"class.std::allocator"* %ref.tmp)
+          to label %invoke.cont unwind label %lpad
+
+2
+  call void @_ZNSaI5pointED1Ev(%"class.std::allocator"* %ref.tmp) #2
+  %5 = load i32* @n, align 4
+  %conv8 = sext i32 %5 to i64
+  call void @_ZNSaI5pointEC1Ev(%"class.std::allocator"* %ref.tmp9) #2
+  invoke void @_ZNSt6vectorI5pointSaIS0_EEC1EmRKS1_(%"class.std::vector"* %u, i64 %conv8, %"class.std::allocator"* %ref.tmp9)
+          to label %invoke.cont11 unwind label %lpad10
+
+3
+  call void @_ZNSaI5pointED1Ev(%"class.std::allocator"* %ref.tmp9) #2
+  %6 = load i32* @n, align 4
+  %conv12 = sext i32 %6 to i64
+  call void @_ZNSaI5pointEC1Ev(%"class.std::allocator"* %ref.tmp13) #2
+  invoke void @_ZNSt6vectorI5pointSaIS0_EEC1EmRKS1_(%"class.std::vector"* %d, i64 %conv12, %"class.std::allocator"* %ref.tmp13)
+          to label %invoke.cont15 unwind label %lpad14
+
+4
+  call void @_ZNSaI5pointED1Ev(%"class.std::allocator"* %ref.tmp13) #2
+  invoke void @_ZNSt6vectorI5pointSaIS0_EEC1Ev(%"class.std::vector"* %c)
+          to label %invoke.cont17 unwind label %lpad16
+
+5
+  store %"class.std::vector"* %a, %"class.std::vector"** %__range, align 8
+  %7 = load %"class.std::vector"** %__range, align 8
+  %call18 = call %struct.point* @_ZNSt6vectorI5pointSaIS0_EE5beginEv(%"class.std::vector"* %7) #2
+  %coerce.dive = getelementptr %"class.__gnu_cxx::__normal_iterator"* %__begin, i32 0, i32 0
+  store %struct.point* %call18, %struct.point** %coerce.dive
+  %8 = load %"class.std::vector"** %__range, align 8
+  %call19 = call %struct.point* @_ZNSt6vectorI5pointSaIS0_EE3endEv(%"class.std::vector"* %8) #2
+  %coerce.dive20 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %__end, i32 0, i32 0
+  store %struct.point* %call19, %struct.point** %coerce.dive20
+  br label %for.cond
+
+6
+  %call23 = invoke zeroext i1 @_ZN9__gnu_cxxneIP5pointSt6vectorIS1_SaIS1_EEEEbRKNS_17__normal_iteratorIT_T0_EESB_(%"class.__gnu_cxx::__normal_iterator"* %__begin, %"class.__gnu_cxx::__normal_iterator"* %__end)
+          to label %invoke.cont22 unwind label %lpad21
+
+7
+  br i1 %call23, label %for.body, label %for.end
+
+8
+  %call25 = invoke %struct.point* @_ZNK9__gnu_cxx17__normal_iteratorIP5pointSt6vectorIS1_SaIS1_EEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %__begin)
+          to label %invoke.cont24 unwind label %lpad21
+
+9
+  store %struct.point* %call25, %struct.point** %i, align 8
+  %9 = load %struct.point** %i, align 8
+  %x = getelementptr inbounds %struct.point* %9, i32 0, i32 0
+  %call27 = invoke %"class.std::basic_istream"* @_ZNSirsERd(%"class.std::basic_istream"* @_ZSt3cin, double* %x)
+          to label %invoke.cont26 unwind label %lpad21
+
+10
+  %10 = load %struct.point** %i, align 8
+  %y = getelementptr inbounds %struct.point* %10, i32 0, i32 1
+  %call29 = invoke %"class.std::basic_istream"* @_ZNSirsERd(%"class.std::basic_istream"* %call27, double* %y)
+          to label %invoke.cont28 unwind label %lpad21
+
+11
+  %11 = load %struct.point** %i, align 8
+  %x30 = getelementptr inbounds %struct.point* %11, i32 0, i32 0
+  %12 = load double* %x30, align 8
+  %13 = load %struct.point** %i, align 8
+  %x31 = getelementptr inbounds %struct.point* %13, i32 0, i32 0
+  %14 = load double* %x31, align 8
+  %mul = fmul double %12, %14
+  %15 = load %struct.point** %i, align 8
+  %y32 = getelementptr inbounds %struct.point* %15, i32 0, i32 1
+  %16 = load double* %y32, align 8
+  %sub = fsub double %16, %mul
+  store double %sub, double* %y32, align 8
+  %call34 = invoke %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIP5pointSt6vectorIS1_SaIS1_EEEppEv(%"class.__gnu_cxx::__normal_iterator"* %__begin)
+          to label %invoke.cont33 unwind label %lpad21
+
+12
+  br label %for.cond
+
+13
+  %17 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %18 = extractvalue { i8*, i32 } %17, 0
+  store i8* %18, i8** %exn.slot
+  %19 = extractvalue { i8*, i32 } %17, 1
+  store i32 %19, i32* %ehselector.slot
+  call void @_ZNSaI5pointED1Ev(%"class.std::allocator"* %ref.tmp) #2
+  br label %eh.resume
+
+14
+  %20 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %21 = extractvalue { i8*, i32 } %20, 0
+  store i8* %21, i8** %exn.slot
+  %22 = extractvalue { i8*, i32 } %20, 1
+  store i32 %22, i32* %ehselector.slot
+  call void @_ZNSaI5pointED1Ev(%"class.std::allocator"* %ref.tmp9) #2
+  br label %ehcleanup74
+
+15
+  %23 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %24 = extractvalue { i8*, i32 } %23, 0
+  store i8* %24, i8** %exn.slot
+  %25 = extractvalue { i8*, i32 } %23, 1
+  store i32 %25, i32* %ehselector.slot
+  call void @_ZNSaI5pointED1Ev(%"class.std::allocator"* %ref.tmp13) #2
+  br label %ehcleanup73
+
+16
+  %26 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %27 = extractvalue { i8*, i32 } %26, 0
+  store i8* %27, i8** %exn.slot
+  %28 = extractvalue { i8*, i32 } %26, 1
+  store i32 %28, i32* %ehselector.slot
+  br label %ehcleanup72
+
+17
+  %29 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %30 = extractvalue { i8*, i32 } %29, 0
+  store i8* %30, i8** %exn.slot
+  %31 = extractvalue { i8*, i32 } %29, 1
+  store i32 %31, i32* %ehselector.slot
+  br label %ehcleanup
+
+18
+  invoke void @_ZNSt6vectorI5pointSaIS0_EEC1ERKS2_(%"class.std::vector"* %agg.tmp, %"class.std::vector"* %a)
+          to label %invoke.cont36 unwind label %lpad21
+
+19
+  invoke void @_Z10ConvexHullSt6vectorI5pointSaIS0_EEi(%"class.std::vector"* sret %ref.tmp35, %"class.std::vector"* %agg.tmp, i32 1)
+          to label %invoke.cont38 unwind label %lpad37
+
+20
+  %call39 = call %"class.std::vector"* @_ZNSt6vectorI5pointSaIS0_EEaSEOS2_(%"class.std::vector"* %c, %"class.std::vector"* %ref.tmp35) #2
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %ref.tmp35) #2
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %agg.tmp) #2
+  invoke void @_ZNSt6vectorI5pointSaIS0_EEC1ERKS2_(%"class.std::vector"* %agg.tmp40, %"class.std::vector"* %c)
+          to label %invoke.cont41 unwind label %lpad21
+
+21
+  invoke void @_Z6getUDPSt6vectorI5pointSaIS0_EERS2_S3_(%"class.std::vector"* %agg.tmp40, %"class.std::vector"* %u, %"class.std::vector"* %d)
+          to label %invoke.cont43 unwind label %lpad42
+
+22
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %agg.tmp40) #2
+  %call44 = call i64 @_ZNKSt6vectorI5pointSaIS0_EE4sizeEv(%"class.std::vector"* %u) #2
+  %conv45 = trunc i64 %call44 to i32
+  store i32 %conv45, i32* %sz, align 4
+  %32 = load i32* %sz, align 4
+  store i32 %32, i32* %x46, align 4
+  store i32 0, i32* %i47, align 4
+  br label %for.cond48
+
+23
+  %33 = load i32* %i47, align 4
+  %34 = load i32* %sz, align 4
+  %sub49 = sub nsw i32 %34, 2
+  %cmp = icmp sle i32 %33, %sub49
+  br i1 %cmp, label %for.body50, label %for.end64
+
+24
+  %35 = load i32* %i47, align 4
+  %conv51 = sext i32 %35 to i64
+  %call53 = invoke %struct.point* @_ZNSt6vectorI5pointSaIS0_EEixEm(%"class.std::vector"* %u, i64 %conv51)
+          to label %invoke.cont52 unwind label %lpad21
+
+25
+  %x54 = getelementptr inbounds %struct.point* %call53, i32 0, i32 0
+  %36 = load double* %x54, align 8
+  %37 = load i32* %i47, align 4
+  %add = add nsw i32 %37, 1
+  %conv55 = sext i32 %add to i64
+  %call57 = invoke %struct.point* @_ZNSt6vectorI5pointSaIS0_EEixEm(%"class.std::vector"* %u, i64 %conv55)
+          to label %invoke.cont56 unwind label %lpad21
+
+26
+  %x58 = getelementptr inbounds %struct.point* %call57, i32 0, i32 0
+  %38 = load double* %x58, align 8
+  %sub59 = fsub double %36, %38
+  %call61 = invoke i32 @_Z4signd(double %sub59)
+          to label %invoke.cont60 unwind label %lpad21
+
+27
+  %cmp62 = icmp eq i32 %call61, 0
+  br i1 %cmp62, label %if.then, label %if.end
+
+28
+  %39 = load i32* %x46, align 4
+  %dec = add nsw i32 %39, -1
+  store i32 %dec, i32* %x46, align 4
+  br label %if.end
+
+29
+  %40 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %agg.tmp) #2
+  br label %ehcleanup
+
+30
+  %43 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %44 = extractvalue { i8*, i32 } %43, 0
+  store i8* %44, i8** %exn.slot
+  %45 = extractvalue { i8*, i32 } %43, 1
+  store i32 %45, i32* %ehselector.slot
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %agg.tmp40) #2
+  br label %ehcleanup
+
+31
+  %46 = load i32* %i47, align 4
+  %inc = add nsw i32 %46, 1
+  store i32 %inc, i32* %i47, align 4
+  br label %for.cond48
+
+32
+  %47 = load i32* %x46, align 4
+  %sub65 = sub nsw i32 %47, 1
+  store i32 %sub65, i32* %ref.tmp66, align 4
+  store i32 0, i32* %ref.tmp67, align 4
+  %call69 = invoke i32* @_ZSt3maxIiERKT_S2_S2_(i32* %ref.tmp66, i32* %ref.tmp67)
+          to label %invoke.cont68 unwind label %lpad21
+
+33
+  %48 = load i32* %call69
+  %call71 = invoke %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %48)
+          to label %invoke.cont70 unwind label %lpad21
+
+34
+  store i32 0, i32* %retval
+  store i32 1, i32* %cleanup.dest.slot
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %c) #2
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %d) #2
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %u) #2
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %a) #2
+  %49 = load i32* %retval
+  ret i32 %49
+
+35
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %c) #2
+  br label %ehcleanup72
+
+36
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %d) #2
+  br label %ehcleanup73
+
+37
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %u) #2
+  br label %ehcleanup74
+
+38
+  call void @_ZNSt6vectorI5pointSaIS0_EED1Ev(%"class.std::vector"* %a) #2
+  br label %eh.resume
+
+39
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val75 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val75

@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 template <class T> int size(const T &x) { return x.size(); }
@@ -15,7 +15,7 @@ const int INF = ~(1<<31);
 const double pi = acos(-1);
 const double EPS = 1e-9;
  
-int main() {
+signed main() {
     cin.sync_with_stdio(false);
  return 0;
 }

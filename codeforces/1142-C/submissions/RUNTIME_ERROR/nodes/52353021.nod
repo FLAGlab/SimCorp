@@ -1,0 +1,227 @@
+
+1
+  %retval = alloca i32, align 4
+  %n = alloca i32, align 4
+  %i = alloca i32, align 4
+  %c = alloca %"struct.std::pair", align 4
+  %agg.tmp = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp20 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp23 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %i28 = alloca i32, align 4
+  %agg.tmp34 = alloca %"struct.std::pair", align 4
+  %agg.tmp35 = alloca %"struct.std::pair", align 4
+  %agg.tmp37 = alloca %"struct.std::pair", align 4
+  %agg.tmp44 = alloca %"struct.std::pair", align 4
+  %agg.tmp45 = alloca %"struct.std::pair", align 4
+  %agg.tmp48 = alloca %"struct.std::pair", align 4
+  %ans = alloca i32, align 4
+  %i62 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %0 = load %struct._IO_FILE** @stdin, align 8
+  %call = call %struct._IO_FILE* @freopen(i8* getelementptr inbounds ([10 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @.str3, i32 0, i32 0), %struct._IO_FILE* %0)
+  %call1 = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %vtable = load i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**)
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -24
+  %1 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %1
+  %add.ptr = getelementptr inbounds i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %vbase.offset
+  %2 = bitcast i8* %add.ptr to %"class.std::basic_ios"*
+  %call2 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %2, %"class.std::basic_ostream"* null)
+  %vtable3 = load i8** bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8**)
+  %vbase.offset.ptr4 = getelementptr i8* %vtable3, i64 -24
+  %3 = bitcast i8* %vbase.offset.ptr4 to i64*
+  %vbase.offset5 = load i64* %3
+  %add.ptr6 = getelementptr inbounds i8* bitcast (%"class.std::basic_ostream"* @_ZSt4cout to i8*), i64 %vbase.offset5
+  %4 = bitcast i8* %add.ptr6 to %"class.std::basic_ios"*
+  %call7 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %4, %"class.std::basic_ostream"* null)
+  %call8 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %n)
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+2
+  %5 = load i32* %i, align 4
+  %6 = load i32* %n, align 4
+  %cmp = icmp slt i32 %5, %6
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  call void @_ZNSt4pairIiiEC1Ev(%"struct.std::pair"* %c)
+  %first = getelementptr inbounds %"struct.std::pair"* %c, i32 0, i32 0
+  %call9 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %first)
+  %second = getelementptr inbounds %"struct.std::pair"* %c, i32 0, i32 1
+  %call10 = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %call9, i32* %second)
+  %first11 = getelementptr inbounds %"struct.std::pair"* %c, i32 0, i32 0
+  %7 = load i32* %first11, align 4
+  %first12 = getelementptr inbounds %"struct.std::pair"* %c, i32 0, i32 0
+  %8 = load i32* %first12, align 4
+  %mul = mul nsw i32 %7, %8
+  %second13 = getelementptr inbounds %"struct.std::pair"* %c, i32 0, i32 1
+  %9 = load i32* %second13, align 4
+  %sub = sub nsw i32 %9, %mul
+  store i32 %sub, i32* %second13, align 4
+  call void @_ZNSt6vectorISt4pairIiiESaIS1_EE9push_backERKS1_(%"class.std::vector"* @pt, %"struct.std::pair"* %c)
+  %10 = load i32* %i, align 4
+  %inc = add nsw i32 %10, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %call14 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE5beginEv(%"class.std::vector"* @pt) #2
+  %coerce.dive = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp, i32 0, i32 0
+  store %"struct.std::pair"* %call14, %"struct.std::pair"** %coerce.dive
+  %call16 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE3endEv(%"class.std::vector"* @pt) #2
+  %coerce.dive17 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp15, i32 0, i32 0
+  store %"struct.std::pair"* %call16, %"struct.std::pair"** %coerce.dive17
+  %coerce.dive18 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp, i32 0, i32 0
+  %11 = load %"struct.std::pair"** %coerce.dive18
+  %coerce.dive19 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp15, i32 0, i32 0
+  %12 = load %"struct.std::pair"** %coerce.dive19
+  call void @_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS3_SaIS3_EEEEEvT_S9_(%"struct.std::pair"* %11, %"struct.std::pair"* %12)
+  %call21 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE5beginEv(%"class.std::vector"* @pt) #2
+  %coerce.dive22 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp20, i32 0, i32 0
+  store %"struct.std::pair"* %call21, %"struct.std::pair"** %coerce.dive22
+  %call24 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE3endEv(%"class.std::vector"* @pt) #2
+  %coerce.dive25 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp23, i32 0, i32 0
+  store %"struct.std::pair"* %call24, %"struct.std::pair"** %coerce.dive25
+  %coerce.dive26 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp20, i32 0, i32 0
+  %13 = load %"struct.std::pair"** %coerce.dive26
+  %coerce.dive27 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp23, i32 0, i32 0
+  %14 = load %"struct.std::pair"** %coerce.dive27
+  call void @_ZSt7reverseIN9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS3_SaIS3_EEEEEvT_S9_(%"struct.std::pair"* %13, %"struct.std::pair"* %14)
+  store i32 0, i32* %i28, align 4
+  br label %for.cond29
+
+5
+  %15 = load i32* %i28, align 4
+  %16 = load i32* %n, align 4
+  %cmp30 = icmp slt i32 %15, %16
+  br i1 %cmp30, label %for.body31, label %for.end61
+
+6
+  br label %while.cond
+
+7
+  %call32 = call i64 @_ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv(%"class.std::vector"* @hul) #2
+  %conv = trunc i64 %call32 to i32
+  %cmp33 = icmp sgt i32 %conv, 1
+  br i1 %cmp33, label %land.rhs, label %land.end
+
+8
+  %call36 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE4backEv(%"class.std::vector"* @hul)
+  %17 = bitcast %"struct.std::pair"* %agg.tmp35 to i8*
+  %18 = bitcast %"struct.std::pair"* %call36 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %17, i8* %18, i64 8, i32 4, i1 false)
+  %call38 = call i64 @_ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv(%"class.std::vector"* @hul) #2
+  %conv39 = trunc i64 %call38 to i32
+  %sub40 = sub nsw i32 %conv39, 2
+  %conv41 = sext i32 %sub40 to i64
+  %call42 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EEixEm(%"class.std::vector"* @hul, i64 %conv41)
+  %19 = bitcast %"struct.std::pair"* %agg.tmp37 to i8*
+  %20 = bitcast %"struct.std::pair"* %call42 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %19, i8* %20, i64 8, i32 4, i1 false)
+  %21 = bitcast %"struct.std::pair"* %agg.tmp35 to i64*
+  %22 = load i64* %21, align 1
+  %23 = bitcast %"struct.std::pair"* %agg.tmp37 to i64*
+  %24 = load i64* %23, align 1
+  %call43 = call i64 @_Z3decSt4pairIiiES0_(i64 %22, i64 %24)
+  %25 = bitcast %"struct.std::pair"* %agg.tmp34 to i64*
+  store i64 %call43, i64* %25, align 1
+  %26 = load i32* %i28, align 4
+  %conv46 = sext i32 %26 to i64
+  %call47 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EEixEm(%"class.std::vector"* @pt, i64 %conv46)
+  %27 = bitcast %"struct.std::pair"* %agg.tmp45 to i8*
+  %28 = bitcast %"struct.std::pair"* %call47 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %27, i8* %28, i64 8, i32 4, i1 false)
+  %call49 = call i64 @_ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv(%"class.std::vector"* @hul) #2
+  %conv50 = trunc i64 %call49 to i32
+  %sub51 = sub nsw i32 %conv50, 2
+  %conv52 = sext i32 %sub51 to i64
+  %call53 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EEixEm(%"class.std::vector"* @hul, i64 %conv52)
+  %29 = bitcast %"struct.std::pair"* %agg.tmp48 to i8*
+  %30 = bitcast %"struct.std::pair"* %call53 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %29, i8* %30, i64 8, i32 4, i1 false)
+  %31 = bitcast %"struct.std::pair"* %agg.tmp45 to i64*
+  %32 = load i64* %31, align 1
+  %33 = bitcast %"struct.std::pair"* %agg.tmp48 to i64*
+  %34 = load i64* %33, align 1
+  %call54 = call i64 @_Z3decSt4pairIiiES0_(i64 %32, i64 %34)
+  %35 = bitcast %"struct.std::pair"* %agg.tmp44 to i64*
+  store i64 %call54, i64* %35, align 1
+  %36 = bitcast %"struct.std::pair"* %agg.tmp34 to i64*
+  %37 = load i64* %36, align 1
+  %38 = bitcast %"struct.std::pair"* %agg.tmp44 to i64*
+  %39 = load i64* %38, align 1
+  %call55 = call i32 @_Z5crossSt4pairIiiES0_(i64 %37, i64 %39)
+  %cmp56 = icmp sle i32 %call55, 0
+  br label %land.end
+
+9
+  %40 = phi i1 [ false, %while.cond ], [ %cmp56, %land.rhs ]
+  br i1 %40, label %while.body, label %while.end
+
+10
+  call void @_ZNSt6vectorISt4pairIiiESaIS1_EE8pop_backEv(%"class.std::vector"* @hul)
+  br label %while.cond
+
+11
+  %41 = load i32* %i28, align 4
+  %conv57 = sext i32 %41 to i64
+  %call58 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EEixEm(%"class.std::vector"* @pt, i64 %conv57)
+  call void @_ZNSt6vectorISt4pairIiiESaIS1_EE9push_backERKS1_(%"class.std::vector"* @hul, %"struct.std::pair"* %call58)
+  %42 = load i32* %i28, align 4
+  %inc60 = add nsw i32 %42, 1
+  store i32 %inc60, i32* %i28, align 4
+  br label %for.cond29
+
+12
+  store i32 0, i32* %ans, align 4
+  store i32 1, i32* %i62, align 4
+  br label %for.cond63
+
+13
+  %43 = load i32* %i62, align 4
+  %call64 = call i64 @_ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv(%"class.std::vector"* @hul) #2
+  %conv65 = trunc i64 %call64 to i32
+  %cmp66 = icmp slt i32 %43, %conv65
+  br i1 %cmp66, label %for.body67, label %for.end79
+
+14
+  %44 = load i32* %i62, align 4
+  %tobool = icmp ne i32 %44, 0
+  br i1 %tobool, label %land.lhs.true, label %if.end
+
+15
+  %45 = load i32* %i62, align 4
+  %sub68 = sub nsw i32 %45, 1
+  %conv69 = sext i32 %sub68 to i64
+  %call70 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EEixEm(%"class.std::vector"* @hul, i64 %conv69)
+  %first71 = getelementptr inbounds %"struct.std::pair"* %call70, i32 0, i32 0
+  %46 = load i32* %first71, align 4
+  %47 = load i32* %i62, align 4
+  %conv72 = sext i32 %47 to i64
+  %call73 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EEixEm(%"class.std::vector"* @hul, i64 %conv72)
+  %first74 = getelementptr inbounds %"struct.std::pair"* %call73, i32 0, i32 0
+  %48 = load i32* %first74, align 4
+  %cmp75 = icmp eq i32 %46, %48
+  br i1 %cmp75, label %if.then, label %if.end
+
+16
+  br label %for.inc77
+
+17
+  %49 = load i32* %ans, align 4
+  %inc76 = add nsw i32 %49, 1
+  store i32 %inc76, i32* %ans, align 4
+  br label %for.inc77
+
+18
+  %50 = load i32* %i62, align 4
+  %inc78 = add nsw i32 %50, 1
+  store i32 %inc78, i32* %i62, align 4
+  br label %for.cond63
+
+19
+  %51 = load i32* %ans, align 4
+  %call80 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %51)
+  ret i32 0

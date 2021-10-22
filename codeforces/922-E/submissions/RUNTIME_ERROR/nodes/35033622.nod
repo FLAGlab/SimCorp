@@ -1,0 +1,22 @@
+
+1
+  %retval = alloca i32, align 4
+  %T = alloca i64, align 8
+  store i32 0, i32* %retval
+  store i64 1, i64* %T, align 8
+  br label %while.cond
+
+2
+  %0 = load i64* %T, align 8
+  %dec = add nsw i64 %0, -1
+  store i64 %dec, i64* %T, align 8
+  %tobool = icmp ne i64 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  call void @_Z4workv()
+  br label %while.cond
+
+4
+  %1 = load i32* %retval
+  ret i32 %1

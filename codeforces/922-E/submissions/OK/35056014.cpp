@@ -1,7 +1,7 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 long long a[1005],cost[1005],n,initial,cap_increase,x,dp[1005][10005],ans;
-int main(){
+signed main(){
 	cin>>n>>initial>>cap_increase>>x;
  for(int i=0;i<n;cin>>a[i++]);
  for(int i=0;i<n;cin>>cost[i++]);

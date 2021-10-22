@@ -1,8 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <cstdio>
-#include <cmath>
-#include <queue>
+#include<bits/stdc++.h>
 using namespace std;
 int n;
 int x[6000] ,y[6000];
@@ -31,7 +27,7 @@ bool cmp(abc a ,abc b){
  if((a.x<0&&b.x<0)||(a.x>0&&b.x>0))return k>kk;
  return k<kk;
 }
-int main()
+signed main()
 {
 	cin >> n;
  for(int i=1;i<=n;i++){

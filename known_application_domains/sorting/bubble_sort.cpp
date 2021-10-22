@@ -1,16 +1,19 @@
-
-void sort(int *a, int n) {
-    int i, t, j = n, s = 1;
+int main() {
+	int a[] = {1, 2, 3, 4, 5};
+	int n = 5;
+	int j = n;
+    bool s = true;
     while (s) {
-        s = 0;
-        for (i = 1; i < j; i++) {
+        s = false;
+        for (int i = 1; i < j; i++) {
             if (a[i] < a[i - 1]) {
-                t = a[i];
+                int t = a[i];
                 a[i] = a[i - 1];
                 a[i - 1] = t;
-                s = 1;
+                s = true;
             }
         }
         j--;
     }
+	return 0;
 }

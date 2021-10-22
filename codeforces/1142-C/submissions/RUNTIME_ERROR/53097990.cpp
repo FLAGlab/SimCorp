@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 typedef long long int ll;
  
@@ -147,7 +147,7 @@ void solve()
 }
  
  
-int main(){
+signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

@@ -1,4 +1,4 @@
-#include <cstdio>
+#include<bits/stdc++.h>
 const int N=10005;
 const double eps=1e-8;
 bool usd[N][N];
@@ -11,7 +11,7 @@ double fabs(double x){return x<0?-x:x;}
 bool equ(double x,double y){
  return fabs(x-y)<=eps;
 }
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1; i<=n; i++) scanf("%d%d",&a[i].x,&a[i].y);
  for(int i=1; i<n; i++){

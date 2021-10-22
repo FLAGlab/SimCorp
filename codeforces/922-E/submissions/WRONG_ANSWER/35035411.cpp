@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 typedef long long ll;
 typedef long double ld;
 using namespace std;
@@ -7,7 +7,7 @@ using namespace std;
 int n, w, b, x;
 ll dp[1010][10010];
 int c[1010], cost[1010];
-int main(){
+signed main(){
 	cin >> n >> w >> b >> x;
  for(int i = 1; i <= n; i++) cin >> c[i];
  for(int i = 1; i <= n; i++) cin >> cost[i];

@@ -1,0 +1,312 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i64, align 8
+  %i24 = alloca i64, align 8
+  %ref.tmp = alloca i64, align 8
+  %i37 = alloca i64, align 8
+  %num = alloca i64, align 8
+  %i88 = alloca i64, align 8
+  store i32 0, i32* %retval
+  store i64 2000000000, i64* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 0, i32 0), align 8
+  store i64 2000000000, i64* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 0, i32 1), align 8
+  %call = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* @n)
+  store i64 1, i64* %i, align 8
+  br label %for.cond
+
+2
+  %0 = load i64* %i, align 8
+  %1 = load i64* @n, align 8
+  %cmp = icmp sle i64 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i64* %i, align 8
+  %arrayidx = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %2
+  %x = getelementptr inbounds %struct.point* %arrayidx, i32 0, i32 0
+  %call1 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* @_ZSt3cin, i64* %x)
+  %3 = load i64* %i, align 8
+  %arrayidx2 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %3
+  %y = getelementptr inbounds %struct.point* %arrayidx2, i32 0, i32 1
+  %call3 = call %"class.std::basic_istream"* @_ZNSirsERx(%"class.std::basic_istream"* %call1, i64* %y)
+  %4 = load i64* %i, align 8
+  %arrayidx4 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %4
+  %y5 = getelementptr inbounds %struct.point* %arrayidx4, i32 0, i32 1
+  %5 = load i64* %y5, align 8
+  %6 = load i64* @cur, align 8
+  %arrayidx6 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %6
+  %y7 = getelementptr inbounds %struct.point* %arrayidx6, i32 0, i32 1
+  %7 = load i64* %y7, align 8
+  %cmp8 = icmp slt i64 %5, %7
+  br i1 %cmp8, label %if.then, label %if.else
+
+4
+  %8 = load i64* %i, align 8
+  store i64 %8, i64* @cur, align 8
+  br label %if.end22
+
+5
+  %9 = load i64* %i, align 8
+  %arrayidx9 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %9
+  %y10 = getelementptr inbounds %struct.point* %arrayidx9, i32 0, i32 1
+  %10 = load i64* %y10, align 8
+  %11 = load i64* @cur, align 8
+  %arrayidx11 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %11
+  %y12 = getelementptr inbounds %struct.point* %arrayidx11, i32 0, i32 1
+  %12 = load i64* %y12, align 8
+  %cmp13 = icmp eq i64 %10, %12
+  br i1 %cmp13, label %if.then14, label %if.end21
+
+6
+  %13 = load i64* %i, align 8
+  %arrayidx15 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %13
+  %x16 = getelementptr inbounds %struct.point* %arrayidx15, i32 0, i32 0
+  %14 = load i64* %x16, align 8
+  %15 = load i64* @cur, align 8
+  %arrayidx17 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %15
+  %x18 = getelementptr inbounds %struct.point* %arrayidx17, i32 0, i32 0
+  %16 = load i64* %x18, align 8
+  %cmp19 = icmp slt i64 %14, %16
+  br i1 %cmp19, label %if.then20, label %if.end
+
+7
+  %17 = load i64* %i, align 8
+  store i64 %17, i64* @cur, align 8
+  br label %if.end
+
+8
+  br label %if.end21
+
+9
+  br label %if.end22
+
+10
+  %18 = load i64* %i, align 8
+  %inc = add nsw i64 %18, 1
+  store i64 %inc, i64* %i, align 8
+  br label %for.cond
+
+11
+  %19 = load i64* @cur, align 8
+  %arrayidx23 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %19
+  call void @_ZSt4swapI5pointEvRT_S2_(%struct.point* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 1), %struct.point* %arrayidx23) #2
+  store i64 2, i64* %i24, align 8
+  br label %for.cond25
+
+12
+  %20 = load i64* %i24, align 8
+  %21 = load i64* @n, align 8
+  %cmp26 = icmp sle i64 %20, %21
+  br i1 %cmp26, label %for.body27, label %for.end35
+
+13
+  %22 = load i64* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 1, i32 0), align 8
+  %23 = load i64* %i24, align 8
+  %arrayidx28 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %23
+  %x29 = getelementptr inbounds %struct.point* %arrayidx28, i32 0, i32 0
+  %24 = load i64* %x29, align 8
+  %sub = sub nsw i64 %24, %22
+  store i64 %sub, i64* %x29, align 8
+  %25 = load i64* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 1, i32 1), align 8
+  %26 = load i64* %i24, align 8
+  %arrayidx30 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %26
+  %y31 = getelementptr inbounds %struct.point* %arrayidx30, i32 0, i32 1
+  %27 = load i64* %y31, align 8
+  %sub32 = sub nsw i64 %27, %25
+  store i64 %sub32, i64* %y31, align 8
+  %28 = load i64* %i24, align 8
+  %inc34 = add nsw i64 %28, 1
+  store i64 %inc34, i64* %i24, align 8
+  br label %for.cond25
+
+14
+  store i64 0, i64* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 1, i32 0), align 8
+  store i64 0, i64* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 1, i32 1), align 8
+  %29 = load i64* @n, align 8
+  %add.ptr = getelementptr inbounds %struct.point* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i32 0), i64 %29
+  %add.ptr36 = getelementptr inbounds %struct.point* %add.ptr, i64 1
+  call void @_ZSt4sortIP5pointPFbS0_S0_EEvT_S4_T0_(%struct.point* getelementptr inbounds ([1000005 x %struct.point]* @p, i32 0, i64 2), %struct.point* %add.ptr36, i1 (i64, i64, i64, i64)* @_Z3cmp5pointS_)
+  store i64 1, i64* %ref.tmp, align 8
+  call void @_ZNSt5dequeIxSaIxEE9push_backEOx(%"class.std::deque"* @dys, i64* %ref.tmp)
+  store i64 2, i64* %i37, align 8
+  br label %for.cond38
+
+15
+  %30 = load i64* %i37, align 8
+  %31 = load i64* @n, align 8
+  %cmp39 = icmp sle i64 %30, %31
+  br i1 %cmp39, label %for.body40, label %for.end86
+
+16
+  br label %while.cond
+
+17
+  %call41 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %tobool = icmp ne i64 %call41, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+18
+  store i64 114514, i64* %num, align 8
+  %call42 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %cmp43 = icmp ugt i64 %call42, 1
+  br i1 %cmp43, label %if.then44, label %if.end79
+
+19
+  %call45 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %sub46 = sub i64 %call45, 2
+  %call47 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %sub46)
+  %32 = load i64* %call47
+  %arrayidx48 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %32
+  %x49 = getelementptr inbounds %struct.point* %arrayidx48, i32 0, i32 0
+  %33 = load i64* %x49, align 8
+  %34 = load i64* %i37, align 8
+  %arrayidx50 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %34
+  %x51 = getelementptr inbounds %struct.point* %arrayidx50, i32 0, i32 0
+  %35 = load i64* %x51, align 8
+  %sub52 = sub nsw i64 %33, %35
+  %call53 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %sub54 = sub i64 %call53, 1
+  %call55 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %sub54)
+  %36 = load i64* %call55
+  %arrayidx56 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %36
+  %y57 = getelementptr inbounds %struct.point* %arrayidx56, i32 0, i32 1
+  %37 = load i64* %y57, align 8
+  %38 = load i64* %i37, align 8
+  %arrayidx58 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %38
+  %y59 = getelementptr inbounds %struct.point* %arrayidx58, i32 0, i32 1
+  %39 = load i64* %y59, align 8
+  %sub60 = sub nsw i64 %37, %39
+  %mul = mul nsw i64 %sub52, %sub60
+  %call61 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %sub62 = sub i64 %call61, 2
+  %call63 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %sub62)
+  %40 = load i64* %call63
+  %arrayidx64 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %40
+  %y65 = getelementptr inbounds %struct.point* %arrayidx64, i32 0, i32 1
+  %41 = load i64* %y65, align 8
+  %42 = load i64* %i37, align 8
+  %arrayidx66 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %42
+  %y67 = getelementptr inbounds %struct.point* %arrayidx66, i32 0, i32 1
+  %43 = load i64* %y67, align 8
+  %sub68 = sub nsw i64 %41, %43
+  %call69 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %sub70 = sub i64 %call69, 1
+  %call71 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %sub70)
+  %44 = load i64* %call71
+  %arrayidx72 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %44
+  %x73 = getelementptr inbounds %struct.point* %arrayidx72, i32 0, i32 0
+  %45 = load i64* %x73, align 8
+  %46 = load i64* %i37, align 8
+  %arrayidx74 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %46
+  %x75 = getelementptr inbounds %struct.point* %arrayidx74, i32 0, i32 0
+  %47 = load i64* %x75, align 8
+  %sub76 = sub nsw i64 %45, %47
+  %mul77 = mul nsw i64 %sub68, %sub76
+  %sub78 = sub nsw i64 %mul, %mul77
+  store i64 %sub78, i64* %num, align 8
+  br label %if.end79
+
+20
+  %48 = load i64* %num, align 8
+  %cmp80 = icmp sge i64 %48, 0
+  br i1 %cmp80, label %if.then81, label %if.else82
+
+21
+  call void @_ZNSt5dequeIxSaIxEE9push_backERKx(%"class.std::deque"* @dys, i64* %i37)
+  br label %while.end
+
+22
+  call void @_ZNSt5dequeIxSaIxEE8pop_backEv(%"class.std::deque"* @dys)
+  br label %while.cond
+
+23
+  %49 = load i64* %i37, align 8
+  %inc85 = add nsw i64 %49, 1
+  store i64 %inc85, i64* %i37, align 8
+  br label %for.cond38
+
+24
+  %call87 = call i64* @_ZNSt5dequeIxSaIxEE5frontEv(%"class.std::deque"* @dys)
+  call void @_ZNSt5dequeIxSaIxEE9push_backERKx(%"class.std::deque"* @dys, i64* %call87)
+  store i64 0, i64* %i88, align 8
+  br label %for.cond89
+
+25
+  %50 = load i64* %i88, align 8
+  %call90 = call i64 @_ZNKSt5dequeIxSaIxEE4sizeEv(%"class.std::deque"* @dys) #2
+  %cmp91 = icmp ult i64 %50, %call90
+  br i1 %cmp91, label %for.body92, label %for.end128
+
+26
+  %51 = load i64* %i88, align 8
+  %call93 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %51)
+  %52 = load i64* %call93
+  %arrayidx94 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %52
+  %y95 = getelementptr inbounds %struct.point* %arrayidx94, i32 0, i32 1
+  %53 = load i64* %y95, align 8
+  %conv = sitofp i64 %53 to double
+  %54 = load i64* @n, align 8
+  %arrayidx96 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %54
+  %x97 = getelementptr inbounds %struct.point* %arrayidx96, i32 0, i32 0
+  %55 = load i64* %x97, align 8
+  %56 = load i64* %i88, align 8
+  %call98 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %56)
+  %57 = load i64* %call98
+  %arrayidx99 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %57
+  %x100 = getelementptr inbounds %struct.point* %arrayidx99, i32 0, i32 0
+  %58 = load i64* %x100, align 8
+  %sub101 = sub nsw i64 %55, %58
+  %conv102 = sitofp i64 %sub101 to double
+  %59 = load i64* %i88, align 8
+  %call103 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %59)
+  %60 = load i64* %call103
+  %arrayidx104 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %60
+  %x105 = getelementptr inbounds %struct.point* %arrayidx104, i32 0, i32 0
+  %61 = load i64* %x105, align 8
+  %62 = load i64* %i88, align 8
+  %call106 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %62)
+  %63 = load i64* %call106
+  %arrayidx107 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %63
+  %y108 = getelementptr inbounds %struct.point* %arrayidx107, i32 0, i32 1
+  %64 = load i64* %y108, align 8
+  %65 = load i64* %i88, align 8
+  %add = add nsw i64 %65, 1
+  %call109 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %add)
+  %66 = load i64* %call109
+  %arrayidx110 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %66
+  %x111 = getelementptr inbounds %struct.point* %arrayidx110, i32 0, i32 0
+  %67 = load i64* %x111, align 8
+  %68 = load i64* %i88, align 8
+  %add112 = add nsw i64 %68, 1
+  %call113 = call i64* @_ZNSt5dequeIxSaIxEEixEm(%"class.std::deque"* @dys, i64 %add112)
+  %69 = load i64* %call113
+  %arrayidx114 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %69
+  %y115 = getelementptr inbounds %struct.point* %arrayidx114, i32 0, i32 1
+  %70 = load i64* %y115, align 8
+  %call116 = call double @_Z8getslopexxxx(i64 %61, i64 %64, i64 %67, i64 %70)
+  %mul117 = fmul double %conv102, %call116
+  %add118 = fadd double %conv, %mul117
+  %71 = load i64* @n, align 8
+  %arrayidx119 = getelementptr inbounds [1000005 x %struct.point]* @p, i32 0, i64 %71
+  %y120 = getelementptr inbounds %struct.point* %arrayidx119, i32 0, i32 1
+  %72 = load i64* %y120, align 8
+  %conv121 = sitofp i64 %72 to double
+  %cmp122 = fcmp oge double %add118, %conv121
+  br i1 %cmp122, label %if.then123, label %if.end125
+
+27
+  %73 = load i64* @ans, align 8
+  %inc124 = add nsw i64 %73, 1
+  store i64 %inc124, i64* @ans, align 8
+  br label %if.end125
+
+28
+  %74 = load i64* %i88, align 8
+  %inc127 = add nsw i64 %74, 1
+  store i64 %inc127, i64* %i88, align 8
+  br label %for.cond89
+
+29
+  %75 = load i64* @ans, align 8
+  %call129 = call %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* @_ZSt4cout, i64 %75)
+  ret i32 0

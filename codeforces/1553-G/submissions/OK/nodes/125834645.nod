@@ -1,0 +1,116 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %tt = alloca %"struct.std::pair", align 4
+  %z = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %agg.tmp15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %ref.tmp = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store i32 0, i32* %retval
+  %call = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0), i32* @n, i32* @q)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idx.ext = sext i32 %2 to i64
+  %add.ptr = getelementptr inbounds i32* getelementptr inbounds ([1000002 x i32]* @a, i32 0, i32 0), i64 %idx.ext
+  %call1 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str2, i32 0, i32 0), i32* %add.ptr)
+  %3 = load i32* %i, align 4
+  %4 = load i32* %i, align 4
+  %idxprom = sext i32 %4 to i64
+  %arrayidx = getelementptr inbounds [1000002 x i32]* @f, i32 0, i64 %idxprom
+  store i32 %3, i32* %arrayidx, align 4
+  %5 = load i32* %i, align 4
+  %idxprom2 = sext i32 %5 to i64
+  %arrayidx3 = getelementptr inbounds [1000002 x i32]* @a, i32 0, i64 %idxprom2
+  %6 = load i32* %arrayidx3, align 4
+  %idxprom4 = sext i32 %6 to i64
+  %arrayidx5 = getelementptr inbounds [1000002 x i32]* @buc, i32 0, i64 %idxprom4
+  store i32 %3, i32* %arrayidx5, align 4
+  %7 = load i32* %i, align 4
+  %inc = add nsw i32 %7, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  call void @_Z3prev()
+  br label %while.cond
+
+5
+  %8 = load i32* @q, align 4
+  %dec = add nsw i32 %8, -1
+  store i32 %dec, i32* @q, align 4
+  %tobool = icmp ne i32 %8, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+6
+  %call6 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0), i32* %x, i32* %y)
+  %9 = load i32* %x, align 4
+  %call7 = call i32 @_Z3geti(i32 %9)
+  store i32 %call7, i32* %x, align 4
+  %10 = load i32* %y, align 4
+  %call8 = call i32 @_Z3geti(i32 %10)
+  store i32 %call8, i32* %y, align 4
+  %11 = load i32* %x, align 4
+  %12 = load i32* %y, align 4
+  %cmp9 = icmp eq i32 %11, %12
+  br i1 %cmp9, label %if.then, label %if.end
+
+7
+  %call10 = call i32 @puts(i8* getelementptr inbounds ([2 x i8]* @.str3, i32 0, i32 0))
+  br label %while.cond
+
+8
+  %call11 = call i32* @_ZSt3minIiERKT_S2_S2_(i32* %x, i32* %y)
+  %call12 = call i32* @_ZSt3maxIiERKT_S2_S2_(i32* %x, i32* %y)
+  %call13 = call i64 @_ZSt9make_pairIRKiS1_ESt4pairINSt17__decay_and_stripIT_E6__typeENS3_IT0_E6__typeEEOS4_OS7_(i32* %call11, i32* %call12)
+  %13 = bitcast %"struct.std::pair"* %tt to i64*
+  store i64 %call13, i64* %13, align 1
+  %call14 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE5beginEv(%"class.std::vector"* @s) #2
+  %coerce.dive = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp, i32 0, i32 0
+  store %"struct.std::pair"* %call14, %"struct.std::pair"** %coerce.dive
+  %call16 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE3endEv(%"class.std::vector"* @s) #2
+  %coerce.dive17 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp15, i32 0, i32 0
+  store %"struct.std::pair"* %call16, %"struct.std::pair"** %coerce.dive17
+  %coerce.dive18 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp, i32 0, i32 0
+  %14 = load %"struct.std::pair"** %coerce.dive18
+  %coerce.dive19 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %agg.tmp15, i32 0, i32 0
+  %15 = load %"struct.std::pair"** %coerce.dive19
+  %call20 = call %"struct.std::pair"* @_ZSt11lower_boundIN9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS3_SaIS3_EEEES3_ET_S9_S9_RKT0_(%"struct.std::pair"* %14, %"struct.std::pair"* %15, %"struct.std::pair"* %tt)
+  %coerce.dive21 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %z, i32 0, i32 0
+  store %"struct.std::pair"* %call20, %"struct.std::pair"** %coerce.dive21
+  %call22 = call %"struct.std::pair"* @_ZNSt6vectorISt4pairIiiESaIS1_EE3endEv(%"class.std::vector"* @s) #2
+  %coerce.dive23 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %ref.tmp, i32 0, i32 0
+  store %"struct.std::pair"* %call22, %"struct.std::pair"** %coerce.dive23
+  %call24 = call zeroext i1 @_ZN9__gnu_cxxneIPSt4pairIiiESt6vectorIS2_SaIS2_EEEEbRKNS_17__normal_iteratorIT_T0_EESC_(%"class.__gnu_cxx::__normal_iterator"* %z, %"class.__gnu_cxx::__normal_iterator"* %ref.tmp)
+  br i1 %call24, label %land.lhs.true, label %cond.false
+
+9
+  %call25 = call %"struct.std::pair"* @_ZNK9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS2_SaIS2_EEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %z)
+  %call26 = call zeroext i1 @_ZSteqIiiEbRKSt4pairIT_T0_ES5_(%"struct.std::pair"* %call25, %"struct.std::pair"* %tt)
+  br i1 %call26, label %cond.true, label %cond.false
+
+10
+  br label %cond.end
+
+11
+  br label %cond.end
+
+12
+  %cond-lvalue = phi [2 x i8]* [ @.str4, %cond.true ], [ @.str5, %cond.false ]
+  %arraydecay = getelementptr inbounds [2 x i8]* %cond-lvalue, i32 0, i32 0
+  %call27 = call i32 @puts(i8* %arraydecay)
+  br label %while.cond
+
+13
+  ret i32 0

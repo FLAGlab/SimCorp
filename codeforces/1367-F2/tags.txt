@@ -1,2 +1,0 @@
-constructive algorithms
-greedy

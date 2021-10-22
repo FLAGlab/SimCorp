@@ -1,0 +1,151 @@
+
+1
+  %retval = alloca i32, align 4
+  %i = alloca i32, align 4
+  %i5 = alloca i32, align 4
+  %agg.tmp = alloca %class.Point, align 8
+  %agg.tmp12 = alloca %class.Point, align 8
+  %agg.tmp16 = alloca %class.Point, align 8
+  %agg.tmp19 = alloca %class.Point, align 8
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* @n)
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+2
+  %0 = load i32* %i, align 4
+  %1 = load i32* @n, align 4
+  %cmp = icmp sle i32 %0, %1
+  br i1 %cmp, label %for.body, label %for.end
+
+3
+  %2 = load i32* %i, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [1000005 x %class.Point]* @p, i32 0, i64 %idxprom
+  %a = getelementptr inbounds %class.Point* %arrayidx, i32 0, i32 0
+  %3 = load i32* %i, align 4
+  %idxprom1 = sext i32 %3 to i64
+  %arrayidx2 = getelementptr inbounds [1000005 x %class.Point]* @p, i32 0, i64 %idxprom1
+  %b = getelementptr inbounds %class.Point* %arrayidx2, i32 0, i32 1
+  %call3 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([9 x i8]* @.str, i32 0, i32 0), i64* %a, i64* %b)
+  %4 = load i32* %i, align 4
+  %inc = add nsw i32 %4, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+4
+  %5 = load i32* @n, align 4
+  %idx.ext = sext i32 %5 to i64
+  %add.ptr = getelementptr inbounds %class.Point* getelementptr inbounds ([1000005 x %class.Point]* @p, i32 0, i32 0), i64 %idx.ext
+  %add.ptr4 = getelementptr inbounds %class.Point* %add.ptr, i64 1
+  call void @_ZSt4sortIP5PointPFbS0_S0_EEvT_S4_T0_(%class.Point* getelementptr inbounds ([1000005 x %class.Point]* @p, i32 0, i64 1), %class.Point* %add.ptr4, i1 (i64, i64, i64, i64)* @_Z3cmp5PointS_)
+  store i32 1, i32* %i5, align 4
+  br label %for.cond6
+
+5
+  %6 = load i32* %i5, align 4
+  %7 = load i32* @n, align 4
+  %cmp7 = icmp sle i32 %6, %7
+  br i1 %cmp7, label %for.body8, label %for.end33
+
+6
+  br label %while.cond
+
+7
+  %8 = load i32* @m, align 4
+  %cmp9 = icmp sgt i32 %8, 1
+  br i1 %cmp9, label %land.rhs, label %land.end
+
+8
+  %9 = load i32* %i5, align 4
+  %idxprom10 = sext i32 %9 to i64
+  %arrayidx11 = getelementptr inbounds [1000005 x %class.Point]* @p, i32 0, i64 %idxprom10
+  %10 = load i32* @m, align 4
+  %sub = sub nsw i32 %10, 1
+  %idxprom13 = sext i32 %sub to i64
+  %arrayidx14 = getelementptr inbounds [1000005 x %class.Point]* @q, i32 0, i64 %idxprom13
+  %11 = bitcast %class.Point* %agg.tmp12 to i8*
+  %12 = bitcast %class.Point* %arrayidx14 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %11, i8* %12, i64 16, i32 8, i1 false)
+  %13 = bitcast %class.Point* %agg.tmp12 to { i64, i64 }*
+  %14 = getelementptr { i64, i64 }* %13, i32 0, i32 0
+  %15 = load i64* %14, align 1
+  %16 = getelementptr { i64, i64 }* %13, i32 0, i32 1
+  %17 = load i64* %16, align 1
+  %call15 = call { i64, i64 } @_ZN5PointmiES_(%class.Point* %arrayidx11, i64 %15, i64 %17)
+  %18 = bitcast %class.Point* %agg.tmp to { i64, i64 }*
+  %19 = getelementptr { i64, i64 }* %18, i32 0, i32 0
+  %20 = extractvalue { i64, i64 } %call15, 0
+  store i64 %20, i64* %19, align 1
+  %21 = getelementptr { i64, i64 }* %18, i32 0, i32 1
+  %22 = extractvalue { i64, i64 } %call15, 1
+  store i64 %22, i64* %21, align 1
+  %23 = load i32* @m, align 4
+  %idxprom17 = sext i32 %23 to i64
+  %arrayidx18 = getelementptr inbounds [1000005 x %class.Point]* @q, i32 0, i64 %idxprom17
+  %24 = load i32* @m, align 4
+  %sub20 = sub nsw i32 %24, 1
+  %idxprom21 = sext i32 %sub20 to i64
+  %arrayidx22 = getelementptr inbounds [1000005 x %class.Point]* @q, i32 0, i64 %idxprom21
+  %25 = bitcast %class.Point* %agg.tmp19 to i8*
+  %26 = bitcast %class.Point* %arrayidx22 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %25, i8* %26, i64 16, i32 8, i1 false)
+  %27 = bitcast %class.Point* %agg.tmp19 to { i64, i64 }*
+  %28 = getelementptr { i64, i64 }* %27, i32 0, i32 0
+  %29 = load i64* %28, align 1
+  %30 = getelementptr { i64, i64 }* %27, i32 0, i32 1
+  %31 = load i64* %30, align 1
+  %call23 = call { i64, i64 } @_ZN5PointmiES_(%class.Point* %arrayidx18, i64 %29, i64 %31)
+  %32 = bitcast %class.Point* %agg.tmp16 to { i64, i64 }*
+  %33 = getelementptr { i64, i64 }* %32, i32 0, i32 0
+  %34 = extractvalue { i64, i64 } %call23, 0
+  store i64 %34, i64* %33, align 1
+  %35 = getelementptr { i64, i64 }* %32, i32 0, i32 1
+  %36 = extractvalue { i64, i64 } %call23, 1
+  store i64 %36, i64* %35, align 1
+  %37 = bitcast %class.Point* %agg.tmp to { i64, i64 }*
+  %38 = getelementptr { i64, i64 }* %37, i32 0, i32 0
+  %39 = load i64* %38, align 1
+  %40 = getelementptr { i64, i64 }* %37, i32 0, i32 1
+  %41 = load i64* %40, align 1
+  %42 = bitcast %class.Point* %agg.tmp16 to { i64, i64 }*
+  %43 = getelementptr { i64, i64 }* %42, i32 0, i32 0
+  %44 = load i64* %43, align 1
+  %45 = getelementptr { i64, i64 }* %42, i32 0, i32 1
+  %46 = load i64* %45, align 1
+  %call24 = call i64 @_Z5Cross5PointS_(i64 %39, i64 %41, i64 %44, i64 %46)
+  %cmp25 = icmp sle i64 %call24, 0
+  br label %land.end
+
+9
+  %47 = phi i1 [ false, %while.cond ], [ %cmp25, %land.rhs ]
+  br i1 %47, label %while.body, label %while.end
+
+10
+  %48 = load i32* @m, align 4
+  %dec = add nsw i32 %48, -1
+  store i32 %dec, i32* @m, align 4
+  br label %while.cond
+
+11
+  %49 = load i32* @m, align 4
+  %inc26 = add nsw i32 %49, 1
+  store i32 %inc26, i32* @m, align 4
+  %idxprom27 = sext i32 %inc26 to i64
+  %arrayidx28 = getelementptr inbounds [1000005 x %class.Point]* @q, i32 0, i64 %idxprom27
+  %50 = load i32* %i5, align 4
+  %idxprom29 = sext i32 %50 to i64
+  %arrayidx30 = getelementptr inbounds [1000005 x %class.Point]* @p, i32 0, i64 %idxprom29
+  %51 = bitcast %class.Point* %arrayidx28 to i8*
+  %52 = bitcast %class.Point* %arrayidx30 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %51, i8* %52, i64 16, i32 8, i1 false)
+  %53 = load i32* %i5, align 4
+  %inc32 = add nsw i32 %53, 1
+  store i32 %inc32, i32* %i5, align 4
+  br label %for.cond6
+
+12
+  %54 = load i32* @m, align 4
+  %sub34 = sub nsw i32 %54, 1
+  %call35 = call %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %sub34)
+  ret i32 0

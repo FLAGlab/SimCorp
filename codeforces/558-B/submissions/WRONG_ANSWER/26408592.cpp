@@ -5,7 +5,7 @@ using namespace std;
 int mp[1000005];
 int ar[100005];
  
-int main()
+signed main()
 {
  int n, i, ans, l, r, mx=0;
     cin >> n;

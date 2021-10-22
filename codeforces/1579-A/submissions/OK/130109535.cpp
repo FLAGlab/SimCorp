@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 string solve(){
 	string str;
@@ -9,7 +9,7 @@ string solve(){
  }
  return mp['B']==(mp['A']+mp['C'])?"YES":"NO";
 }
-int main() {
+signed main() {
  int t;
 	cin>>t;
  while(t--){

@@ -1,5 +1,4 @@
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 #define LL long long
 using namespace std;
 struct node
@@ -17,7 +16,7 @@ bool cmp(const node &a,const node &b)
  
 }
  
-int main()
+signed main()
 {
 	LL n;
 	scanf("%lld",&n);

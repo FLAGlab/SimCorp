@@ -1,10 +1,7 @@
-#include<cstdio>
-#include<iostream>
-#include<algorithm>
-#include<cstring>
+#include<bits/stdc++.h>
 using namespace std;
 int f[1001][10010],c[1010],cost[1010];
-int main()
+signed main()
 {
  int n,w,b,x,sum=0;
 	scanf("%d%d%d%d",&n,&w,&b,&x);

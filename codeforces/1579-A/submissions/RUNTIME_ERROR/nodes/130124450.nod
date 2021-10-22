@@ -1,0 +1,179 @@
+
+1
+  %retval = alloca i32, align 4
+  %t = alloca i32, align 4
+  %s = alloca %"class.std::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %mp = alloca %"class.std::map", align 8
+  %__range = alloca %"class.std::basic_string"*, align 8
+  %__begin = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %__end = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %c = alloca i8, align 1
+  %ref.tmp = alloca i8, align 1
+  %ref.tmp17 = alloca i8, align 1
+  %ref.tmp20 = alloca i8, align 1
+  %ref.tmp23 = alloca i8, align 1
+  %ref.tmp26 = alloca i8, align 1
+  %ref.tmp30 = alloca i8, align 1
+  store i32 0, i32* %retval
+  %call = call %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* %t)
+  br label %while.cond
+
+2
+  %0 = load i32* %t, align 4
+  %dec = add nsw i32 %0, -1
+  store i32 %dec, i32* %t, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  call void @_ZNSsC1Ev(%"class.std::basic_string"* %s)
+  %call1 = invoke %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RSbIS4_S5_T1_E(%"class.std::basic_istream"* @_ZSt3cin, %"class.std::basic_string"* %s)
+          to label %invoke.cont unwind label %lpad
+
+4
+  invoke void @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEC1Ev(%"class.std::map"* %mp)
+          to label %invoke.cont2 unwind label %lpad
+
+5
+  store %"class.std::basic_string"* %s, %"class.std::basic_string"** %__range, align 8
+  %1 = load %"class.std::basic_string"** %__range, align 8
+  %call3 = call i8* @_ZNSs5beginEv(%"class.std::basic_string"* %1) #2
+  %coerce.dive = getelementptr %"class.__gnu_cxx::__normal_iterator"* %__begin, i32 0, i32 0
+  store i8* %call3, i8** %coerce.dive
+  %2 = load %"class.std::basic_string"** %__range, align 8
+  %call4 = call i8* @_ZNSs3endEv(%"class.std::basic_string"* %2) #2
+  %coerce.dive5 = getelementptr %"class.__gnu_cxx::__normal_iterator"* %__end, i32 0, i32 0
+  store i8* %call4, i8** %coerce.dive5
+  br label %for.cond
+
+6
+  %call8 = invoke zeroext i1 @_ZN9__gnu_cxxneIPcSsEEbRKNS_17__normal_iteratorIT_T0_EES7_(%"class.__gnu_cxx::__normal_iterator"* %__begin, %"class.__gnu_cxx::__normal_iterator"* %__end)
+          to label %invoke.cont7 unwind label %lpad6
+
+7
+  br i1 %call8, label %for.body, label %for.end
+
+8
+  %call10 = invoke i8* @_ZNK9__gnu_cxx17__normal_iteratorIPcSsEdeEv(%"class.__gnu_cxx::__normal_iterator"* %__begin)
+          to label %invoke.cont9 unwind label %lpad6
+
+9
+  %3 = load i8* %call10
+  store i8 %3, i8* %c, align 1
+  %call12 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixERS3_(%"class.std::map"* %mp, i8* %c)
+          to label %invoke.cont11 unwind label %lpad6
+
+10
+  %4 = load i32* %call12
+  %inc = add nsw i32 %4, 1
+  store i32 %inc, i32* %call12
+  %call14 = invoke %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPcSsEppEv(%"class.__gnu_cxx::__normal_iterator"* %__begin)
+          to label %invoke.cont13 unwind label %lpad6
+
+11
+  br label %for.cond
+
+12
+  %5 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %6 = extractvalue { i8*, i32 } %5, 0
+  store i8* %6, i8** %exn.slot
+  %7 = extractvalue { i8*, i32 } %5, 1
+  store i32 %7, i32* %ehselector.slot
+  br label %ehcleanup
+
+13
+  %8 = landingpad { i8*, i32 } personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*)
+          cleanup
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot
+  call void @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEED1Ev(%"class.std::map"* %mp) #2
+  br label %ehcleanup
+
+14
+  store i8 66, i8* %ref.tmp, align 1
+  %call16 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixEOc(%"class.std::map"* %mp, i8* %ref.tmp)
+          to label %invoke.cont15 unwind label %lpad6
+
+15
+  %11 = load i32* %call16
+  store i8 65, i8* %ref.tmp17, align 1
+  %call19 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixEOc(%"class.std::map"* %mp, i8* %ref.tmp17)
+          to label %invoke.cont18 unwind label %lpad6
+
+16
+  %12 = load i32* %call19
+  %rem = srem i32 %11, %12
+  store i8 67, i8* %ref.tmp20, align 1
+  %call22 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixEOc(%"class.std::map"* %mp, i8* %ref.tmp20)
+          to label %invoke.cont21 unwind label %lpad6
+
+17
+  %13 = load i32* %call22
+  %cmp = icmp eq i32 %rem, %13
+  br i1 %cmp, label %if.then, label %lor.lhs.false
+
+18
+  store i8 66, i8* %ref.tmp23, align 1
+  %call25 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixEOc(%"class.std::map"* %mp, i8* %ref.tmp23)
+          to label %invoke.cont24 unwind label %lpad6
+
+19
+  %14 = load i32* %call25
+  store i8 67, i8* %ref.tmp26, align 1
+  %call28 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixEOc(%"class.std::map"* %mp, i8* %ref.tmp26)
+          to label %invoke.cont27 unwind label %lpad6
+
+20
+  %15 = load i32* %call28
+  %rem29 = srem i32 %14, %15
+  store i8 65, i8* %ref.tmp30, align 1
+  %call32 = invoke i32* @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEEixEOc(%"class.std::map"* %mp, i8* %ref.tmp30)
+          to label %invoke.cont31 unwind label %lpad6
+
+21
+  %16 = load i32* %call32
+  %cmp33 = icmp eq i32 %rem29, %16
+  br i1 %cmp33, label %if.then, label %if.else
+
+22
+  %call35 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* getelementptr inbounds ([4 x i8]* @.str, i32 0, i32 0))
+          to label %invoke.cont34 unwind label %lpad6
+
+23
+  %call37 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call35, i8* getelementptr inbounds ([2 x i8]* @.str1, i32 0, i32 0))
+          to label %invoke.cont36 unwind label %lpad6
+
+24
+  br label %if.end
+
+25
+  %call39 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* @_ZSt4cout, i8* getelementptr inbounds ([3 x i8]* @.str2, i32 0, i32 0))
+          to label %invoke.cont38 unwind label %lpad6
+
+26
+  %call41 = invoke %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* %call39, i8* getelementptr inbounds ([2 x i8]* @.str1, i32 0, i32 0))
+          to label %invoke.cont40 unwind label %lpad6
+
+27
+  br label %if.end
+
+28
+  call void @_ZNSt3mapIciSt4lessIcESaISt4pairIKciEEED1Ev(%"class.std::map"* %mp) #2
+  call void @_ZNSsD1Ev(%"class.std::basic_string"* %s) #2
+  br label %while.cond
+
+29
+  call void @_ZNSsD1Ev(%"class.std::basic_string"* %s) #2
+  %exn = load i8** %exn.slot
+  %sel = load i32* %ehselector.slot
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val42 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val42
+
+30
+  ret i32 0

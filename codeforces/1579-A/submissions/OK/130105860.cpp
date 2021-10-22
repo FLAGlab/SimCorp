@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
  
 int T,a,b,c;
 string s;
-int main()
+signed main()
 {
 	scanf("%d",&T);
  while(T--){

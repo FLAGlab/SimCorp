@@ -1,6 +1,4 @@
-#include<algorithm>
-#include<cmath>
-#include<cstdio>
+#include<bits/stdc++.h>
 const int maxn=100005;
 int n;
 struct Point{
@@ -25,7 +23,7 @@ void Andrew(){
  stack[++top]=i;
  }
 }
-int main(){
+signed main(){
 	scanf("%d",&n);
  for(int i=1;i<=n;i++){
 		scanf("%lld%lld",&p[i].x,&p[i].y);

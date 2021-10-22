@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
  
 using namespace std;
  
@@ -9,7 +9,7 @@ long long dp[MAXN][MAXR*2];
 long long cost[MAXR];
 long long c[MAXR];
  
-int main()
+signed main()
 {
  long long n,w,b,x;
 	cin >> n >> w >> b >> x;

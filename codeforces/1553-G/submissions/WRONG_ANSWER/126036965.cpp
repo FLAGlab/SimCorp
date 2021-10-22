@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ppp pair<int,int>
 using namespace std;
 const int n=1e6+5;
@@ -10,7 +10,7 @@ int find(int x){
  return f[x]=find(f[x]);
 }
 ppp k1[100000];
-int main(){
+signed main(){
  int i,j,k;
 	cin>>nn>>q;
  for(i=1;i<=nn;i++)

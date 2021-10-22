@@ -1,6 +1,4 @@
-#include<iostream>
-#include<cstdio>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 const int N=1e6+10;
 int n;
@@ -13,7 +11,7 @@ bool cmp(abc a,abc b){
  return (a.x==b.x)?(a.y>b.y):(a.x<b.x);
 }
  
-int main(){
+signed main(){
 	cin>>n;
  for(int i=1;i<=n;i++){
 		scanf("%d %d",&p[i].x,&p[i].y);

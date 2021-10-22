@@ -4,7 +4,7 @@ const int N =1e6+5;
 int num[N],st[N];
 int n,l,r;
 int mx=-1,mi=N;
-int main() {
+signed main() {
  while(cin>>n) {
  for(int i=1; i<=n; i++) {
  int x;

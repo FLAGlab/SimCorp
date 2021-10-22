@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 long long  q[1000005],arr[1000005],arr2[1000005],f;
-int main()
+signed main()
 {
  long long x,a,ma=0,max=0,pos1,pos2,num;
   cin>>x;

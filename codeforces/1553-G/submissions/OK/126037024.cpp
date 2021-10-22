@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ppp pair<int,int>
 using namespace std;
 const int n=1e6+5;
@@ -10,37 +10,36 @@ int find(int x){
  return f[x]=find(f[x]);
 }
 ppp k1[1000000];
-int main(){
+signed main(){
  int i,j,k;
 	cin>>nn>>q;
  for(i=1;i<=nn;i++)
 		cin>>a[i],f[i]=i,wei[a[i]]=i;
  for(i=2;i<n;i++){
-	if(p[i])continue;
-	for(int j=i,pp=-1;j<n;j+=i){
-		if(wei[j]){
-			if(pp==-1)color[i]=find(wei[j]);
-			else f[find(pp)]=find(wei[j]);
-							pp=wei[j];
-		}
-		p[j]=i;
-	}
+ if(p[i])continue;
+ for(int j=i,pp=-1;j<n;j+=i){
+ if(wei[j]){
+ if(pp==-1)color[i]=find(wei[j]);
+ else f[find(pp)]=find(wei[j]);
+				pp=wei[j];
  }
-
+			p[j]=i;
+ }
+ }
  for(i=2;i<n;i++)
  if(p[i]==i)
 			color[i]=find(color[i]);
  int c=0;
  for(i=1;i<=nn;i++,c=0){
-	int az=a[i]+1;
-			d[++c]=find(i);
-	while(az>1)
-				d[++c]=color[p[az]],az/=p[az];
-			sort(d+1,d+c+1);
-			c=unique(d+1,d+c+1)-d-1;
-	for(k=1;k<c;k++)
-		for(j=k+1;j<=c;j++)
-			k1[++top]=make_pair(d[k],d[j]);
+ int az=a[i]+1;
+		d[++c]=find(i);
+ while(az>1)
+			d[++c]=color[p[az]],az/=p[az];
+		sort(d+1,d+c+1);
+		c=unique(d+1,d+c+1)-d-1;
+ for(k=1;k<c;k++)
+ for(j=k+1;j<=c;j++)
+				k1[++top]=make_pair(d[k],d[j]);
  }
 	sort(k1+1,k1+top+1);
  for(int i=1;i<=q;i++){

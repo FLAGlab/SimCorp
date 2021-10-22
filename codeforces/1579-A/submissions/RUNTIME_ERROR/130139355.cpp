@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string.h>
+#include<bits/stdc++.h>
 using namespace std;
 int judge(string s){
  int a=0,b=0,c=0;
@@ -20,7 +18,7 @@ int judge(string s){
  }
 }
  
-int main(){
+signed main(){
  int n;
 	string s;
 	cin>>n;

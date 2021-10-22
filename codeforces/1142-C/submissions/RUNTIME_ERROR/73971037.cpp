@@ -15,15 +15,13 @@ ll MOD1=1e9+7;
 #define debug2(x,y) cout<<#x<<" :: "<<x<<"\t"<<#y<<" :: "<<y<<endl;
 #define debug3(x,y,z) cout<<#x<<" :: "<<x<<"\t"<<#y<<" :: "<<y<<"\t"<<#z<<" :: "<<z<<endl;
 #define debug4(x,y,z,w) cout<<#x<<" :: "<<x<<"\t"<<#y<<" :: "<<y<<"\t"<<#z<<" :: "<<z<<"\t"<<#w<<" :: "<<w<<endl;
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 #define fbo find_by_order
 #define ook order_of_key
 #define ub upper_bound
 #define lb lower_bound
 #define pq priority_queue
 #define pll pair<ll,ll>
-using namespace __gnu_pbds;
+
 #define ordereds tree<ll, null_type,less<ll>, rb_tree_tag,tree_order_statistics_node_update>
 #define error 0.000000000000000001
 ll add(ll a,ll b){if((ll1)a+b>=MOD)return (ll1)a+b-MOD;return a+b;}
@@ -319,7 +317,7 @@ void convex_hull(vector<Point<ll>>& a,vector<Point<ll>> &up) {
  }
 }
 const int D=1e6+5;
-int main()
+signed main()
 {
     boost;
     cout<<fixed<<setprecision(12);
