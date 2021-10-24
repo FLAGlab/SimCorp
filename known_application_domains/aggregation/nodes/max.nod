@@ -1,0 +1,60 @@
+
+1
+  %retval = alloca i32, align 4
+  %a = alloca [5 x i32], align 16
+  %n = alloca i32, align 4
+  %ans = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval
+  %0 = bitcast [5 x i32]* %a to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* bitcast ([5 x i32]* @_ZZ4mainE1a to i8*), i64 20, i32 16, i1 false)
+  store i32 5, i32* %n, align 4
+  %1 = load i32* %n, align 4
+  %cmp = icmp sgt i32 %1, 0
+  br i1 %cmp, label %cond.true, label %cond.false
+
+2
+  %arrayidx = getelementptr inbounds [5 x i32]* %a, i32 0, i64 0
+  %2 = load i32* %arrayidx, align 4
+  br label %cond.end
+
+3
+  br label %cond.end
+
+4
+  %cond = phi i32 [ %2, %cond.true ], [ 0, %cond.false ]
+  store i32 %cond, i32* %ans, align 4
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+5
+  %3 = load i32* %i, align 4
+  %4 = load i32* %n, align 4
+  %cmp1 = icmp slt i32 %3, %4
+  br i1 %cmp1, label %for.body, label %for.end
+
+6
+  %5 = load i32* %i, align 4
+  %idxprom = sext i32 %5 to i64
+  %arrayidx2 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom
+  %6 = load i32* %arrayidx2, align 4
+  %7 = load i32* %ans, align 4
+  %cmp3 = icmp sgt i32 %6, %7
+  br i1 %cmp3, label %if.then, label %if.end
+
+7
+  %8 = load i32* %i, align 4
+  %idxprom4 = sext i32 %8 to i64
+  %arrayidx5 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom4
+  %9 = load i32* %arrayidx5, align 4
+  store i32 %9, i32* %ans, align 4
+  br label %if.end
+
+8
+  %10 = load i32* %i, align 4
+  %inc = add nsw i32 %10, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+9
+  ret i32 0

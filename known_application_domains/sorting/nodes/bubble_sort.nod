@@ -1,0 +1,85 @@
+
+1
+  %retval = alloca i32, align 4
+  %a = alloca [5 x i32], align 16
+  %n = alloca i32, align 4
+  %j = alloca i32, align 4
+  %s = alloca i8, align 1
+  %i = alloca i32, align 4
+  %t = alloca i32, align 4
+  store i32 0, i32* %retval
+  %0 = bitcast [5 x i32]* %a to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* bitcast ([5 x i32]* @_ZZ4mainE1a to i8*), i64 20, i32 16, i1 false)
+  store i32 5, i32* %n, align 4
+  %1 = load i32* %n, align 4
+  store i32 %1, i32* %j, align 4
+  store i8 1, i8* %s, align 1
+  br label %while.cond
+
+2
+  %2 = load i8* %s, align 1
+  %tobool = trunc i8 %2 to i1
+  br i1 %tobool, label %while.body, label %while.end
+
+3
+  store i8 0, i8* %s, align 1
+  store i32 1, i32* %i, align 4
+  br label %for.cond
+
+4
+  %3 = load i32* %i, align 4
+  %4 = load i32* %j, align 4
+  %cmp = icmp slt i32 %3, %4
+  br i1 %cmp, label %for.body, label %for.end
+
+5
+  %5 = load i32* %i, align 4
+  %idxprom = sext i32 %5 to i64
+  %arrayidx = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom
+  %6 = load i32* %arrayidx, align 4
+  %7 = load i32* %i, align 4
+  %sub = sub nsw i32 %7, 1
+  %idxprom1 = sext i32 %sub to i64
+  %arrayidx2 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom1
+  %8 = load i32* %arrayidx2, align 4
+  %cmp3 = icmp slt i32 %6, %8
+  br i1 %cmp3, label %if.then, label %if.end
+
+6
+  %9 = load i32* %i, align 4
+  %idxprom4 = sext i32 %9 to i64
+  %arrayidx5 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom4
+  %10 = load i32* %arrayidx5, align 4
+  store i32 %10, i32* %t, align 4
+  %11 = load i32* %i, align 4
+  %sub6 = sub nsw i32 %11, 1
+  %idxprom7 = sext i32 %sub6 to i64
+  %arrayidx8 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom7
+  %12 = load i32* %arrayidx8, align 4
+  %13 = load i32* %i, align 4
+  %idxprom9 = sext i32 %13 to i64
+  %arrayidx10 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom9
+  store i32 %12, i32* %arrayidx10, align 4
+  %14 = load i32* %t, align 4
+  %15 = load i32* %i, align 4
+  %sub11 = sub nsw i32 %15, 1
+  %idxprom12 = sext i32 %sub11 to i64
+  %arrayidx13 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom12
+  store i32 %14, i32* %arrayidx13, align 4
+  store i8 1, i8* %s, align 1
+  br label %if.end
+
+7
+  %16 = load i32* %i, align 4
+  %inc = add nsw i32 %16, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+8
+  %17 = load i32* %j, align 4
+  %dec = add nsw i32 %17, -1
+  store i32 %dec, i32* %j, align 4
+  br label %while.cond
+
+9
+  ret i32 0

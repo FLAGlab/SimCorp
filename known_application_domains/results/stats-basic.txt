@@ -1,0 +1,6 @@
+plot_all_vs_all: similarity-basic-NORMALIZED-NODE-SYM
+	Explained variation per principal component: [0.68522932 0.16125961]
+plot_all_vs_all: similarity-basic-ORIGINAL
+	Explained variation per principal component: [0.44263226 0.21152667]
+plot_all_vs_all: similarity-basic-ORIGINAL-NODE-SYM
+	Explained variation per principal component: [0.92201996 0.0431536 ]

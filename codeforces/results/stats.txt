@@ -1,0 +1,744 @@
+plot_all_vs_all: similarity-NORMALIZED-NODE-SYM
+	Explained variation per principal component: [0.57209596 0.27599568]
+	silhouette_score: 0.05715189811505202
+	calinski_harabasz_score: 74.70114524166829
+	davies_bouldin_score: 3.114959689782995
+	PCA Indices
+	silhouette_score: 0.0019324042124766805
+	calinski_harabasz_score: 77.33958852444232
+	davies_bouldin_score: 4.239699955121113
+plot_ok_and_wrong: similarity-NORMALIZED-NODE-SYM
+	Explained variation per principal component: [0.55694111 0.26926492]
+	silhouette_score: 0.13141569531067498
+	calinski_harabasz_score: 81.35291012545028
+	davies_bouldin_score: 2.205824402083741
+	PCA Indices
+	silhouette_score: 0.06266120812760913
+	calinski_harabasz_score: 84.78687576777978
+	davies_bouldin_score: 3.0272930258610415
+plot_by_type: similarity-NORMALIZED-NODE-SYM WRONG_ANSWER
+(236, 236)
+	Explained variation per principal component: [0.53117073 0.28649513]
+	silhouette_score: 0.10105261553440989
+	calinski_harabasz_score: 37.31771973275237
+	davies_bouldin_score: 2.6514175462070764
+	PCA Indices
+	silhouette_score: 0.025849700292908454
+	calinski_harabasz_score: 38.05580774297776
+	davies_bouldin_score: 3.444590474613785
+plot_by_type: similarity-NORMALIZED-NODE-SYM RUNTIME_ERROR
+(149, 149)
+	Explained variation per principal component: [0.59732963 0.25134105]
+	silhouette_score: 0.002385392139835502
+	calinski_harabasz_score: 15.140841017149839
+	davies_bouldin_score: 3.7509487669995565
+	PCA Indices
+	silhouette_score: -0.049851358859022664
+	calinski_harabasz_score: 17.05024482172244
+	davies_bouldin_score: 4.188815815173771
+plot_by_type: similarity-NORMALIZED-NODE-SYM OK
+(181, 181)
+	Explained variation per principal component: [0.63248336 0.19250222]
+	silhouette_score: 0.20396785527638128
+	calinski_harabasz_score: 55.62886705843466
+	davies_bouldin_score: 1.3236112504539108
+	PCA Indices
+	silhouette_score: 0.15298795106406685
+	calinski_harabasz_score: 64.39041059990434
+	davies_bouldin_score: 1.6295775688478347
+plot_by_problem: similarity-NORMALIZED-NODE-SYM 1553-G
+(108, 108)
+	Explained variation per principal component: [0.74639996 0.124474  ]
+	silhouette_score: -0.06240570626659248
+	calinski_harabasz_score: 1.8185163036656764
+	davies_bouldin_score: 6.1023320499605695
+	PCA Indices
+	silhouette_score: -0.09879870343254295
+	calinski_harabasz_score: 1.7652588853297195
+	davies_bouldin_score: 6.027658487956082
+plot_by_problem: similarity-NORMALIZED-NODE-SYM 1579-A
+(112, 112)
+	Explained variation per principal component: [0.58976731 0.26060905]
+	silhouette_score: -0.021477317079477715
+	calinski_harabasz_score: 3.9663164126355515
+	davies_bouldin_score: 5.064626131680199
+	PCA Indices
+	silhouette_score: -0.03288352155065648
+	calinski_harabasz_score: 4.2782653068979535
+	davies_bouldin_score: 4.864730562166591
+plot_by_problem: similarity-NORMALIZED-NODE-SYM 922-E
+(108, 108)
+	Explained variation per principal component: [0.67646394 0.19514156]
+	silhouette_score: -0.11483035437357936
+	calinski_harabasz_score: 5.216575001950753
+	davies_bouldin_score: 3.2480290350177348
+	PCA Indices
+	silhouette_score: -0.15641946783508812
+	calinski_harabasz_score: 5.619387750667832
+	davies_bouldin_score: 3.0382073322539385
+plot_by_problem: similarity-NORMALIZED-NODE-SYM 1142-C
+(119, 119)
+	Explained variation per principal component: [0.75038958 0.14330999]
+	silhouette_score: 0.1130889706591719
+	calinski_harabasz_score: 38.25682458469105
+	davies_bouldin_score: 2.5182020073693705
+	PCA Indices
+	silhouette_score: 0.12746070151794325
+	calinski_harabasz_score: 45.410384171390426
+	davies_bouldin_score: 2.2341996334528496
+plot_by_problem: similarity-NORMALIZED-NODE-SYM 558-B
+(119, 119)
+	Explained variation per principal component: [0.5040117  0.34934381]
+	silhouette_score: -0.03842390881329783
+	calinski_harabasz_score: 4.281240116153292
+	davies_bouldin_score: 8.389293416524746
+	PCA Indices
+	silhouette_score: -0.0535106338139205
+	calinski_harabasz_score: 4.383115218522045
+	davies_bouldin_score: 9.02767992714194
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1553-G WRONG_ANSWER
+(50, 50)
+	Explained variation per principal component: [0.68011947 0.17455207]
+	silhouette_score: 0.5937883389511263
+	calinski_harabasz_score: 62.790738714795815
+	davies_bouldin_score: 0.55786726499188
+	PCA Indices
+	silhouette_score: 0.667377988595662
+	calinski_harabasz_score: 91.7324868474441
+	davies_bouldin_score: 0.38558718814064497
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1553-G RUNTIME_ERROR
+(12, 12)
+	Explained variation per principal component: [0.74903589 0.13078125]
+	silhouette_score: 0.6208740958498591
+	calinski_harabasz_score: 17.372720286525148
+	davies_bouldin_score: 0.6231000693620501
+	PCA Indices
+	silhouette_score: 0.7053032572996871
+	calinski_harabasz_score: 24.94631478808887
+	davies_bouldin_score: 0.5312039772383366
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1553-G OK
+(46, 46)
+	Explained variation per principal component: [0.76025658 0.11018995]
+	silhouette_score: 0.6397441831327043
+	calinski_harabasz_score: 79.090827042933
+	davies_bouldin_score: 0.5260536524137315
+	PCA Indices
+	silhouette_score: 0.7169924178404122
+	calinski_harabasz_score: 121.78732855289748
+	davies_bouldin_score: 0.3846301437776243
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1579-A WRONG_ANSWER
+(41, 41)
+	Explained variation per principal component: [0.66066297 0.19647149]
+	silhouette_score: 0.4825441366531267
+	calinski_harabasz_score: 41.60841918026734
+	davies_bouldin_score: 0.8554998680367955
+	PCA Indices
+	silhouette_score: 0.5946690261069596
+	calinski_harabasz_score: 58.894588786899135
+	davies_bouldin_score: 0.643129383824653
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1579-A RUNTIME_ERROR
+(21, 21)
+	Explained variation per principal component: [0.44965743 0.27157417]
+	silhouette_score: 0.3511979423098081
+	calinski_harabasz_score: 10.914927037280668
+	davies_bouldin_score: 1.1587755039192218
+	PCA Indices
+	silhouette_score: 0.4587268304008295
+	calinski_harabasz_score: 17.860276428930128
+	davies_bouldin_score: 0.890383329317256
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1579-A OK
+(50, 50)
+	Explained variation per principal component: [0.57342541 0.24577262]
+	silhouette_score: 0.4421395691303828
+	calinski_harabasz_score: 47.24199010803518
+	davies_bouldin_score: 0.9541925517532915
+	PCA Indices
+	silhouette_score: 0.5348516216934848
+	calinski_harabasz_score: 72.54166728993168
+	davies_bouldin_score: 0.7449310482086633
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 922-E WRONG_ANSWER
+(49, 49)
+	Explained variation per principal component: [0.72020807 0.1361556 ]
+	silhouette_score: 0.6831410554915689
+	calinski_harabasz_score: 81.01080171475553
+	davies_bouldin_score: 0.5037965403023438
+	PCA Indices
+	silhouette_score: 0.7584006597682451
+	calinski_harabasz_score: 131.47941449605025
+	davies_bouldin_score: 0.3823995558891313
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 922-E RUNTIME_ERROR
+(47, 47)
+	Explained variation per principal component: [0.6228456  0.22388481]
+	silhouette_score: 0.6218339545127755
+	calinski_harabasz_score: 40.69755747522779
+	davies_bouldin_score: 0.5212686278590519
+	PCA Indices
+	silhouette_score: 0.6841115764458445
+	calinski_harabasz_score: 55.77464040527368
+	davies_bouldin_score: 0.3905449576571165
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 922-E OK
+(12, 12)
+	Explained variation per principal component: [0.53240914 0.22762049]
+	silhouette_score: 0.419869185363015
+	calinski_harabasz_score: 8.465609259353595
+	davies_bouldin_score: 0.8017996817370967
+	PCA Indices
+	silhouette_score: 0.5448280438809346
+	calinski_harabasz_score: 14.10724351520067
+	davies_bouldin_score: 0.48347004138076416
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1142-C WRONG_ANSWER
+(46, 46)
+	Explained variation per principal component: [0.59044581 0.27891606]
+	silhouette_score: 0.6205743663216632
+	calinski_harabasz_score: 46.30063464641453
+	davies_bouldin_score: 0.5959060420625435
+	PCA Indices
+	silhouette_score: 0.6687582016075649
+	calinski_harabasz_score: 61.04077953060035
+	davies_bouldin_score: 0.46119322837106086
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1142-C RUNTIME_ERROR
+(25, 25)
+	Explained variation per principal component: [0.5855312 0.1654814]
+	silhouette_score: 0.4258482018782216
+	calinski_harabasz_score: 21.001911932879956
+	davies_bouldin_score: 0.858929535499635
+	PCA Indices
+	silhouette_score: 0.5589222772083118
+	calinski_harabasz_score: 39.033038357248834
+	davies_bouldin_score: 0.5659466567564045
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 1142-C OK
+(48, 48)
+	Explained variation per principal component: [0.7463402 0.133008 ]
+	silhouette_score: 0.6944363191186934
+	calinski_harabasz_score: 71.9430600504982
+	davies_bouldin_score: 0.5972510737919858
+	PCA Indices
+	silhouette_score: 0.7471228746143607
+	calinski_harabasz_score: 103.58735288961822
+	davies_bouldin_score: 0.4701250304118443
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 558-B WRONG_ANSWER
+(50, 50)
+	Explained variation per principal component: [0.50628046 0.30457211]
+	silhouette_score: 0.4072644330536799
+	calinski_harabasz_score: 32.85421745347787
+	davies_bouldin_score: 1.055063522523925
+	PCA Indices
+	silhouette_score: 0.5065766100881077
+	calinski_harabasz_score: 47.32725396097737
+	davies_bouldin_score: 0.8148323788396039
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 558-B RUNTIME_ERROR
+(44, 44)
+	Explained variation per principal component: [0.44758299 0.38570925]
+	silhouette_score: 0.3425396726355568
+	calinski_harabasz_score: 22.915667509878023
+	davies_bouldin_score: 1.175599243418522
+	PCA Indices
+	silhouette_score: 0.4360835289395706
+	calinski_harabasz_score: 30.512625447325636
+	davies_bouldin_score: 0.9321236013549032
+plot_by_problem_and_type: similarity-NORMALIZED-NODE-SYM 558-B OK
+(25, 25)
+	Explained variation per principal component: [0.67307397 0.15404877]
+	silhouette_score: 0.48340123013329206
+	calinski_harabasz_score: 13.192551914380351
+	davies_bouldin_score: 1.122864614741321
+	PCA Indices
+	silhouette_score: 0.602828033038384
+	calinski_harabasz_score: 17.768784411319302
+	davies_bouldin_score: 0.9380059831197476
+plot_all_vs_all: similarity-ORIGINAL-NODE-SYM
+	Explained variation per principal component: [0.57890196 0.11219017]
+	silhouette_score: 0.15666842355663566
+	calinski_harabasz_score: 129.15716971177628
+	davies_bouldin_score: 1.9024848999296364
+	PCA Indices
+	silhouette_score: 0.08212343106871998
+	calinski_harabasz_score: 184.96518553398948
+	davies_bouldin_score: 2.4264908430795873
+plot_ok_and_wrong: similarity-ORIGINAL-NODE-SYM
+	Explained variation per principal component: [0.61300357 0.11437598]
+	silhouette_score: 0.21903855012448906
+	calinski_harabasz_score: 148.31565571733805
+	davies_bouldin_score: 1.5128503134650546
+	PCA Indices
+	silhouette_score: 0.2223596938011993
+	calinski_harabasz_score: 243.6588321302325
+	davies_bouldin_score: 1.1994932720981604
+plot_by_type: similarity-ORIGINAL-NODE-SYM WRONG_ANSWER
+(236, 236)
+	Explained variation per principal component: [0.59278566 0.10970474]
+	silhouette_score: 0.21029782463971322
+	calinski_harabasz_score: 74.53613639865429
+	davies_bouldin_score: 1.5508684391445247
+	PCA Indices
+	silhouette_score: 0.184214450609584
+	calinski_harabasz_score: 129.88735156274424
+	davies_bouldin_score: 1.2478724086313204
+plot_by_type: similarity-ORIGINAL-NODE-SYM RUNTIME_ERROR
+(149, 149)
+	Explained variation per principal component: [0.47765448 0.18468945]
+	silhouette_score: 0.0671277897817186
+	calinski_harabasz_score: 14.85566122847905
+	davies_bouldin_score: 2.604303757000972
+	PCA Indices
+	silhouette_score: -0.023247055086221612
+	calinski_harabasz_score: 17.701695515053014
+	davies_bouldin_score: 3.3161163669524307
+plot_by_type: similarity-ORIGINAL-NODE-SYM OK
+(181, 181)
+	Explained variation per principal component: [0.63538325 0.11355851]
+	silhouette_score: 0.2404715339690955
+	calinski_harabasz_score: 72.60301074470657
+	davies_bouldin_score: 1.3305900285219263
+	PCA Indices
+	silhouette_score: 0.25544781388420884
+	calinski_harabasz_score: 110.61434521702755
+	davies_bouldin_score: 1.0124462295224872
+plot_by_problem: similarity-ORIGINAL-NODE-SYM 1553-G
+(108, 108)
+	Explained variation per principal component: [0.43009351 0.19977627]
+	silhouette_score: 0.0012257367708819707
+	calinski_harabasz_score: 1.5088199620042484
+	davies_bouldin_score: 6.913241594166742
+	PCA Indices
+	silhouette_score: -0.04036944198542764
+	calinski_harabasz_score: 0.880913823515457
+	davies_bouldin_score: 8.719098331204878
+plot_by_problem: similarity-ORIGINAL-NODE-SYM 1579-A
+(112, 112)
+	Explained variation per principal component: [0.55985449 0.22728536]
+	silhouette_score: -0.013366793088597787
+	calinski_harabasz_score: 3.9396067670997814
+	davies_bouldin_score: 5.850078648039581
+	PCA Indices
+	silhouette_score: -0.035553341191652175
+	calinski_harabasz_score: 4.106522867480688
+	davies_bouldin_score: 6.819627042592789
+plot_by_problem: similarity-ORIGINAL-NODE-SYM 922-E
+(108, 108)
+	Explained variation per principal component: [0.31237182 0.29040512]
+	silhouette_score: -0.036642387855510876
+	calinski_harabasz_score: 7.225027435403005
+	davies_bouldin_score: 3.1855637897223406
+	PCA Indices
+	silhouette_score: -0.12976768675582873
+	calinski_harabasz_score: 11.32846850337775
+	davies_bouldin_score: 2.4168256202518807
+plot_by_problem: similarity-ORIGINAL-NODE-SYM 1142-C
+(119, 119)
+	Explained variation per principal component: [0.71945297 0.06795513]
+	silhouette_score: 0.05689642379489213
+	calinski_harabasz_score: 33.94840354069177
+	davies_bouldin_score: 6.685955537376121
+	PCA Indices
+	silhouette_score: 0.06907591157330668
+	calinski_harabasz_score: 49.02660489792641
+	davies_bouldin_score: 22.954914304754357
+plot_by_problem: similarity-ORIGINAL-NODE-SYM 558-B
+(119, 119)
+	Explained variation per principal component: [0.43860336 0.16304132]
+	silhouette_score: -0.02367776752241802
+	calinski_harabasz_score: 3.0978951190557042
+	davies_bouldin_score: 6.405936311666004
+	PCA Indices
+	silhouette_score: -0.05413059611415772
+	calinski_harabasz_score: 3.7028888151169563
+	davies_bouldin_score: 10.339345814270354
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1553-G WRONG_ANSWER
+(50, 50)
+	Explained variation per principal component: [0.4224586  0.27157541]
+	silhouette_score: 0.6434818988839516
+	calinski_harabasz_score: 24.821632575603598
+	davies_bouldin_score: 0.29099806013098956
+	PCA Indices
+	silhouette_score: 0.7551739734576084
+	calinski_harabasz_score: 44.679335762841006
+	davies_bouldin_score: 0.19722989675448185
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1553-G RUNTIME_ERROR
+(12, 12)
+	Explained variation per principal component: [0.58223108 0.31483809]
+	silhouette_score: 0.5185970119747777
+	calinski_harabasz_score: 9.776810721443598
+	davies_bouldin_score: 0.617995454993571
+	PCA Indices
+	silhouette_score: 0.6017843412783642
+	calinski_harabasz_score: 12.019137586216088
+	davies_bouldin_score: 0.39293494239390236
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1553-G OK
+(46, 46)
+	Explained variation per principal component: [0.47708827 0.16132242]
+	silhouette_score: 0.30673208000480423
+	calinski_harabasz_score: 22.72710624283229
+	davies_bouldin_score: 1.358351574557038
+	PCA Indices
+	silhouette_score: 0.4781233504435978
+	calinski_harabasz_score: 48.039657141854306
+	davies_bouldin_score: 0.8612556765522958
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1579-A WRONG_ANSWER
+(41, 41)
+	Explained variation per principal component: [0.65573687 0.17410579]
+	silhouette_score: 0.5301844285225421
+	calinski_harabasz_score: 54.258767156982785
+	davies_bouldin_score: 0.6888234448568092
+	PCA Indices
+	silhouette_score: 0.658813548558116
+	calinski_harabasz_score: 90.65374484535681
+	davies_bouldin_score: 0.4364407372137783
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1579-A RUNTIME_ERROR
+(21, 21)
+	Explained variation per principal component: [0.48085033 0.2147814 ]
+	silhouette_score: 0.3369918538229837
+	calinski_harabasz_score: 12.464035984960052
+	davies_bouldin_score: 1.0462993391895221
+	PCA Indices
+	silhouette_score: 0.5217705954398189
+	calinski_harabasz_score: 24.847725380091358
+	davies_bouldin_score: 0.6327454578895533
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1579-A OK
+(50, 50)
+	Explained variation per principal component: [0.64854308 0.15425944]
+	silhouette_score: 0.5291344283478421
+	calinski_harabasz_score: 73.3764202588365
+	davies_bouldin_score: 0.7107316762484772
+	PCA Indices
+	silhouette_score: 0.6817616611192284
+	calinski_harabasz_score: 145.25105198125635
+	davies_bouldin_score: 0.4209907657810109
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 922-E WRONG_ANSWER
+(49, 49)
+	Explained variation per principal component: [0.68128282 0.09515214]
+	silhouette_score: 0.5215272173026947
+	calinski_harabasz_score: 62.97532283455759
+	davies_bouldin_score: 0.589665799677599
+	PCA Indices
+	silhouette_score: 0.6876122851950521
+	calinski_harabasz_score: 130.82130520663603
+	davies_bouldin_score: 0.3432207316385126
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 922-E RUNTIME_ERROR
+(47, 47)
+	Explained variation per principal component: [0.36161936 0.22653034]
+	silhouette_score: 0.41812118460921394
+	calinski_harabasz_score: 21.629772311189008
+	davies_bouldin_score: 0.8826380021331757
+	PCA Indices
+	silhouette_score: 0.678367578713173
+	calinski_harabasz_score: 54.277536747439854
+	davies_bouldin_score: 0.4786464404138965
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 922-E OK
+(12, 12)
+	Explained variation per principal component: [0.38832617 0.21419422]
+	silhouette_score: 0.3040317968530861
+	calinski_harabasz_score: 5.414965727431288
+	davies_bouldin_score: 1.223629702715249
+	PCA Indices
+	silhouette_score: 0.4836228833590795
+	calinski_harabasz_score: 12.185674708399688
+	davies_bouldin_score: 0.6871756476295396
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1142-C WRONG_ANSWER
+(46, 46)
+	Explained variation per principal component: [0.64522578 0.14137623]
+	silhouette_score: 0.5553785899940413
+	calinski_harabasz_score: 35.013306339649624
+	davies_bouldin_score: 0.8391777888667106
+	PCA Indices
+	silhouette_score: 0.63217893281451
+	calinski_harabasz_score: 51.52633104428301
+	davies_bouldin_score: 0.6706282825781595
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1142-C RUNTIME_ERROR
+(25, 25)
+	Explained variation per principal component: [0.51947263 0.12093045]
+	silhouette_score: 0.3714279768585552
+	calinski_harabasz_score: 19.748751519833217
+	davies_bouldin_score: 1.0653132803495586
+	PCA Indices
+	silhouette_score: 0.610249488893552
+	calinski_harabasz_score: 58.8801716894026
+	davies_bouldin_score: 0.5453078359970756
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 1142-C OK
+(48, 48)
+	Explained variation per principal component: [0.58646877 0.17250159]
+	silhouette_score: 0.5410996133701804
+	calinski_harabasz_score: 27.709833220296137
+	davies_bouldin_score: 0.8340386148074593
+	PCA Indices
+	silhouette_score: 0.64661493988046
+	calinski_harabasz_score: 44.53663468281416
+	davies_bouldin_score: 0.6731772332728633
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 558-B WRONG_ANSWER
+(50, 50)
+	Explained variation per principal component: [0.34971687 0.17881009]
+	silhouette_score: 0.44622656156151386
+	calinski_harabasz_score: 17.77069308192665
+	davies_bouldin_score: 0.7973773549204726
+	PCA Indices
+	silhouette_score: 0.6551076339090676
+	calinski_harabasz_score: 47.843479495237375
+	davies_bouldin_score: 0.457259690259034
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 558-B RUNTIME_ERROR
+(44, 44)
+	Explained variation per principal component: [0.3963865  0.21181931]
+	silhouette_score: 0.3728059742101595
+	calinski_harabasz_score: 16.97168490441201
+	davies_bouldin_score: 1.0698718093766455
+	PCA Indices
+	silhouette_score: 0.5468435412234964
+	calinski_harabasz_score: 35.87635625325075
+	davies_bouldin_score: 0.7091621909496514
+plot_by_problem_and_type: similarity-ORIGINAL-NODE-SYM 558-B OK
+(25, 25)
+	Explained variation per principal component: [0.43641538 0.16748312]
+	silhouette_score: 0.2983971675297398
+	calinski_harabasz_score: 11.152729755905673
+	davies_bouldin_score: 1.3382830180911371
+	PCA Indices
+	silhouette_score: 0.5919391356482773
+	calinski_harabasz_score: 26.389869533431792
+	davies_bouldin_score: 0.661943282510561
+plot_all_vs_all: similarity-ORIGINAL
+	Explained variation per principal component: [0.59641987 0.10197434]
+	silhouette_score: 0.1491271075429927
+	calinski_harabasz_score: 122.52513197796821
+	davies_bouldin_score: 1.9417983379315449
+	PCA Indices
+	silhouette_score: 0.09543483289227868
+	calinski_harabasz_score: 169.14516348892084
+	davies_bouldin_score: 2.2455929569687285
+plot_ok_and_wrong: similarity-ORIGINAL
+	Explained variation per principal component: [0.61161196 0.11589296]
+	silhouette_score: 0.2172170909686107
+	calinski_harabasz_score: 147.10875524604168
+	davies_bouldin_score: 1.5429646800795154
+	PCA Indices
+	silhouette_score: 0.17866677469567666
+	calinski_harabasz_score: 237.77493461646648
+	davies_bouldin_score: 1.3029653198651083
+plot_by_type: similarity-ORIGINAL WRONG_ANSWER
+(236, 236)
+	Explained variation per principal component: [0.60777918 0.11083862]
+	silhouette_score: 0.20660652081843653
+	calinski_harabasz_score: 75.99653148272556
+	davies_bouldin_score: 1.5656594673058861
+	PCA Indices
+	silhouette_score: 0.1624363818516978
+	calinski_harabasz_score: 127.8036302891535
+	davies_bouldin_score: 1.2301291831396088
+plot_by_type: similarity-ORIGINAL RUNTIME_ERROR
+(149, 149)
+	Explained variation per principal component: [0.55595222 0.11251568]
+	silhouette_score: 0.05049859174638796
+	calinski_harabasz_score: 14.559486933335442
+	davies_bouldin_score: 2.615383827255605
+	PCA Indices
+	silhouette_score: -0.04663322523125573
+	calinski_harabasz_score: 17.114491389949375
+	davies_bouldin_score: 3.7942008084265395
+plot_by_type: similarity-ORIGINAL OK
+(181, 181)
+	Explained variation per principal component: [0.60942856 0.11661559]
+	silhouette_score: 0.2335965840233778
+	calinski_harabasz_score: 69.722961047365
+	davies_bouldin_score: 1.3798723910976531
+	PCA Indices
+	silhouette_score: 0.2505527435955383
+	calinski_harabasz_score: 107.2239809390958
+	davies_bouldin_score: 1.0596273104282552
+plot_by_problem: similarity-ORIGINAL 1553-G
+(108, 108)
+	Explained variation per principal component: [0.38642176 0.20926251]
+	silhouette_score: -0.002351480266972399
+	calinski_harabasz_score: 1.6713062073774467
+	davies_bouldin_score: 6.732377901543178
+	PCA Indices
+	silhouette_score: -0.03626996592021328
+	calinski_harabasz_score: 1.2158697048639624
+	davies_bouldin_score: 7.675724399088364
+plot_by_problem: similarity-ORIGINAL 1579-A
+(112, 112)
+	Explained variation per principal component: [0.51163263 0.25422679]
+	silhouette_score: -0.009498792783677596
+	calinski_harabasz_score: 3.925935798947888
+	davies_bouldin_score: 5.876061308006434
+	PCA Indices
+	silhouette_score: -0.03878339321212075
+	calinski_harabasz_score: 4.058499245495388
+	davies_bouldin_score: 8.39761655323418
+plot_by_problem: similarity-ORIGINAL 922-E
+(108, 108)
+	Explained variation per principal component: [0.49033877 0.22666407]
+	silhouette_score: -0.06011778557657249
+	calinski_harabasz_score: 8.142944252075402
+	davies_bouldin_score: 3.046174334185615
+	PCA Indices
+	silhouette_score: -0.176246356468632
+	calinski_harabasz_score: 10.83123906064847
+	davies_bouldin_score: 2.3943765704799453
+plot_by_problem: similarity-ORIGINAL 1142-C
+(119, 119)
+	Explained variation per principal component: [0.75545373 0.06710155]
+	silhouette_score: 0.07392859622694353
+	calinski_harabasz_score: 42.9887591061302
+	davies_bouldin_score: 6.68752115095167
+	PCA Indices
+	silhouette_score: 0.08672902208852859
+	calinski_harabasz_score: 60.51597709152546
+	davies_bouldin_score: 12.976654030045053
+plot_by_problem: similarity-ORIGINAL 558-B
+(119, 119)
+	Explained variation per principal component: [0.44428648 0.17097641]
+	silhouette_score: -0.019955251010427694
+	calinski_harabasz_score: 2.9955723325210752
+	davies_bouldin_score: 6.803328648309969
+	PCA Indices
+	silhouette_score: -0.05069582030187345
+	calinski_harabasz_score: 3.468161435288308
+	davies_bouldin_score: 15.358769051436516
+plot_by_problem_and_type: similarity-ORIGINAL 1553-G WRONG_ANSWER
+(50, 50)
+	Explained variation per principal component: [0.35366625 0.25756058]
+	silhouette_score: 0.5789396206531564
+	calinski_harabasz_score: 17.319882628882016
+	davies_bouldin_score: 0.34667491436617676
+	PCA Indices
+	silhouette_score: 0.7113395549050009
+	calinski_harabasz_score: 32.928890999625715
+	davies_bouldin_score: 0.23200811937125834
+plot_by_problem_and_type: similarity-ORIGINAL 1553-G RUNTIME_ERROR
+(12, 12)
+	Explained variation per principal component: [0.5627022  0.31315168]
+	silhouette_score: 0.5059639856999076
+	calinski_harabasz_score: 9.150040219632803
+	davies_bouldin_score: 0.6291348449153404
+	PCA Indices
+	silhouette_score: 0.5976986524883522
+	calinski_harabasz_score: 11.71709002570653
+	davies_bouldin_score: 0.4017370713794447
+plot_by_problem_and_type: similarity-ORIGINAL 1553-G OK
+(46, 46)
+	Explained variation per principal component: [0.4570079  0.16089865]
+	silhouette_score: 0.28378769424564454
+	calinski_harabasz_score: 21.164799759444332
+	davies_bouldin_score: 1.3934121742649284
+	PCA Indices
+	silhouette_score: 0.44412445786865556
+	calinski_harabasz_score: 47.06231675103788
+	davies_bouldin_score: 0.8538028690915196
+plot_by_problem_and_type: similarity-ORIGINAL 1579-A WRONG_ANSWER
+(41, 41)
+	Explained variation per principal component: [0.59947763 0.18631219]
+	silhouette_score: 0.5081706180853278
+	calinski_harabasz_score: 48.54795131441938
+	davies_bouldin_score: 0.7507431697703955
+	PCA Indices
+	silhouette_score: 0.6652020809868318
+	calinski_harabasz_score: 93.13326964222966
+	davies_bouldin_score: 0.4414956921139032
+plot_by_problem_and_type: similarity-ORIGINAL 1579-A RUNTIME_ERROR
+(21, 21)
+	Explained variation per principal component: [0.46614464 0.22104939]
+	silhouette_score: 0.3224575497561411
+	calinski_harabasz_score: 11.57650059858886
+	davies_bouldin_score: 1.0975499933064359
+	PCA Indices
+	silhouette_score: 0.5127820536408286
+	calinski_harabasz_score: 23.048012671368852
+	davies_bouldin_score: 0.6517339107879347
+plot_by_problem_and_type: similarity-ORIGINAL 1579-A OK
+(50, 50)
+	Explained variation per principal component: [0.5741591  0.18919777]
+	silhouette_score: 0.47970932897120266
+	calinski_harabasz_score: 54.975438773380766
+	davies_bouldin_score: 0.8141920175482377
+	PCA Indices
+	silhouette_score: 0.6495101192286143
+	calinski_harabasz_score: 110.79028047396045
+	davies_bouldin_score: 0.4748765663892535
+plot_by_problem_and_type: similarity-ORIGINAL 922-E WRONG_ANSWER
+(49, 49)
+	Explained variation per principal component: [0.64793743 0.13650659]
+	silhouette_score: 0.5247513066016154
+	calinski_harabasz_score: 60.17216941618526
+	davies_bouldin_score: 0.596528725704402
+	PCA Indices
+	silhouette_score: 0.6978127515464726
+	calinski_harabasz_score: 116.7193611111346
+	davies_bouldin_score: 0.32699412643930204
+plot_by_problem_and_type: similarity-ORIGINAL 922-E RUNTIME_ERROR
+(47, 47)
+	Explained variation per principal component: [0.57703672 0.0990216 ]
+	silhouette_score: 0.5552053953690047
+	calinski_harabasz_score: 46.57383398041367
+	davies_bouldin_score: 0.6007181948824873
+	PCA Indices
+	silhouette_score: 0.7691392970001316
+	calinski_harabasz_score: 135.43729450553903
+	davies_bouldin_score: 0.3102033180950877
+plot_by_problem_and_type: similarity-ORIGINAL 922-E OK
+(12, 12)
+	Explained variation per principal component: [0.40802842 0.21537828]
+	silhouette_score: 0.3201806121882732
+	calinski_harabasz_score: 5.88638995804892
+	davies_bouldin_score: 1.1745030234200915
+	PCA Indices
+	silhouette_score: 0.4994993641560805
+	calinski_harabasz_score: 13.095706840312216
+	davies_bouldin_score: 0.6666085536486284
+plot_by_problem_and_type: similarity-ORIGINAL 1142-C WRONG_ANSWER
+(46, 46)
+	Explained variation per principal component: [0.63840156 0.14706143]
+	silhouette_score: 0.5616619738108447
+	calinski_harabasz_score: 38.22829466331179
+	davies_bouldin_score: 0.786378374217512
+	PCA Indices
+	silhouette_score: 0.639536843485715
+	calinski_harabasz_score: 59.1210506293278
+	davies_bouldin_score: 0.6059851411549444
+plot_by_problem_and_type: similarity-ORIGINAL 1142-C RUNTIME_ERROR
+(25, 25)
+	Explained variation per principal component: [0.54624464 0.10948056]
+	silhouette_score: 0.3816508659727285
+	calinski_harabasz_score: 21.2345062117494
+	davies_bouldin_score: 1.027487389928758
+	PCA Indices
+	silhouette_score: 0.6340873528009672
+	calinski_harabasz_score: 61.98418247064665
+	davies_bouldin_score: 0.5126939406930386
+plot_by_problem_and_type: similarity-ORIGINAL 1142-C OK
+(48, 48)
+	Explained variation per principal component: [0.59012732 0.17299229]
+	silhouette_score: 0.331164954536248
+	calinski_harabasz_score: 21.455216975232698
+	davies_bouldin_score: 1.1658490335406164
+	PCA Indices
+	silhouette_score: 0.542630345732182
+	calinski_harabasz_score: 32.734842808138204
+	davies_bouldin_score: 0.7492052073325343
+plot_by_problem_and_type: similarity-ORIGINAL 558-B WRONG_ANSWER
+(50, 50)
+	Explained variation per principal component: [0.39927537 0.16485002]
+	silhouette_score: 0.4031844773438062
+	calinski_harabasz_score: 22.96673133939244
+	davies_bouldin_score: 0.9663883309361405
+	PCA Indices
+	silhouette_score: 0.6241466245146214
+	calinski_harabasz_score: 62.550097703407474
+	davies_bouldin_score: 0.5891370670989546
+plot_by_problem_and_type: similarity-ORIGINAL 558-B RUNTIME_ERROR
+(44, 44)
+	Explained variation per principal component: [0.36172148 0.23378269]
+	silhouette_score: 0.35033753201732876
+	calinski_harabasz_score: 15.305548781532737
+	davies_bouldin_score: 1.102840207478107
+	PCA Indices
+	silhouette_score: 0.527305571058207
+	calinski_harabasz_score: 32.318052176035444
+	davies_bouldin_score: 0.7292960651521756
+plot_by_problem_and_type: similarity-ORIGINAL 558-B OK
+(25, 25)
+	Explained variation per principal component: [0.40601387 0.16895165]
+	silhouette_score: 0.2756427385927898
+	calinski_harabasz_score: 9.766416033482372
+	davies_bouldin_score: 1.4333203526287805
+	PCA Indices
+	silhouette_score: 0.5572758422900139
+	calinski_harabasz_score: 24.341966087792592
+	davies_bouldin_score: 0.7280738872689967

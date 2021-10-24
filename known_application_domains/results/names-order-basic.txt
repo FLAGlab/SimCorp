@@ -1,0 +1,10 @@
+sum/Tesis/sum.cpp
+sum_odd/Tesis/sum_odd.cpp
+min/Tesis/min.cpp
+linear_search/Tesis/linear_search.cpp
+iterative_quick_sort/Tesis/iterative_quick_sort.cpp
+binary_search/Tesis/binary_search.cpp
+iterative_merge_sort/Tesis/iterative_merge_sort.cpp
+bubble_sort/Tesis/bubble_sort.cpp
+max/Tesis/max.cpp
+gnone_sort/Tesis/gnone_sort.cpp

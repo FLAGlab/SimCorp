@@ -1,0 +1,185 @@
+
+1
+  %retval = alloca i32, align 4
+  %a = alloca [5 x i32], align 16
+  %n = alloca i32, align 4
+  %h = alloca i32, align 4
+  %l = alloca i32, align 4
+  %saved_stack = alloca i8*
+  %top = alloca i32, align 4
+  %x = alloca i32, align 4
+  %i = alloca i32, align 4
+  %j = alloca i32, align 4
+  %p = alloca i32, align 4
+  %cleanup.dest.slot = alloca i32
+  store i32 0, i32* %retval
+  %0 = bitcast [5 x i32]* %a to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* bitcast ([5 x i32]* @_ZZ4mainE1a to i8*), i64 20, i32 16, i1 false)
+  store i32 5, i32* %n, align 4
+  %1 = load i32* %n, align 4
+  %sub = sub nsw i32 %1, 1
+  store i32 %sub, i32* %h, align 4
+  store i32 0, i32* %l, align 4
+  %2 = load i32* %h, align 4
+  %3 = load i32* %l, align 4
+  %sub1 = sub nsw i32 %2, %3
+  %add = add nsw i32 %sub1, 1
+  %4 = zext i32 %add to i64
+  %5 = call i8* @llvm.stacksave()
+  store i8* %5, i8** %saved_stack
+  %vla = alloca i32, i64 %4, align 16
+  store i32 -1, i32* %top, align 4
+  %6 = load i32* %l, align 4
+  %7 = load i32* %top, align 4
+  %inc = add nsw i32 %7, 1
+  store i32 %inc, i32* %top, align 4
+  %idxprom = sext i32 %inc to i64
+  %arrayidx = getelementptr inbounds i32* %vla, i64 %idxprom
+  store i32 %6, i32* %arrayidx, align 4
+  %8 = load i32* %h, align 4
+  %9 = load i32* %top, align 4
+  %inc2 = add nsw i32 %9, 1
+  store i32 %inc2, i32* %top, align 4
+  %idxprom3 = sext i32 %inc2 to i64
+  %arrayidx4 = getelementptr inbounds i32* %vla, i64 %idxprom3
+  store i32 %8, i32* %arrayidx4, align 4
+  br label %while.cond
+
+2
+  %10 = load i32* %top, align 4
+  %cmp = icmp sge i32 %10, 0
+  br i1 %cmp, label %while.body, label %while.end
+
+3
+  %11 = load i32* %top, align 4
+  %dec = add nsw i32 %11, -1
+  store i32 %dec, i32* %top, align 4
+  %idxprom5 = sext i32 %11 to i64
+  %arrayidx6 = getelementptr inbounds i32* %vla, i64 %idxprom5
+  %12 = load i32* %arrayidx6, align 4
+  store i32 %12, i32* %h, align 4
+  %13 = load i32* %top, align 4
+  %dec7 = add nsw i32 %13, -1
+  store i32 %dec7, i32* %top, align 4
+  %idxprom8 = sext i32 %13 to i64
+  %arrayidx9 = getelementptr inbounds i32* %vla, i64 %idxprom8
+  %14 = load i32* %arrayidx9, align 4
+  store i32 %14, i32* %l, align 4
+  %15 = load i32* %h, align 4
+  %idxprom10 = sext i32 %15 to i64
+  %arrayidx11 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom10
+  %16 = load i32* %arrayidx11, align 4
+  store i32 %16, i32* %x, align 4
+  %17 = load i32* %l, align 4
+  %sub12 = sub nsw i32 %17, 1
+  store i32 %sub12, i32* %i, align 4
+  %18 = load i32* %l, align 4
+  store i32 %18, i32* %j, align 4
+  br label %for.cond
+
+4
+  %19 = load i32* %j, align 4
+  %20 = load i32* %h, align 4
+  %sub13 = sub nsw i32 %20, 1
+  %cmp14 = icmp sle i32 %19, %sub13
+  br i1 %cmp14, label %for.body, label %for.end
+
+5
+  %21 = load i32* %j, align 4
+  %idxprom15 = sext i32 %21 to i64
+  %arrayidx16 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom15
+  %22 = load i32* %arrayidx16, align 4
+  %23 = load i32* %x, align 4
+  %cmp17 = icmp sle i32 %22, %23
+  br i1 %cmp17, label %if.then, label %if.end
+
+6
+  %24 = load i32* %i, align 4
+  %inc18 = add nsw i32 %24, 1
+  store i32 %inc18, i32* %i, align 4
+  %25 = load i32* %i, align 4
+  %idxprom19 = sext i32 %25 to i64
+  %arrayidx20 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom19
+  %26 = load i32* %j, align 4
+  %idxprom21 = sext i32 %26 to i64
+  %arrayidx22 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom21
+  call void @_Z4swapPiS_(i32* %arrayidx20, i32* %arrayidx22)
+  br label %if.end
+
+7
+  %27 = load i32* %j, align 4
+  %inc23 = add nsw i32 %27, 1
+  store i32 %inc23, i32* %j, align 4
+  br label %for.cond
+
+8
+  %28 = load i32* %i, align 4
+  %add24 = add nsw i32 %28, 1
+  %idxprom25 = sext i32 %add24 to i64
+  %arrayidx26 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom25
+  %29 = load i32* %h, align 4
+  %idxprom27 = sext i32 %29 to i64
+  %arrayidx28 = getelementptr inbounds [5 x i32]* %a, i32 0, i64 %idxprom27
+  call void @_Z4swapPiS_(i32* %arrayidx26, i32* %arrayidx28)
+  %30 = load i32* %i, align 4
+  %add29 = add nsw i32 %30, 1
+  store i32 %add29, i32* %p, align 4
+  %31 = load i32* %p, align 4
+  %sub30 = sub nsw i32 %31, 1
+  %32 = load i32* %l, align 4
+  %cmp31 = icmp sgt i32 %sub30, %32
+  br i1 %cmp31, label %if.then32, label %if.end40
+
+9
+  %33 = load i32* %l, align 4
+  %34 = load i32* %top, align 4
+  %inc33 = add nsw i32 %34, 1
+  store i32 %inc33, i32* %top, align 4
+  %idxprom34 = sext i32 %inc33 to i64
+  %arrayidx35 = getelementptr inbounds i32* %vla, i64 %idxprom34
+  store i32 %33, i32* %arrayidx35, align 4
+  %35 = load i32* %p, align 4
+  %sub36 = sub nsw i32 %35, 1
+  %36 = load i32* %top, align 4
+  %inc37 = add nsw i32 %36, 1
+  store i32 %inc37, i32* %top, align 4
+  %idxprom38 = sext i32 %inc37 to i64
+  %arrayidx39 = getelementptr inbounds i32* %vla, i64 %idxprom38
+  store i32 %sub36, i32* %arrayidx39, align 4
+  br label %if.end40
+
+10
+  %37 = load i32* %p, align 4
+  %add41 = add nsw i32 %37, 1
+  %38 = load i32* %h, align 4
+  %cmp42 = icmp slt i32 %add41, %38
+  br i1 %cmp42, label %if.then43, label %if.end51
+
+11
+  %39 = load i32* %p, align 4
+  %add44 = add nsw i32 %39, 1
+  %40 = load i32* %top, align 4
+  %inc45 = add nsw i32 %40, 1
+  store i32 %inc45, i32* %top, align 4
+  %idxprom46 = sext i32 %inc45 to i64
+  %arrayidx47 = getelementptr inbounds i32* %vla, i64 %idxprom46
+  store i32 %add44, i32* %arrayidx47, align 4
+  %41 = load i32* %h, align 4
+  %42 = load i32* %top, align 4
+  %inc48 = add nsw i32 %42, 1
+  store i32 %inc48, i32* %top, align 4
+  %idxprom49 = sext i32 %inc48 to i64
+  %arrayidx50 = getelementptr inbounds i32* %vla, i64 %idxprom49
+  store i32 %41, i32* %arrayidx50, align 4
+  br label %if.end51
+
+12
+  br label %while.cond
+
+13
+  store i32 0, i32* %retval
+  store i32 1, i32* %cleanup.dest.slot
+  %43 = load i8** %saved_stack
+  call void @llvm.stackrestore(i8* %43)
+  %44 = load i32* %retval
+  ret i32 %44
