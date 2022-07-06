@@ -1,4 +1,4 @@
-In the following, we present the results for the different experiemnts conducted using the SimCorp. Corpus
+In the following, we present the results for the different experiemnts conducted using the SimCorp Corpus
 
 ## Semantic Similarity Evaluation
 
